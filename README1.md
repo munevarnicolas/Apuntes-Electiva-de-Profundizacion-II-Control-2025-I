@@ -6,13 +6,12 @@ Esta clase se llevo a cabo el dias 6 de Febrero de 2025, la cual estuvo dirigida
 
 💡**Ejemplo 1:**
 
-![Figura de prueba](images/plantilla/2025-02-28.png)
+![Figura de prueba](images/plantilla/cnc.jpg)
 
-Figura 1. Figura de prueba
+Figura 1. Maquina CNC
 
-Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
-## 3. Subsecciones
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
+## 3. Ejes de Movimiento
+>🔑 *Ejes de Movimiento:* En el control de movimiento y la automatización, los ejes de movimiento (o motion axes en inglés) son las direcciones en las que una máquina o sistema puede moverse. Cada eje representa un grado de libertad. Por ejemplo, un robot industrial con tres ejes lineales puede moverse hacia adelante y atrás (eje X), de un lado a otro (eje Y) y arriba y abajo (eje Z). Además de los movimientos lineales, también existen ejes rotacionales, que permiten que un sistema gire alrededor de un eje en lugar de solo desplazarse.
 ### 3.1. Título de subsecciones
 Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
 ### 3.2. Numeración de subsecciones
