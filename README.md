@@ -1,19 +1,22 @@
-# Electiva de Profundización Control Digital y de Movimiento
+# Electiva de Profundización Control de Movimiento
 Clase 1, pre-requsitos, contenido y evaluación para la materia en el periodo 2025-I                         
 ## 1. Pre-requisitos
 - Electiva de Profundización I Control <br/>
 - Programación
 
 ## 2. Contenido
-- Conversion A/D y D/A <br/>
-- Ecuaciones en diferencias <br/>
-- Transformada Z <br/>
-- Funciones de Transferencia <br/>
-- Estabilidad (Test Jury) <br/>
-- Discretizacion Controladores <br/>
-- Metodos Algebraicos <br/>
-- Respuesta en Frecuencia <br/>
-- Espacio Estados (Retroalimentacion Estados y observaciones) <br/>
+- Control Cascada <br/>
+- Sistemas de Transmisión:
+    - Engranajes
+    - Poleas
+    - Piñón Cremallera
+    - Tornillo Sin fin
+- Perfiles de Movimiento
+- Comandos Básicos:
+    - Home
+    - Jog
+- Espacio de Estados (Rechazo Activo de Perturbaciones)
+  
 
 ## 3. Evaluación
 1er Corte (20%): <br/>
