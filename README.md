@@ -35,4 +35,4 @@ Clase 1, pre-requsitos, contenido y evaluación para la materia en el periodo 20
 - Laboratorio (10%): <br/>
 
 ## 4. Referencias
-[1] "Apuntes Clase - Martes 4 Feebrero 2025"
+[1] "Apuntes Clase - Martes 4 Febrero 2025"
