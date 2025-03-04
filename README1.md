@@ -26,7 +26,7 @@ Antes de los sistemas digitales modernos, el control de movimiento se realizaba 
 
 💡**Ejemplo 3:**
 
-![Figura de prueba](images/plantilla/cnc1.jpg)
+![Figura de prueba](images/plantilla/images.jpg)
 
 Figura 3. Axis en máquina CNC.
 
