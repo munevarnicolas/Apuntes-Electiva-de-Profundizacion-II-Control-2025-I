@@ -33,6 +33,8 @@ Figura 3. Bobinadora de cables y láminas de alta tensión y baja tensión serie
 ## 4. Control de Movimiento en la actualidad
 El control de movimiento en la actulaidad es electronico, el cual permite que coordine y gestione todos los elementos del sistema para lograr que cada eje se mueva de manera sincronizada y exacta. En un sistema completo se integran varios componentes que trabajan en conjunto, y a continuación se describen de forma sencilla:
 
+- Interfaz Hombre-Máquina (HMI)
+
 >🔑 *Interfaz Hombre-Máquina (HMI):* Es el punto de conexión entre el operador y el sistema. A través de esta interfaz, el usuario puede programar, ajustar y supervisar el comportamiento de la máquina, facilitando la configuración y el monitoreo en tiempo real.
 
 💡**Ejemplo 4:**
@@ -41,6 +43,8 @@ El control de movimiento en la actulaidad es electronico, el cual permite que co
 
 Figura 4. HMI Siemens. 
 
+- Controlador de Movimiento
+  
 >🔑 *Controlador de Movimiento:* Este es el "cerebro" del sistema. Se encarga de procesar las instrucciones de la HMI y ejecutar algoritmos de control que determinan las trayectorias y velocidades de cada eje. Gracias a su capacidad de procesamiento en tiempo real, puede corregir desviaciones y asegurar que los movimientos sean precisos. Posee CPU, salidas de potencia, entradas para sensores y puertos de comunicacion.
 
 💡**Ejemplo 5:**
@@ -49,21 +53,45 @@ Figura 4. HMI Siemens.
 
 Figura 5. Controlador de Movimiento Linmot.
 
->🔑 *Actuadores:* Son los dispositivos físicos (como motores eléctricos o servomotores) que transforman las señales del controlador en movimientos reales. Su rapidez y precisión son fundamentales para cumplir con las demandas de alta velocidad y precisión del sistema.
+- Drivers de Potencia
+
+>🔑 *Driver de Potencia:* Son intermediarios entre el controlador y los actuadores. Estos dispositivos amplifican las señales de control para que sean capaces de mover los actuadores con la fuerza y precisión necesarias. Funcionan controlando la corriente y el voltaje que se suministran a los motores o servomotores, permitiendo así un manejo fino de la velocidad y el par motor. Su correcto funcionamiento es clave para traducir las órdenes del controlador en acciones mecánicas efectivas.
 
 💡**Ejemplo 6:**
 
-![Figura de prueba](images/plantilla/motor.png)
+![Figura de prueba](images/plantilla/driver.png)
 
-Figura 6. Servomotores DC.
+Figura 6. Driver de Potencia Yaskawa serie Sigma.
 
->🔑 *Mecanismos de Transmisión:* Estos elementos, como engranajes, correas o husillos, se encargan de transmitir el movimiento generado por los actuadores a las partes mecánicas del sistema. Su diseño y precisión determinan en gran medida la exactitud con la que se mueve cada eje.
+- Actuadores
+
+>🔑 *Actuadores:* Son los dispositivos físicos (como motores eléctricos o servomotores) que transforman las señales del controlador en movimientos reales. Su rapidez y precisión son fundamentales para cumplir con las demandas de alta velocidad y precisión del sistema.
 
 💡**Ejemplo 7:**
 
+![Figura de prueba](images/plantilla/motor.png)
+
+Figura 7. Servomotores DC.
+
+- Mecanismos de Transmisión
+
+>🔑 *Mecanismos de Transmisión:* Estos elementos, como engranajes, correas o husillos, se encargan de transmitir el movimiento generado por los actuadores a las partes mecánicas del sistema. Su diseño y precisión determinan en gran medida la exactitud con la que se mueve cada eje.
+
+💡**Ejemplo 8:**
+
 ![Figura de prueba](images/plantilla/trans.jpg)
 
-Figura 7. Sistemas de transmisión.
+Figura 8. Sistemas de transmisión.
+
+- Sensores
+
+>🔑 *Sensores:* Los sensores son esenciales para el control de movimiento, ya que proporcionan la retroalimentación necesaria para ajustar y corregir el funcionamiento del sistema en tiempo real. Con estos datos, el controlador de movimiento puede ajustar de manera dinámica las señales enviadas a los drivers y actuadores, corrigiendo errores y asegurando que el sistema mantenga la sincronización y precisión esperadas. Los sensores pueden incluir encoders, tacómetros, y otros dispositivos de medición que monitorean continuamente el estado del sistema.
+
+💡**Ejemplo 9:**
+
+![Figura de prueba](images/plantilla/encoder.jpg)
+
+Figura 9. Sensor encoder Allen-Bradley.
 
 ## 6. Figuras
 Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las figuras de las presentaciones**. Para incluir figuras puede seguir los siguientes pasos:
