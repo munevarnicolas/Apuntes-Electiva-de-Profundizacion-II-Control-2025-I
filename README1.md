@@ -98,11 +98,13 @@ Figura 8. Sistemas de transmisión.
 
 Figura 9. Sensor encoder Allen-Bradley.
 
+## 5. Ejercicios
+Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
 
-## 5. Conclusiones
+## 6. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
-## 6. Referencias
+## 7. Referencias
 [1] "Apuntes Clase - Jueves 6 Febrero 2025"
 [2] "Ingeniería de control moderna. Ogata, K"
 [3] "Diseño de sistemas de control analógicos y digitales . Chen"
