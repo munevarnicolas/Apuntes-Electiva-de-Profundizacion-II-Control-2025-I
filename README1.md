@@ -98,4 +98,8 @@ Figura 9. Sensor encoder Allen-Bradley.
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
 ## 6. Referencias
+[1] "Apuntes Clase - Jueves 6 Febrero 2025"
+[2] "Ingeniería de control moderna. Ogata, K"
+[3] "Diseño de sistemas de control analógicos y digitales . Chen"
+[4] "Controladores PID Teoría, diseño y sintonización. Astrom, K"
 
