@@ -5,8 +5,11 @@ Clase 2, Esta clase se llevo a cabo el dias 6 de Febrero de 2025, la cual estuvo
 >🔑 *Control de Movimiento:*  Es una disciplina dentro del campo de la automatización y el control que se encarga encarga de regular cómo se mueve un sistema mecánico, asegurando que alcance la posición, velocidad, aceleración o torque deseadas de manera precisa y estable.
 
 >🔑 *Posición:* Hace referencia a la disposición en un objeto en el espacio y el tiempo, representado a través de un sistema de coordenadas.
+>
 >🔑 *Velocidad:* Es una magnitud física que expresa la relación entre el cambio de posición de un objeto y el tiempo empleado para ello, así como su dirección y sentido.
+>
 >🔑 *Aceleración:* Es una magnitud vectorial que indica cómo varía la velocidad de un objeto en el transcurso del tiempo, tanto en magnitud como en dirección.
+>
 >🔑 *Torque:* Es la fuerza que se aplica a un objeto para que gire. También se le conoce como momento de fuerza o momento dinámico.
 
 El control de movimiento se usa ampliamente en todo tipo de industrias, incluidas las de embalaje, ensamblaje, textil, papel, impresión, procesamiento de alimentos, productos de madera, maquinaria, electrónica y fabricación de semiconductores. Es el corazón de casi cualquier maquinaria y proceso automatizado. El control de movimiento implica controlar los movimientos mecánicos de una carga.
