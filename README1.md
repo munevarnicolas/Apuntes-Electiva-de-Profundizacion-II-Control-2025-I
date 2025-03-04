@@ -31,11 +31,39 @@ Antes de los sistemas digitales modernos, el control de movimiento se realizaba 
 Figura 3. Bobinadora de cables y láminas de alta tensión y baja tensión serie 400, Broomfield.
 
 ## 4. Control de Movimiento en la actualidad
-Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
+El control de movimiento en la actulaidad es electronico, el cual permite que coordine y gestione todos los elementos del sistema para lograr que cada eje se mueva de manera sincronizada y exacta. En un sistema completo se integran varios componentes que trabajan en conjunto, y a continuación se describen de forma sencilla:
 
-💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
+>🔑 *Interfaz Hombre-Máquina (HMI):* Es el punto de conexión entre el operador y el sistema. A través de esta interfaz, el usuario puede programar, ajustar y supervisar el comportamiento de la máquina, facilitando la configuración y el monitoreo en tiempo real.
 
-$$R=\frac{V}{I}$$
+💡**Ejemplo 4:**
+
+![Figura de prueba](images/plantilla/hmi.jpg)
+
+Figura 4. HMI Siemens. 
+
+>🔑 *Controlador de Movimiento:* Este es el "cerebro" del sistema. Se encarga de procesar las instrucciones de la HMI y ejecutar algoritmos de control que determinan las trayectorias y velocidades de cada eje. Gracias a su capacidad de procesamiento en tiempo real, puede corregir desviaciones y asegurar que los movimientos sean precisos. Posee CPU, salidas de potencia, entradas para sensores y puertos de comunicacion.
+
+💡**Ejemplo 5:**
+
+![Figura de prueba](images/plantilla/controlador.jpg)
+
+Figura 5. Controlador de Movimiento Linmot.
+
+>🔑 *Actuadores:* Son los dispositivos físicos (como motores eléctricos o servomotores) que transforman las señales del controlador en movimientos reales. Su rapidez y precisión son fundamentales para cumplir con las demandas de alta velocidad y precisión del sistema.
+
+💡**Ejemplo 6:**
+
+![Figura de prueba](images/plantilla/motor.png)
+
+Figura 6. Servomotores DC.
+
+>🔑 *Mecanismos de Transmisión:* Estos elementos, como engranajes, correas o husillos, se encargan de transmitir el movimiento generado por los actuadores a las partes mecánicas del sistema. Su diseño y precisión determinan en gran medida la exactitud con la que se mueve cada eje.
+
+💡**Ejemplo 7:**
+
+![Figura de prueba](images/plantilla/trans.jpg)
+
+Figura 7. Sistemas de transmisión.
 
 ## 6. Figuras
 Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las figuras de las presentaciones**. Para incluir figuras puede seguir los siguientes pasos:
