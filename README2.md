@@ -8,7 +8,7 @@ Clase 3, se llevo a cabo el dia 13 de Febrero del 2025, la cual estuvo dirigida 
 
 ![Figura de prueba](images/plantilla/bloquescascada.png)
 
-Figura 1. Esquema de Control cascada para un intercambiador termico.
+Figura 1. Diagrama de bloques Control Cascada.
 
 ## 3. Subsecciones
 
