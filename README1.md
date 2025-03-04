@@ -1,5 +1,5 @@
 # Control de Movimiento
-Esta clase se llevo a cabo el dias 6 de Febrero de 2025, la cual estuvo dirigida a comprender como el control de movimiento es de gran importancia en las diversas industrias, se comprendió mejor su uso y las aplicaciones que este tiene, adicional se hizo un recorrido breve de como ha avanzado este tipo de control con el pasar del tiempo.
+Clase 2, Esta clase se llevo a cabo el dias 6 de Febrero de 2025, la cual estuvo dirigida a comprender como el control de movimiento es de gran importancia en las diversas industrias, se comprendió mejor su uso y las aplicaciones que este tiene, adicional se hizo un recorrido breve de como ha avanzado este tipo de control con el pasar del tiempo.
 
 ## 1. ¿Que es control de Movimiento?
 >🔑 *Control de Movimiento:*  Es una disciplina dentro del campo de la automatización y el control que se encarga encarga de regular cómo se mueve un sistema mecánico, asegurando que alcance la posición, velocidad, aceleración o torque deseadas de manera precisa y estable.
