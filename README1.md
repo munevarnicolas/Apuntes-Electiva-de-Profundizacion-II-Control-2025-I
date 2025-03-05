@@ -105,7 +105,7 @@ Figura 9. Sensor encoder Allen-Bradley.
 
 ### 📚Ejercicio 1:
 
-![Figura de prueba](images/plantilla/ejemplo1.jpg)
+![Figura de prueba](images/plantilla/robot.png)
 
 Figura 10. Máquina de Clasificación de Huevos Zenyer.
 
