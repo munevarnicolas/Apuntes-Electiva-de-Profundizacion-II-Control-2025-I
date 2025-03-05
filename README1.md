@@ -147,20 +147,28 @@ Figura 11. Máquina de Clasificación de Huevos Zenyer.
 
 ## 7. Aplicaciones en diversas Industrias
 
-- titulo1
-![Figura de prueba](images/plantilla/cascadecontrol.png)
+__- Empaque y Paletizado__
+  
+![Figura de prueba](images/plantilla/empaqueypaletizado.jpg)
 
-Figura 10. Diagrama de bloques control cascada.
+Figura 12. Planta de empaque y paletizado.
 
-- titulo1
-![Figura de prueba](images/plantilla/cascadecontrol.png)
 
-Figura 11. Diagrama de bloques control cascada.
 
-- titulo1
-![Figura de prueba](images/plantilla/cascadecontrol.png)
+__- Ensamble de PCB__
+  
+![Figura de prueba](images/plantilla/pcb.jpg)
 
-Figura 11. Diagrama de bloques control cascada.
+Figura 13. Diagrama de bloques control cascada.
+
+
+
+__- Etiquetado__
+  
+![Figura de prueba](images/plantilla/etiquetado.jpg)
+
+Figura 14. Máquina de Etiquetado.
+
 ## 8. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
