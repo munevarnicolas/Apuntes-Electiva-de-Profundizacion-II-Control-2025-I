@@ -110,16 +110,6 @@ Figura 9. Sensor encoder Allen-Bradley.
 
 Figura 10. Diagrama de bloques control cascada.
 
-
-
-## 6. Ejercicios
-
-### 📚Ejercicio 1:
-
-![Figura de prueba](images/plantilla/robot.png)
-
-Figura 10. Máquina de Clasificación de Huevos Zenyer.
-
 La figura 10 representa un sistema de control con dos lazos de retroalimentación, uno externo y otro interno, también conocido como “control en cascada”. Para entenderlo de forma sencilla:
 
 - **Primer controlador (bucle externo)**:  
@@ -135,6 +125,16 @@ La figura 10 representa un sistema de control con dos lazos de retroalimentació
   - Su salida se envía de vuelta al primer controlador, cerrando el lazo externo de retroalimentación.
 
 En pocas palabras, el **bucle interno** corrige y estabiliza de manera rápida una variable intermedia (como la velocidad de un motor), mientras que el **bucle externo** se ocupa de la variable final que realmente nos importa (como la posición del eje o el nivel en un tanque). Este enfoque “en cascada” hace que el sistema sea más estable y preciso.
+
+
+## 6. Ejercicios
+
+### 📚Ejercicio 1:
+
+![Figura de prueba](images/plantilla/robot.png)
+
+Figura 11. Máquina de Clasificación de Huevos Zenyer.
+
 
 #### Componentes:
 
