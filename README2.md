@@ -2,7 +2,7 @@
 Clase 3, se llevo a cabo el dia 13 de Febrero del 2025, la cual estuvo dirigida a comprender el funcionamiento y esquema general del control casacda, adicional sus metodos de sintonizacion en lazo abierto y cerrado.
 
 ## 1. ¿Que es Control Cascada?
->🔑 *Control casacada* El control en cascada, según Ogata, es una estrategia de control en la que se emplean dos lazos de control conectados en serie. El lazo primario, se encarga de la variable principal del proceso; su salida no actúa directamente sobre el proceso, sino que sirve de referencia para el lazo secundario. Este lazo secundario controla una variable intermedia que tiene una respuesta más rápida y se encarga de compensar las perturbaciones de manera inmediata. De esta forma, el lazo secundario reacciona rápidamente a los cambios, mientras que el lazo primario mantiene la estabilidad y precisión de la variable principal, mejorando el desempeño global del sistema.
+>🔑 *Control cascada* El control en cascada, según Ogata, es una estrategia de control en la que se emplean dos lazos de control conectados en serie. El lazo primario, se encarga de la variable principal del proceso; su salida no actúa directamente sobre el proceso, sino que sirve de referencia para el lazo secundario. Este lazo secundario controla una variable intermedia que tiene una respuesta más rápida y se encarga de compensar las perturbaciones de manera inmediata. De esta forma, el lazo secundario reacciona rápidamente a los cambios, mientras que el lazo primario mantiene la estabilidad y precisión de la variable principal, mejorando el desempeño global del sistema.
 
 💡**Ejemplo 1:**
 
