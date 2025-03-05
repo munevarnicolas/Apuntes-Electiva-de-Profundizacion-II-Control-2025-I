@@ -41,7 +41,9 @@ Figura 6.  Diagrama de bloques del proceso de control cascada del precalentador/
 
 
 
-## 3. Subsecciones
+## 3. Metodos de Sintonización
+>🔑 *Control cascada*  Es un procedimiento sistemático para determinar los valores apropiados de los parámetros de un controlador, con el fin de lograr un rendimiento específico en el sistema controlado. Estos métodos establecen cómo ajustar las ganancias para que el sistema sea estable, responda de forma rápida y minimice el error en la variable que se desea regular.
+
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
