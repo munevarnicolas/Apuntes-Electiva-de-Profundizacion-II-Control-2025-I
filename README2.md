@@ -31,6 +31,13 @@ En la figura 4, al comparar el control de retroalimentación simple con el contr
 
 Además, se aclara que el controlador más interno es el que actúa directamente sobre la válvula, mientras que los controladores externos ajustan el set point del lazo inmediatamente interno. Se subraya que esta forma de estructurar el control permite reaccionar más rápido ante perturbaciones que afectan primero a la variable intermedia, sin esperar a que la variable principal se desvíe.
 
+![Figura de prueba](images/plantilla/4.png)
+
+Figura 5.  Diagrama de bloques del proceso de control de retroalimentación del precalentador/reactor.
+
+
+
+
 ## 3. Subsecciones
 
 ## 2. Definiciones
