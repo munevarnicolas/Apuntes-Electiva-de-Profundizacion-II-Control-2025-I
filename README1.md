@@ -145,13 +145,29 @@ Figura 11. Máquina de Clasificación de Huevos Zenyer.
 - Sistema de Transmisión: Reducción de engranajes.
 - Sensores: Presencia, posicion, torque, corriente, seguridad.
 
-## 6. Conclusiones
+## 7. Aplicaciones en diversas Industrias
+
+- titulo1
+![Figura de prueba](images/plantilla/cascadecontrol.png)
+
+Figura 10. Diagrama de bloques control cascada.
+
+- titulo1
+![Figura de prueba](images/plantilla/cascadecontrol.png)
+
+Figura 11. Diagrama de bloques control cascada.
+
+- titulo1
+![Figura de prueba](images/plantilla/cascadecontrol.png)
+
+Figura 11. Diagrama de bloques control cascada.
+## 8. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
 Aquí tienes tu texto en formato de viñetas en Markdown:  
 
 
-## 7. Referencias  
+## 9. Referencias  
 - [1] *Apuntes Clase - Jueves 6 Febrero 2025*  
 - [2] *Ingeniería de control moderna. Ogata, K*  
 - [3] *Diseño de sistemas de control analógicos y digitales. Chen*  
