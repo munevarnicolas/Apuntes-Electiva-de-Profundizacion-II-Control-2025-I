@@ -10,6 +10,17 @@ Clase 3, se llevo a cabo el dia 13 de Febrero del 2025, la cual estuvo dirigida 
 
 Figura 1. Diagrama de bloques Control Cascada.
 
+
+💡**Ejemplo 2:**
+
+![Figura de prueba](images/plantilla/1.png)
+
+Figura 2. Control de retroalimentación del proceso del precalentador/reactor.
+
+El proceso comienza con el precalentamiento del reactivo A en un horno, ya que este reactivo suele llegar frío y necesita elevar su temperatura antes de entrar al reactor. La reacción A → B en el reactor es exotérmica, por lo que se utiliza una camisa de enfriamiento para controlar la temperatura \($$T_R$$\). Sin embargo, durante la puesta en marcha se detectó que la capacidad de enfriamiento no era suficiente, manteniendo la válvula de enfriamiento prácticamente abierta todo el tiempo. Como solución temporal, se decidió dejar la válvula de enfriamiento completamente abierta y, en su lugar, regular la temperatura del reactor manipulando el combustible que alimenta el horno. Esta estrategia funcionó inicialmente, pero se presentaron perturbaciones tanto en el horno (variaciones en la temperatura de entrada del reactivo, poder calorífico del combustible, temperatura del aire de combustión) como en el reactor (cambios en la temperatura y flujo del refrigerante), lo que provocaba desviaciones en la temperatura \($$T_R$$\) y un control lento con oscilaciones debido a los retardos acumulados. Para mejorar la respuesta ante estas perturbaciones, se implementó un control en cascada que emplea dos lazos de control: uno secundario que supervisa y regula la temperatura de salida del horno \($$T_H$$\), y otro primario que se encarga de la temperatura del reactor \($$T_R$$\). De esta forma, el lazo interno corrige rápidamente las alteraciones en \($$T_H$$\) antes de que afecten a \($$T_R$$\), brindando una respuesta más ágil y estable, y reduciendo las oscilaciones en la variable de control principal.
+
+
+
 ## 3. Subsecciones
 
 ## 2. Definiciones
@@ -28,6 +39,12 @@ Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto 
 
 ## 5. Ecuaciones
 Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
+
+$$
+1.4 \left[\frac{1 + K_{c2} K_2}{K_{c2} K_1}\right]
+\left[\frac{t_{0.1}}{\tau_1}\right]^{-1.14}
+\left[\frac{\tau_2}{\tau_1}\right]^{0.1}
+$$
 
 💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
 
