@@ -109,6 +109,10 @@ Figura 9. Sensor encoder Allen-Bradley.
 
 Figura 10. Máquina de Clasificación de Huevos Zenyer.
 
+#### Componentes:
+
+
+
 ## 6. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
