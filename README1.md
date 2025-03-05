@@ -101,7 +101,18 @@ Figura 8. Sistemas de transmisión.
 
 Figura 9. Sensor encoder Allen-Bradley.
 
-## 5. Ejercicios
+## 5. Control Cascada
+
+### Esquema de Control Cascada
+
+
+![Figura de prueba](images/plantilla/cascadecontrol.png)
+
+Figura 10. Diagrama de bloques control cascada.
+
+
+
+## 6. Ejercicios
 
 ### 📚Ejercicio 1:
 
