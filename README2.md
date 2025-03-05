@@ -35,6 +35,9 @@ Además, se aclara que el controlador más interno es el que actúa directamente
 
 Figura 5.  Diagrama de bloques del proceso de control de retroalimentación del precalentador/reactor.
 
+![Figura de prueba](images/plantilla/5.png)
+
+Figura 6.  Diagrama de bloques del proceso de control cascada del precalentador/reactor.
 
 
 
