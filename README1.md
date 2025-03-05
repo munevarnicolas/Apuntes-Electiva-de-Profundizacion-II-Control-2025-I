@@ -111,7 +111,12 @@ Figura 10. Máquina de Clasificación de Huevos Zenyer.
 
 #### Componentes:
 
-
+- HMI: Teach Pendant.
+- Control de Movimiento: Controller Box.
+- Driver de Potencia: Integrado junto a los motores.
+- Actuadores: Motores tipo  Brushless.
+- Sistema de Transmisión: Reducción de engranajes.
+- Sensores: Presencia, posicion, torque, corriente, seguridad.
 
 ## 6. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
