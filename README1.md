@@ -110,7 +110,7 @@ Figura 9. Sensor encoder Allen-Bradley.
 
 Figura 10. Diagrama de bloques control cascada.
 
-La figura 10 representa un sistema de control con dos lazos de retroalimentación, uno externo y otro interno, también conocido como “control en cascada”. Para entenderlo de forma sencilla:
+La figura 10 representa un sistema de control en cascada.
 
 - **Primer controlador (bucle externo)**:  
   - Observa la salida real del proceso (lo que en verdad está pasando) y la compara con la meta o referencia (lo que queremos lograr).  
