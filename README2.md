@@ -41,10 +41,12 @@ Figura 6.  Diagrama de bloques del proceso de control cascada del precalentador/
 
 
 
-## 3. Métodos de Sintonización
+## 2. Métodos de Sintonización
 >🔑 *Método de Sintonización:*  Es un procedimiento sistemático para determinar los valores apropiados de los parámetros de un controlador, con el fin de lograr un rendimiento específico en el sistema controlado. Estos métodos establecen cómo ajustar las ganancias para que el sistema sea estable, responda de forma rápida y minimice el error en la variable que se desea regular.
-
-
+>
+>🔑 *Lazo Abierto:* El lazo abierto en control hace referencia a un sistema en el que la acción de control se realiza sin utilizar retroalimentación de la salida. Es decir, el controlador envía una señal de entrada a la planta (o proceso) basándose únicamente en una referencia predeterminada, sin medir el resultado real para ajustar la acción. Esto implica que cualquier error, perturbación o variación en la planta no se corrige automáticamente, lo que puede afectar la precisión y estabilidad del sistema.
+>
+>🔑 *Lazo Cerrado:* El lazo cerrado hace referencia a que la acción de control se ajusta en función de la retroalimentación proveniente de la salida del sistema. Esto significa que se mide la salida y se compara con el valor deseado (referencia). La diferencia o error resultante se utiliza para modificar la señal de control, de manera que se corrija cualquier desviación y se acerque la salida al valor objetivo.
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
 >🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
