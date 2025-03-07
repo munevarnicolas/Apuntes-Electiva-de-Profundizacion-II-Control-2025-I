@@ -166,6 +166,61 @@ Figura 2. Modelo de Motor DC.
 
 Este modelo es especialmente útil en aplicaciones de control, ya que permite predecir la respuesta del motor a cambios en el voltaje o en la carga y facilita el diseño de sistemas de control que aseguren un funcionamiento preciso y estable del motor DC.
 
+## 4. Sensores
+>🔑 *Sensor:* Es un dispositivo que detecta el cambio en el entorno y responde a alguna salida en el otro sistema. Un sensor convierte un fenómeno físico en un voltaje analógico medible
+
+En un servomecanismo, el objetivo es controlar con precisión variables como la posición, la velocidad o el par (torque) de un actuador (generalmente un motor). Para lograrlo, se emplean sensores que retroalimentan el sistema de control con información sobre el estado real del movimiento. Algunos sensores que se utilizan en motores son:
+
+### 1. Sensores de Posición:
+
+- **Potenciómetro:**  
+  - **Ventajas**: Económico, fácil de implementar.  
+  - **Limitaciones**: Desgaste mecánico, resolución y precisión relativamente bajas.
+
+- **Encoder Óptico:**  
+  - **Ventajas**: Alta resolución y precisión, muy común en aplicaciones industriales.  
+  - **Limitaciones**: Sensible a la suciedad, precio mayor que un potenciómetro.
+
+- **Encoder Magnético:**  
+  - **Ventajas**: Más robusto ante vibraciones y polvo, buena resolución.  
+  - **Limitaciones**: Resolución algo menor que algunos encoders ópticos de alta gama, costo intermedio.
+
+- **Resolver**  
+  - **Ventajas**: Muy robusto (temperatura, vibraciones), confiable en entornos exigentes.  
+  - **Limitaciones**: Coste más elevado, requiere electrónica de decodificación especializada.
+
+### 2. Sensores de Velocidad:
+
+- **Tacómetro (Generador):**  
+  - **Ventajas**: Salida analógica proporcional a la velocidad, simple y con buena respuesta dinámica.  
+  - **Limitaciones**: Desgaste mecánico, menor precisión que métodos digitales.
+
+- **Encoder (Conteo de Pulsos):**  
+  - **Ventajas**: Se usa el mismo encoder de posición para obtener velocidad midiendo la frecuencia de los pulsos.  
+  - **Limitaciones**: A bajas velocidades la medición puede ser imprecisa por recuento de pulsos.
+
+- **Sensores Hall en Motores BLDC:**  
+  - **Ventajas**: Integrados en el motor, simplicidad en sistemas sin escobillas.  
+  - **Limitaciones**: Resolución menor comparada con un encoder de alta resolución.
+
+### 3. Sensores para medición de torque:
+
+- **Shunt (Resistencia de derivación):**
+  - **Ventajas**: Bajo costo, implementación sencilla utilizando la ley de Ohm, respuesta rápida en la medición. 
+  - **Limitaciones**: Pérdida de potencia debido a la caída de tensión, sensibilidad a efectos térmicos que pueden afectar la precisión; posible interferencia en el circuito, especialmente en aplicaciones de alta precisión.
+
+
+- **Sensor de Efecto Hall:**
+  - **Ventajas**: Medición sin contacto, sin interrumpir el circuito, capacidad para medir tanto corrientes continuas (DC) como alternas (AC), aislamiento eléctrico, lo que incrementa la seguridad.
+  - **Limitaciones**: Costo mayor en comparación con el shunt, requiere calibraciones precisas y puede ser sensible a interferencias magnéticas y térmicas, la respuesta y linealidad pueden ser inferiores en aplicaciones de alta precisión.
+
+
+## 5. Driver de Potencia 
+>🔑 *Driver de Potencia:* Es un dispositivo electrónico esencial que actúa como intermediario entre el sistema de control y el motor, transformando señales de bajo voltaje en impulsos de alta potencia. Esto permite ajustar con precisión la velocidad, dirección y aceleración del motor, adaptándolo a las demandas específicas de cada aplicación. Además, incorpora mecanismos de protección que gestionan y limitan la corriente para prevenir sobrecargas y daños en el motor, garantizando un funcionamiento seguro y eficiente. En resumen, el driver de potencia no solo impulsa el motor, sino que también optimiza su desempeño y prolonga su vida útil mediante una adecuada conversión y control de la energía eléctrica.
+
+![Figura de prueba](images/plantilla/puenteh.jpg)
+
+Figura 3. Puente H L298N.
 
 ## 4. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
