@@ -17,12 +17,12 @@ Figura 1. Simscape Multibody.
 
 ![Figura de prueba](images/plantilla/sim0.png)
 
-Figura 2. Simscape Multibody.
+Figura 2. Mechanism Configuration.
 
 
 ![Figura de prueba](images/plantilla/sim1.png)
 
-Figura 3. Simscape Multibody.
+Figura 3. Solver Configuration.
 
 
 ![Figura de prueba](images/plantilla/sim2.png)
@@ -32,13 +32,14 @@ Figura 4. Simscape Multibody.
 
 ![Figura de prueba](images/plantilla/sim3.png)
 
-Figura 5. Simscape Multibody.
+Figura 5. Brick Solid.
 
 
 
 ![Figura de prueba](images/plantilla/Ejerciciosim.gif)
 
-Figura 5. Simscape Multibody.
+Figura 6. Simscape Multibody Simulación.
+
 ## 10. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
