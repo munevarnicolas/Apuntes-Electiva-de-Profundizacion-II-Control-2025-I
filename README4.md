@@ -49,7 +49,7 @@ Simulación del mecanismo de péndulo :
 Figura 6. Simscape Multibody Simulación.
 
 ## 4. Conclusiones
-Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
+La clase ofreció una introducción al mundo de Simscape Multibody y su aplicación en el modelado y simulación de sistemas mecánicos tridimensionales en MATLAB/Simulink. Se aprendió a utilizar bloques esenciales como el Mechanism Configuration, que permite definir parámetros críticos de la simulación, incluyendo el vector de gravedad y la orientación de los marcos de referencia, y el Solver Configuration, que garantiza la precisión y estabilidad al integrar las ecuaciones del sistema. Además, se destacó el uso del bloque Brick Solid para representar de forma realista cuerpos rígidos, lo que en conjunto con la integración de diversas bibliotecas multidominio, facilita el análisis dinámico de mecanismos complejos. Esta integración de componentes y la visualización en 3D facilitan la comprensión de la dinámica de sistemas complejos, lo que resulta especialmente útil en el diseño y análisis de mecanismos en campos tan variados como la robótica y la ingeniería.
 
 ## 5. Referencias
 - [1] *Apuntes Clase - Jueves 20 Febrero 2025.*  
