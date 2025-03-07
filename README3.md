@@ -222,14 +222,19 @@ En un servomecanismo, el objetivo es controlar con precisión variables como la 
 
 Figura 3. Puente H L298N.
 
-## 4. Ejercicios
+## 6. SPWM e Inversores
+
+Los SPWM (Modulación por Ancho de Pulso Sinusoidal) son una técnica de control que permite generar una forma de onda senoidal a partir de pulsos de tensión modulados, siendo muy utilizada en aplicaciones de conversión de energía para mejorar la calidad de la señal de salida. Por otro lado, los inversores son dispositivos electrónicos que convierten la energía de corriente continua (DC) en corriente alterna (AC). En conjunto, el SPWM se emplea comúnmente en inversores para controlar la forma de la onda de salida, facilitando el funcionamiento de motores y otros sistemas eléctricos con características de eficiencia y precisión en la conversión de energía.
+
+
+## 7. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
 
 
-## 5. Conclusiones
+## 8. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
-## 6. Referencias
+## 9. Referencias
 - [1] *Apuntes Clase - Jueves 20 Febrero 2025.*  
 - [2] *CHAPMAN. 2005. Maquinas eléctricas. Madrid: McGraw-Hill Interamericana.*  
 - [3] *LANGSDORF. 1968. Principios de las maquinas de corriente continua. McGrawHill.*  
