@@ -120,8 +120,8 @@ Tabla 3. Tabla de Sintonización lazo cerrado Hang.
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
 ## 5. Referencias
-- [1] *Apuntes Clase - Jueves 13 Febrero 2025*  
-- [2] *Ingeniería de control moderna. Ogata, K*  
-- [3] *Diseño de sistemas de control analógicos y digitales. Chen*  
-- [4] *Controladores PID: Teoría, diseño y sintonización. Astrom, K*
-- [5] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci*
+- [1] *Apuntes Clase - Jueves 13 Febrero 2025.*  
+- [2] *Ingeniería de control moderna. Ogata, K.*  
+- [3] *Diseño de sistemas de control analógicos y digitales. Chen.*  
+- [4] *Controladores PID: Teoría, diseño y sintonización. Astrom, K.*
+- [5] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
