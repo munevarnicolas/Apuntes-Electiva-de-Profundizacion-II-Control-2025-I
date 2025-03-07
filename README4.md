@@ -1,11 +1,13 @@
 # Simscape Multibody
 Esta clase se realizo el dia 27 de Febrero de 2025, la clase estuvo diridgida a hacer una introducción al software Simscape Multibody en el entorno de desarrollo y programación de Matlab.
-## 1. Subtítulos
-Agregue todos los subtítulos que considere necesarios para estructurar el contenido de la clase. Es importante que considere jerarquías de los temas para definir el orden de estos subtítulos. Cada subtítulo debe ir numerado como una sección, de la manera en que lo presenta esta plantilla
+## 1. ¿Que es?
+>🔑 *Simscape Multibody:* Es un entorno de modelado y simulación que forma parte de MATLAB/Simulink, desarrollado por MathWorks.
+
+El cual permite a los ingenieros y científicos crear modelos de sistemas mecánicos en 3D de forma gráfica, a partir de bloques que representan cuerpos rígidos, uniones (juntas), engranajes, resortes, amortiguadores, entre otros componentes. Gracias a esta aproximación basada en bloques, se facilita la comprensión y la colaboración multidisciplinaria, permitiendo construir sistemas complejos sin necesidad de programar cada ecuación de manera explícita. Además, Simscape Multibody se integra con otras bibliotecas de Simscape (eléctrica, térmica, hidráulica, etc.), brindando la posibilidad de simular sistemas multidominio de manera coherente en un mismo entorno. En este entorno, los usuarios pueden analizar el comportamiento dinámico de sus modelos, visualizar en 3D los movimientos y calcular esfuerzos, torques y restricciones en tiempo real. Esto resulta especialmente útil en el diseño de robots, maquinaria industrial, mecanismos automotrices y cualquier sistema donde la dinámica mecánica sea relevante. Asimismo, la herramienta ofrece opciones de postprocesado y generación de informes, facilitando la interpretación de resultados y la toma de decisiones en etapas tempranas del diseño.
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
+ descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
 
 ## 3. Subsecciones
 Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
