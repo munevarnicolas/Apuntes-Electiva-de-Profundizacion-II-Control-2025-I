@@ -118,12 +118,46 @@ Figura 5. Motor AC Síncrono.
 
 Tabla 1. Tabla de comparación entre tipos de motores AC y DC.
 
-## 3. Subsecciones
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
-### 3.1. Título de subsecciones
-Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
-### 3.2. Numeración de subsecciones
-Siga la numeración de la sección seguida de un punto y luego el número de la subsección.
+## 3. Modelo por corriente de armadura
+
+Es un enfoque matemático para describir y analizar el comportamiento dinámico de un motor DC centrándose en la corriente que circula por la armadura. Este modelo utiliza las leyes fundamentales de circuitos eléctricos y mecánicos para establecer las relaciones entre:
+
+- **Voltaje aplicado:** La tensión que se aplica al motor.
+- **Corriente de armadura:** La corriente que circula por los devanados del rotor (armadura) y que genera el campo magnético responsable de producir el torque.
+- **Resistencia e inductancia de la armadura:** Que afectan cómo varía la corriente en función del tiempo.
+- **Fuerza contraelectromotriz (back EMF):** Una tensión generada por el movimiento del rotor en el campo magnético, que se opone al voltaje aplicado y depende de la velocidad de rotación.
+- **Torque:** El resultado mecánico que impulsa el movimiento del motor.
+
+
+**Parte Eléctrica:**
+$$v_a = L_a \frac{d i_a}{dt} + R_a \, i_a + V_b$$
+
+**Parte Magnética:**
+
+$$T_m = (K_a \, K_c \, I_c)\, i_a(t) = K_\tau \, i_a(t)$$
+
+$$V_b = K_e  \omega$$
+
+$$T_m = T_c + T_p$$
+
+**Parte Mecánica:**
+
+$$J \frac{d^2 \theta}{dt^2} + b \frac{d \theta}{dt} + k \theta = \tau(t)$$
+
+
+$$
+L_a \frac{d \Bigl(\frac{J \ddot{\theta} + b \dot{\theta} + k \theta}{K_\tau}\Bigr)}{dt}
+\+\
+R_a \Biggl(\frac{J \ddot{\theta} + b \dot{\theta} + k \theta}{K_\tau}\Biggr)
+\+\
+K_e \dot{\theta}
+\=\
+v_a
+$$
+
+
+Este modelo es especialmente útil en aplicaciones de control, ya que permite predecir la respuesta del motor a cambios en el voltaje o en la carga y facilita el diseño de sistemas de control que aseguren un funcionamiento preciso y estable del motor DC.
+
 
 ## 4. Ejemplos
 Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
