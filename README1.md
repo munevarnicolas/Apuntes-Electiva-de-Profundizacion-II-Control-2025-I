@@ -180,6 +180,6 @@ Aquí tienes tu texto en formato de viñetas en Markdown:
 - [2] *Ingeniería de control moderna. Ogata, K*  
 - [3] *Diseño de sistemas de control analógicos y digitales. Chen*  
 - [4] *Controladores PID: Teoría, diseño y sintonización. Astrom, K*  
-
+- [5] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci*
 
 
