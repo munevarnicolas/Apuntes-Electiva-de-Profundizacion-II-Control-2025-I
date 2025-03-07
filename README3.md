@@ -158,11 +158,11 @@ $$
 
 ![Figura de prueba](images/plantilla/ejemplomotor.png)
 
-Figura 1. dgfds
+Figura 1. Modelo de Motor DC.
 
 ![Figura de prueba](images/plantilla/ejemplomotor2.png)
 
-Figura 2. Ffdf
+Figura 2. Modelo de Motor DC.
 
 Este modelo es especialmente útil en aplicaciones de control, ya que permite predecir la respuesta del motor a cambios en el voltaje o en la carga y facilita el diseño de sistemas de control que aseguren un funcionamiento preciso y estable del motor DC.
 
