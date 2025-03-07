@@ -15,9 +15,14 @@ Figura 1. Simscape Multibody.
 
 📚Ejercicio 1:
 
+El bloque **Mechanism Configuration** en Simscape Multibody permite definir parámetros esenciales para la simulación, tales como el vector de gravedad, configuraciones numéricas del solucionador y la orientación de los marcos de referencia, además de ajustar opciones avanzadas que influyen en la modelación de conexiones y restricciones, lo que resulta fundamental para personalizar y optimizar el comportamiento dinámico de sistemas mecánicos complejos.
+
 ![Figura de prueba](images/plantilla/sim0.png)
 
 Figura 2. Mechanism Configuration.
+
+
+El bloque Solver Configuration en Simscape Multibody se encarga de definir y ajustar los parámetros numéricos que controlan el proceso de integración de las ecuaciones del sistema, estableciendo tolerancias, el tipo de integrador y la gestión de los pasos de tiempo, lo que garantiza que la simulación se ejecute de manera precisa, estable y eficiente.
 
 
 ![Figura de prueba](images/plantilla/sim1.png)
@@ -30,11 +35,14 @@ Figura 3. Solver Configuration.
 Figura 4. Simscape Multibody.
 
 
+El bloque Brick Solid en Simscape Multibody permite modelar un sólido con forma rectangular, facilitando la definición de sus dimensiones, masa, centro de masa y propiedades inerciales, lo que resulta esencial para representar cuerpos rígidos de forma realista dentro de una simulación multibody.
+
 ![Figura de prueba](images/plantilla/sim3.png)
 
 Figura 5. Brick Solid.
 
 
+Simulación del mecanismo de péndulo :
 
 ![Figura de prueba](images/plantilla/Ejerciciosim.gif)
 
