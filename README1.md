@@ -172,8 +172,6 @@ Figura 14. Máquina de Etiquetado.
 ## 8. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
-Aquí tienes tu texto en formato de viñetas en Markdown:  
-
 
 ## 9. Referencias  
 - [1] *Apuntes Clase - Jueves 6 Febrero 2025*  
