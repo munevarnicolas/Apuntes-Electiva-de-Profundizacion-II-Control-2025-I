@@ -77,4 +77,6 @@ Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas t
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
 ## 11. Referencias
-[1] MathWorks, "Simscape Multibody
+- [1] *Apuntes Clase - Jueves 20 Febrero 2025.*  
+- [2] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
+- [3] *MathWorks, Simscape Multibody*
