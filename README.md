@@ -35,4 +35,5 @@ Clase 1, pre-requsitos, contenido y evaluación para la materia en el periodo 20
 - Laboratorio (10%): <br/>
 
 ## 4. Referencias
-[1] "Apuntes Clase - Martes 4 Febrero 2025"
+- [1] "Apuntes Clase - Martes 4 Febrero 2025"
+- [2] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci*
