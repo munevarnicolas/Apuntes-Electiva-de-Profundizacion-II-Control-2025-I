@@ -1,4 +1,4 @@
-# Motores y Sensores
+![image](https://github.com/user-attachments/assets/e715c27c-73d1-4952-9ef4-6a61fc7f9bc7)# Motores y Sensores
 Esta clase se realizo el dia jueves 20 de Febrero de 2025, la clase estuvo dirigida a comprender los motores y sus carateristicas, adicional se trabajo un poco sobre el software Simscape realizando modelos y validaciones de los motores; ademas se analizo algunos sensores en servomecanismo como lo son los encoders.
 ## 1. ¿Que es un Servomotor?
 >🔑 *Servomotor:* Es un tipo de motor diseñado para el control preciso de la posición, velocidad y aceleración.
@@ -128,6 +128,7 @@ Es un enfoque matemático para describir y analizar el comportamiento dinámico 
 - **Fuerza contraelectromotriz (back EMF):** Una tensión generada por el movimiento del rotor en el campo magnético, que se opone al voltaje aplicado y depende de la velocidad de rotación.
 - **Torque:** El resultado mecánico que impulsa el movimiento del motor.
 
+💡**Ejemplo 1:**
 
 **Parte Eléctrica:**
 $$v_a = L_a \frac{d i_a}{dt} + R_a \, i_a + V_b$$
