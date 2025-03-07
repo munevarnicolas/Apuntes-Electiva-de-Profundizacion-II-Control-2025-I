@@ -18,11 +18,11 @@ Figura 2. Motor Eléctrico.
 
 - **Motores DC**
 
-![Figura de prueba](images/plantilla/motordc.jpg)
+![Figura de prueba](images/plantilla/dcmotor.jpg)
 
 Figura 3. Motor DC.
 - **Motores AC inducción**
-  ![Figura de prueba](images/plantilla/motoracinduc.jpg)
+  ![Figura de prueba](images/plantilla/motordcinduc.jpg)
 
 Figura 4. Motor AC Inducción.
 - **Motores AC Síncronos**
