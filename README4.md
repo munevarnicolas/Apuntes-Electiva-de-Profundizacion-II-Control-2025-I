@@ -12,10 +12,33 @@ Figura 1. Simscape Multibody.
 
 
 ## 3. Ejercicios
-📚
+
+📚Ejercicio 1:
+
+![Figura de prueba](images/plantilla/sim0.png)
+
+Figura 2. Simscape Multibody.
+
+
+![Figura de prueba](images/plantilla/sim1.png)
+
+Figura 3. Simscape Multibody.
+
+
+![Figura de prueba](images/plantilla/sim2.png)
+
+Figura 4. Simscape Multibody.
+
+
+![Figura de prueba](images/plantilla/sim3.png)
+
+Figura 5. Simscape Multibody.
+
+
+
 ![Figura de prueba](images/plantilla/Ejerciciosim.gif)
 
-Figura 1. Simscape Multibody.
+Figura 5. Simscape Multibody.
 ## 10. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
