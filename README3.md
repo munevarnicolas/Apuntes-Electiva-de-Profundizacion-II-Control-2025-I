@@ -60,7 +60,7 @@ Figura 3. Motor DC.
 
 Figura 4. Motor AC Inducción.
 
-#### Partes de un Motor AC Induccion:
+#### Partes de un Motor AC Inducción:
 
 **1. Estator:**  
   - Es la parte fija del motor. Contiene las bobinas (o devanados) por las que circula la corriente eléctrica alterna, creando un campo magnético rotatorio.
@@ -84,15 +84,27 @@ Figura 4. Motor AC Inducción.
 
 Figura 5. Motor AC Síncrono.
 
+#### Partes de un Motor Síncronos:
 
+**1. Estator:**  
+  - Contiene los devanados alimentados por corriente alterna que generan un campo magnético rotatorio.
 
+**2. Rotor:**  
+  - Es la parte móvil del motor. Puede ser:
+  - **Rotor con polos salientes:** Utilizado en aplicaciones de bajas velocidades y alta eficiencia en el uso de la excitación.
+  - **Rotor cilíndrico:** Con forma lisa, normalmente empleado en aplicaciones de alta velocidad.  
+  En ambos casos, el rotor se excita mediante corriente continua en sus devanados o mediante imanes permanentes, creando un campo magnético que se alinea con el del estator.
 
+**3. Sistema de excitación:**  
+  - En motores con rotor electromagnético, se utiliza un sistema que suministra corriente continua a los devanados del rotor para generar el campo magnético.
 
+**4. Carcasa y componentes mecánicos:**  
+  - Incluyen el bastidor, los cojinetes y los sistemas de refrigeración, que protegen y facilitan el funcionamiento del motor.
 
+**5. Terminales y conexiones eléctricas:**  
+  Permiten la conexión del motor al suministro eléctrico y a los sistemas de control.
 
-
-
-
+### Comparación entre Tipos de Motores:
 
 | Característica               | Motor DC                                                                                                                                                          | Motor AC Síncrono                                                                                                                                                         | Motor AC de Inducción                                                                                                                                                  |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,7 +116,7 @@ Figura 5. Motor AC Síncrono.
 | **Costo y Complejidad**      | Pueden implicar mayor costo y complejidad en sistemas de control preciso, en particular los sin escobillas.                                                         | Su costo y complejidad son mayores por la necesidad de sistemas de excitación y control, lo que puede aumentar la inversión inicial y el mantenimiento.                  | Generalmente más económicos y robustos, siendo la opción preferida para muchas aplicaciones industriales a pesar de requerir controladores en ciertos casos.          |
 
 
-
+Tabla 1. Tabla de comparación entre tipos de motores AC y DC.
 
 ## 3. Subsecciones
 Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
