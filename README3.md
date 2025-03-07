@@ -75,4 +75,8 @@ Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas t
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
 ## 11. Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
+- [1] *Apuntes Clase - Jueves 20 Febrero 2025.*  
+- [2] *CHAPMAN. 2005. Maquinas eléctricas. Madrid: McGraw-Hill Interamericana.*  
+- [3] *LANGSDORF. 1968. Principios de las maquinas de corriente continua. McGrawHill.*  
+- [4] *SERRANO IRIBARNEGARAY. 1989: Fundamentos de maquinas eléctricas rotativas. Marcombo.*
+- [5] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
