@@ -113,10 +113,10 @@ El método propuesto por Hang en 1994 ofrece una forma sistemática de sintoniza
 Tabla 3. Tabla de Sintonización lazo cerrado Hang.
 
 
-## 4. Conclusiones
+## 3. Conclusiones
 La clase de Control Cascada abordó en profundidad la estrategia de implementar dos lazos de control en serie, permitiendo que el lazo interno, de respuesta más rápida, suavize eficazmente las perturbaciones antes de que incidan en la variable principal, la cual es regulada por el lazo externo. De acuerdo con lo expuesto en el libro Principles and Practice of Automatic Process Control, este enfoque no solo mejora la estabilidad y precisión del sistema, sino que también optimiza su desempeño global al separar claramente las dinámicas rápidas y lentas del proceso. La implementación de métodos de sintonización en lazo abierto, como el método de Austin, y en lazo cerrado, basado en técnicas con relé (método de Hang), destaca la importancia de ajustar empírica y sistemáticamente los parámetros de ambos controladores, asegurando una operación coordinada que compensa de manera eficiente las perturbaciones y mantiene la estabilidad del sistema. La utilización del control en cascada es esencial para lograr un desempeño robusto en procesos complejos como lo son los mas comunes en diversas industrias, ya que permite una respuesta ágil ante variaciones en las condiciones del proceso y garantiza un control de alta precisión. Este enfoque, especialmente relevante en entornos de control digital, se fundamenta en la implementación de controladores PID en cada uno de los lazos: el lazo interno, con su controlador PID, actúa de forma rápida para atenuar las perturbaciones en las variables intermedias, mientras que el lazo externo, también gestionado por un PID, se enfoca en mantener la estabilidad y precisión de la variable principal del proceso.
 
-## 5. Referencias
+## 4. Referencias
 - [1] *Apuntes Clase - Jueves 13 Febrero 2025.*  
 - [2] *Ingeniería de control moderna. Ogata, K.*  
 - [3] *Diseño de sistemas de control analógicos y digitales. Chen.*  
