@@ -48,84 +48,72 @@ Figura 6.  Diagrama de bloques del proceso de control cascada del precalentador/
 >
 >🔑 *Lazo Cerrado:* Un sistema en lazo cerrado toma la salida del proceso y la compara con la señal de referencia para conocer en todo momento la evolución de la variable.
 
-## 2. Definiciones
-Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
+### 1) Sintonización en Lazo Abierto
 
-## 3. Subsecciones
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
-### 3.1. Título de subsecciones
-Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
-### 3.2. Numeración de subsecciones
-Siga la numeración de la sección seguida de un punto y luego el número de la subsección.
+En este método se realizan pruebas de respuesta (por ejemplo, aplicando una señal rampa o escalón) para identificar las características dinámicas del sistema, sin utilizar la retroalimentación activa durante la sintonización. Esto permite ajustar los parámetros del controlador basándose en el comportamiento observado.
 
-## 4. Ejemplos
-Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
+### Procedimiento:
+#### Sintonización del Lazo Secundario:
 
-## 5. Ecuaciones
-Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
+- **Prueba de respuesta:**  
+  Se aplica una señal de entrada al lazo interno y se observa la respuesta de la variable controlada.
 
-$$
-1.4 \left[\frac{1 + K_{c2} K_2}{K_{c2} K_1}\right]
-\left[\frac{t_{0.1}}{\tau_1}\right]^{-1.14}
-\left[\frac{\tau_2}{\tau_1}\right]^{0.1}
-$$
+- **Identificación de parámetros:**  
+  Se extraen parámetros como el tiempo de respuesta, ganancia y constante de tiempo. Estos datos permiten modelar el comportamiento del lazo interno.
 
-💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
+- **Ajuste del controlador:**  
+  Con base en el modelo obtenido, se seleccionan los parámetros del controlador (por ejemplo, mediante métodos empíricos) para que el lazo interno responda de manera rápida y estable.
 
-$$R=\frac{V}{I}$$
+#### Sintonización del Lazo Primario:
 
-## 6. Figuras
-Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las figuras de las presentaciones**. Para incluir figuras puede seguir los siguientes pasos:
-* Primero escribimos ![]().
-* Después escribimos, dentro de los corchetes, el texto alternativo. Este es opcional y solo entra en acción cuando no se puede cargar la imagen correctamente.
-* Después escribimos, dentro de los paréntesis, la ubicación del archivo (ya sea una url o una ubicación dentro de algun folder local). Se recomienda poner las imágenes en una carpeta que se llame imágenes dentro del repositorio github para que no tengan problemas al cargar las imágenes.
+- **Referencia al lazo secundario:**  
+  Una vez sintonizado el lazo secundario, se procede a ajustar el controlador del lazo primario, considerando que la salida del lazo secundario es la entrada del lazo externo.
 
-💡**Ejemplo 2:**
+- **Prueba de sistema completo:**  
+  Se aplica una perturbación o cambio en la variable principal y se observa la respuesta global del sistema en cascada.
 
-![Figura de prueba](images/plantilla/Captura2.PNG)
+- **Ajuste fino:**  
+  Se realizan ajustes adicionales en el controlador externo para minimizar el error entre la variable principal y su referencia, optimizando la interacción con el lazo secundario.
 
-Figura 1. Figura de prueba
 
-Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
+#### 2) Sintonización en Lazo Abierto de Austin:
 
-## 7. Tablas
-En caso de necesitar la inclusión de tablas para organizar información se recomienda el uso de la herramienta del siguiente enlace https://www.tablesgenerator.com/markdown_tables , la cual permite organizar la información dentro de la tabla y genera el código markdown automáticamente:
+El método de sintonización en lazo abierto de Austin ofrece una forma práctica de ajustar sistemas en cascada, permitiendo calibrar tanto el controlador primario como el secundario a partir de una única prueba experimental. Esta técnica se basa en aplicar una señal de entrada al sistema y analizar la respuesta obtenida para determinar los parámetros dinámicos fundamentales, lo que elimina la necesidad de múltiples pruebas para cada lazo de control. Con los datos obtenidos, se desarrollan ecuaciones específicas para ajustar el controlador primario, que puede configurarse como PI o PID, considerando que el controlador secundario opera como P o PI. Estas ecuaciones permiten compensar las características del lazo secundario, asegurando que la respuesta del sistema sea rápida y estable, y facilitando una integración coherente entre ambos niveles de control. La principal ventaja de este método es su simplicidad y eficiencia, ya que reduce el tiempo y la complejidad del proceso de sintonización en sistemas donde las condiciones del proceso son relativamente estables. En definitiva, la metodología de Austin proporciona una solución robusta y práctica para optimizar el desempeño global de sistemas en cascada, coordinando de manera efectiva el ajuste de ambos controladores con una sola prueba.
 
-💡**Ejemplo 3:** 
+**Usar esta tabla si** $$\(\frac{\tau_2}{\tau_1} > 0.38\)$$
 
-| **Resultado** | **x = número de intentos hasta primer éxito** |
-|---------------|-----------------------------------------------|
-|       S       |                       1                       |
-|       FS      |                       2                       |
-|      FFS      |                       3                       |
-|      ...      |                      ...                      |
-|    FFFFFFS    |                       7                       |
-|      ...      |                      ...                      |
+| **PRIMARY** $$\( G_{c1}(s) \)$$ | PI | PID |
+|-----------|-----------|-----------|
+| **SECONDARY** $$\( G_{c2}(s) \)$$   | $$\(\tau_{I1} = \tau_{1}\)$$ <br>  $$\(K_{c1}\)$$ | $$\(\tau_{I1} = \tau_{1}\);$$ $$\(\tau_{D1} = \frac{t_{0,1} - \tau_{2}}{2}\)$$ <br> $$\(K_{c1}\)$$ |
+| P   | $$\( 1.4 \left[ \frac{1 + K_{c2} \ K_2}{K_{c2} \ K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.14} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$ | $$\( 1.4 \left[ \frac{1 + K_{c2} \ K_2}{K_{c2} \ K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.14} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$|
+| PI    | $$\( 1.25 \left[ \frac{K_2}{K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.07} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$ | $$\( 1.25 \left[ \frac{K_2}{K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.07} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$ |
+| Range   | $$\( 0.02 \le \frac{\tau_2}{\tau_1} \le 0.38 \)$$  <br> $$\( t_{o2} \le t_{o1} \)$$ | $$\( 0.02 \le \frac{\tau_2}{\tau_1} \le 0.38 \)$$  <br> $$\( t_{o2} \le t_{o1} \)$$  <br>  $$\frac{t_{o1} - \tau_2}{2} \ge 0.08\$$ |
 
-Tabla 1. Tabla de ejemplo
+Tabla 1. Tabla de Sintonización lazo abierto Austin para valores $$\(\frac{\tau_2}{\tau_1} > 0.38\)$$.
 
-Cada tabla debe llevar la etiqueta que describa su contenido y numeración consecutiva para todas las tablas
 
-## 8. Código
-Teniendo en cuenta que el curso requiere del desarrollo de código matlab, c, c++ u otro. Si requiere incluir pequeños segmentos de código en los apuntes hágalos de la siguiente manera:
+| **PRIMARY** $$\( G_{c1}(s) \)$$ | PI | PID |
+|-----------|-----------|-----------|
+| **SECONDARY** $$\( G_{c2}(s) \)$$ | $$\(\tau_{I1} = \tau_{1}\)$$ <br>  $$\(K_{c1}\)$$ | $$\(\tau_{I1} = \tau_{1}\);$$ $$\(\tau_{D1} = \frac{t_{0,1} - \tau_{2}}{2}\)$$ <br> $$\(K_{c1}\)$$  |
+| P   | $$\( 0.84 \left[ \frac{1 + K_{c2} \ K_2}{K_{c2} \ K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.14} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$ | $$\( 1.17 \left[ \frac{1 + K_{c2} \ K_2}{K_{c2} \ K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.14} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \) $$ |
+| PI    | $$\( 0.75 \left[ \frac{K_2}{K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.07} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$ |  $$\( 1.04 \left[ \frac{K_2}{K_1} \right] \left[ \frac{t_{o1}}{\tau_1} \right]^{-1.07} \left[ \frac{\tau_2}{\tau_1} \right]^{0.1} \)$$ |
+| Range    | $$\( 0.02 \le \frac{\tau_2}{\tau_1} \le 0.65 \)$$  <br> $$\( t_{o2} \le t_{o1} \)$$ | $$\( 0.02 \le \frac{\tau_2}{\tau_1} \le 0.35 \)$$  <br> $$\( t_{o2} \le t_{o1} \)$$  <br>  $$\frac{t_{o1} - \tau_2}{2} \ge 0.08\$$ |
 
-💡**Ejemplo 4:**
-```
-var sumar2 = function(numero) {
-  return numero + 2;
-}
-```
+Tabla 2. Tabla de Sintonización lazo abierto Austin.
 
-## 9. Ejercicios
-Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
+### 2) Sintonización en Lazo Cerrado
+El método propuesto por Hang en 1994 ofrece una forma sistemática de sintonizar controladores en cascada mediante pruebas de lazo cerrado con relé. En un sistema de control en cascada, el lazo secundario se encarga de corregir perturbaciones rápidamente, mientras que el lazo primario regula la variable de proceso principal. La propuesta de Hang consiste en obtener la ganancia crítica y la frecuencia de oscilación del sistema a partir de las oscilaciones generadas por el relé, lo que permite ajustar los parámetros de ambos controladores de manera ordenada y con una base empírica sólida. El procedimiento comienza con la sintonización del lazo interno: se realiza una prueba de lazo cerrado con relé en la parte interna del sistema para determinar la ganancia crítica y la frecuencia de oscilación. Con estos valores, se ajusta el controlador secundario utilizando reglas de sintonización como Ziegler-Nichols modificadas o métodos de optimización específicos. Luego, se cierra el lazo secundario con el controlador recién ajustado y se repite la prueba de relé para el lazo externo, obteniendo así nuevos valores de ganancia crítica y frecuencia de oscilación que reflejan la dinámica del sistema con el lazo interno activo. Finalmente, se ajusta el controlador primario para asegurar un desempeño estable y robusto. Tanto la simntonizacion del lazo secundario como el primario se hace con respesto a la siguientre tabla:
 
-## Rúbrica
-| 0-1                                                                                   | 1-2                                                                                  | 2-3                                                                                                                                                                               | 3-4                                                                                                                                                                       | 4-5                                                                                                                                                                               |
-|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Presenta menos del 10% de los temas o no presenta por  el medio y formato  solicitado | Presenta menos del 40% de los temas solicitados, y  cumple parcialmente la plantilla | Presenta menos del 60% de los temas solicitados (con descripciones, gráficos tablas, etc), y cumple  parcialmente la plantilla. No presenta la totalidad  de ejercicios resueltos | Presenta menos del 80% de los temas solicitados (con descripciones, gráficos, tablas, etc) y cumple con  la plantilla. No presenta  la totalidad de ejercicios  resueltos | Presenta el 100% de los temas vistos en clase (con descripciones, gráficos, tablas, etc), siguiendo totalmente la plantilla. presenta la  totalidad de los ejercicios solicitados |
+| Controller | $$\(K_p\)$$        | $$\(T_i\)$$            | $$\(T_d\)$$              |
+|------------|-----------------|------------------------|----------------------|
+| **P**      | $$\(0.5\,K_{cr}\)$$ | $$\(\infty\)$$            | $$\(0\)$$                |
+| **PI**     | $$\(0.45\,K_{cr}\)$$ | $$\(\frac{P_{cr}}{1.2}\)$$ | $$\(0\)$$               |
+| **PID**    | $$\(0.6\,K_{cr}\)$$ | $$\(\frac{P_{cr}}{2}\)$$  | $$\(0.125\,P_{cr}\)$$    |
 
-## 10. Conclusiones
+Tabla 3. Tabla de Sintonización lazo cerrado Hang.
+
+
+## . Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
 ## 11. Referencias
