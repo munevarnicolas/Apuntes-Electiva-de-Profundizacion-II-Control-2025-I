@@ -48,10 +48,10 @@ Simulación del mecanismo de péndulo :
 
 Figura 6. Simscape Multibody Simulación.
 
-## 10. Conclusiones
+## 4. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
-## 11. Referencias
+## 5. Referencias
 - [1] *Apuntes Clase - Jueves 20 Febrero 2025.*  
 - [2] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
 - [3] *MathWorks, Simscape Multibody*
