@@ -17,9 +17,18 @@ Figura 2. Motor Eléctrico.
 ### Tipos de Motores:
 
 - **Motores DC**
-- **Motores AC inducción**
-- **Motores AC Síncronos**
 
+![Figura de prueba](images/plantilla/motordc.jpg)
+
+Figura 3. Motor DC.
+- **Motores AC inducción**
+  ![Figura de prueba](images/plantilla/motoracinduc.jpg)
+
+Figura 4. Motor AC Inducción.
+- **Motores AC Síncronos**
+![Figura de prueba](images/plantilla/motoracsincro.jpg)
+
+Figura 3. Motor AC Síncrono.
 
 ## 3. Subsecciones
 Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
