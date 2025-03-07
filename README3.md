@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e715c27c-73d1-4952-9ef4-6a61fc7f9bc7)# Motores y Sensores
+# Motores y Sensores
 Esta clase se realizo el dia jueves 20 de Febrero de 2025, la clase estuvo dirigida a comprender los motores y sus carateristicas, adicional se trabajo un poco sobre el software Simscape realizando modelos y validaciones de los motores; ademas se analizo algunos sensores en servomecanismo como lo son los encoders.
 ## 1. ¿Que es un Servomotor?
 >🔑 *Servomotor:* Es un tipo de motor diseñado para el control preciso de la posición, velocidad y aceleración.
@@ -156,6 +156,13 @@ K_e \dot{\theta}
 v_a
 $$
 
+![Figura de prueba](images/plantilla/ejemplomotor.png)
+
+Figura 1. dgfds
+
+![Figura de prueba](images/plantilla/ejemplomotor2.png)
+
+Figura 2. Ffdf
 
 Este modelo es especialmente útil en aplicaciones de control, ya que permite predecir la respuesta del motor a cambios en el voltaje o en la carga y facilita el diseño de sistemas de control que aseguren un funcionamiento preciso y estable del motor DC.
 
