@@ -231,14 +231,10 @@ Los SPWM (Modulación por Ancho de Pulso Sinusoidal) son una técnica de control
 
 Figura 4. Sinusoidal Pulse Width Modulation.
 
-## 7. Ejercicios
-Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
+## 7. Conclusiones
+En conclusión, la clase sobre Motores y Sensores ofreció un alcance integral al analizar en profundidad tanto los fundamentos teóricos como las aplicaciones prácticas en el diseño y control de motores eléctricos, apoyándose en conceptos fundamentales presentados en *Fundamentos de máquinas eléctricas rotativas* (Serrano Iribarnegaray, 1989). Se exploraron las características esenciales y componentes de motores de corriente continua y alterna tales como estator, rotor, conmutador y devanados para comprender cómo se transforma la energía eléctrica en movimiento mecánico. Además, se destacó el modelado mediante la corriente de armadura, una herramienta crucial que permite predecir el comportamiento dinámico y facilitar el diseño de sistemas de control precisos, validado y optimizado mediante simulaciones en entornos como Simscape. Adicional a esto se destaco la importancia de los sensores en servomecanismos, tales como encoders, potenciómetros y sensores Hall, para proporcionar retroalimentación precisa en la medición de variables críticas como posición, velocidad y torque. Finalmente, se subrayó la relevancia de los drivers de potencia y las técnicas de modulación por ancho de pulso sinusoidal (SPWM) en la conversión y control eficiente de la energía, elementos indispensables para asegurar un funcionamiento seguro, eficiente y duradero en aplicaciones y entornos industriales.
 
-
-## 8. Conclusiones
-Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
-
-## 9. Referencias
+## 8. Referencias
 - [1] *Apuntes Clase - Jueves 20 Febrero 2025.*  
 - [2] *CHAPMAN. 2005. Maquinas eléctricas. Madrid: McGraw-Hill Interamericana.*  
 - [3] *LANGSDORF. 1968. Principios de las maquinas de corriente continua. McGrawHill.*  
