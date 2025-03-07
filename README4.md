@@ -13,7 +13,7 @@ Figura 1. Simscape Multibody.
 
 ## 3. Ejercicios
 📚
-![Figura de prueba](images/plantilla/ejerciciosim.gif)
+![Figura de prueba](images/plantilla/Ejerciciosim.gif)
 
 Figura 1. Simscape Multibody.
 ## 10. Conclusiones
