@@ -112,9 +112,11 @@ El método propuesto por Hang en 1994 ofrece una forma sistemática de sintoniza
 
 Tabla 3. Tabla de Sintonización lazo cerrado Hang.
 
+## 3. Ejercicios
 
-## . Conclusiones
+### 📚Ejercicio 1:
+
+## 4. Conclusiones
 Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
 
-## 11. Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo
+## 5. Referencias
