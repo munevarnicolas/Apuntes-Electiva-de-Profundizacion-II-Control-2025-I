@@ -16,7 +16,7 @@ El control de movimiento se usa ampliamente en todo tipo de industrias, incluida
 
 💡**Ejemplo 1:**
 
-![Figura de prueba](images/plantilla/cnc.jpg)
+![Figura de prueba](images/plantilla.cnc.jpg)
 
 Figura 1. Máquina CNC.
 
