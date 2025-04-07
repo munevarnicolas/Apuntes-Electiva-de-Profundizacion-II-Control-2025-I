@@ -1,18 +1,11 @@
-# Control de Movimiento
-Clase 2, Esta clase se llevo a cabo el dias 6 de Febrero de 2025, la cual estuvo dirigida a comprender como el control de movimiento es de gran importancia en las diversas industrias, se comprendió mejor su uso y las aplicaciones que este tiene, adicional se hizo un recorrido breve de como ha avanzado este tipo de control con el pasar del tiempo.
+# Perfiles de Movimiento
+Clase 2, Esta clase se llevo a cabo el dia 20 de Marzo de 2025, la cual estuvo dirigida a comprender los perfiles de movimiento, sus tipos, ejemplos que ayudaron con su comprension y como desde la ingenieria mecatronica se puede controlar este tipo de movimientos de un punto a otro.
 
-## 1. ¿Que es control de Movimiento?
->🔑 *Control de Movimiento:*  Es una disciplina dentro del campo de la automatización y el control que se encarga encarga de regular cómo se mueve un sistema mecánico, asegurando que alcance la posición, velocidad, aceleración o torque deseadas de manera precisa y estable.
 
->🔑 *Posición:* Hace referencia a la disposición en un objeto en el espacio y el tiempo, representado a través de un sistema de coordenadas.
->
->🔑 *Velocidad:* Es una magnitud física que expresa la relación entre el cambio de posición de un objeto y el tiempo empleado para ello, así como su dirección y sentido.
->
->🔑 *Aceleración:* Es una magnitud vectorial que indica cómo varía la velocidad de un objeto en el transcurso del tiempo, tanto en magnitud como en dirección.
->
->🔑 *Torque:* Es la fuerza que se aplica a un objeto para que gire. También se le conoce como momento de fuerza o momento dinámico.
+## 1. ¿Que es perfil de Movimiento?
+>🔑 *Perfil de Movimiento:* Es la trayectoria diseñada para trasladar un punto “A” a un punto “B”, que en su forma más simple es una línea recta en un solo eje, pero que en aplicaciones complejas se construye combinando múltiples ejes y controlando posición, velocidad y aceleración en cada etapa. 
 
-El control de movimiento se usa ampliamente en todo tipo de industrias, incluidas las de embalaje, ensamblaje, textil, papel, impresión, procesamiento de alimentos, productos de madera, maquinaria, electrónica y fabricación de semiconductores. Es el corazón de casi cualquier maquinaria y proceso automatizado. El control de movimiento implica controlar los movimientos mecánicos de una carga.
+Los perfiles son esenciales porque definen de forma precisa la trayectoria, la velocidad y la aceleración que debe seguir un sistema para moverse de un punto a otro. Esto permite programar transiciones suaves y evitar movimientos bruscos, lo que reduce el desgaste mecánico y mejora la precisión. Ajustar estos parámetros es clave para adaptar el comportamiento del sistema a diferentes condiciones o tareas, facilitando la corrección en tiempo real de desviaciones y asegurando un rendimiento óptimo y seguro en aplicaciones tan diversas como la robótica, la manufactura, etc.
 
 💡**Ejemplo 1:**
 
