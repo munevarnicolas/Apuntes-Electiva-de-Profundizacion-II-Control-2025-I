@@ -4,7 +4,7 @@ Para la clase de hoy se presenta el tema de perfiles de movimiento, los cuales d
 ## 1. ¿Qué son perfiles de Movimiento?
 >🔑 *Perfiles de Movimiento:*  Un perfil de movimiento es la descripción técnica de cómo varían en el tiempo la posición, la velocidad y la aceleración de un eje u objeto, asegurando transiciones suaves entre fases de aceleración, velocidad constante y desaceleración.
 
-![Figura de prueba](images/plantilla/erich1.png)
+![erich1](https://github.com/user-attachments/assets/e0894bbd-cfd1-42ab-aeb1-f3e3c62883a5)
 
 Figura 1. Perfil de movimiento.
 
@@ -64,7 +64,7 @@ $$
 t_{\text{total}} = t_a + t_m + t_d = 2 + 3 + 2 = 7\ \text{s}
 $$
 
-![Figura de prueba](images/plantilla/erich1.png)
+![erich2](https://github.com/user-attachments/assets/6d61cdd9-47b5-4629-a93b-ce1cb5dafdf8)
 
 Figura 2. Perfil de movimiento Robot Gantry.
 
@@ -87,6 +87,12 @@ s = 0 + \frac{1}{2}(2)(5^2) = \frac{1}{2} \cdot 2 \cdot 25 = 25\ \text{m}
 $$
 
 La posición del eje después de 5 segundos es $$\boxed{25\ \text{m}}$$
+
+### 📚Ejercicio 2:
+
+Dado el perfil de velocidad de la figura,calcule 𝑠𝐴, 𝑠𝐵, 𝑠𝐶 usando las reglas geométricas y el método analítico del perfil de movimiento.
+
+![image](https://github.com/user-attachments/assets/626782a4-5e51-4b8e-ac0c-d2ece58fd3d8)
 
 
 ## 6. Conclusiones
