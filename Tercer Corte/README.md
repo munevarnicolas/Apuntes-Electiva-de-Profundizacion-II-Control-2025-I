@@ -1,52 +1,27 @@
-# Análisis de motor y control de movimiento
-Para la clase de hoy se presentó una introducción al control de movimiento, dónde se detallan las variables a controlar (Posición, velocidad, aceleración y torque), las aplicaciones y una serie de ejemplos relacionados con la historia del control, dónde se mencionan los métodos previos y las dificultades qué atravezaron para lograr un funcionamiento óptimo.
+# Perfiles de Movimiento
+Para la clase de hoy se presenta el tema de perfiles de movimiento, los cuales describe cómo cambian la posición, velocidad y aceleración de un objeto durante un determinado intervalo de tiempo, vemos algunos ejemplos y ejercicios que sirven para profundizar sobre el tema y su aplicabilidad en control de movimiento.
 
-Se enlistan y describen los elementos físicos que conforman un sistema de control, los problemas actuales que conlleva controlar un motor y se introduce al control de movimiento con el Lazo cascada.
+## 1. ¿Qué son perfiles de Movimiento?
+>🔑 *Perfiles de Movimiento:*  Un perfil de movimiento es la descripción técnica de cómo varían en el tiempo la posición, la velocidad y la aceleración de un eje u objeto, asegurando transiciones suaves entre fases de aceleración, velocidad constante y desaceleración.
 
-**Contenido**
-1. ¿Qué es el control de Movimiento y cómo funciona?
-2. Línea histórica del Control de movimiento y aplicaciones en la industria.
-3. Partes de un sistema de control.
-4. Díficultades del control de motores.
-5. Esquema de control y lazo cascada.
+![Figura de prueba](images/plantilla/erich1.png)
 
-## 1. ¿Qué es el control de Movimiento y cómo funciona?
->🔖 *Definición:* El control de movimiento consiste en la parametrización de las propiedades de la planta y modificación del funcionamiento de uno o varios servomotores para cumplir con un resultado deseado. $^{[1]}$
+Figura 1. Perfil de movimiento.
 
-Para iniciar con el control, se toman mediciones de la entrada, la salida y se genera una retroalimentación para generar cambios en el resultado del sistema. El autor _Asif Šabanovic_ propone una serie de pasos típicos a la hora de diseñar un sistema de control $^{[2]}$:
+Un perfil de movimiento establece la ruta que un punto debe seguir desde el punto “A” hasta el punto “B”, describiendo en cada fase cómo evolucionan su posición, velocidad y aceleración. En el caso más sencillo, con un único eje, esta trayectoria es una línea recta. Para operaciones más complejas se sincronizan varios ejes y se combinan distintos subperfiles, de modo que, al integrarse, realicen la tarea deseada. De este modo, cada subperfil no solo define la geometría del recorrido, sino también las fases de aceleración, velocidad constante y desaceleración en cada eje, asegurando movimientos precisos, fluidos y sin vibraciones.
 
-- Modelar el sistema que se va a controlar y simplificar el modelo para que sea manejable.
-- Decidir las especificaciones de rendimiento y el marco de control que se utilizará.
-- Diseñar un controlador que cumpla las especificaciones, si es posible.
-- Simular el sistema controlado resultante, ya sea en un ordenador o en una planta piloto.
-- Repita el procedimiento si es necesario,
-- Elija el hardware y el software e implemente el controlador.
-- Ponga a punto el controlador en línea si es necesario.
-$^{[Traducción-realizada-con-la-versión-gratuita-del-traductor-DeepL.com]}$
+## 2. Cinematica
+
+En el estudio y diseño de perfiles de movimiento, la cinemática es fundamental, ya que proporciona las herramientas necesarias para describir con precisión cómo se desplaza un objeto en función del tiempo. Esta rama de la física se enfoca exclusivamente en el cómo del movimiento, sin tener en cuenta las fuerzas que lo generan. Su análisis se basa en tres conceptos esenciales: posición, velocidad y aceleración, los cuales están directamente relacionados entre sí a través de derivadas e integrales.
 
 
-Para el análisis y diseño de sistemas de control de movimiento, se tienen en cuenta 4 variables fundamentales para modelar y modificar el comportamiento del motor. Toda la medición de magnitudes se hace considerando 2 partes del motor: El eje de movimiento y la conexión de corriente de corriente
-
-![Partes del Motor](https://github.com/user-attachments/assets/7ff6ca56-7de6-46b4-95a4-a1321eb328a1)
-Figura 1. Partes del Motor
-
-
-|                                           **Posición**                                           |                                               **Velocidad**                                              |                                              **Aceleración**                                             |                                                **Torque**                                                |
-|:------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
-|                                            $(X,Y)$ $°$                                           |                                             _m/s  Rad/s  RPM_                                            |                                   $\frac{Rad}{s^{2}}$ $\frac{m}{s^{2}}$                                  |                                                   $Nm$                                                   |
-| ![PID_position](https://github.com/user-attachments/assets/28945c0e-6ab9-425f-bfef-cd8b26597af5) Figura 2. PID position | ![Speed Simulation](https://github.com/user-attachments/assets/0ae7273a-30e3-4271-9c1e-408c220970e1) Figura 3. Speed Simulation | ![Acceletation Graph](https://github.com/user-attachments/assets/41b6e1bc-fcdf-4e97-85b5-05fce34d2c1f) Figura 4. Acceletation Graph| ![Torque](https://github.com/user-attachments/assets/84ac28ef-e86a-44ce-aed7-b7aae72ad044) Figura 5. Torque|
-Tabla 1. Tabla de Magnitudes y Unidades presentes en el movimiento del motor.
+>🔑 *Posición:* $$s(t)$$ es la función de posición: nos dice exactamente dónde está el objeto en el instante t. En su forma integral es $$s = \int v(t)\,dt$$
+>
+>🔑 *Velocidad:* $$v(t) = \frac{ds}{dt}$$ es la velocidad: calcula la pendiente de s(t), es decir, cuánto y con qué dirección cambia la posición por unidad de tiempo. En su forma integral es $$v = \int a(t)\,dt$$
+>
+>🔑 *Aceleración:* $$a(t) = \dfrac{dv}{dt}$$ es la aceleración: mide la variación de la velocidad en el tiempo, o sea, cómo de rápido aumenta o disminuye la velocidad.  
 
 
-## 2. Línea histórica del Control de movimiento y aplicaciones en la industria.
-
-Desde la industrialización, se han diseñado máquinas que permitan manufacturar cada vez más rápido y en mayor cantidad, las principales industrias son por ejemplo: Embalaje, ensamble, textiles, imprenta, procesamiento de comida, carpinteria, maquinaria, electrónica y manufactura de semiconductores. $^{[3]}$
-
-![Máquina Imprenta DEC LA36](https://github.com/user-attachments/assets/c7d6a1bf-9e84-4dec-9f09-cf0294e797f4)
-
-Figura 6. Máquina Imprenta DEC LA36
-
-Según *Perplexity AI*, trata de un terminal de impresión matricial introducido en 1974 por Digital Equipment Corporation (DEC). Este dispositivo utilizaba un sistema de control de movimiento basado en un motor eléctrico de corriente continua (DC) y un codificador óptico/tacómetro para mover la carreta, lo que permitía una mayor precisión y velocidad en la impresión.
 
 **Características del DEC LA36:**
 - _Motor DC y Codificador Óptico/Tacómetro:_ Permitían un control preciso de la velocidad y posición de la carreta.
