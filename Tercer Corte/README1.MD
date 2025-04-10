@@ -1,4 +1,5 @@
-# Perfiles de Movimiento
+# Continuacion SIMSCAPE
+
 Para la clase de hoy se presenta el tema de perfiles de movimiento, los cuales describe cómo cambian la posición, velocidad y aceleración de un objeto durante un determinado intervalo de tiempo, vemos algunos ejemplos y ejercicios que sirven para profundizar sobre el tema y su aplicabilidad en control de movimiento.
 
 ## 1. ¿Qué son perfiles de Movimiento?
