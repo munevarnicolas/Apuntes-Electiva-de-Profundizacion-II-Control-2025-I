@@ -47,6 +47,41 @@ triangular es la posición alcanzada en t=15 s, $$S_0 = \frac{1}{2} \cdot (15\,\
 
 ## 3. Perfiles de Movimiento Trapezoidal
 
+Un perfil de movimiento trapezoidal es una forma bastante común de controlar cómo se mueve un objeto, como el eje de un robot o una máquina. Se divide en tres etapas claras: la primera es que el objeto acelera de forma constante, luego mantiene una velocidad fija durante un tiempo y finalmente, desacelera también de manera constante hasta detenerse. Si dibujamos la velocidad a lo largo del tiempo, el gráfico toma forma de trapecio, de ahí su nombre. Este tipo de perfil es útil porque ayuda a que el movimiento sea fluido y eficiente, sin exigirle demasiado al motor o sistema, respetando los límites de aceleración que se pueden manejar con seguridad. Una de las razones por las que se usa tanto este perfil es que es fácil de calcular y lo suficientemente preciso para muchas tareas industriales. Aunque no es tan suave como un perfil en "S", que reduce aún más los cambios bruscos de aceleración, el perfil trapezoidal ofrece un buen equilibrio entre velocidad, control y facilidad de implementación. Es ideal cuando se necesita mover algo rápido y de forma repetitiva, como en impresoras 3D, máquinas CNC o sistemas automatizados de producción.
+
+Las principales caracteristicas del perfil trapezoidal son:
+
+- **Forma del perfil:**  
+  Tiene forma de trapecio en la gráfica de velocidad vs. tiempo.
+
+- **Fases del movimiento:**  
+  1. Aceleración constante  
+  2. Velocidad constante  
+  3. Desaceleración constante
+
+- **Nivel de suavidad:**  
+  Es un perfil moderadamente suave. Más suave que una aceleración instantánea, pero menos suave que un perfil en "S".
+
+- **Facilidad de cálculo:**  
+  Se basa en fórmulas básicas de cinemática, por lo que es fácil de implementar.
+
+- **Tiempo total del movimiento:**  
+  Se reparte entre las tres fases (aceleración, velocidad constante y desaceleración).
+
+- **Ventajas:**  
+  - Fácil de implementar  
+  - Eficiente  
+  - Buen equilibrio entre rapidez y control  
+  - Ideal para movimientos repetitivos
+
+- **Limitaciones:**  
+  - Cambios bruscos en la aceleración pueden generar vibraciones o mayor desgaste mecánico
+
+- **Aplicaciones comunes:**  
+  - Robótica  
+  - Impresoras 3D  
+  - Máquinas CNC  
+  - Sistemas de automatización industrial
 
 💡**Ejemplo 3:**
 
@@ -96,16 +131,21 @@ Dado el perfil de velocidad de la figura,calcule 𝑠𝐴, 𝑠𝐵, 𝑠𝐶 us
 
 
 ## 6. Conclusiones
-- Como introducción, es importante tener presentes conceptos básicos e indicaciones para distinguir las propiedades de los motores.
-- El sistema puede contener partes pequeñas como el controlador de movimiento, la unidad de cómputo, el HMI, son parte de un funcionamiento integral.
-- La historia permite analizar el avance del proceso y trazar un horizonte hacia el futuro del diseño de sistemas de control.
-- Existen muchos dispositivos para realizar una tarea específica, depende del operario determinar sus resultados esperados.
+
+- El diseño de perfiles de movimiento eficientes es fundamental para optimizar la precisión y el tiempo de ciclo en sistemas automatizados, porque en industrias como la manufactura avanzada y la robótica, usar perfiles como el trapezoidal o el perfil en S permite movimientos suaves y controlados que reducen el desgaste mecánico y aumentan la vida útil de los componentes.
+
+- El entendimiento de los conceptos básicos de cinemática (posición, velocidad y aceleración) permite diseñar trayectorias predecibles y seguras, esto es clave en sistemas donde el movimiento interactúa con humanos o procesos sensibles como de ensamble fino o corte de alta precisión.
+
+- El control digital facilita la implementación práctica de perfiles de movimiento complejos mediante algoritmos en microcontroladores, PLCs y sistemas embebidos, debido al procesamiento digital, se pueden integrar sensores y retroalimentación para ajustar dinámicamente los perfiles de movimiento en tiempo real.
+
+- La correcta selección del perfil de movimiento depende del tipo de aplicación: perfiles trapezoidales para movimientos rápidos y repetitivos; perfiles en S para suavidad y menor impacto, esto permite adaptar soluciones a sectores diversos como la industria alimentaria, farmacéutica, automotriz, textil o aeroespacial.
+
+- Integrar el control de movimiento dentro de sistemas de automatización más amplios mejora la eficiencia global de la línea de producción porque a través de protocolos industriales, interfaces digitales y control distribuido, los perfiles de movimiento pueden sincronizarse con visión artificial, sensores de carga o control de calidad automatizado.
 
 ## 7. Referencias
-[1] 
-
-[2] IMEPI México, ¿Que es una Interfaz Humano-Máquina (HMI)? , IMEPI Mexico, 2024.
-
-[3] Nvsautomatización, "Controlador de Potencia" , Nvsautomatización, 2024.
-
-[4] J. M. Martínez, "Mecanismos de transmisión" , en Mecapedia, 20224
+[1] R. Kelly, V. Santibáñez, and A. Loria, Control of Robot Manipulators in Joint Space, Springer, 2005
+[2] K. J. Åström and R. M. Murray, Feedback Systems: An Introduction for Scientists and Engineers, Princeton University Press, 2008.
+[3] H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.
+[4] M. Alonso and E. J. Finn, Fundamental University Physics: Volume 1 - Mechanics, 2nd ed. Reading, MA, USA: Addison-Wesley, 1973
+[5] K. Ogata, Discrete-Time Control Systems, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 1995.
+[6] M. Gopal, Digital Control and State Variable Methods, 4th ed. New Delhi, India: McGraw-Hill Education, 2012.
