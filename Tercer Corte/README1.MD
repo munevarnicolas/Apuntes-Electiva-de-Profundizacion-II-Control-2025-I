@@ -15,7 +15,7 @@ Figura 1. World Frame.
 
 - Solver Configuration: Bloque obligatorio que permite al simulador resolver las ecuaciones físicas del sistema. Controla aspectos como el tipo de solver, tolerancia numérica y configuración local/global del solver.
 
-![Figura de prueba](images/plantilla/erich8.png)
+![Figura de prueba](images/plantilla/erich7.png)
 
 Figura 2. Solver Configuration.
 
