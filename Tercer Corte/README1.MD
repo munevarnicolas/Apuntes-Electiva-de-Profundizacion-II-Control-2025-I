@@ -22,12 +22,12 @@ El primer ejercicio fue
 - Scope: Muestra en tiempo real los resultados de la simulación, permitiendo visualizar las variables medidas por el sensor.
 
 
-![Figura de prueba](images/plantilla/simscape.jpg)
+![Figura de prueba](images/plantilla/erich3.png)
 
 Figura 1. Ejemplo 1.
 
 
-![Figura de prueba](images/plantilla/simscape.jpg)
+![Figura de prueba](images/plantilla/erich4.gif)
 
 Figura 2. Ejemplo 1 Diagrama de Bloques.
 
