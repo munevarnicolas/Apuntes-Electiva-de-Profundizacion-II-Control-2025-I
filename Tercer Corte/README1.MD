@@ -9,7 +9,15 @@ El primer ejercicio fue
 
 - World Frame: Define el sistema de coordenadas global (referencia absoluta) desde el cual se mide la posición y orientación de todos los cuerpos del modelo.
 
+![Figura de prueba](images/plantilla/erich8.gif)
+
+Figura 1. World Frame.
+
 - Solver Configuration: Bloque obligatorio que permite al simulador resolver las ecuaciones físicas del sistema. Controla aspectos como el tipo de solver, tolerancia numérica y configuración local/global del solver.
+
+![Figura de prueba](images/plantilla/erich8.gif)
+
+Figura 2.Solver Configuration.
 
 - Revolute Joints: Articulaciones que permiten la rotación relativa entre dos cuerpos alrededor de un eje. En el modelo se usan para conectar las piezas entre sí y al marco global.
 
