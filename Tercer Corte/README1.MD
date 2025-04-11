@@ -47,12 +47,12 @@ Figura 5. Solid Blocks.
 
 ![Figura de prueba](images/plantilla/erich3.png)
 
-Figura 1. Ejemplo 1 Simulacion Mecanismo.
+Figura 6. Ejemplo 1 Simulacion Mecanismo.
 
 
 ![Figura de prueba](images/plantilla/erich4.gif)
 
-Figura 2. Ejemplo 1 Diagrama de Bloques.
+Figura 7. Ejemplo 1 Diagrama de Bloques.
 
 Para la realización de este ejercicio se hizo siguiendo estos patrametros:
 - Modelado de los sólidos (Solid Blocks): Cada uno de los tres eslabones se representa con bloques tipo Solid, en los que se definen dimensiones físicas, color, masa y eje de referencia.
@@ -69,13 +69,16 @@ Uno de los Revolute Joints recibe una entrada de torque constante o señal peri�
 
 ### 📚Ejercicio 2:
 
+El segundo ejercicio se el solido realiza un movimiento oscilante lineal en una sola dirección, empujado hacia adelante y hacia atrás. Esto se debe a la entrada senoidal que modifica la posición de la articulación prismática a lo largo del tiempo. Como resultado, el sólido sigue esa señal de entrada desplazándose dentro de los límites definidos por la amplitud de la onda.
+
+
 ![Figura de prueba](images/plantilla/erich5.png)
 
-Figura 3. Ejemplo 2 Diagrama de Bloques.
+Figura 8. Ejemplo 2 Diagrama de Bloques.
 
 ![Figura de prueba](images/plantilla/erich6.gif)
 
-Figura 4. Ejemplo 2 Simulacion Mecanismo.
+Figura 9. Ejemplo 2 Simulacion Mecanismo.
 
 
 ## 5. Conclusiones
