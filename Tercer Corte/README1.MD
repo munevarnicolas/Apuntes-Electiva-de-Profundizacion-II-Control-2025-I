@@ -9,19 +9,34 @@ El primer ejercicio fue
 
 - World Frame: Define el sistema de coordenadas global (referencia absoluta) desde el cual se mide la posición y orientación de todos los cuerpos del modelo.
 
-![Figura de prueba](images/plantilla/erich8.gif)
+![Figura de prueba](images/plantilla/erich8.png)
 
 Figura 1. World Frame.
 
 - Solver Configuration: Bloque obligatorio que permite al simulador resolver las ecuaciones físicas del sistema. Controla aspectos como el tipo de solver, tolerancia numérica y configuración local/global del solver.
 
-![Figura de prueba](images/plantilla/erich8.gif)
+![Figura de prueba](images/plantilla/erich8.png)
 
-Figura 2.Solver Configuration.
+Figura 2. Solver Configuration.
 
 - Revolute Joints: Articulaciones que permiten la rotación relativa entre dos cuerpos alrededor de un eje. En el modelo se usan para conectar las piezas entre sí y al marco global.
 
+![Figura de prueba](images/plantilla/erich10.png)
+
+Figura 3. Revolute Joint.
+
+- Mechanism Configuration: Se utiliza para ajustar propiedades globales del entorno de simulación física de Simscape Multibody. Específicamente, te permite definir cómo se gestionan ciertos aspectos clave del modelo, como el manejo de los sensores, la visualización del entorno 3D, la gravedad y otras opciones avanzadas que afectan el comportamiento del mecanismo completo.
+
+![Figura de prueba](images/plantilla/erich9.png)
+
+Figura 4. Mechanism Configuration.
+
 - Solid Blocks: Representan cuerpos rígidos tridimensionales que forman parte de un sistema mecánico. Estos bloques son fundamentales para construir modelos físicos realistas, ya que permiten definir las propiedades físicas de los objetos que se van a simular, como su forma, masa, color, momento de inercia y posición relativa respecto a otros componentes del sistema.
+
+![Figura de prueba](images/plantilla/erich15.png)
+
+Figura 5. Solid Blocks.
+
 
 - Fuerza Externa (`f(x) = 0`): Fuente de fuerza aplicada al sistema, que puede ser modificada para estudiar la respuesta dinámica ante diferentes excitaciones.
 
