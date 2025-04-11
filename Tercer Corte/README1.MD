@@ -1,4 +1,4 @@
-# Continuacion SIMSCAPE
+# Simscape Multibody - Mecanismos
 
 Para la clase de hoy se presenta continua el tema del modelado de esalabones y mecanismo en el software Simscpae Multibody, el cual es una herramienta dentro de MATLAB y Simulink que permite modelar y simular sistemas mecánicos tridimensionales de forma visual y dianmica. Está pensada para representar mecanismos complejos como robots, vehículos, grúas, estructuras articuladas o cualquier sistema que involucre cuerpos rígidos en movimiento, uniones, actuadores y sensores.
 
@@ -83,7 +83,12 @@ Figura 9. Ejemplo 2 Simulacion Mecanismo.
 
 ## 5. Conclusiones
 
+- La aplicación de señales a través de actuadores en joints  demuestra cómo Simscape Multibody unifica la especificación de trayectorias deseadas con el cálculo automático de fuerzas y torques internos. Esto facilita evaluar no solo si un mecanismo alcanza la posición deseada, sino también el esfuerzo real necesario para hacerlo.
+- La integracion de perfiles de movimiento en Simscape Multibody junto con controladores desarrollados en Simulink establece un flujo de trabajo dinamico por el cual se diseña un perfil, se simula, se mide el error, se ajusta el controlador y se valida de nuevo. Esta metodología reduce el tiempo de desarrollo de sistemas mecatrónicos al permitir validar estrategias de control, asegurando que el perfil de movimiento se cumpla bajo condiciones reales de carga y dinámica acoplada.
+- En mecanismos de múltiples eslabones, un perfil de movimiento aplicado en una articulación genera reacciones dinámicas en las juntas adyacentes. El análisis de los torques de reacción y las fuerzas internas revela la distribución de cargas a lo largo del sistema, información crucial para el dimensionamiento estructural y la selección de componentes mecánicos adecuados segun la necesidad (rodamientos, ejes, servomotores).
+- La herramienta Matlab Simulink, permite simular diversos mecanismo, en esta clase se pudo analizar que mientras la articulación revoluta convierte un torque o gravedad en un movimiento pendular, la prismática traduce directamente el perfil de posición en un desplazamiento lineal. El análisis comparativo de ambos casos revela las diferencias en respuesta dinámica (inercia rotacional; inercia traslacional) y en la necesidad de dimensionar actuadores distintos según el tipo de movimiento.
+- La representación visual y modular de mecanismos quer permite el software Simscape Multibody por medio de los perfiles de movimiento facilita la enseñanza de conceptos de cinemática, dinámica y control en entornos académicos e industriales, acelerando el aprendizaje y la adopción de buenas prácticas de modelado y simulación que son muy comunes y de vital imporatncia en la ingenieria. 
 
 ## 6. Referencias
-
 [1] MathWorks, Simscape Multibody [2025]
+[2] E.P.2.Control digital y de Mov. Aulas Ecci. [2025]
