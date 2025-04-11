@@ -34,11 +34,11 @@ Figura 2. Ejemplo 1 Diagrama de Bloques.
 
 ### 📚Ejercicio 2:
 
-![Figura de prueba](images/plantilla/simscape.jpg)
+![Figura de prueba](images/plantilla/erich5.png)
 
 Figura 3. Ejemplo 2 Diagrama de Bloques.
 
-![Figura de prueba](images/plantilla/simscape.jpg)
+![Figura de prueba](images/plantilla/erich6.gif)
 
 Figura 4. Ejemplo 2 Diagrama de Bloques.
 
