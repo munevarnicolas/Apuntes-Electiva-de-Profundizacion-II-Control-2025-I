@@ -1,5 +1,5 @@
 # Simscape Multibody
-Esta clase se realizo el dia 13 de Febrero de 2025, la clase estuvo diridgida a hacer algunos mecanismos y comprender mas a fdondo el software Simscape Multibody en el entorno de desarrollo y programación de Matlab-Simulink.
+Esta clase se realizo el dia 13 de Marzo de 2025, la clase estuvo diridgida a hacer algunos mecanismos y comprender mas a fdondo el software Simscape Multibody en el entorno de desarrollo y programación de Matlab-Simulink.
 
 ## 1. ¿Que es control de Movimiento?
 >🔑 *Control de Movimiento:*  Es una disciplina dentro del campo de la automatización y el control que se encarga encarga de regular cómo se mueve un sistema mecánico, asegurando que alcance la posición, velocidad, aceleración o torque deseadas de manera precisa y estable.
@@ -173,9 +173,6 @@ Figura 14. Máquina de Etiquetado.
 Se observa que el control de movimiento ha evolucionado significativamente, pasando de sistemas mecánicos y analógicos, que dependían de mecanismos físicos como engranajes, levas y poleas, a soluciones digitales y electrónicas que permiten un control mas preciso de parámetros críticos como la posición, velocidad, aceleración y torque. Esta transformación ha posibilitado la implementación de estrategias de control más sofisticadas, como el control en cascada, que divide el proceso en bucles internos y externos para corregir rápidamente las perturbaciones y mantener la estabilidad del sistema. La integración de algoritmos de procesamiento en tiempo real ha mejorado la capacidad de respuesta y la adaptabilidad, facilitando la optimización de procesos en aplicaciones industriales complejas. Además, es importante destacar la importancia de la convergencia de diversos componentes tecnológicos en el control de movimiento moderno. La incorporación de interfaces hombre-máquina (HMI), controladores avanzados, drivers de potencia, actuadores precisos, mecanismos de transmisión y sensores ha permitido no solo la supervisión en tiempo real, sino también ajustes continuos y la corrección dinámica de errores. Este enfoque integrado garantiza una operación más eficiente, flexible y segura, satisfaciendo las demandas de industrias tan variadas como el embalaje, ensamblaje, etiquetado y fabricación de semiconductores, y posicionando el control de movimiento como un pilar fundamental en la automatización industrial actual.
 
 ## 9. Referencias  
-- [1] *Apuntes Clase - Jueves 6 Febrero 2025.*  
-- [2] *Ingeniería de control moderna. Ogata, K.*  
-- [3] *Diseño de sistemas de control analógicos y digitales. Chen.*  
-- [4] *Controladores PID: Teoría, diseño y sintonización. Astrom, K.*  
-- [5] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
-
+- [1] *Apuntes Clase - Jueves 13 Marzo 2025.*  
+- [2] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
+- [3] *MathWorks, Simscape Multibody.*
