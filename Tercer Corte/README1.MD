@@ -5,7 +5,7 @@ Para la clase de hoy se presenta continua el tema del modelado de esalabones y m
 ## 1. Ejercicios
 
 ### 📚Ejercicio 1:
-El primer ejercicio fue 
+El primer ejercicio fue un mecanismo que está compuesto por tres sólidos rígidos que forman un triángulo cerrado, con tres articulaciones revolutas que permiten que los eslabones giren entre sí. Al ser impulsado desde uno de sus vértices, se genera un movimiento rotacional continuo en una de las barras, lo que obliga a las otras dos a seguir un movimiento coordinado, preservando la forma triangular del conjunto. Este tipo de movimiento se conoce como movimiento de rotación acoplada, en donde todos los eslabones están unidos de tal manera que la rotación de uno condiciona el movimiento de los demás; uno de los eslabones actúa como manivela, otro como eslabón acoplador y el último como balancín.
 
 - World Frame: Define el sistema de coordenadas global (referencia absoluta) desde el cual se mide la posición y orientación de todos los cuerpos del modelo.
 
@@ -47,12 +47,24 @@ Figura 5. Solid Blocks.
 
 ![Figura de prueba](images/plantilla/erich3.png)
 
-Figura 1. Ejemplo 1.
+Figura 1. Ejemplo 1 Simulacion Mecanismo.
 
 
 ![Figura de prueba](images/plantilla/erich4.gif)
 
 Figura 2. Ejemplo 1 Diagrama de Bloques.
+
+Para la realización de este ejercicio se hizo siguiendo estos patrametros:
+- Modelado de los sólidos (Solid Blocks): Cada uno de los tres eslabones se representa con bloques tipo Solid, en los que se definen dimensiones físicas, color, masa y eje de referencia.
+
+- Configuración del sistema de coordenadas: Se añade un bloque de World Frame para definir el sistema de referencia global. Además, cada articulación se alinea con los extremos de los sólidos mediante bloques de Rigid Transform, para asegurar la correcta orientación espacial.
+
+- Articulaciones (Revolute Joints): Entre cada par de sólidos se colocan Revolute Joints, permitiendo la rotación relativa entre ellos. Estas juntas se configuran para estar alineadas con los extremos de los eslabones.
+
+- Actuación del sistema
+Uno de los Revolute Joints recibe una entrada de torque constante o señal periódica, aplicada mediante un bloque de actuador. Esto induce el movimiento que se propaga al resto del mecanismo.
+
+- Gravedad y entorno físico: Se activa la gravedad en el eje deseado, lo que afecta el comportamiento dinámico del sistema. El movimiento resultante puede ser influenciado por el peso de los eslabones.
 
 
 ### 📚Ejercicio 2:
@@ -63,7 +75,7 @@ Figura 3. Ejemplo 2 Diagrama de Bloques.
 
 ![Figura de prueba](images/plantilla/erich6.gif)
 
-Figura 4. Ejemplo 2 Diagrama de Bloques.
+Figura 4. Ejemplo 2 Simulacion Mecanismo.
 
 
 ## 5. Conclusiones
