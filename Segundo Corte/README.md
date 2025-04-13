@@ -101,6 +101,12 @@ Figura 8. Diagrama de bloques Yugo Escoces.
 
 La figura 8 representa el digaram de bloques para un mecanismo de yugo escoces.
 
+Este diagrama de bloques representa un modelo del mecanismo Yugo Escocés implementado en Simulink utilizando la librería de Simscape Multibody. El sistema comienza con un actuador rotacional (bloque "Discrete") que genera un movimiento angular continuo sobre un eje. Este eje está conectado a un bloque de articulación rotacional que transmite el par a un componente giratorio (disco o manivela), el cual está unido a la biela a través de un pivote. Esta biela convierte el movimiento circular en un movimiento lineal alternativo del yugo, mediante el acoplamiento en una ranura que restringe su desplazamiento a una sola dirección.
+
+El bloque identificado como "RANURA DE YUGO" (en amarillo) es el componente clave para transformar el movimiento de la biela. La biela está unida al bloque "EFECTOR FINAL" (en rojo), que representa el punto donde el movimiento combinado de la rotación y el deslizamiento se transmite directamente al yugo. Este yugo es un bloque que se desliza en línea recta gracias al montaje de guía, representado aquí con una unión prismática (deslizamiento lineal). A su vez, el "PIN DESLIZAMIENTO" (en azul) está montado dentro del yugo, restringido a moverse únicamente en dirección lineal, siguiendo una trayectoria dictada por el giro de la manivela.
+
+El sistema se completa con bloques de sensado que permiten visualizar y registrar variables del sistema dinámico. En la parte inferior derecha se encuentran las salidas del modelo: posición del yugo, velocidad del yugo, posición angular y velocidad angular. Estos datos permiten realizar un análisis cuantitativo del comportamiento del mecanismo, como la validación del modelo respecto a las ecuaciones teóricas del yugo escocés y sus derivadas respecto al tiempo. En conjunto, este modelo permite estudiar con precisión la cinemática y dinámica del mecanismo, incluyendo los efectos de inercia, restricciones de movimiento y acoplamiento entre elementos móviles.
+
 ## 3. Conclusiones
 
 - La aplicación de señales a través de actuadores en joints  demuestra cómo Simscape Multibody unifica la especificación de trayectorias deseadas con el cálculo automático de fuerzas y torques internos. Esto facilita evaluar no solo si un mecanismo alcanza la posición deseada, sino también el esfuerzo real necesario para hacerlo.
