@@ -262,7 +262,7 @@ $$
 >🔑 *Perfil en S:* Un perfil de movimiento en S suaviza el inicio y el fin del movimiento con aceleraciones variables, logrando transiciones fluidas y minimizando vibraciones en mecanismos.
 >
 
-![Figura de prueba](images/plantilla/perfiltra.png)
+![Figura de prueba](images/plantilla/perfilens.png)
 
 Figura 7. Perfil de curva en S.
 
