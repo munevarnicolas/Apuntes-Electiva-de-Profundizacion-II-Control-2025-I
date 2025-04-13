@@ -227,7 +227,11 @@ $$
 
 Figura 5. Perfil de movimiento Robot Gantry.
 
-💡**Ejemplo 4:**
+
+
+💡**Ejemplo 5:**
+
+
 
 Dado el perfil de velocidadsimétrico de la figura, calcule lamáxima velocidad y la aceleración máxima.
 
@@ -253,7 +257,14 @@ $$
 a = \frac{2v_{\text{max}}}{t}
 $$
 
-## 4. Ejercicios
+## 4. Perfiles de Movimiento en S
+
+>🔑 *Perfil en S:* Un perfil de movimiento en S suaviza el inicio y el fin del movimiento con aceleraciones variables, logrando transiciones fluidas y minimizando vibraciones en mecanismos.
+>
+
+
+
+## 5. Ejercicios
 
 ### 📚Ejercicio 1:
 Un eje (axis) lineal comienza su movimiento desde el reposo en la posición 0, con una aceleración de 2 m/s2. Después de moverse durante 5 s, cual es la posición del eje (axis)?
@@ -369,10 +380,10 @@ $$
 - $$\( s_B = 21 \ \text{cm} \)$$
 - $$\( s_C = 22 \\text{cm} \)$$
 
-## 5. Conclusiones
+## 6. Conclusiones
 
 
-## 6. Referencias
+## 7. Referencias
 - [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
 - [2] *R. Kelly, V. Santibáñez, and A. Loria, Control of Robot Manipulators in Joint Space, Springer, 2005*
 - [3] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
