@@ -63,15 +63,47 @@ Donde $$𝑡_0$$ es el tiempo inicial, $$𝑣_0$$ es la velocidad inicial y $$�
 
 Encuentre la posición y la aceleración en t=5 s
 
-R:// La aceleración sería la pendiente de la velocidad: $$a = \frac{10}{5} \\ = 2\text{in}/s^2$$ , mientras que el área bajo la curva de velocidad es hasta t=5 s es la posición alcanzada en t=5 s $$s = \frac{1}{2}(10 \cdot 5) = 25\, \text{in/s}$$
+La aceleración sería la pendiente de la velocidad: 
+
+$$
+a = \frac{10}{5} \\ = 2\text{in}/s^2
+$$ 
+
+mientras que el área bajo la curva de velocidad es hasta t=5 s es la posición alcanzada en t=5 s 
+
+$$
+s = \frac{1}{2}(10 \cdot 5) = 25 \text{in/s}
+$$
 
 
 💡**Ejemplo 2:**
 
 Un eje está viajando a una velocidad de 10 cm/s. En t=5 s empieza a disminuir la velocidad como se ve en el perfil. Cual es la posición del eje cuando se detiene? Asuma que empieza a desacelerar a 25 cm
 
-R:// La pendiente de la velocidad es la aceleración: $$a = \frac{-10\ \text{cm/s} \cdot \frac{1\ \text{m}}{100\ \text{cm}}}{15\ \text{s} - 5\ \text{s}} = \frac{-0.1\ \text{m/s}}{10\ \text{s}} \\ = -0.01\ \text{m/s}^2$$ , mientras que el área del perfil de velocidad
-triangular es la posición alcanzada en t=15 s, $$S_0 = \frac{1}{2} \cdot (15\,\text{s} - 5\,\text{s}) \cdot 0{,}1\,\frac{\text{m}}{\text{s}} = 0{,}5\,\text{m}$$
+La pendiente de la velocidad es la aceleración: 
+
+$$
+a = \frac{-10\ \text{cm/s} \cdot \frac{1\ \text{m}}{100\ \text{cm}}}{15\ \text{s} - 5\ \text{s}}  
+$$ 
+
+$$
+a = \frac{-0.1\ \text{m/s}}{10\ \text{s}}
+$$
+
+$$
+a = -0.01\ \text{m/s}^2
+$$
+
+
+mientras que el área del perfil de velocidad triangular es la posición alcanzada en t=15 s, 
+
+$$
+S_0 = \frac{1}{2} \cdot (15\text{s} - 5\text{s}) \cdot 0.1\frac{\text{m}}{\text{s}} 
+$$
+
+$$
+S_0 = 0.5 \ text{m}$$
+$$
 
 ## 3. Perfiles de Movimiento Trapezoidal
 
