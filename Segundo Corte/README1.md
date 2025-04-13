@@ -235,7 +235,6 @@ Figura 5. Perfil de movimiento Robot Gantry.
 💡**Ejemplo 5:**
 
 
-
 Dado el perfil de velocidadsimétrico de la figura, calcule lamáxima velocidad y la aceleración máxima.
 
 ![Figura de prueba](images/plantilla/ejemsime.png)
@@ -260,6 +259,7 @@ $$
 a = \frac{2v_{\text{max}}}{t}
 $$
 
+
 ## 4. Perfiles de Movimiento en S
 
 >🔑 *Perfil en S:* Un perfil de movimiento en S suaviza el inicio y el fin del movimiento con aceleraciones variables, logrando transiciones fluidas y minimizando vibraciones en mecanismos.
@@ -272,6 +272,76 @@ Figura 7. Perfil de curva en S.
 En la figura 7 se ve los perfiles de movimiento para aceleración, velocidad, posición y jerk de un perfil de curva en S.
 
 Los perfiles de movimiento en S son esenciales en sistemas mecánicos y robóticos, ya que garantizan un movimiento suave, preciso y eficiente. Estos perfiles destacan por suavizar las transiciones al inicio y al final del movimiento, reduciendo las vibraciones y los impactos bruscos que podrían afectar el desempeño de los equipos. Al disminuir el estrés mecánico sobre componentes como motores, engranajes y rodamientos, se incrementa la durabilidad de las máquinas y se optimizan los costos de mantenimiento. Además, son especialmente valiosos en aplicaciones que requieren alta precisión, como robots industriales, impresoras 3D y máquinas CNC, donde las trayectorias deben ser ejecutadas con exactitud para evitar errores. En ámbitos orientados al uso humano, como prótesis, exoesqueletos o vehículos autónomos, los movimientos logrados mediante perfiles en S resultan más naturales y cómodos, mejorando la experiencia del usuario. Por si fuera poco, estos perfiles también optimizan el consumo energético gracias a transiciones graduales en la aceleración y desaceleración. En conjunto, los perfiles de movimiento en S no solo impulsan el rendimiento técnico, sino que también contribuyen a la sostenibilidad, la seguridad y la excelencia en una amplia variedad de aplicaciones tecnológicas.
+
+### Modelo Matematico
+
+### Modelado de Segmentos Curvos del Perfil de Velocidad
+
+Cada segmento curvo del perfil de velocidad en función del tiempo $$\( v(t) \)$$ se modela utilizando un polinomio de segundo orden, el cual se expresa matemáticamente como:
+
+$$
+v(t) = C_1 t^2 + C_2 t + C_3
+$$
+
+Donde:
+- $$\( C_1 \), \( C_2 \) y \( C_3 \)$$ son coeficientes que se determinan aplicando condiciones de frontera (como posición, velocidad y aceleración inicial o final en puntos específicos del perfil de movimiento).
+
+El uso de un polinomio de segundo orden permite describir de forma suave y continua la variación de la velocidad en el tiempo, lo cual es fundamental para evitar cambios bruscos en los mecanismos. Este enfoque ofrece mayor control sobre la aceleración, lo que resulta crucial para garantizar trayectorias suaves y predecibles. Al aplicar condiciones de frontera, se asegura que el perfil cumpla con los valores deseados en los puntos iniciales y finales del intervalo considerado.
+
+Para el tramo de la curva A de la velocidad:
+
+Condiciones de Frontera para el Intervalo $$\( 0 < t < \frac{t_a}{2} \)$$
+
+Se consideran las siguientes condiciones extraídas de los perfiles de velocidad y aceleración:
+
+- Velocidad inicial:
+  
+$$
+v(0) = 0
+$$
+
+- Aceleración inicial:
+
+$$
+a(0) = \frac{dv}{dt} = 0
+$$
+
+- Velocidad a la mitad del intervalo de aceleración:
+  
+$$
+v\left(\frac{t_a}{2}\right) = \frac{v_m}{2}
+$$
+
+- Aceleración a la mitad del intervalo:
+  
+$$
+a\left(\frac{t_a}{2}\right) = a
+$$
+
+Dado que se modela la velocidad con un polinomio de segundo orden:
+
+$$
+v(t) = C_1 t^2 + C_2 t + C_3
+$$
+
+Entonces, al aplicar la condición \( v(0) = 0 \):
+
+$$
+v(0) = C_1(0)^2 + C_2(0) + C_3 = 0 \Rightarrow C_3 = 0
+$$
+
+
+$$
+v \left( \frac{t_a}{2} \right) = \frac{C_1 t_a^2}{4} = \frac{v_m}{2} \implies C_1 = \frac{2 v_m}{t_a^2}
+$$
+
+$$
+v(t) = \frac{2v_m}{t_a^2} t^2
+$$
+
+
+💡**Ejemplo 6:**
+
 
 
 ## 5. Ejercicios
