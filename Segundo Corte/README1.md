@@ -223,9 +223,9 @@ $$
 t_{\text{total}} = t_a + t_m + t_d = 2 + 3 + 2 = 7\ \text{s}
 $$
 
-![erich2](https://github.com/user-attachments/assets/6d61cdd9-47b5-4629-a93b-ce1cb5dafdf8)
+![Figura de prueba](images/plantilla/ejemtrape2.png)
 
-Figura 2. Perfil de movimiento Robot Gantry.
+Figura 5. Perfil de movimiento Robot Gantry.
 
 ## 4. Ejercicios
 
