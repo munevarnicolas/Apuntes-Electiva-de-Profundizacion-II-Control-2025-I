@@ -170,6 +170,45 @@ $$
 s(t) = \int_0^{t_a} a t \, dt = \left. \frac{1}{2} a t^2 \right|_0^{t_a} = \frac{1}{2} a t_a^2
 $$
 
+- Para \( $$t_a < t < (t_a + t_m)$$ \)
+
+Dado que:
+
+$$
+t_0 = t_a, \quad v_0 = v_m, \quad s_0 = s(t_a), \quad a = 0
+$$
+
+La posición se obtiene integrando la velocidad constante:
+
+$$
+s(t) = s(t_a) + \int_{t_a}^{t} v_m \, dt = s(t_a) + v_m t \bigg|_{t_a}^{t}
+$$
+
+$$
+s(t) = s(t_a) + v_m (t - t_a)
+$$
+
+- Para \( ($$t_a + t_m$$) < t < ttotal \)
+
+Dado que:
+
+$$
+t_0 = (t_a + t_m), \quad v_0 = v_m, \quad s_0 = s(t_a + t_m)
+$$
+
+La posición se obtiene integrando la velocidad con desaceleración:
+
+$$
+s(t) = s(t_a + t_m) + \int_{t_a + t_m}^{t} \left[ -a \cdot (t - (t_a + t_m)) + v_m \right] dt
+$$
+
+$$
+s(t) = s(t_a + t_m) + \left[ v_m t - \frac{1}{2} a (t - (t_a + t_m))^2 \right]_{t_a + t_m}^{t}
+$$
+
+
+💡**Ejemplo 4:**
+
 El eje X de un robot Gantry debe moverse una distancia de 10 cm. La aceleración máxima permitida en este eje es de 1 cm/s², y se desea mover el eje a una velocidad máxima de 2 cm/s. cuanto tiempo tomará hacer este movimiento
 
 $$
