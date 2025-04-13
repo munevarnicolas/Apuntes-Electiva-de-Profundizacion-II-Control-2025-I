@@ -73,6 +73,12 @@ La figura 6 representa el diagrama de bloques del mecanismo de pendulo.
 
 El segundo ejercicio propuesto fue de yugo escoces, el cual esta diseñado para convertir movimiento rotativo continuo en un desplazamiento lineal alternativo. En la imagen, el disco giratorio lleva un perno excéntrico que está encajado en la ranura longitudinal del yugo. A medida que el disco rota, el perno describe un círculo cuyo centro está desplazado respecto al eje de giro, forzando al yugo a deslizarse hacia adelante y hacia atrás a lo largo de la ranura, manteniendo siempre contacto con el perno.
 
+![Figura de prueba](images/plantilla/ejercicio.gif)
+
+Figura 7. Mecanismo Yugo Escoces.
+
+La figura 7 representa el movimiento del mecanismo de un Yugo Escoces.
+
 Desde el punto de vista cinemático, la relación entre el ángulo de rotación θ del disco y la posición x del yugo viene dada por:
 
 $$
@@ -88,6 +94,12 @@ $$
 
 siendo ω la velocidad angular constante del disco. La aceleración máxima ocurre en los puntos de retorno del recorrido lineal, lo que implica picos de esfuerzo en los componentes de guía.
 En cuanto a dinámica y aplicaciones, el yugo escocés ofrece una conversión de movimiento muy precisa y suave cuando la rotación es uniforme, pero genera fuerzas de inercia considerables en los extremos del recorrido debido a la rápida inversión de aceleración. Por ello se utiliza comúnmente en compresores de pistón, bombas de diafragma y mecanismos de prensa ligeros, donde se valora la simplicidad constructiva y la exactitud del recorrido lineal, siempre teniendo en cuenta el diseño robusto de guías y rodamientos para soportar los picos de carga.
+
+![Figura de prueba](images/plantilla/ejercicio.png)
+
+Figura 8. Diagrama de bloques Yugo Escoces.
+
+La figura 8 representa el digaram de bloques para un mecanismo de yugo escoces.
 
 ## 3. Conclusiones
 
