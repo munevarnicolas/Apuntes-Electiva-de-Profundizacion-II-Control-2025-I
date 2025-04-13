@@ -366,7 +366,9 @@ $$
 s(t) = \int_{0}^{15} \frac{64}{900} t^2 \ dt + \int_{15}^{30} 32 - \frac{64}{900} (30^2 - 60t + t^2) \ dt
 $$
 
-![Imagen de WhatsApp 2025-04-13 a las 16 21 24_5d15397d](https://github.com/user-attachments/assets/0cbfa40b-31be-4106-9f92-f8e6c4c776ae)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/32648b7d-9764-41b4-8231-3b7a081a939c" alt="image">
+</div>
 
 $$
 s_{0B}(t) = 77.62 + 480 - 64.12 = 493.49 \ \text{cts}
@@ -375,6 +377,15 @@ $$
 $$
 s_{0C}(t) = 493.49 + 32 \cdot 70 = 2733.49 \ \text{cts}
 $$
+
+
+💡**Ejemplo 7:**
+
+Suponiendo que para un perfil de curva s pura se tiene una velocidad máxima de 10 in/s y un tiempo de aceleración de 4s, grafique el periodo de aceleración en Matlab
+
+![Figura de prueba](images/plantilla/grafica.png)
+
+Figura 9. Perfil curva en S ejemplo 7.
 
 ## 5. Ejercicios
 
