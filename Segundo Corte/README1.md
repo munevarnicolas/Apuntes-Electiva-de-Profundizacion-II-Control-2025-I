@@ -46,6 +46,8 @@ En la figura 2 se muestra de manera general que estudia la cinematica, en donde 
 
 ## Reglas Geométricas
 
+La relación entre posición, velocidad y aceleración es vital para comprender el movimiento de un objeto desde un enfoque analítico. La posición en un momento determinado puede obtenerse calculando el área bajo la curva de velocidad en un gráfico de velocidad versus tiempo; esto implica que al integrar la velocidad en un intervalo dado se obtiene el desplazamiento total del objeto durante ese tiempo. Por otro lado, la aceleración se relaciona directamente con la velocidad, ya que representa la pendiente de la curva de velocidad. En términos matemáticos, esto significa que al derivar la velocidad respecto al tiempo, se obtiene la aceleración en cada instante. Estas relaciones muestran cómo las tres magnitudes están conectadas a través del cálculo diferencial e integral, permitiendo analizar y predecir con precisión el comportamiento dinámico de sistemas en movimiento.
+
 $$
 v = v_0 + a(t - t_0)
 $$
@@ -55,6 +57,7 @@ s = s_0 + \frac{1}{2}(t - t_0)\left(v_0 + a(t - t_0)\right)
 $$
 
 Donde $$𝑡_0$$ es el tiempo inicial, $$𝑣_0$$ es la velocidad inicial y $$𝑠_0$$ es la posición inicial. La aceleración es constante “a”.
+
 
 💡**Ejemplo 1:**
 
