@@ -27,6 +27,21 @@ Figura 2. Balancin Triangular.
 La figura 2 representa el movimiento del mecanismo de balancin triangular.
 
 
+💡**Ejemplo 2:**
+
+![Figura de prueba](images/plantilla/2do.png)
+
+Figura 1. Diagrama de Bloques Balancin.
+
+La figura 1 representa el diagrama de bloques del mecanismo de balancin.
+
+
+![Figura de prueba](images/plantilla/2do.gif)
+
+Figura 2. Balancin.
+
+La figura 2 representa el movimiento del mecanismo de balancin.
+
 
 
 ## 1. Ejercicios
