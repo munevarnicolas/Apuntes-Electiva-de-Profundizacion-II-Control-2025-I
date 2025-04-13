@@ -8,6 +8,18 @@ En el caso de mecanismos con lazos cinemáticos cerrados, como cadenas de eslabo
 
 Si el modelo incluye actuadores o sensores, se deben usar de forma coherente. Los actuadores permiten aplicar movimiento o fuerza en las articulaciones, mientras que los sensores permiten medir variables como posición, velocidad o esfuerzo; no se deben aplicar múltiples actuadores sobre el mismo grado de libertad sin un control adecuado. Finalmente, se recomienda utilizar un solver apropiado y revisar constantemente el Mechanics Explorer durante la simulación para observar el comportamiento del sistema y diagnosticar posibles errores. Con estas consideraciones, se puede lograr una simulación precisa, estable y representativa del mecanismo en estudio.
 
+💡**Ejemplo 1:**
+
+![Figura de prueba](images/plantilla/Captura2.PNG)
+
+Figura 1. Ejemplo 1 balancin Triangular.
+
+La figura 1 representa el diagrama de bloques del mecanismo de balancin triangular.
+
+
+El balancín triangular es un eslabón articulado que funciona como punto de retorno y estabilización en mecanismos de tres barras. Está fijado en uno de sus vértices, que actúa como punto de apoyo, permitiendo que el resto de la pieza oscile en un movimiento de vaivén limitado por los ángulos definidos en las juntas revolutas. Al recibir el impulso de la manivela a través del eslabón acoplador, el balancín convierte el giro continuo en un recorrido oscilatorio entre dos posiciones extremas, manteniendo siempre la geometría triangular del sistema. 
+Su diseño y dimensiones determinan tanto el ángulo de oscilación como la relación de transmisión de fuerzas: un balancín más largo oscila con menor amplitud pero con mayor fuerza de reacción, mientras que uno más corto ofrece mayor recorrido con menor fuerza. .
+
 ## 1. Ejercicios
 
 ### 📚Ejercicio 1:
