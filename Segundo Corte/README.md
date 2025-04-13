@@ -1,6 +1,6 @@
 # Simscape Multibody - Mecanismos
 
-Para la clase de hoy se presenta continua el tema del modelado de eslabones y mecanismo en el software Simscpae Multibody, se realizaron algunos ejemplos y jercicios para complemnetar la explicacion y poder apropiar los conceptos.
+La clase se realizo el dia 13 de Marzo, en la cual se presenta continua el tema del modelado de eslabones y mecanismo en el software Simscpae Multibody, se realizaron algunos ejemplos y jercicios para complemnetar la explicacion y poder apropiar los conceptos.
 
 ## 1. Mecanismos
 
