@@ -283,9 +283,9 @@ $$
 
 2. De $$\( s_0 \) a \( s_B \)$$: Triángulo + Rectángulo
 
-\[
+$$
 s_B = s_A + \text{área del rectángulo} = 1 + 5 \cdot 4 = 1 + 20 = 21 \\text{cm}
-\]
+$$
 
 
 
