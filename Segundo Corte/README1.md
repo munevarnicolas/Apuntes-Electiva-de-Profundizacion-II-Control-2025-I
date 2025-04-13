@@ -118,7 +118,7 @@ En la figura 3 se ve los perfiles de movimiento para aceleración, velocidad y p
 
 💡**Ejemplo 3:**
 
-![Figura de prueba](images/plantilla/perfiltra.png)
+![Figura de prueba](images/plantilla/ejemtrape.png)
 
 Figura 4. Tornillo sin Fin.
 
