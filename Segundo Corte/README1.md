@@ -102,7 +102,7 @@ S_0 = \frac{1}{2} \cdot (15\text{s} - 5\text{s}) \cdot 0.1\frac{\text{m}}{\text{
 $$
 
 $$
-S_0 = 0.5 \ text{m}$$
+S_0 = 0.5\ \text{m}$$
 $$
 
 ## 3. Perfiles de Movimiento Trapezoidal
