@@ -1,168 +1,94 @@
-# Simscape Multibody
-Esta clase se realizo el dia 13 de Marzo de 2025, la clase estuvo diridgida a hacer algunos mecanismos y comprender mas a fdondo el software Simscape Multibody en el entorno de desarrollo y programación de Matlab-Simulink.
+# Simscape Multibody - Mecanismos
 
-## 1. ¿Que es control de Movimiento?
+Para la clase de hoy se presenta continua el tema del modelado de esalabones y mecanismo en el software Simscpae Multibody, el cual es una herramienta dentro de MATLAB y Simulink que permite modelar y simular sistemas mecánicos tridimensionales de forma visual y dianmica. Está pensada para representar mecanismos complejos como robots, vehículos, grúas, estructuras articuladas o cualquier sistema que involucre cuerpos rígidos en movimiento, uniones, actuadores y sensores.
 
-
-💡**Ejemplo 1:**
-
-![Figura de prueba](images/plantilla/cnc.jpg)
-
-Figura 1. Máquina CNC.
-
-## 2. Ejes de Movimiento
->🔑 *Ejes de Movimiento:* En el control de movimiento y la automatización, los ejes de movimiento (o motion axes en inglés) son las direcciones en las que una máquina o sistema puede moverse. Cada eje representa un grado de libertad. Por ejemplo, un robot industrial con tres ejes lineales puede moverse hacia adelante y atrás (eje X), de un lado a otro (eje Y) y arriba y abajo (eje Z). Además de los movimientos lineales, también existen ejes rotacionales, que permiten que un sistema gire alrededor de un eje en lugar de solo desplazarse.
-
-💡**Ejemplo 2:**
-
-![Figura de prueba](images/plantilla/cnc1.jpg)
-
-Figura 2. Axis en máquina CNC.
-
-## 3. Control de Movimiento con el pasar del tiempo
-Antes de los sistemas digitales modernos, el control de movimiento se realizaba principalmente mediante métodos mecánicos y análogos en donde se usaban sistemas de engranajes, levas, poleas y palancas para crear movimientos precisos, como en los relojes antiguos o las cajas de música. También se empleaban sistemas hidráulicos y neumáticos que utilizaban la presión de líquidos o aire para mover maquinaria industrial, eran principlamnete diseñados por la ingeniería industrial y mecánica.
-
-💡**Ejemplo 3:**
-
-![Figura de prueba](images/plantilla/images.jpg)
-
-Figura 3. Bobinadora de cables y láminas de alta tensión y baja tensión serie 400, Broomfield.
-
-## 4. Control de Movimiento en la actualidad
-El control de movimiento en la actulaidad es electronico, el cual permite que coordine y gestione todos los elementos del sistema para lograr que cada eje se mueva de manera sincronizada y exacta. En un sistema completo se integran varios componentes que trabajan en conjunto, y a continuación se describen de forma sencilla:
-
-- Interfaz Hombre-Máquina (HMI)
-
->🔑 *Interfaz Hombre-Máquina (HMI):* Es el punto de conexión entre el operador y el sistema. A través de esta interfaz, el usuario puede programar, ajustar y supervisar el comportamiento de la máquina, facilitando la configuración y el monitoreo en tiempo real.
-
-💡**Ejemplo 4:**
-
-![Figura de prueba](images/plantilla/hmi.jpg)
-
-Figura 4. HMI Siemens. 
-
-- Controlador de Movimiento
-  
->🔑 *Controlador de Movimiento:* Este es el "cerebro" del sistema. Se encarga de procesar las instrucciones de la HMI y ejecutar algoritmos de control que determinan las trayectorias y velocidades de cada eje. Gracias a su capacidad de procesamiento en tiempo real, puede corregir desviaciones y asegurar que los movimientos sean precisos. Posee CPU, salidas de potencia, entradas para sensores y puertos de comunicacion.
-
-💡**Ejemplo 5:**
-
-![Figura de prueba](images/plantilla/controlador.jpg)
-
-Figura 5. Controlador de Movimiento Linmot.
-
-- Drivers de Potencia
-
->🔑 *Driver de Potencia:* Son intermediarios entre el controlador y los actuadores. Estos dispositivos amplifican las señales de control para que sean capaces de mover los actuadores con la fuerza y precisión necesarias. Funcionan controlando la corriente y el voltaje que se suministran a los motores o servomotores, permitiendo así un manejo fino de la velocidad y el par motor. Su correcto funcionamiento es clave para traducir las órdenes del controlador en acciones mecánicas efectivas.
-
-💡**Ejemplo 6:**
-
-![Figura de prueba](images/plantilla/driver.png)
-
-Figura 6. Driver de Potencia Yaskawa serie Sigma.
-
-- Actuadores
-
->🔑 *Actuadores:* Son los dispositivos físicos (como motores eléctricos o servomotores) que transforman las señales del controlador en movimientos reales. Su rapidez y precisión son fundamentales para cumplir con las demandas de alta velocidad y precisión del sistema.
-
-💡**Ejemplo 7:**
-
-![Figura de prueba](images/plantilla/motor.png)
-
-Figura 7. Servomotores DC.
-
-- Mecanismos de Transmisión
-
->🔑 *Mecanismos de Transmisión:* Estos elementos, como engranajes, correas o husillos, se encargan de transmitir el movimiento generado por los actuadores a las partes mecánicas del sistema. Su diseño y precisión determinan en gran medida la exactitud con la que se mueve cada eje.
-
-💡**Ejemplo 8:**
-
-![Figura de prueba](images/plantilla/trans.jpg)
-
-Figura 8. Sistemas de transmisión.
-
-- Sensores
-
->🔑 *Sensores:* Los sensores son esenciales para el control de movimiento, ya que proporcionan la retroalimentación necesaria para ajustar y corregir el funcionamiento del sistema en tiempo real. Con estos datos, el controlador de movimiento puede ajustar de manera dinámica las señales enviadas a los drivers y actuadores, corrigiendo errores y asegurando que el sistema mantenga la sincronización y precisión esperadas. Los sensores pueden incluir encoders, tacómetros, y otros dispositivos de medición que monitorean continuamente el estado del sistema.
-
-💡**Ejemplo 9:**
-
-![Figura de prueba](images/plantilla/encoder.jpg)
-
-Figura 9. Sensor encoder Allen-Bradley.
-
-## 5. Control Cascada
-
-### Esquema de Control Cascada
-
-
-![Figura de prueba](images/plantilla/cascadecontrol.png)
-
-Figura 10. Diagrama de bloques control cascada.
-
-La figura 10 representa un sistema de control en cascada.
-
-- **Primer controlador (bucle externo)**:  
-  - Observa la salida real del proceso (lo que en verdad está pasando) y la compara con la meta o referencia (lo que queremos lograr).  
-  - A partir de esa comparación, genera una señal que servirá como la referencia para el segundo controlador.
-
-- **Segundo controlador (bucle interno)**:  
-  - Toma la señal del primer controlador como su entrada principal.  
-  - Se encarga de controlar directamente una variable interna del proceso, ajustándola rápido cuando ocurren cambios o perturbaciones.
-
-- **Proceso**:  
-  - Es el sistema físico que queremos manejar (por ejemplo, un motor, un tanque o un horno).  
-  - Su salida se envía de vuelta al primer controlador, cerrando el lazo externo de retroalimentación.
-
-En pocas palabras, el **bucle interno** corrige y estabiliza de manera rápida una variable intermedia (como la velocidad de un motor), mientras que el **bucle externo** se ocupa de la variable final que realmente nos importa (como la posición del eje o el nivel en un tanque). Este enfoque “en cascada” hace que el sistema sea más estable y preciso.
-
-
-## 6. Ejercicios
+## 1. Ejercicios
 
 ### 📚Ejercicio 1:
+El primer ejercicio fue un mecanismo que está compuesto por tres sólidos rígidos que forman un triángulo cerrado, con tres articulaciones revolutas que permiten que los eslabones giren entre sí. Al ser impulsado desde uno de sus vértices, se genera un movimiento rotacional continuo en una de las barras, lo que obliga a las otras dos a seguir un movimiento coordinado, preservando la forma triangular del conjunto. Este tipo de movimiento se conoce como movimiento de rotación acoplada, en donde todos los eslabones están unidos de tal manera que la rotación de uno condiciona el movimiento de los demás; uno de los eslabones actúa como manivela, otro como eslabón acoplador y el último como balancín.
 
-![Figura de prueba](images/plantilla/robot.png)
+- World Frame: Define el sistema de coordenadas global (referencia absoluta) desde el cual se mide la posición y orientación de todos los cuerpos del modelo.
 
-Figura 11. Máquina de Clasificación de Huevos Zenyer.
+![Figura de prueba](images/plantilla/erich8.png)
+
+Figura 1. World Frame.
+
+- Solver Configuration: Bloque obligatorio que permite al simulador resolver las ecuaciones físicas del sistema. Controla aspectos como el tipo de solver, tolerancia numérica y configuración local/global del solver.
+
+![Figura de prueba](images/plantilla/erich7.png)
+
+Figura 2. Solver Configuration.
+
+- Revolute Joints: Articulaciones que permiten la rotación relativa entre dos cuerpos alrededor de un eje. En el modelo se usan para conectar las piezas entre sí y al marco global.
+
+![Figura de prueba](images/plantilla/erich10.png)
+
+Figura 3. Revolute Joint.
+
+- Mechanism Configuration: Se utiliza para ajustar propiedades globales del entorno de simulación física de Simscape Multibody. Específicamente, te permite definir cómo se gestionan ciertos aspectos clave del modelo, como el manejo de los sensores, la visualización del entorno 3D, la gravedad y otras opciones avanzadas que afectan el comportamiento del mecanismo completo.
+
+![Figura de prueba](images/plantilla/erich9.png)
+
+Figura 4. Mechanism Configuration.
+
+- Solid Blocks: Representan cuerpos rígidos tridimensionales que forman parte de un sistema mecánico. Estos bloques son fundamentales para construir modelos físicos realistas, ya que permiten definir las propiedades físicas de los objetos que se van a simular, como su forma, masa, color, momento de inercia y posición relativa respecto a otros componentes del sistema.
+
+![Figura de prueba](images/plantilla/erich15.png)
+
+Figura 5. Solid Blocks.
 
 
-#### Componentes:
+- Fuerza Externa (`f(x) = 0`): Fuente de fuerza aplicada al sistema, que puede ser modificada para estudiar la respuesta dinámica ante diferentes excitaciones.
 
-- HMI: Teach Pendant.
-- Control de Movimiento: Controller Box.
-- Driver de Potencia: Integrado junto a los motores.
-- Actuadores: Motores tipo  Brushless.
-- Sistema de Transmisión: Reducción de engranajes.
-- Sensores: Presencia, posicion, torque, corriente, seguridad.
+- Joint Sensor: Mide variables físicas en las articulaciones (como posición angular, velocidad o torque) y entrega esos datos a bloques de visualización.
 
-## 7. Aplicaciones en diversas Industrias
-
-__- Empaque y Paletizado__
-  
-![Figura de prueba](images/plantilla/empaqueypaletizado.jpg)
-
-Figura 12. Planta de empaque y paletizado.
+- Scope: Muestra en tiempo real los resultados de la simulación, permitiendo visualizar las variables medidas por el sensor.
 
 
+![Figura de prueba](images/plantilla/erich3.png)
 
-__- Ensamble de PCB__
-  
-![Figura de prueba](images/plantilla/pcb.jpg)
-
-Figura 13. Diagrama de bloques control cascada.
+Figura 6. Ejemplo 1 Simulacion Mecanismo.
 
 
+![Figura de prueba](images/plantilla/erich4.gif)
 
-__- Etiquetado__
-  
-![Figura de prueba](images/plantilla/etiquetado.jpg)
+Figura 7. Ejemplo 1 Diagrama de Bloques.
 
-Figura 14. Máquina de Etiquetado.
+Para la realización de este ejercicio se hizo siguiendo estos patrametros:
+- Modelado de los sólidos (Solid Blocks): Cada uno de los tres eslabones se representa con bloques tipo Solid, en los que se definen dimensiones físicas, color, masa y eje de referencia.
 
-## 8. Conclusiones
-Se observa que el control de movimiento ha evolucionado significativamente, pasando de sistemas mecánicos y analógicos, que dependían de mecanismos físicos como engranajes, levas y poleas, a soluciones digitales y electrónicas que permiten un control mas preciso de parámetros críticos como la posición, velocidad, aceleración y torque. Esta transformación ha posibilitado la implementación de estrategias de control más sofisticadas, como el control en cascada, que divide el proceso en bucles internos y externos para corregir rápidamente las perturbaciones y mantener la estabilidad del sistema. La integración de algoritmos de procesamiento en tiempo real ha mejorado la capacidad de respuesta y la adaptabilidad, facilitando la optimización de procesos en aplicaciones industriales complejas. Además, es importante destacar la importancia de la convergencia de diversos componentes tecnológicos en el control de movimiento moderno. La incorporación de interfaces hombre-máquina (HMI), controladores avanzados, drivers de potencia, actuadores precisos, mecanismos de transmisión y sensores ha permitido no solo la supervisión en tiempo real, sino también ajustes continuos y la corrección dinámica de errores. Este enfoque integrado garantiza una operación más eficiente, flexible y segura, satisfaciendo las demandas de industrias tan variadas como el embalaje, ensamblaje, etiquetado y fabricación de semiconductores, y posicionando el control de movimiento como un pilar fundamental en la automatización industrial actual.
+- Configuración del sistema de coordenadas: Se añade un bloque de World Frame para definir el sistema de referencia global. Además, cada articulación se alinea con los extremos de los sólidos mediante bloques de Rigid Transform, para asegurar la correcta orientación espacial.
 
-## 9. Referencias  
-- [1] *Apuntes Clase - Jueves 13 Marzo 2025.*  
-- [2] *E.P.2.Control digital y de mov-04948-2561. Aulas Ecci.*
-- [3] *MathWorks, Simscape Multibody.*
+- Articulaciones (Revolute Joints): Entre cada par de sólidos se colocan Revolute Joints, permitiendo la rotación relativa entre ellos. Estas juntas se configuran para estar alineadas con los extremos de los eslabones.
+
+- Actuación del sistema
+Uno de los Revolute Joints recibe una entrada de torque constante o señal periódica, aplicada mediante un bloque de actuador. Esto induce el movimiento que se propaga al resto del mecanismo.
+
+- Gravedad y entorno físico: Se activa la gravedad en el eje deseado, lo que afecta el comportamiento dinámico del sistema. El movimiento resultante puede ser influenciado por el peso de los eslabones.
+
+
+### 📚Ejercicio 2:
+
+El segundo ejercicio se el solido realiza un movimiento oscilante lineal en una sola dirección, empujado hacia adelante y hacia atrás. Esto se debe a la entrada senoidal que modifica la posición de la articulación prismática a lo largo del tiempo. Como resultado, el sólido sigue esa señal de entrada desplazándose dentro de los límites definidos por la amplitud de la onda.
+
+
+![Figura de prueba](images/plantilla/erich5.png)
+
+Figura 8. Ejemplo 2 Diagrama de Bloques.
+
+![Figura de prueba](images/plantilla/erich6.gif)
+
+Figura 9. Ejemplo 2 Simulacion Mecanismo.
+
+
+## 5. Conclusiones
+
+- La aplicación de señales a través de actuadores en joints  demuestra cómo Simscape Multibody unifica la especificación de trayectorias deseadas con el cálculo automático de fuerzas y torques internos. Esto facilita evaluar no solo si un mecanismo alcanza la posición deseada, sino también el esfuerzo real necesario para hacerlo.
+- La integracion de perfiles de movimiento en Simscape Multibody junto con controladores desarrollados en Simulink establece un flujo de trabajo dinamico por el cual se diseña un perfil, se simula, se mide el error, se ajusta el controlador y se valida de nuevo. Esta metodología reduce el tiempo de desarrollo de sistemas mecatrónicos al permitir validar estrategias de control, asegurando que el perfil de movimiento se cumpla bajo condiciones reales de carga y dinámica acoplada.
+- En mecanismos de múltiples eslabones, un perfil de movimiento aplicado en una articulación genera reacciones dinámicas en las juntas adyacentes. El análisis de los torques de reacción y las fuerzas internas revela la distribución de cargas a lo largo del sistema, información crucial para el dimensionamiento estructural y la selección de componentes mecánicos adecuados segun la necesidad (rodamientos, ejes, servomotores).
+- La herramienta Matlab Simulink, permite simular diversos mecanismo, en esta clase se pudo analizar que mientras la articulación revoluta convierte un torque o gravedad en un movimiento pendular, la prismática traduce directamente el perfil de posición en un desplazamiento lineal. El análisis comparativo de ambos casos revela las diferencias en respuesta dinámica (inercia rotacional; inercia traslacional) y en la necesidad de dimensionar actuadores distintos según el tipo de movimiento.
+- La representación visual y modular de mecanismos quer permite el software Simscape Multibody por medio de los perfiles de movimiento facilita la enseñanza de conceptos de cinemática, dinámica y control en entornos académicos e industriales, acelerando el aprendizaje y la adopción de buenas prácticas de modelado y simulación que son muy comunes y de vital imporatncia en la ingenieria. 
+
+## 6. Referencias
+[1] MathWorks, Simscape Multibody [2025]
+[2] E.P.2.Control digital y de Mov. Aulas Ecci. [2025]
