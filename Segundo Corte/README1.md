@@ -28,18 +28,13 @@ En conjunto, estas tres variables no solo describen el movimiento, sino que cons
 
 Figura 1. Perfiles de Movimiento.
 
-En la figura 1 se muestra el perfil de movimiento de un mecanismo, estas graficas representan el comportamiento del ,mismo y son fundamentales para el anlisis y control de estos movimientos en mecanismos. 
+En la figura 1 se muestra el perfil de movimiento de un mecanismo, estas graficas representan el comportamiento del mismo y son fundamentales para el anlisis y control de estos movimientos en mecanismos. 
 
 ## 2. Cinematica
 
 En el estudio y diseño de perfiles de movimiento, la cinemática es fundamental, ya que proporciona las herramientas necesarias para describir con precisión cómo se desplaza un objeto en función del tiempo. Esta rama de la física se enfoca exclusivamente en el cómo del movimiento, sin tener en cuenta las fuerzas que lo generan. Su análisis se basa en tres conceptos esenciales: posición, velocidad y aceleración, los cuales están directamente relacionados entre sí a través de derivadas e integrales.
 
-![Figura de prueba](images/plantilla/perfiles.png)
 
-Figura 1. Figura de prueba
-
-Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
-Figura 1. Perfil de movimiento.
 
 
 
