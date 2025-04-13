@@ -12,7 +12,7 @@ Si el modelo incluye actuadores o sensores, se deben usar de forma coherente. Lo
 
 ![Figura de prueba](images/plantilla/Captura2.PNG)
 
-Figura 1. Ejemplo 1 balancin Triangular.
+Figura 1. Diagrama de Bloques Balancin Triangular.
 
 La figura 1 representa el diagrama de bloques del mecanismo de balancin triangular.
 
