@@ -231,7 +231,7 @@ Figura 5. Perfil de movimiento Robot Gantry.
 
 Dado el perfil de velocidadsimétrico de la figura, calcule lamáxima velocidad y la aceleración máxima.
 
-![Figura de prueba](images/plantilla/ejemtrape2.png)
+![Figura de prueba](images/plantilla/ejemsime.png)
 
 Figura 6. Ejemplo 4.
 
