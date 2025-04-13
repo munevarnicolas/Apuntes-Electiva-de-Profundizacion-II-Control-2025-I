@@ -44,7 +44,7 @@ En la figura 2 se muestra de manera general que estudia la cinematica, en donde 
 
   
 
-## Reglas Geometricas
+## Reglas Geométricas
 
 $$
 v = v_0 + a(t - t_0)
@@ -53,6 +53,8 @@ $$
 $$
 s = s_0 + \frac{1}{2}(t - t_0)\left(v_0 + a(t - t_0)\right)
 $$
+
+Donde $$𝑡_0$$ es el tiempo inicial, $$𝑣_0$$ es la velocidad inicial y $$𝑠_0$$ es la posición inicial. La aceleración es constante “a”.
 
 💡**Ejemplo 1:**
 
