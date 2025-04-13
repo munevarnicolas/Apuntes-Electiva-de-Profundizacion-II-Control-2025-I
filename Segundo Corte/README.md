@@ -1,6 +1,6 @@
 # Simscape Multibody - Mecanismos
 
-Para la clase de hoy se presenta continua el tema del modelado de esalabones y mecanismo en el software Simscpae Multibody, el cual es una herramienta dentro de MATLAB y Simulink que permite modelar y simular sistemas mecánicos tridimensionales de forma visual y dianmica. Está pensada para representar mecanismos complejos como robots, vehículos, grúas, estructuras articuladas o cualquier sistema que involucre cuerpos rígidos en movimiento, uniones, actuadores y sensores.
+Para la clase de hoy se presenta continua el tema del modelado de eslabones y mecanismo en el software Simscpae Multibody, se realizaron algunos ejemplos y jercicios para complemnetar la explicacion y poder apropiar los conceptos.
 
 ## 1. Ejercicios
 
