@@ -10,15 +10,24 @@ Si el modelo incluye actuadores o sensores, se deben usar de forma coherente. Lo
 
 💡**Ejemplo 1:**
 
-![Figura de prueba](images/plantilla/Captura2.PNG)
+![Figura de prueba](images/plantilla/1ro.png)
 
 Figura 1. Diagrama de Bloques Balancin Triangular.
 
 La figura 1 representa el diagrama de bloques del mecanismo de balancin triangular.
 
-
 El balancín triangular es un eslabón articulado que funciona como punto de retorno y estabilización en mecanismos de tres barras. Está fijado en uno de sus vértices, que actúa como punto de apoyo, permitiendo que el resto de la pieza oscile en un movimiento de vaivén limitado por los ángulos definidos en las juntas revolutas. Al recibir el impulso de la manivela a través del eslabón acoplador, el balancín convierte el giro continuo en un recorrido oscilatorio entre dos posiciones extremas, manteniendo siempre la geometría triangular del sistema. 
-Su diseño y dimensiones determinan tanto el ángulo de oscilación como la relación de transmisión de fuerzas: un balancín más largo oscila con menor amplitud pero con mayor fuerza de reacción, mientras que uno más corto ofrece mayor recorrido con menor fuerza. .
+Su diseño y dimensiones determinan tanto el ángulo de oscilación como la relación de transmisión de fuerzas: un balancín más largo oscila con menor amplitud pero con mayor fuerza de reacción, mientras que uno más corto ofrece mayor recorrido con menor fuerza.
+
+
+![Figura de prueba](images/plantilla/1ro.gif)
+
+Figura 2. Balancin Triangular.
+
+La figura 2 representa el movimiento del mecanismo de balancin triangular.
+
+
+
 
 ## 1. Ejercicios
 
