@@ -111,5 +111,6 @@ El sistema se completa con bloques de sensado que permiten visualizar y registra
 
 
 ## 4. Referencias
-[1] MathWorks, Simscape Multibody [2025]
-[2] E.P.2.Control digital y de Mov. Aulas Ecci. [2025]
+- [1] MathWorks, Simscape Multibody. [2025]
+- [2] E.P.2.Control digital y de Mov. Aulas Ecci. [2025]
+- [3] Apuntes Clase - Jueves 13 de Marzo. [2025]
