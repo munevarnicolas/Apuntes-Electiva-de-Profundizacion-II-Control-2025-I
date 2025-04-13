@@ -53,7 +53,7 @@ La figura 4 representa el movimiento del mecanismo de balancin.
 
 El primer ejercicio fue un mecanismo de pendulo que consiste en una barra rígida unida a una base fija mediante una junta revoluta, lo que le permite girar libremente en un plano. Al aplicarse un impulso inicial o un par motor, la barra describe un movimiento oscilatorio alrededor de su punto de apoyo, comportándose como un péndulo rígido. La amplitud y la frecuencia de las oscilaciones dependen de la longitud de la barra, de la distribución de su masa y de cualquier fuerza de amortiguamiento o fricción presente en la articulación.
 
-En términos generales, se trata de un sistema de un solo grado de libertad, donde la energía cinética y potencial se intercambian continuamente: la barra acelera al descender y desacelera al ascender, deteniéndose momentáneamente en los extremos de su recorrido antes de invertir el sentido de giro. Este tipo de mecanismo se emplea frecuentemente para estudiar dinámicas de oscilación, para medir periodos en relojes de péndulo o como componente básico en sistemas de control de vibraciones y amortiguación.
+En términos generales, se trata de un sistema de un solo grado de libertad, donde la energía cinética y potencial se intercambian continuamente, en donde la barra acelera al descender y desacelera al ascender, deteniéndose momentáneamente en los extremos de su recorrido antes de invertir el sentido de giro. Este tipo de mecanismo se emplea frecuentemente para estudiar dinámicas de oscilación, para medir periodos en relojes de péndulo o como componente básico en sistemas de control de vibraciones y amortiguación.
 
 ![Figura de prueba](images/plantilla/pendulo.gif)
 
@@ -68,19 +68,26 @@ Figura 6. Diagrama de bloques mecanismo Pendulo.
 
 La figura 6 representa el diagrama de bloques del mecanismo de pendulo.
 
+
 ### 📚Ejercicio 2:
 
-El segundo ejercicio se el solido realiza un movimiento oscilante lineal en una sola dirección, empujado hacia adelante y hacia atrás. Esto se debe a la entrada senoidal que modifica la posición de la articulación prismática a lo largo del tiempo. Como resultado, el sólido sigue esa señal de entrada desplazándose dentro de los límites definidos por la amplitud de la onda.
+El segundo ejercicio propuesto fue de yugo escoces, el cual esta diseñado para convertir movimiento rotativo continuo en un desplazamiento lineal alternativo. En la imagen, el disco giratorio lleva un perno excéntrico que está encajado en la ranura longitudinal del yugo. A medida que el disco rota, el perno describe un círculo cuyo centro está desplazado respecto al eje de giro, forzando al yugo a deslizarse hacia adelante y hacia atrás a lo largo de la ranura, manteniendo siempre contacto con el perno.
 
+Desde el punto de vista cinemático, la relación entre el ángulo de rotación θ del disco y la posición x del yugo viene dada por:
 
-![Figura de prueba](images/plantilla/erich5.png)
+$$
+x = e \cos(\theta)
+$$
 
-Figura 8. Ejemplo 2 Diagrama de Bloques.
+donde 
+𝑒 es la distancia del perno al eje de giro. Esto produce un movimiento armónico simple, con velocidad y aceleración del yugo que se pueden obtener derivando respecto al tiempo:
 
-![Figura de prueba](images/plantilla/erich6.gif)
+$$
+v = -e \omega \sin(\theta), \quad a = -e \omega^2 \cos(\theta)
+$$
 
-Figura 9. Ejemplo 2 Simulacion Mecanismo.
-
+siendo ω la velocidad angular constante del disco. La aceleración máxima ocurre en los puntos de retorno del recorrido lineal, lo que implica picos de esfuerzo en los componentes de guía.
+En cuanto a dinámica y aplicaciones, el yugo escocés ofrece una conversión de movimiento muy precisa y suave cuando la rotación es uniforme, pero genera fuerzas de inercia considerables en los extremos del recorrido debido a la rápida inversión de aceleración. Por ello se utiliza comúnmente en compresores de pistón, bombas de diafragma y mecanismos de prensa ligeros, donde se valora la simplicidad constructiva y la exactitud del recorrido lineal, siempre teniendo en cuenta el diseño robusto de guías y rodamientos para soportar los picos de carga.
 
 ## 3. Conclusiones
 
