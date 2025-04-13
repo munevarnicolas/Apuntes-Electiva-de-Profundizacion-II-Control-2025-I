@@ -227,6 +227,32 @@ $$
 
 Figura 5. Perfil de movimiento Robot Gantry.
 
+💡**Ejemplo 4:**
+
+Dado el perfil de velocidadsimétrico de la figura, calcule lamáxima velocidad y la aceleración máxima.
+
+![Figura de prueba](images/plantilla/ejemtrape2.png)
+
+Figura 6. Ejemplo 4.
+
+Usando la geometría, se puede calcular la distancia total viajada
+
+$$
+s_B = \frac{1}{2} v_{\text{max}} \cdot \frac{t}{2} + \frac{1}{2} v_{\text{max}} \cdot \frac{t}{2}
+$$
+
+$$
+s_B = \frac{1}{2} v_{\text{max}} t
+$$
+
+$$
+v_{\text{max}} = \frac{2s_B}{t}
+$$
+
+$$
+a = \frac{2v_{\text{max}}}{t}
+$$
+
 ## 4. Ejercicios
 
 ### 📚Ejercicio 1:
@@ -345,15 +371,6 @@ $$
 
 ## 5. Conclusiones
 
-- El diseño de perfiles de movimiento eficientes es fundamental para optimizar la precisión y el tiempo de ciclo en sistemas automatizados, porque en industrias como la manufactura avanzada y la robótica, usar perfiles como el trapezoidal o el perfil en S permite movimientos suaves y controlados que reducen el desgaste mecánico y aumentan la vida útil de los componentes.
-
-- El entendimiento de los conceptos básicos de cinemática (posición, velocidad y aceleración) permite diseñar trayectorias predecibles y seguras, esto es clave en sistemas donde el movimiento interactúa con humanos o procesos sensibles como de ensamble fino o corte de alta precisión.
-
-- El control digital facilita la implementación práctica de perfiles de movimiento complejos mediante algoritmos en microcontroladores, PLCs y sistemas embebidos, debido al procesamiento digital, se pueden integrar sensores y retroalimentación para ajustar dinámicamente los perfiles de movimiento en tiempo real.
-
-- La correcta selección del perfil de movimiento depende del tipo de aplicación: perfiles trapezoidales para movimientos rápidos y repetitivos; perfiles en S para suavidad y menor impacto, esto permite adaptar soluciones a sectores diversos como la industria alimentaria, farmacéutica, automotriz, textil o aeroespacial.
-
-- Integrar el control de movimiento dentro de sistemas de automatización más amplios mejora la eficiencia global de la línea de producción porque a través de protocolos industriales, interfaces digitales y control distribuido, los perfiles de movimiento pueden sincronizarse con visión artificial, sensores de carga o control de calidad automatizado.
 
 ## 6. Referencias
 - [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
