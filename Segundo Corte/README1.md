@@ -387,7 +387,18 @@ Suponiendo que para un perfil de curva s pura se tiene una velocidad máxima de 
 
 Figura 9. Perfil curva en S ejemplo 7.
 
-## 5. Ejercicios
+## 5. Movimiento Multieje
+
+El movimiento multi-eje es fundamental en sistemas de automatización avanzada y control de maquinaria, ya que permite coordinar múltiples actuadores para lograr trayectorias complejas y precisas. Este tipo de movimiento requiere que los distintos ejes trabajen de manera sincronizada para cumplir con un perfil determinado, como puede ser un desplazamiento en línea recta, una curva o cualquier forma geométrica específica. Para lograr esto, se deben planificar cuidadosamente los perfiles de aceleración, velocidad y posición de cada eje involucrado, considerando las limitaciones mecánicas y dinámicas del sistema. En muchas aplicaciones industriales, como el corte por láser, la impresión 3D o los robots cartesianos, la correcta implementación del movimiento multi-eje es clave para obtener resultados precisos y eficientes.
+
+Existen varias estrategias para ejecutar movimientos multi-eje, cada una con distintos niveles de complejidad y precisión. Una opción simple es mover un eje a la vez, lo cual es adecuado para movimientos secuenciales o cuando no se requiere precisión en trayectorias compuestas. Otra estrategia es el slew motion, donde ambos ejes se mueven al mismo tiempo pero sin una sincronización estricta, lo que puede provocar trayectorias no deseadas si las velocidades no están equilibradas. La opción más avanzada es el interpolated motion, en la que los movimientos de ambos ejes se ajustan para que comiencen y terminen simultáneamente, permitiendo formar trayectorias suaves y precisas, como líneas rectas o arcos. Esta última técnica es esencial para aplicaciones donde la exactitud del recorrido es crítica, y se implementa comúnmente mediante algoritmos de interpolación lineal o circular en sistemas de control numérico.
+
+
+![Figura de prueba](images/plantilla/multieje.png)
+
+Figura 10. Maquinaria con movimeinto multieje.
+
+## 6. Ejercicios
 
 ### 📚Ejercicio 1:
 Un eje (axis) lineal comienza su movimiento desde el reposo en la posición 0, con una aceleración de 2 m/s2. Después de moverse durante 5 s, cual es la posición del eje (axis)?
@@ -503,10 +514,10 @@ $$
 - $$\( s_B = 21 \ \text{cm} \)$$
 - $$\( s_C = 22 \\text{cm} \)$$
 
-## 6. Conclusiones
+## 7. Conclusiones
 
 
-## 7. Referencias
+## 8. Referencias
 - [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
 - [2] *R. Kelly, V. Santibáñez, and A. Loria, Control of Robot Manipulators in Joint Space, Springer, 2005*
 - [3] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
