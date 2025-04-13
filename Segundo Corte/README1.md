@@ -408,7 +408,50 @@ tomará a cada eje completar el movimiento?
 
 Figura 10. Multieje ejemplo 8.
 
+Sabiendo que:
 
+$$
+t_a = 0.2\ \text{s}, \quad L_x = 16\ \text{cm} \quad \text{y} \quad v_x = 4\ \text{cm/s}
+$$
+
+$$
+L_y = 12\ \text{cm} \quad \text{y} \quad v_y = 4\ \text{cm/s}
+$$
+
+
+
+$$
+t_m^x = \frac{L_x}{v_m} - t_a = \frac{16\ \text{cm}}{4\ \text{cm/s}} - 0.2 = 3.8\ \text{s}
+$$
+
+$$
+t_{\text{total}}^x = 3.8 + 2t_a = 4.2\ \text{s}
+$$
+
+
+
+$$
+t_m^y = \frac{L_y}{v_m} - t_a = \frac{12\ \text{cm}}{4\ \text{cm/s}} - 0.2 = 2.8\ \text{s}
+$$
+
+$$
+t_{\text{total}}^y = 2.8 + 2t_a = 3.2\ \text{s}
+$$
+
+En el caso mencionado anteriormente, se debe utilizar como referencia el perfil de velocidad del eje que requiera mayor tiempo. Luego, se procede a interpolar el perfil del otro eje para garantizar que ambos concluyan simultáneamente.
+
+$$
+v_x = 4\ \text{cm/s} \quad t_a = 0.2\ \text{s} \quad v_y =\ ?
+$$
+
+$$
+t_m = \frac{L_y}{v_y} - t_a
+$$
+
+
+$$
+v_y = \frac{L_y}{t_m + t_a} = \frac{12\ \text{cm}}{3.8 + 0.2} = 3\ \text{cm/s}
+$$
 
 ## 6. Ejercicios
 
