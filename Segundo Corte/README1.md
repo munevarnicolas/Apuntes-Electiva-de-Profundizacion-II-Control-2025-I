@@ -168,11 +168,16 @@ Figura 2. Perfil de movimiento Robot Gantry.
 ### 📚Ejercicio 1:
 Un eje (axis) lineal comienza su movimiento desde el reposo en la posición 0, con una aceleración de 2 m/s2. Después de moverse durante 5 s, cual es la posición del eje (axis)?
 
-- Posición inicial: $$\( s_0 = 0\ \text{m} \)$$  
-- Velocidad inicial: $$\( v_0 = 0\ \text{m/s} \)$$
-- Aceleración: $$\( a = 2\ \text{m/s}^2 \)$$  
-- Tiempo: $$\( t = 5\ \text{s} \)$$
-  
+- Posición inicial:
+  $$\( s_0 = 0\ \text{m} \)$$  
+- Velocidad inicial:
+  $$\( v_0 = 0\ \text{m/s} \)$$
+- Aceleración:
+  $$\( a = 2\ \text{m/s}^2 \)$$  
+- Tiempo:
+  $$\( t = 5\ \text{s} \)$$
+
+
 $$
 s = s_0 + \frac{1}{2} a t^2
 $$
@@ -180,6 +185,10 @@ $$
 $$
 s = 0 + \frac{1}{2}(2)(5^2) = \frac{1}{2} \cdot 2 \cdot 25 = 25\ \text{m}
 $$
+
+![Figura de prueba](images/plantilla/ejercicio1mat.png)
+
+Figura X. Perfil de Movimiento Posicion Ejercicio 1.
 
 La posición del eje después de 5 segundos es $$\boxed{25\ \text{m}}$$
 
