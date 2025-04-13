@@ -2,6 +2,12 @@
 
 Para la clase de hoy se presenta continua el tema del modelado de eslabones y mecanismo en el software Simscpae Multibody, se realizaron algunos ejemplos y jercicios para complemnetar la explicacion y poder apropiar los conceptos.
 
+Para que un mecanismo funcione correctamente en Simscape Multibody, es importante tener en cuenta varios aspectos técnicos y estructurales del modelo. En primer lugar, definir correctamente los grados de libertad del sistema, evitando tanto restricciones excesivas como movimientos indeseados. Para ello, se deben utilizar bloques de articulación (como revolute, prismatic, etc.) adecuados para cada conexión, y comprobar la movilidad general del sistema usando el bloque Mechanism Configuration. Además, cada componente del mecanismo debe estar representado por un bloque Solid, con su geometría, masa y centro de masa bien definidos, y conectado correctamente mediante transformaciones rígidas o articulaciones. La posición inicial del mecanismo también debe ser geométricamente válida para evitar errores de ensamblaje; el Mechanics Explorer permite visualizar y verificar esta configuración antes de simular.
+
+En el caso de mecanismos con lazos cinemáticos cerrados, como cadenas de eslabones, es fundamental cerrar correctamente el circuito usando bloques de engranajes, restricciones de cierre de lazo o conexiones cinemáticas equivalentes, ya que estos sistemas tienden a generar redundancias o problemas de rigidez numérica si no se modelan adecuadamente. Asimismo, es importante asignar parámetros físicos realistas a todos los elementos del modelo: masas, momentos de inercia, dimensiones, fricción, fuerzas externas, entre otros. Valores extremos o poco realistas pueden llevar a simulaciones inestables o poco representativas.
+
+Si el modelo incluye actuadores o sensores, se deben usar de forma coherente. Los actuadores permiten aplicar movimiento o fuerza en las articulaciones, mientras que los sensores permiten medir variables como posición, velocidad o esfuerzo; no se deben aplicar múltiples actuadores sobre el mismo grado de libertad sin un control adecuado. Finalmente, se recomienda utilizar un solver apropiado y revisar constantemente el Mechanics Explorer durante la simulación para observar el comportamiento del sistema y diagnosticar posibles errores. Con estas consideraciones, se puede lograr una simulación precisa, estable y representativa del mecanismo en estudio.
+
 ## 1. Ejercicios
 
 ### 📚Ejercicio 1:
