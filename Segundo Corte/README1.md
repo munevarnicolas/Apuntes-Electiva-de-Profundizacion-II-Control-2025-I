@@ -1,5 +1,5 @@
 # Perfiles de Movimiento
-Para la clase de hoy se presenta el tema de perfiles de movimiento, los cuales describe cómo cambian la posición, velocidad y aceleración de un objeto durante un determinado intervalo de tiempo, vemos algunos ejemplos y ejercicios que sirven para profundizar sobre el tema y su aplicabilidad en control de movimiento.
+La clase sobre perfies de mvomiento se realizo los dias 20 y 27 de Marzo de 2025, en donde se trato la descripcion los tipos de perfiles con sus caracteristicas analiticas y matematicas, adicional se analizaron varios ejemplos que permitieron profundizarar y apropiar conceptos pra ser aplicados a control de movimiento, el cual es muy importante en la formación del ingeniero mecatronico.
 
 ## 1. ¿Qué son perfiles de Movimiento?
 >🔑 *Perfiles de Movimiento:*  Un perfil de movimiento es la descripción técnica de cómo varían en el tiempo la posición, la velocidad y la aceleración de un eje u objeto, asegurando transiciones suaves entre fases de aceleración, velocidad constante y desaceleración.
