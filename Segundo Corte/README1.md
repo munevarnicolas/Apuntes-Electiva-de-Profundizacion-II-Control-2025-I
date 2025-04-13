@@ -116,6 +116,9 @@ Figura 3. Perfil Trapezoidal.
 
 En la figura 3 se ve los perfiles de movimiento para aceleración, velocidad y posición de un perfil trapezoidal.
 
+Los perfiles de movimiento trapezoidales son ampliamente utilizados en mecanismos debido a su simplicidad y eficiencia. Se caracterizan por dividir el movimiento en tres fases, las cuales son aceleración constante, velocidad uniforme y desaceleración constante, formando una curva en forma de trapecio. Este tipo de perfil garantiza transiciones claras y controladas, lo que reduce la complejidad del cálculo y facilita su implementación en dispositivos como motores y actuadores. Su estructura definida permite alcanzar velocidades máximas rápidamente, optimizando el tiempo de operación en procesos industriales. Además, al proporcionar movimientos uniformes durante la fase de velocidad constante, se mejora la estabilidad del sistema y se minimizan los riesgos de errores. Por estas razones, los perfiles trapezoidales son una solución práctica y confiable para aplicaciones que requieren precisión, rapidez y control en los movimientos.
+
+
 💡**Ejemplo 3:**
 
 ![Figura de prueba](images/plantilla/ejemtrape.png)
@@ -268,6 +271,8 @@ Figura 7. Perfil de curva en S.
 
 En la figura 7 se ve los perfiles de movimiento para aceleración, velocidad, posición y jerk de un perfil de curva en S.
 
+Los perfiles de movimiento en S son esenciales en sistemas mecánicos y robóticos, ya que garantizan un movimiento suave, preciso y eficiente. Estos perfiles destacan por suavizar las transiciones al inicio y al final del movimiento, reduciendo las vibraciones y los impactos bruscos que podrían afectar el desempeño de los equipos. Al disminuir el estrés mecánico sobre componentes como motores, engranajes y rodamientos, se incrementa la durabilidad de las máquinas y se optimizan los costos de mantenimiento. Además, son especialmente valiosos en aplicaciones que requieren alta precisión, como robots industriales, impresoras 3D y máquinas CNC, donde las trayectorias deben ser ejecutadas con exactitud para evitar errores. En ámbitos orientados al uso humano, como prótesis, exoesqueletos o vehículos autónomos, los movimientos logrados mediante perfiles en S resultan más naturales y cómodos, mejorando la experiencia del usuario. Por si fuera poco, estos perfiles también optimizan el consumo energético gracias a transiciones graduales en la aceleración y desaceleración. En conjunto, los perfiles de movimiento en S no solo impulsan el rendimiento técnico, sino que también contribuyen a la sostenibilidad, la seguridad y la excelencia en una amplia variedad de aplicaciones tecnológicas.
+
 
 ## 5. Ejercicios
 
@@ -397,4 +402,3 @@ $$
 - [6] *M. Alonso and E. J. Finn, Fundamental University Physics: Volume 1 - Mechanics, 2nd ed. Reading, MA, USA: Addison-Wesley, 1973*
 - [7] *K. Ogata, Discrete-Time Control Systems, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 1995.*
 - [8] *Apuntes Clase - Jueves 27 de Marzo. [2025]*
-
