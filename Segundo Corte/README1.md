@@ -342,7 +342,39 @@ $$
 
 💡**Ejemplo 6:**
 
+A partir del perfil de velocidad obtenga la posición del eje (axis) transcurridos 100 ms.
 
+![Figura de prueba](images/plantilla/perfilens.png)
+
+Figura 8. Perfil de velocidad curva en S ejemplo 6.
+
+Para la curva en S:
+
+$$
+v_A(t) = \frac{2v_m}{t_a^2} t^2
+$$
+
+$$
+v_B(t) = v_m - \frac{2v_m}{t_a^2} (t_a - t)^2
+$$
+
+$$
+s(t) = \int_{0}^{15} \frac{2 \cdot 32}{30^2} t^2 \ dt + \int_{15}^{30} 32 - \frac{2 \cdot 32}{30^2} (30 - t)^2 \ dt
+$$
+
+$$
+s(t) = \int_{0}^{15} \frac{64}{900} t^2 \ dt + \int_{15}^{30} 32 - \frac{64}{900} (30^2 - 60t + t^2) \ dt
+$$
+
+![Imagen de WhatsApp 2025-04-13 a las 16 21 24_5d15397d](https://github.com/user-attachments/assets/0cbfa40b-31be-4106-9f92-f8e6c4c776ae)
+
+$$
+s_{0B}(t) = 77.62 + 480 - 64.12 = 493.49 \ \text{cts}
+$$
+
+$$
+s_{0C}(t) = 493.49 + 32 \cdot 70 = 2733.49 \ \text{cts}
+$$
 
 ## 5. Ejercicios
 
