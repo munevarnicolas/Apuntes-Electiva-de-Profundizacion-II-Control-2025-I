@@ -252,7 +252,7 @@ $$
 
 ![Figura de prueba](images/plantilla/ejercicio1mat.png)
 
-Figura X. Perfil de Movimiento Posicion Ejercicio 1.
+Figura 6. Perfil de Movimiento Posicion Ejercicio 1.
 
 La posición del eje después de 5 segundos es $$\boxed{25\ \text{m}}$$
 
@@ -262,6 +262,86 @@ Dado el perfil de velocidad de la figura,calcule 𝑠𝐴, 𝑠𝐵, 𝑠𝐶 us
 
 ![image](https://github.com/user-attachments/assets/626782a4-5e51-4b8e-ac0c-d2ece58fd3d8)
 
+-Datos del perfil:
+
+- Aceleración: 0.5 s  
+- Velocidad constante: 5 s  
+- Desaceleración: 0.5 s  
+- Velocidad máxima: \( 4 \, \text{cm/s} \)
+
+---
+
+#### Método 1: Análisis Geométrico (Área bajo la curva)
+
+1. De $$\( s_0 \) a \( s_A \)$$: Triángulo de aceleración
+
+$$
+s_A = \frac{1}{2} \cdot \text{base} \cdot \text{altura} = \frac{1}{2} \cdot 0.5 \cdot 4 = 1 \\text{cm}
+$$
+
+
+
+2. De $$\( s_0 \) a \( s_B \)$$: Triángulo + Rectángulo
+
+\[
+s_B = s_A + \text{área del rectángulo} = 1 + 5 \cdot 4 = 1 + 20 = 21 \\text{cm}
+\]
+
+
+
+3. De \( s_0 \) a \( s_C \): Área total
+
+$$
+s_C = s_B + \text{área del triángulo de desaceleración} = 21 + \frac{1}{2} \cdot 0.5 \cdot 4 = 21 + 1 = 22 \\text{cm}
+$$
+
+
+
+- Resultado Geométrico:
+
+- $$\( s_A = 1 \, \text{cm} \)$$
+- $$\( s_B = 21 \, \text{cm} \)$$
+- $$\( s_C = 22 \, \text{cm} \)$$
+
+
+
+#### Método 2: Análisis Analítico (Usando fórmulas)
+
+- Aceleración: \( 0 < t < 0.5 \, s \)
+
+$$
+a = \frac{v}{t} = \frac{4}{0.5} = 8 \\text{cm/s}^2
+$$
+
+$$
+s_A = \frac{1}{2} a t^2 = \frac{1}{2} \cdot 8 \cdot (0.5)^2 = 1 \\text{cm}
+$$
+
+
+- Velocidad constante: \( 0.5 < t < 5.5 \)
+
+$$
+s_B = s_A + v_m \cdot t = 1 + 4 \cdot 5 = 21 \\text{cm}
+$$
+
+
+- Desaceleración: \( 5.5 < t < 6 \)
+
+$$
+s_C = s_B + v_m \cdot t - \frac{1}{2} a t^2 = 21 + 4 \cdot 0.5 - \frac{1}{2} \cdot 8 \cdot (0.5)^2
+$$
+
+$$
+s_C = 21 + 2 - 1 = 22 \\text{cm}
+$$
+
+
+
+- Resultados Analítico:
+
+- $$\( s_A = 1 \ \text{cm} \)$$
+- $$\( s_B = 21 \ \text{cm} \)$$
+- $$\( s_C = 22 \\text{cm} \)$$
 
 ## 5. Conclusiones
 
