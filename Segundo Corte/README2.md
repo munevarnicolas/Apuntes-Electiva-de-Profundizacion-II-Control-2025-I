@@ -1,4 +1,4 @@
-# Sistemas de Transmisión
+# Elementos de Transmisión
 Clase 2, Esta clase se llevo a cabo el dia 20 de Marzo de 2025, la cual estuvo dirigida a comprender los perfiles de movimiento, sus tipos, ejemplos que ayudaron con su comprension y como desde la ingenieria mecatronica se puede controlar este tipo de movimientos de un punto a otro.
 
 
