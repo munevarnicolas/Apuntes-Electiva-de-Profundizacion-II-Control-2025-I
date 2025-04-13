@@ -2,6 +2,8 @@
 
 Para la clase de hoy se presenta continua el tema del modelado de eslabones y mecanismo en el software Simscpae Multibody, se realizaron algunos ejemplos y jercicios para complemnetar la explicacion y poder apropiar los conceptos.
 
+## 1. Mecanismos
+
 Para que un mecanismo funcione correctamente en Simscape Multibody, es importante tener en cuenta varios aspectos técnicos y estructurales del modelo. En primer lugar, definir correctamente los grados de libertad del sistema, evitando tanto restricciones excesivas como movimientos indeseados. Para ello, se deben utilizar bloques de articulación (como revolute, prismatic, etc.) adecuados para cada conexión, y comprobar la movilidad general del sistema usando el bloque Mechanism Configuration. Además, cada componente del mecanismo debe estar representado por un bloque Solid, con su geometría, masa y centro de masa bien definidos, y conectado correctamente mediante transformaciones rígidas o articulaciones. La posición inicial del mecanismo también debe ser geométricamente válida para evitar errores de ensamblaje; el Mechanics Explorer permite visualizar y verificar esta configuración antes de simular.
 
 En el caso de mecanismos con lazos cinemáticos cerrados, como cadenas de eslabones, es fundamental cerrar correctamente el circuito usando bloques de engranajes, restricciones de cierre de lazo o conexiones cinemáticas equivalentes, ya que estos sistemas tienden a generar redundancias o problemas de rigidez numérica si no se modelan adecuadamente. Asimismo, es importante asignar parámetros físicos realistas a todos los elementos del modelo: masas, momentos de inercia, dimensiones, fricción, fuerzas externas, entre otros. Valores extremos o poco realistas pueden llevar a simulaciones inestables o poco representativas.
@@ -31,20 +33,21 @@ La figura 2 representa el movimiento del mecanismo de balancin triangular.
 
 ![Figura de prueba](images/plantilla/2do.png)
 
-Figura 1. Diagrama de Bloques Balancin.
+Figura 3. Diagrama de Bloques Balancin.
 
-La figura 1 representa el diagrama de bloques del mecanismo de balancin.
+La figura 3 representa el diagrama de bloques del mecanismo de balancin.
+
+Esta mecanismo mostrado en la fihura 4 se realizo con base en el baancin triangular sin embargo se le realizafron modificaciones en los frames de los eslabones y con ayuda de los bloques rigid transform se logro ese movimiento caracteritico del balancin.
 
 
 ![Figura de prueba](images/plantilla/2do.gif)
 
-Figura 2. Balancin.
+Figura 4. Balancin.
 
-La figura 2 representa el movimiento del mecanismo de balancin.
+La figura 4 representa el movimiento del mecanismo de balancin.
 
 
-
-## 1. Ejercicios
+## 2. Ejercicios
 
 ### 📚Ejercicio 1:
 El primer ejercicio fue un mecanismo que está compuesto por tres sólidos rígidos que forman un triángulo cerrado, con tres articulaciones revolutas que permiten que los eslabones giren entre sí. Al ser impulsado desde uno de sus vértices, se genera un movimiento rotacional continuo en una de las barras, lo que obliga a las otras dos a seguir un movimiento coordinado, preservando la forma triangular del conjunto. Este tipo de movimiento se conoce como movimiento de rotación acoplada, en donde todos los eslabones están unidos de tal manera que la rotación de uno condiciona el movimiento de los demás; uno de los eslabones actúa como manivela, otro como eslabón acoplador y el último como balancín.
@@ -123,7 +126,7 @@ Figura 8. Ejemplo 2 Diagrama de Bloques.
 Figura 9. Ejemplo 2 Simulacion Mecanismo.
 
 
-## 5. Conclusiones
+## 3. Conclusiones
 
 - La aplicación de señales a través de actuadores en joints  demuestra cómo Simscape Multibody unifica la especificación de trayectorias deseadas con el cálculo automático de fuerzas y torques internos. Esto facilita evaluar no solo si un mecanismo alcanza la posición deseada, sino también el esfuerzo real necesario para hacerlo.
 - La integracion de perfiles de movimiento en Simscape Multibody junto con controladores desarrollados en Simulink establece un flujo de trabajo dinamico por el cual se diseña un perfil, se simula, se mide el error, se ajusta el controlador y se valida de nuevo. Esta metodología reduce el tiempo de desarrollo de sistemas mecatrónicos al permitir validar estrategias de control, asegurando que el perfil de movimiento se cumpla bajo condiciones reales de carga y dinámica acoplada.
@@ -131,6 +134,6 @@ Figura 9. Ejemplo 2 Simulacion Mecanismo.
 - La herramienta Matlab Simulink, permite simular diversos mecanismo, en esta clase se pudo analizar que mientras la articulación revoluta convierte un torque o gravedad en un movimiento pendular, la prismática traduce directamente el perfil de posición en un desplazamiento lineal. El análisis comparativo de ambos casos revela las diferencias en respuesta dinámica (inercia rotacional; inercia traslacional) y en la necesidad de dimensionar actuadores distintos según el tipo de movimiento.
 - La representación visual y modular de mecanismos quer permite el software Simscape Multibody por medio de los perfiles de movimiento facilita la enseñanza de conceptos de cinemática, dinámica y control en entornos académicos e industriales, acelerando el aprendizaje y la adopción de buenas prácticas de modelado y simulación que son muy comunes y de vital imporatncia en la ingenieria. 
 
-## 6. Referencias
+## . Referencias
 [1] MathWorks, Simscape Multibody [2025]
 [2] E.P.2.Control digital y de Mov. Aulas Ecci. [2025]
