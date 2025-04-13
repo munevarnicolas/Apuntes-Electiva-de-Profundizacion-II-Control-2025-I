@@ -396,7 +396,7 @@ Existen varias estrategias para ejecutar movimientos multi-eje, cada una con dis
 
 ![Figura de prueba](images/plantilla/multieje.png)
 
-Figura 10. Maquinaria con movimeinto multieje.
+Figura 10. Maquinaria con movimiento multieje.
 
 ## 6. Ejercicios
 
