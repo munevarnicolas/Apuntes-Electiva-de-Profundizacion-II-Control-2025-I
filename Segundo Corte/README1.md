@@ -398,6 +398,18 @@ Existen varias estrategias para ejecutar movimientos multi-eje, cada una con dis
 
 Figura 10. Maquinaria con movimiento multieje.
 
+
+💡**Ejemplo 8:**
+
+Considere la máquina de la figura. Si ambos ejes se mueven a una velocidad de 4 cm/s usando un perfil de velocidad trapezoidal con 𝑡𝑎 = 0,2 s, cuánto tiempo le
+tomará a cada eje completar el movimiento?
+
+![Figura de prueba](images/plantilla/ejem8.png)
+
+Figura 10. Multieje ejemplo 8.
+
+
+
 ## 6. Ejercicios
 
 ### 📚Ejercicio 1:
