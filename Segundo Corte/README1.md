@@ -107,43 +107,68 @@ $$
 
 ## 3. Perfiles de Movimiento Trapezoidal
 
-Un perfil de movimiento trapezoidal es una forma bastante común de controlar cómo se mueve un objeto, como el eje de un robot o una máquina. Se divide en tres etapas claras: la primera es que el objeto acelera de forma constante, luego mantiene una velocidad fija durante un tiempo y finalmente, desacelera también de manera constante hasta detenerse. Si dibujamos la velocidad a lo largo del tiempo, el gráfico toma forma de trapecio, de ahí su nombre. Este tipo de perfil es útil porque ayuda a que el movimiento sea fluido y eficiente, sin exigirle demasiado al motor o sistema, respetando los límites de aceleración que se pueden manejar con seguridad. Una de las razones por las que se usa tanto este perfil es que es fácil de calcular y lo suficientemente preciso para muchas tareas industriales. Aunque no es tan suave como un perfil en "S", que reduce aún más los cambios bruscos de aceleración, el perfil trapezoidal ofrece un buen equilibrio entre velocidad, control y facilidad de implementación. Es ideal cuando se necesita mover algo rápido y de forma repetitiva, como en impresoras 3D, máquinas CNC o sistemas automatizados de producción.
+>🔑 *Perfil Trapezoidal:* Un perfil trapezoidal describe el movimiento con aceleración constante, velocidad uniforme y desaceleración constante, formando una gráfica en forma de trapecio para control preciso en mecanismos.
+>
 
-Las principales caracteristicas del perfil trapezoidal son:
+![Figura de prueba](images/plantilla/perfiltra.png)
 
-- **Forma del perfil:**  
-  Tiene forma de trapecio en la gráfica de velocidad vs. tiempo.
+Figura 3. Perfil Trapezoidal.
 
-- **Fases del movimiento:**  
-  1. Aceleración constante  
-  2. Velocidad constante  
-  3. Desaceleración constante
-
-- **Nivel de suavidad:**  
-  Es un perfil moderadamente suave. Más suave que una aceleración instantánea, pero menos suave que un perfil en "S".
-
-- **Facilidad de cálculo:**  
-  Se basa en fórmulas básicas de cinemática, por lo que es fácil de implementar.
-
-- **Tiempo total del movimiento:**  
-  Se reparte entre las tres fases (aceleración, velocidad constante y desaceleración).
-
-- **Ventajas:**  
-  - Fácil de implementar  
-  - Eficiente  
-  - Buen equilibrio entre rapidez y control  
-  - Ideal para movimientos repetitivos
-
-- **Limitaciones:**  
-  - Cambios bruscos en la aceleración pueden generar vibraciones o mayor desgaste mecánico
-
-- **Aplicaciones comunes:**  
-  - Robótica  
-  - Impresoras 3D  
-  - Máquinas CNC  
-  - Sistemas de automatización industrial
+En la figura 3 se ve los perfiles de movimiento para aceleración, velocidad y posición de un perfil trapezoidal.
 
 💡**Ejemplo 3:**
+
+![Figura de prueba](images/plantilla/perfiltra.png)
+
+Figura 4. Tornillo sin Fin.
+
+Se procedio a realizar el analisis geometrico como analitico del perfil de velocidad de la figura 4 para comprender mas a fondo el mecanismo
+
+### Metodo Geometrico:
+
+$$ 
+t_a = t_d = \frac{v_m}{a} 
+$$
+
+
+$$ 
+t_{total} = t_a + t_m + t_d 
+$$
+
+
+$$ 
+L = \frac{t_a \cdot v_m}{2} + t_m \cdot v_m + \frac{t_d \cdot v_m}{2} 
+$$
+
+$$
+L = v_m \cdot (t_a + t_m) 
+$$
+
+Entonces el tiempo de movimiento tm es:
+
+$$ 
+t_m = \frac{L}{v_m} - t_a 
+$$
+
+### Metodo Analitico:
+
+$$ 
+t_a = t_d = \frac{v_m}{a} 
+$$
+
+- Para \( 0 < t < $$t_a$$ \)
+
+Dado que:
+
+$$
+t_0 = 0, \quad v_0 = 0, \quad s_0 = 0
+$$
+
+La posición se obtiene integrando la velocidad:
+
+$$
+s(t) = \int_0^{t_a} a t \, dt = \left. \frac{1}{2} a t^2 \right|_0^{t_a} = \frac{1}{2} a t_a^2
+$$
 
 El eje X de un robot Gantry debe moverse una distancia de 10 cm. La aceleración máxima permitida en este eje es de 1 cm/s², y se desea mover el eje a una velocidad máxima de 2 cm/s. cuanto tiempo tomará hacer este movimiento
 
