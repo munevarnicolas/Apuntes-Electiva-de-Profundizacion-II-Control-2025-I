@@ -231,6 +231,24 @@ $$
 J_{\text{total}} = J_m + J_{\text{coupling}} + J_{mg} + \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
 $$
 
+### Relacion de Inercia
+
+La relación de inercia se refiere a la comparación entre las inercias de dos o más componentes dentro de un sistema mecánico. En términos generales, esta relación se utiliza para entender cómo se distribuye la resistencia al cambio de movimiento entre diferentes partes de un sistema, como los engranajes, ejes o masas. En sistemas rotacionales, la relación de inercia se calcula comparando las inercias de los componentes involucrados, que dependen de la masa de los cuerpos y la distribución de esa masa en relación con el eje de rotación. Esta relación es esencial para prever cómo los cambios en un componente afectarán a otros elementos del sistema, particularmente en lo que respecta a la aceleración, desaceleración y la eficiencia del movimiento.
+
+- Esta definida como:
+
+$$
+J_R = \frac{J_{\text{on motor shaft}} + J_{\text{ref}}}{J_m}
+$$
+
+- De esta relación se concluye que es la relación entre toda la inercia de la carga y la inercia del motor:
+
+$$
+J_R = \frac{J_{\text{on motor shaft}} + J_{\text{load} \rightarrow M} + J_{\text{GB} \rightarrow M}}{J_m}
+$$
+
+Donde M: Comercialmente el fabricante da la inercia reflejada al eje del motor.
+
 
 ## 2. Ejes de Movimiento
 >🔑 *Ejes de Movimiento:* En el control de movimiento y la automatización, los ejes de movimiento (o motion axes en inglés) son las direcciones en las que una máquina o sistema puede moverse. Cada eje representa un grado de libertad. Por ejemplo, un robot industrial con tres ejes lineales puede moverse hacia adelante y atrás (eje X), de un lado a otro (eje Y) y arriba y abajo (eje Z). Además de los movimientos lineales, también existen ejes rotacionales, que permiten que un sistema gire alrededor de un eje en lugar de solo desplazarse.
