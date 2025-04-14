@@ -337,6 +337,9 @@ $$
 
 Donde BP: es igual a los engranajes
 
+![Figura de prueba](images/plantilla/inerrefle1.png)
+
+Figura 9. Inercia reflejada.
 
 La correa se modela como una masa rotatoria, cuya inercia se define como:
 
@@ -354,6 +357,9 @@ $$
 J_{belt \rightarrow in} = \frac{W_{belt}}{g \cdot \eta} \cdot r_{ip}^2
 $$
 
+![Figura de prueba](images/plantilla/inerrefle2.png)
+
+Figura 10. Inercia reflejada.
 
 ## 5. Conclusiones
 
