@@ -571,6 +571,12 @@ $$
 
 ## 7. Conclusiones
 
+La clase sobre perfiles de movimiento abordó un tema fundamental para el control de sistemas dinámicos, especialmente en el campo de la ingeniería mecatrónica. Los perfiles de movimiento permiten modelar y controlar el comportamiento de un objeto en movimiento, optimizando su precisión, eficiencia y seguridad. Se discutieron las tres magnitudes principales posición, velocidad y aceleración que, al analizarse de manera conjunta, proporcionan una comprensión completa de cómo varía el movimiento de un sistema. Estas variables son esenciales para garantizar que los dispositivos se comporten como se espera y evitar errores durante el funcionamiento.
+
+Además, se exploraron los conceptos clave de la cinemática, que es crucial para describir y prever el movimiento de los cuerpos sin considerar las fuerzas involucradas. El uso de derivadas e integrales facilita el análisis de cómo la posición y la velocidad cambian en función del tiempo. En este sentido, los perfiles trapezoidales y en S se presentan como soluciones muy eficaces para el diseño de trayectorias, proporcionando una transición suave entre diferentes fases del movimiento, lo cual es crucial para aplicaciones industriales y robóticas.
+
+El estudio de los perfiles de movimiento trapezoidal se destaca por su simplicidad y eficiencia, ya que divide el movimiento en fases claras de aceleración constante, velocidad constante y desaceleración constante. Por otro lado, los perfiles en S, con sus aceleraciones variables, se utilizan en aplicaciones que requieren movimientos extremadamente suaves y naturales, reduciendo vibraciones y mejorando la precisión del sistema.Para finalizar, el concepto de movimiento multieje resalta la importancia de la coordinación entre ejes en sistemas complejos, como los utilizados en robots y maquinaria automatizada. La sincronización precisa de múltiples actuadores permite realizar trayectorias complejas con alta precisión, lo que es esencial para aplicaciones avanzadas en la industria y la robótica.
+
 
 ## 8. Referencias
 - [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
