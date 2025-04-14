@@ -19,6 +19,32 @@ La importancia de los diseños de transmisión también está estrechamente rela
 
 Al incorporar los perfiles de movimiento en el diseño de transmisión, se logra una correspondencia precisa entre las exigencias dinámicas del sistema y la respuesta mecánica de sus componentes. Esta integración permite controlar de forma más efectiva la aceleración, el desaceleramiento y la estabilidad del movimiento, lo que resulta en una operación más eficiente y fluida. Además, una transición cuidadosamente diseñada entre distintas fases del movimiento minimiza picos de carga y esfuerzos transitorios, reduciendo significativamente la fatiga y el desgaste prematuro de los elementos mecánicos. Esto no solo prolonga la vida útil del sistema, sino que también garantiza un desempeño más confiable en condiciones variables o exigentes, donde pequeñas desviaciones en el perfil de movimiento pueden traducirse en fallas críticas o pérdidas de precisión operativa.
 
+## 1. Diseño de Transmisión
+
+En el diseño de sistemas de transmisión, uno de los requerimientos fundamentales es garantizar que el torque proporcionado por el motor, incluso a su máxima velocidad, sea mayor al exigido por la aplicación. Esto no solo asegura un funcionamiento eficiente, sino que previene el sobreesfuerzo del motor ante condiciones variables o inesperadas. Para ello, se recomienda siempre incorporar un margen de seguridad, que actúe como una reserva de capacidad ante incrementos imprevistos de carga o pérdidas por fricción. Asimismo, es crucial mantener una relación adecuada de inercia entre el motor y la carga, ya que una inercia mal equilibrada puede generar respuestas lentas, inestabilidad en el control del sistema y desgaste acelerado de los componentes.
+
+No atender correctamente estos requerimientos puede derivar en diversos problemas de diseño en las transmisiones. Por ejemplo, un motor subdimensionado puede operar constantemente cerca de sus límites, elevando su temperatura y reduciendo su vida útil. De igual forma, una mala gestión de la inercia puede causar oscilaciones o vibraciones indeseadas, afectando la precisión del sistema, especialmente en aplicaciones que requieren alta repetibilidad o ciclos de tiempo muy controlados. Además, ignorar aspectos como el costo, la facilidad de mantenimiento o la compatibilidad entre componentes puede traducirse en soluciones poco sostenibles, tanto en términos técnicos como económicos. Por ello, el diseño de una transmisión debe abordarse de forma integral, considerando no solo los parámetros mecánicos, sino también el contexto operativo completo del sistema.
+
+### Inercia y Torque reflejado
+
+>🔑 *Inercia:* s una medida de la fuerza que causa un giro o rotación alrededor de un eje. Depende de la magnitud de la fuerza y la distancia desde el punto de aplicación al eje de rotación.
+>
+
+>🔑 *Torque:* es la fuerza aplicada a una distancia del eje de rotación, que genera un movimiento giratorio. Se expresa en Newton-metro (Nm) y determina la capacidad para hacer girar un objeto alrededor de un eje.
+>
+
+En el contexto del diseño de sistemas de transmisión y control de movimiento, la inercia juega un papel esencial al representar la resistencia de un cuerpo a los cambios en su velocidad angular. De acuerdo con las leyes de Newton, esta propiedad es la contraparte rotacional de la masa en los sistemas lineales. En aplicaciones de control, tanto rotacionales como lineales, se hace referencia a la inercia para describir la dificultad que tiene el sistema para acelerar o desacelerar. Esta característica influye directamente en la capacidad del motor para seguir un perfil de movimiento con precisión, ya que una inercia mal dimensionada puede provocar retrasos en la respuesta, oscilaciones o incluso pérdida de control.
+
+El concepto de torque reflejado está estrechamente ligado a la inercia y al diseño de transmisión. A través de un sistema de engranajes o cualquier medio de acoplamiento mecánico, la carga externa impone una resistencia que es "reflejada" hacia el motor, y esta resistencia incluye tanto el torque como la inercia equivalente. Si esta carga reflejada es demasiado alta respecto a la capacidad del motor, el sistema no podrá seguir adecuadamente el perfil de movimiento programado, comprometiendo el rendimiento del control y la eficiencia energética. Por ello, es fundamental ajustar las relaciones de transmisión para adecuar el valor de inercia reflejada, logrando un equilibrio entre rapidez de respuesta y estabilidad del sistema.
+
+Por leyes de Newton el comportamiento es:
+
+$$
+∑T = Jα
+$$
+
+Desde el punto de vista del control de movimiento, el manejo adecuado de la inercia y el torque reflejado permite un seguimiento más preciso de los perfiles de velocidad, aceleración y posición, aspectos críticos en sistemas automatizados de alta exigencia como robots industriales, CNC o impresoras 3D. Un diseño optimizado facilita que el controlador aplique los comandos de forma más efectiva, minimizando errores y mejorando la dinámica general del sistema. En resumen, la comprensión y correcta aplicación de estos conceptos no solo aseguran el funcionamiento mecánico, sino también la fidelidad en la ejecución del perfil de movimiento deseado.
+
 
 💡**Ejemplo 1:**
 
