@@ -249,19 +249,42 @@ $$
 
 Donde M: Comercialmente el fabricante da la inercia reflejada al eje del motor.
 
-
-
-El Sistema en la figura usa un engranaje PN023 de Apex Dynamics. Este tiene 5:1 de relación, 0,15 Kg − cm2 reflejado a la entrada y 97% de eficiencia. El motor es un Quantum QB02301 NEMA tamaño 23 de Allied Motion Technologies. Este tiene 1,5x10−5 Kg − m2 de inercia en el rotor. Si la inercia de la carga es 10x10−4 Kg − m2. Encuentre la relación de inercia
-
-
-## 2. Ejes de Movimiento
->🔑 *Ejes de Movimiento:* En el control de movimiento y la automatización, los ejes de movimiento (o motion axes en inglés) son las direcciones en las que una máquina o sistema puede moverse. Cada eje representa un grado de libertad. Por ejemplo, un robot industrial con tres ejes lineales puede moverse hacia adelante y atrás (eje X), de un lado a otro (eje Y) y arriba y abajo (eje Z). Además de los movimientos lineales, también existen ejes rotacionales, que permiten que un sistema gire alrededor de un eje en lugar de solo desplazarse.
-
 💡**Ejemplo 2:**
 
 ![Figura de prueba](images/plantilla/ejem2.png)
 
-Figura 2. Axis en máquina CNC.
+Figura 6. Ejemplo 2.
+
+El sistema en la figura usa un engranaje PN023 de Apex Dynamics. Este tiene 5:1 de relación, 0,1 Kg·cm² reflejado a la entrada y 97% de eficiencia. El motor es un Quantum QB02301 NEMA tamaño 23 de Allied Motion Technologies. Este tiene 1,5 × 10⁻⁵ Kg·m² de inercia en el rotor. Si la inercia de la carga es 10 × 10⁻⁴ Kg·m², encuentre la relación de inercia.
+
+
+$$
+J_{load \to M} = \frac{J_{load}}{\eta N_{GB}^2}
+$$
+
+$$
+J_{load \to M} = \frac{10 \times 10^{-4}}{0.97 \cdot 5^2}
+$$
+
+$$
+J_{load \to M} = 4.124 \times 10^{-5} \, \text{kg·m}^2
+$$
+
+---
+
+$$
+J_R = \frac{J_{on \, \text{motor shaft}} + J_{load \to M} + J_{GB \to M}}{J_m}
+$$
+
+$$
+J_R = \frac{4.124 \times 10^{-5} + 0.15 \times 10^{-4}}{1.5 \times 10^{-5}}
+$$
+
+$$
+J_R  = 3.75
+$$
+
+
 
 
 
