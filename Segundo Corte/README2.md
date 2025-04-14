@@ -327,6 +327,32 @@ Figura 8. Relacion de transmisión en polea - correa.
 
 ### Inercia Reflejada
 
+$$
+J_{trans_{ref}} = J_{IP} + J_{belt \rightarrow in} + J_{LP \rightarrow in} + J_{load \rightarrow in} + J_{C2 \rightarrow in}
+$$
+
+$$
+J_{trans_{ref}} = J_{IP} + \left( \frac{W_{belt}}{g \cdot \eta} \right) \cdot r_{ip}^2 + \frac{1}{\eta N_{BP}^2} (J_{LP} + J_{load} + J_{C2})
+$$
+
+Donde BP: es igual a los engranajes
+
+
+La correa se modela como una masa rotatoria, cuya inercia se define como:
+
+$$
+J = m \cdot r^2
+$$
+
+Sustituyendo:
+
+$$
+W_{belt} = m \cdot g \quad \text{y} \quad r = r_{ip}
+$$
+
+$$
+J_{belt \rightarrow in} = \frac{W_{belt}}{g \cdot \eta} \cdot r_{ip}^2
+$$
 
 
 ## 5. Conclusiones
