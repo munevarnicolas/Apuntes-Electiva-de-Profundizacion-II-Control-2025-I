@@ -223,9 +223,14 @@ $$
 J_{\text{total}} = J_m + J_{\text{coupling}} + J_{mg} + \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
 $$
 
-![Figura de prueba](images/plantilla/ejem1.png)
+![Figura de prueba](images/plantilla/ejem1.1.png)
 
 Figura 5. Ejemplo 1.
+
+$$
+J_{\text{total}} = J_m + J_{\text{coupling}} + J_{mg} + \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
+$$
+
 
 ## 2. Ejes de Movimiento
 >🔑 *Ejes de Movimiento:* En el control de movimiento y la automatización, los ejes de movimiento (o motion axes en inglés) son las direcciones en las que una máquina o sistema puede moverse. Cada eje representa un grado de libertad. Por ejemplo, un robot industrial con tres ejes lineales puede moverse hacia adelante y atrás (eje X), de un lado a otro (eje Y) y arriba y abajo (eje Z). Además de los movimientos lineales, también existen ejes rotacionales, que permiten que un sistema gire alrededor de un eje en lugar de solo desplazarse.
