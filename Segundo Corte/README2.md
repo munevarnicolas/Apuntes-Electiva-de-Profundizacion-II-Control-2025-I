@@ -382,11 +382,16 @@ Donde:
 Figura 11. Torque reflejado.
 
 
-## 5. Conclusiones
+## 5. Ejercicios
 
-Se observa que el control de movimiento ha evolucionado significativamente, pasando de sistemas mecánicos y analógicos, que dependían de mecanismos físicos como engranajes, levas y poleas, a soluciones digitales y electrónicas que permiten un control mas preciso de parámetros críticos como la posición, velocidad, aceleración y torque. Esta transformación ha posibilitado la implementación de estrategias de control más sofisticadas, como el control en cascada, que divide el proceso en bucles internos y externos para corregir rápidamente las perturbaciones y mantener la estabilidad del sistema. La integración de algoritmos de procesamiento en tiempo real ha mejorado la capacidad de respuesta y la adaptabilidad, facilitando la optimización de procesos en aplicaciones industriales complejas. Además, es importante destacar la importancia de la convergencia de diversos componentes tecnológicos en el control de movimiento moderno. La incorporación de interfaces hombre-máquina (HMI), controladores avanzados, drivers de potencia, actuadores precisos, mecanismos de transmisión y sensores ha permitido no solo la supervisión en tiempo real, sino también ajustes continuos y la corrección dinámica de errores. Este enfoque integrado garantiza una operación más eficiente, flexible y segura, satisfaciendo las demandas de industrias tan variadas como el embalaje, ensamblaje, etiquetado y fabricación de semiconductores, y posicionando el control de movimiento como un pilar fundamental en la automatización industrial actual.
+### 📚Ejercicio 1:
 
-## 6. Referencias  
+
+## 6. Conclusiones
+
+
+
+## 7. Referencias  
 - [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
 - [2] *R. Kelly, V. Santibáñez, and A. Loria, Control of Robot Manipulators in Joint Space, Springer, 2005*
 - [3] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
