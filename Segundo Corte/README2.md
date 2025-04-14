@@ -431,6 +431,11 @@ Figura 18. Resultados del mecanismo.
 
 ## 6. Conclusiones
 
+El análisis de los sistemas de transmisión evidencia que un diseño cuidadoso de engranajes, poleas y correas es esencial para lograr un control de movimiento preciso y eficiente en aplicaciones mecatrónicas. La elección adecuada de las relaciones de transmisión y el dimensionamiento de los componentes asegura que el motor entregue el torque y la velocidad necesarios, al mismo tiempo que se preserva un margen de seguridad que evita el desgaste prematuro y mejora la durabilidad del sistema. La incorporación de perfiles de movimiento suaves permite transiciones estables, minimiza las tensiones mecánicas y garantiza una respuesta más uniforme ante variaciones de carga.
+
+El manejo de la inercia y la forma en que la carga interactúa con el motor resulta clave para la fidelidad del seguimiento de trayectorias. Ajustar la proporción entre las inercias del motor y de la carga, junto con la eficiencia de la transmisión, favorece un equilibrio entre rapidez de respuesta y estabilidad, reduciendo vibraciones y mejorando la calidad del control. En sistemas de polea y correa, además, es fundamental considerar la elasticidad y la masa de la correa para anticipar retardos dinámicos y optimizar la precisión.
+
+Los ejemplos prácticos demuestran que, más allá de los cálculos teóricos, es imprescindible aplicar una metodología sistemática que contemple la selección de materiales, la compatibilidad entre componentes y las condiciones operativas reales. De este modo, es posible diseñar sistemas de movimiento que no solo cumplan con los requisitos de desempeño, sino que también ofrezcan una operación confiable, un mantenimiento sencillo y un uso energético optimizado.
 
 
 ## 7. Referencias  
