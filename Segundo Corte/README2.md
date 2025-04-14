@@ -231,7 +231,7 @@ $$
 J_{\text{total}} = J_m + J_{\text{coupling}} + J_{mg} + \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
 $$
 
-### Relacion de Inercia
+### Relación de Inercia
 
 La relación de inercia se refiere a la comparación entre las inercias de dos o más componentes dentro de un sistema mecánico. En términos generales, esta relación se utiliza para entender cómo se distribuye la resistencia al cambio de movimiento entre diferentes partes de un sistema, como los engranajes, ejes o masas. En sistemas rotacionales, la relación de inercia se calcula comparando las inercias de los componentes involucrados, que dependen de la masa de los cuerpos y la distribución de esa masa en relación con el eje de rotación. Esta relación es esencial para prever cómo los cambios en un componente afectarán a otros elementos del sistema, particularmente en lo que respecta a la aceleración, desaceleración y la eficiencia del movimiento.
 
@@ -294,21 +294,20 @@ Desde una perspectiva técnica, alcanzar un equilibrio en \( J_R \) permite dise
 | Alta                | Mayor a 10  | No es importante dinámicas rápidas            | Baja eficiencia o torque insuficiente |
 
 
-## 3. Control de Movimiento con el pasar del tiempo
-Antes de los sistemas digitales modernos, el control de movimiento se realizaba principalmente mediante métodos mecánicos y análogos en donde se usaban sistemas de engranajes, levas, poleas y palancas para crear movimientos precisos, como en los relojes antiguos o las cajas de música. También se empleaban sistemas hidráulicos y neumáticos que utilizaban la presión de líquidos o aire para mover maquinaria industrial, eran principlamnete diseñados por la ingeniería industrial y mecánica.
 
-💡**Ejemplo 3:**
+## 4. Conceptos de Transmision Polea - Correa
 
-![Figura de prueba](images/plantilla/images.jpg)
+Los sistemas de transmisión por polea y correa son mecanismos utilizados para transferir movimiento y potencia entre ejes separados, mediante el contacto entre una o más poleas y una correa flexible. Este tipo de sistema se basa en la fricción generada entre la superficie de la polea y la correa, permitiendo transmitir el giro desde un eje motriz (como el de un motor) hacia uno o más ejes conducidos. Existen diferentes configuraciones, como transmisiones abiertas, cruzadas o múltiples, y también distintos tipos de correas (planas, trapezoidales, dentadas), dependiendo del nivel de precisión, velocidad y torque requerido en la aplicación.
 
-Figura 3. Bobinadora de cables y láminas de alta tensión y baja tensión serie 400, Broomfield.
+![Figura de prueba](images/plantilla/poleacorrea.png)
 
-## 4. Control de Movimiento en la actualidad
-El control de movimiento en la actulaidad es electronico, el cual permite que coordine y gestione todos los elementos del sistema para lograr que cada eje se mueva de manera sincronizada y exacta. En un sistema completo se integran varios componentes que trabajan en conjunto, y a continuación se describen de forma sencilla:
+Figura 7. Transmision Polea - Correa.
 
-- Interfaz Hombre-Máquina (HMI)
 
->🔑 *Interfaz Hombre-Máquina (HMI):* Es el punto de conexión entre el operador y el sistema. A través de esta interfaz, el usuario puede programar, ajustar y supervisar el comportamiento de la máquina, facilitando la configuración y el monitoreo en tiempo real.
+Estos sistemas ofrecen ventajas importantes como simplicidad mecánica, bajo costo y capacidad de absorber vibraciones y pequeñas desalineaciones, lo que los hace ideales para muchas aplicaciones industriales. Sin embargo, su comportamiento dinámico puede ser más complejo que otros sistemas como los de engranajes, debido a la elasticidad de la correa y el posible deslizamiento. Esto introduce variables como la inercia reflejada y el retardo en la respuesta del sistema, aspectos críticos cuando se requiere precisión en la sincronización del movimiento o en perfiles de aceleración y desaceleración.
+
+Los sistemas de polea y correa son especialmente relevantes en control y perfiles de movimiento porque permiten modular la relación de velocidad y torque entre el motor y la carga de manera eficiente. En aplicaciones donde el movimiento debe seguir un perfil específico tales como rampas suaves de aceleración, cambios de dirección o ciclos repetitivos; es fundamental considerar la respuesta mecánica del sistema de transmisión. La elasticidad de la correa, la masa rotacional y la tensión afectan la precisión con la que se puede seguir un perfil de movimiento. 
+
 
 💡**Ejemplo 4:**
 
