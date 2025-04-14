@@ -386,6 +386,20 @@ Figura 11. Torque reflejado.
 
 ### 📚Ejercicio 1:
 
+La figura 12 muestra un sistema mecánico compuesto por dos círculos conectados por líneas que representan una correa o cadena. El círculo más grande, de color rojo, podría simbolizar una polea motriz o engranaje principal, mientras que el círculo más pequeño, de color verde, sería la polea conducida o secundaria. Los cuadrados amarillos en el centro de cada círculo probablemente indican los ejes de rotación.
+
+![Figura de prueba](images/plantilla/ejercicio1ult.png)
+
+Figura 12. Sistema mecanico Polea - correa.
+
+El diagrama de bloques  representa un sistema mecánico basado en la interacción de componentes de una transmisión por correa y polea. Este tipo de sistema es esencial en aplicaciones que requieren transferencias de movimiento y fuerza de manera eficiente, ajustando velocidades y torques para adaptarse a diferentes requisitos funcionales. El diagrama destaca los componentes clave involucrados: la polea, la correa y los puntos de conexión, junto con elementos que parecen representar parámetros físicos, condiciones iniciales y posiblemente simulaciones computacionales.
+
+![Figura de prueba](images/plantilla/ejercicio2ult.png)
+
+Figura 13. Diagrama de bloques Sistema mecanico Polea - correa.
+
+El diagrama mostrado en la figura 13, muestra cómo cada componente contribuye al flujo de movimiento. Los bloques como "pulley-base", "edge_pulley1" y "pulley_edge2" indican partes individuales de la polea que interactúan con la correa, mientras que el bloque etiquetado como "B" representa el modelo dinámico de la correa, que incluye su rigidez y capacidad de transmitir fuerza. La eficiencia y la relación de transmisión están representadas implícitamente, ya que son fundamentales para reflejar los torques y las inercias hacia el eje motriz. Además, los bloques "W" y "P" podrían indicar parámetros de peso o resistencia aplicados a la correa, cuya influencia en el sistema debe ser calculada y controlada para garantizar un rendimiento óptimo.
+
 
 ## 6. Conclusiones
 
