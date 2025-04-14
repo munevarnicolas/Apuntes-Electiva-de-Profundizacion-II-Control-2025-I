@@ -150,7 +150,35 @@ El torque reflejado es el concepto que describe cómo el par motor (torque) apli
 
 ### Eficiencia
 
+>🔑 *Eficiencia:* La eficiencia en control de movimiento se refiere a la capacidad de un sistema para maximizar la conversión de energía en trabajo útil, minimizando las pérdidas de energía durante el proceso de funcionamiento.
+>
 
+*Recordando que:*
+
+$$
+P = T \cdot \omega
+$$
+
+
+$$
+\eta = \frac{P_{\text{output}}}{P_{\text{input}}}
+$$
+
+$$
+T_l \omega_l = \eta T_m \omega_m
+$$
+
+$$
+T_m = \frac{T_l}{\eta N_{\text{GB}}}
+$$
+
+
+
+*Siguiendo la inercia reflejada:*
+
+$$
+J_{\text{ref}} = \frac{J_{\text{load}}}{\eta N_{\text{GB}}^2}
+$$
 
 
 💡**Ejemplo 1:**
