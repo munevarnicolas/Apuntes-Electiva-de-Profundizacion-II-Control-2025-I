@@ -1,11 +1,24 @@
 # Elementos de Transmisión
-Clase 2, Esta clase se llevo a cabo el dia 20 de Marzo de 2025, la cual estuvo dirigida a comprender los perfiles de movimiento, sus tipos, ejemplos que ayudaron con su comprension y como desde la ingenieria mecatronica se puede controlar este tipo de movimientos de un punto a otro.
+Esta clase se llevó a cabo el día 3 de abril de 2025, la cual estuvo dirigida a comprender los sistemas de transmisión, abordando temas como el diseño de transmisión, los sistemas de engranajes, así como los conceptos de inercia y torque reflejado, fundamentales para el análisis y optimización del movimiento en sistemas mecánicos.
 
 
-## 1. ¿Que es perfil de Movimiento?
->🔑 *Perfil de Movimiento:* Es la trayectoria diseñada para trasladar un punto “A” a un punto “B”, que en su forma más simple es una línea recta en un solo eje, pero que en aplicaciones complejas se construye combinando múltiples ejes y controlando posición, velocidad y aceleración en cada etapa. 
+## 1. ¿Que es un sistema de Transmisión?
+>🔑 *Sistema de Transmision:* Un sistema de transmisión es un conjunto de elementos mecánicos que transfieren potencia desde una fuente de energía, como un motor, hacia un componente receptor, controlando velocidad, torque y dirección del movimiento.
+>
 
+Los diseños de transmisión son fundamentales porque permiten adaptar la potencia generada por un motor a las necesidades específicas de una máquina o sistema. A través del diseño adecuado, se puede controlar la velocidad, el torque y la eficiencia del movimiento, optimizando el rendimiento general del mecanismo. Esto es especialmente importante en aplicaciones donde se requiere precisión o donde las condiciones de carga varían constantemente, como en la robótica, la manufactura o los vehículos eléctricos.
+
+Además, un buen diseño de transmisión contribuye a la durabilidad y seguridad del sistema. Al seleccionar correctamente componentes como engranajes, correas o cadenas, se minimizan las pérdidas de energía y se reducen los esfuerzos mecánicos innecesarios, lo que alarga la vida útil de los equipos. También permite prever y compensar factores como la inercia o las vibraciones, haciendo que el funcionamiento sea más estable y confiable incluso en condiciones exigentes.
 Los perfiles son esenciales porque definen de forma precisa la trayectoria, la velocidad y la aceleración que debe seguir un sistema para moverse de un punto a otro. Esto permite programar transiciones suaves y evitar movimientos bruscos, lo que reduce el desgaste mecánico y mejora la precisión. Ajustar estos parámetros es clave para adaptar el comportamiento del sistema a diferentes condiciones o tareas, facilitando la corrección en tiempo real de desviaciones y asegurando un rendimiento óptimo y seguro en aplicaciones tan diversas como la robótica, la manufactura, etc.
+
+![Figura de prueba](images/plantilla/sistemas.png)
+
+Figura 1. Sistemas de transmision por poleas.
+
+La importancia de los diseños de transmisión también está estrechamente relacionada con los perfiles de movimiento, ya que estos determinan cómo varía la velocidad y aceleración a lo largo del tiempo en un sistema mecánico. Un diseño de transmisión bien ajustado permite seguir de manera precisa el perfil de movimiento deseado, lo cual es esencial en aplicaciones donde se requiere un control exacto, como en sistemas automatizados o maquinaria de alta precisión.
+
+Al incorporar los perfiles de movimiento en el diseño de transmisión, se logra una correspondencia precisa entre las exigencias dinámicas del sistema y la respuesta mecánica de sus componentes. Esta integración permite controlar de forma más efectiva la aceleración, el desaceleramiento y la estabilidad del movimiento, lo que resulta en una operación más eficiente y fluida. Además, una transición cuidadosamente diseñada entre distintas fases del movimiento minimiza picos de carga y esfuerzos transitorios, reduciendo significativamente la fatiga y el desgaste prematuro de los elementos mecánicos. Esto no solo prolonga la vida útil del sistema, sino que también garantiza un desempeño más confiable en condiciones variables o exigentes, donde pequeñas desviaciones en el perfil de movimiento pueden traducirse en fallas críticas o pérdidas de precisión operativa.
+
 
 💡**Ejemplo 1:**
 
