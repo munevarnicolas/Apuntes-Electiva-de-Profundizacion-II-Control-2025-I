@@ -49,7 +49,9 @@ $$
 
 Desde el punto de vista del control de movimiento, el manejo adecuado de la inercia y el torque reflejado permite un seguimiento más preciso de los perfiles de velocidad, aceleración y posición, aspectos críticos en sistemas automatizados de alta exigencia como robots industriales, CNC o impresoras 3D. Un diseño optimizado facilita que el controlador aplique los comandos de forma más efectiva, minimizando errores y mejorando la dinámica general del sistema. En resumen, la comprensión y correcta aplicación de estos conceptos no solo aseguran el funcionamiento mecánico, sino también la fidelidad en la ejecución del perfil de movimiento deseado.
 
-## 3. Relacion de Engranajes
+## 3. Conceptos de transmisión Engranajes
+
+### Relacion de Engranajes
 
 Una relación de engranajes es una medida que describe cómo se transmite el movimiento entre dos o más engranajes, en función de sus tamaños y número de dientes. Es un concepto fundamental en la ingeniería mecánica, pues determina la velocidad de rotación y la fuerza aplicada a través de los engranajes. La relación de engranajes se define generalmente como la razón entre el número de dientes de los engranajes involucrados, y tiene un impacto directo en la eficiencia de las máquinas. Dependiendo de cómo estén conectados los engranajes, esta relación puede ser de aumento o reducción de velocidad, lo que influye en la funcionalidad y rendimiento de sistemas complejos como motores, transmisiones o mecanismos de reloj.
 
@@ -60,6 +62,96 @@ Figura 3. Relación de Engranajes.
 Una de las propiedades clave de las relaciones de engranajes es que permiten alterar la velocidad y el par motor en un sistema mecánico sin necesidad de modificar directamente los motores. En una relación de engranajes reductora, el engranaje conductor (el que está impulsando el sistema) tiene más dientes que el engranaje conducido, lo que resulta en una disminución de la velocidad de salida pero un aumento en el par motor. Por el contrario, una relación multiplicadora aumenta la velocidad de salida, pero a costa de reducir el par motor. Estas relaciones son cruciales para optimizar el funcionamiento de vehículos, maquinaria industrial y dispositivos que requieren control preciso sobre la velocidad y fuerza de movimiento.
 
 Desde una perspectiva más técnica, el diseño de una relación de engranajes involucra factores como la geometría de los engranajes (módulo, diámetro de paso, y ángulos de presión), la precisión en el corte de dientes, y la sincronización de los engranajes para evitar deslizamientos y desgastes prematuros. En aplicaciones donde se busca alta eficiencia y durabilidad, se deben considerar materiales resistentes al desgaste y al calor, además de una lubricación adecuada para minimizar la fricción. Los avances tecnológicos han permitido crear engranajes más compactos y eficientes, mejorando así la capacidad de las máquinas modernas para operar a mayores velocidades y con mayor fuerza sin comprometer su fiabilidad.
+
+
+### Inercia Reflejada
+
+La inercia reflejada es un concepto que describe cómo la inercia de un componente en un sistema se traslada o se refleja en otro componente al momento de conectar diferentes partes de un mecanismo, como engranajes o ejes. Este fenómeno se refiere al efecto de la inercia de un cuerpo, como un volante de inercia, cuando se transmite a través de un sistema de transmisión o a otro componente mecánico, afectando la dinámica de todo el sistema.
+
+- Acople directo
+
+$$
+T_m = J_{\text{load}} \, \ddot{\theta}_m
+$$
+
+
+
+- Desplazamiento tangencial
+
+$$
+r_l \theta_l = r_m \theta_m
+$$
+
+
+- Acople con engranajes
+
+$$
+T_l = J_{\text{load}} \, \ddot{\theta}_l
+$$
+
+$$
+\frac{\omega_m}{\omega_l} = \frac{r_l}{r_m}
+$$
+
+$$
+\frac{r_l}{r_m} T_m = J_{\text{load}} \, \ddot{\theta}_l
+$$
+
+$$
+r_l \ddot{\theta}_l = r_m \ddot{\theta}_m
+$$
+
+$$
+\frac{r_l}{r_m} T_m = J_{\text{load}} \frac{r_m}{r_l} \ddot{\theta}_m
+$$
+
+
+
+- Por leyes de Newton
+
+$$
+T_m = J_{\text{load}} \left( \frac{r_m}{r_l} \right)^2 \ddot{\theta}_m
+$$
+
+$$
+T_m = J_{\text{load}} \frac{1}{N_{\text{GB}}^2} \ddot{\theta}_m
+$$
+
+$$
+J_{\text{ref}} = \frac{J_{\text{load}}}{N_{\text{GB}}^2}
+$$
+
+
+
+En un sistema de engranajes o de transmisión de potencia, la inercia de un componente puede influir en la velocidad y el comportamiento del sistema. Por ejemplo, si un motor está conectado a una carga a través de engranajes, la inercia reflejada del sistema de carga puede hacer que el motor necesite trabajar más para acelerar o desacelerar el sistema completo. En otras palabras, la inercia de la carga, aunque no forme parte directamente del motor, se "refleja" sobre él, haciendo que el esfuerzo necesario para cambiar su velocidad de rotación aumente.
+
+
+### Torque Reflejado
+
+De la relación definida anteriormente en inercia reflejada:
+
+$$
+\frac{\omega_m}{\omega_l} = \frac{T_l}{T_m}
+$$
+
+$$
+T_m = \frac{\omega_l}{\omega_m} T_l
+$$
+
+$$
+T_m = \frac{T_l}{N_{\text{GB}}}
+$$
+
+La relación de engranajes también está en el denominador, pero no se eleva al cuadrado.
+
+
+El torque reflejado es el concepto que describe cómo el par motor (torque) aplicado en un componente de un sistema se "transmite" o "refleja" en otro componente conectado, como un engranaje, eje o carga. Este fenómeno ocurre debido a la relación de transmisión de los componentes del sistema, y refleja cómo las fuerzas se distribuyen en función de las características geométricas de los elementos involucrados, como el número de dientes de los engranajes. Dependiendo de esta relación, el torque experimenta una variación al pasar de un componente a otro, lo que puede aumentar o disminuir en magnitud, afectando el comportamiento dinámico de todo el sistema.
+
+
+### Eficiencia
+
+
+
 
 💡**Ejemplo 1:**
 
