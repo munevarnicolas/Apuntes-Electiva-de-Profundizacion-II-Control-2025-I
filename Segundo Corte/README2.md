@@ -295,148 +295,41 @@ Desde una perspectiva técnica, alcanzar un equilibrio en \( J_R \) permite dise
 
 
 
-## 4. Conceptos de Transmision Polea - Correa
+## 4. Conceptos de Transmisión Polea - Correa
 
 Los sistemas de transmisión por polea y correa son mecanismos utilizados para transferir movimiento y potencia entre ejes separados, mediante el contacto entre una o más poleas y una correa flexible. Este tipo de sistema se basa en la fricción generada entre la superficie de la polea y la correa, permitiendo transmitir el giro desde un eje motriz (como el de un motor) hacia uno o más ejes conducidos. Existen diferentes configuraciones, como transmisiones abiertas, cruzadas o múltiples, y también distintos tipos de correas (planas, trapezoidales, dentadas), dependiendo del nivel de precisión, velocidad y torque requerido en la aplicación.
 
 ![Figura de prueba](images/plantilla/poleacorrea.png)
 
-Figura 7. Transmision Polea - Correa.
+Figura 7. Transmisión Polea - Correa.
 
 
 Estos sistemas ofrecen ventajas importantes como simplicidad mecánica, bajo costo y capacidad de absorber vibraciones y pequeñas desalineaciones, lo que los hace ideales para muchas aplicaciones industriales. Sin embargo, su comportamiento dinámico puede ser más complejo que otros sistemas como los de engranajes, debido a la elasticidad de la correa y el posible deslizamiento. Esto introduce variables como la inercia reflejada y el retardo en la respuesta del sistema, aspectos críticos cuando se requiere precisión en la sincronización del movimiento o en perfiles de aceleración y desaceleración.
 
 Los sistemas de polea y correa son especialmente relevantes en control y perfiles de movimiento porque permiten modular la relación de velocidad y torque entre el motor y la carga de manera eficiente. En aplicaciones donde el movimiento debe seguir un perfil específico tales como rampas suaves de aceleración, cambios de dirección o ciclos repetitivos; es fundamental considerar la respuesta mecánica del sistema de transmisión. La elasticidad de la correa, la masa rotacional y la tensión afectan la precisión con la que se puede seguir un perfil de movimiento. 
 
+### Relacion de Transmisión
 
-💡**Ejemplo 4:**
-
-![Figura de prueba](images/plantilla/hmi.jpg)
-
-Figura 4. HMI Siemens. 
-
-- Controlador de Movimiento
-  
->🔑 *Controlador de Movimiento:* Este es el "cerebro" del sistema. Se encarga de procesar las instrucciones de la HMI y ejecutar algoritmos de control que determinan las trayectorias y velocidades de cada eje. Gracias a su capacidad de procesamiento en tiempo real, puede corregir desviaciones y asegurar que los movimientos sean precisos. Posee CPU, salidas de potencia, entradas para sensores y puertos de comunicacion.
-
-💡**Ejemplo 5:**
-
-![Figura de prueba](images/plantilla/controlador.jpg)
-
-Figura 5. Controlador de Movimiento Linmot.
-
-- Drivers de Potencia
-
->🔑 *Driver de Potencia:* Son intermediarios entre el controlador y los actuadores. Estos dispositivos amplifican las señales de control para que sean capaces de mover los actuadores con la fuerza y precisión necesarias. Funcionan controlando la corriente y el voltaje que se suministran a los motores o servomotores, permitiendo así un manejo fino de la velocidad y el par motor. Su correcto funcionamiento es clave para traducir las órdenes del controlador en acciones mecánicas efectivas.
-
-💡**Ejemplo 6:**
-
-![Figura de prueba](images/plantilla/driver.png)
-
-Figura 6. Driver de Potencia Yaskawa serie Sigma.
-
-- Actuadores
-
->🔑 *Actuadores:* Son los dispositivos físicos (como motores eléctricos o servomotores) que transforman las señales del controlador en movimientos reales. Su rapidez y precisión son fundamentales para cumplir con las demandas de alta velocidad y precisión del sistema.
-
-💡**Ejemplo 7:**
-
-![Figura de prueba](images/plantilla/motor.png)
-
-Figura 7. Servomotores DC.
-
-- Mecanismos de Transmisión
-
->🔑 *Mecanismos de Transmisión:* Estos elementos, como engranajes, correas o husillos, se encargan de transmitir el movimiento generado por los actuadores a las partes mecánicas del sistema. Su diseño y precisión determinan en gran medida la exactitud con la que se mueve cada eje.
-
-💡**Ejemplo 8:**
-
-![Figura de prueba](images/plantilla/trans.jpg)
-
-Figura 8. Sistemas de transmisión.
-
-- Sensores
-
->🔑 *Sensores:* Los sensores son esenciales para el control de movimiento, ya que proporcionan la retroalimentación necesaria para ajustar y corregir el funcionamiento del sistema en tiempo real. Con estos datos, el controlador de movimiento puede ajustar de manera dinámica las señales enviadas a los drivers y actuadores, corrigiendo errores y asegurando que el sistema mantenga la sincronización y precisión esperadas. Los sensores pueden incluir encoders, tacómetros, y otros dispositivos de medición que monitorean continuamente el estado del sistema.
-
-💡**Ejemplo 9:**
-
-![Figura de prueba](images/plantilla/encoder.jpg)
-
-Figura 9. Sensor encoder Allen-Bradley.
-
-## 5. Control Cascada
-
-### Esquema de Control Cascada
+Los sistemas de transmisión por correa y poleas, estan para transferir movimiento y fuerza de manera eficiente. En este contexto, la relación de transmisión es clave para describir cómo se vinculan las velocidades angulares y los radios de las poleas. Dado que la velocidad tangencial de la correa es constante en ambas poleas, se puede deducir que el producto de la velocidad angular y el radio de una polea equivale al mismo producto en la otra. Este principio permite calcular la relación de transmisión, definida por el cociente entre las velocidades angulares o, alternativamente, por el cociente de los radios de las poleas. Este concepto es aplicable en numerosos sistemas mecánicos donde se requiere ajustar la velocidad y el torque transmitido para satisfacer las necesidades de una aplicación específica. La relación de transmisión tiene implicaciones significativas en el diseño de sistemas. Por ejemplo, una relación de transmisión más alta permite aumentar el torque a expensas de reducir la velocidad, lo que es ideal para aplicaciones que demandan fuerza pero no requieren rapidez. Por otro lado, una relación más baja prioriza la velocidad sobre el torque, siendo útil en situaciones que requieren movimientos rápidos y precisos. 
 
 
-![Figura de prueba](images/plantilla/cascadecontrol.png)
+![Figura de prueba](images/plantilla/poleacorrea.png)
 
-Figura 10. Diagrama de bloques control cascada.
-
-La figura 10 representa un sistema de control en cascada.
-
-- **Primer controlador (bucle externo)**:  
-  - Observa la salida real del proceso (lo que en verdad está pasando) y la compara con la meta o referencia (lo que queremos lograr).  
-  - A partir de esa comparación, genera una señal que servirá como la referencia para el segundo controlador.
-
-- **Segundo controlador (bucle interno)**:  
-  - Toma la señal del primer controlador como su entrada principal.  
-  - Se encarga de controlar directamente una variable interna del proceso, ajustándola rápido cuando ocurren cambios o perturbaciones.
-
-- **Proceso**:  
-  - Es el sistema físico que queremos manejar (por ejemplo, un motor, un tanque o un horno).  
-  - Su salida se envía de vuelta al primer controlador, cerrando el lazo externo de retroalimentación.
-
-En pocas palabras, el **bucle interno** corrige y estabiliza de manera rápida una variable intermedia (como la velocidad de un motor), mientras que el **bucle externo** se ocupa de la variable final que realmente nos importa (como la posición del eje o el nivel en un tanque). Este enfoque “en cascada” hace que el sistema sea más estable y preciso.
+Figura 8. Relacion de transmisión en polea - correa.
 
 
-## 6. Ejercicios
+$$
+V_{tangential} = \omega_{ip} \cdot r_{ip} = \omega_{lp} \cdot r_{lp}
+$$
 
-### 📚Ejercicio 1:
+$$
+N_{BP} = \frac{\omega_{ip}}{\omega_{lp}} = \frac{r_{lp}}{r_{ip}}
+$$
+## 5. Conclusiones
 
-![Figura de prueba](images/plantilla/robot.png)
-
-Figura 11. Máquina de Clasificación de Huevos Zenyer.
-
-
-#### Componentes:
-
-- HMI: Teach Pendant.
-- Control de Movimiento: Controller Box.
-- Driver de Potencia: Integrado junto a los motores.
-- Actuadores: Motores tipo  Brushless.
-- Sistema de Transmisión: Reducción de engranajes.
-- Sensores: Presencia, posicion, torque, corriente, seguridad.
-
-## 7. Aplicaciones en diversas Industrias
-
-__- Empaque y Paletizado__
-  
-![Figura de prueba](images/plantilla/empaqueypaletizado.jpg)
-
-Figura 12. Planta de empaque y paletizado.
-
-
-
-__- Ensamble de PCB__
-  
-![Figura de prueba](images/plantilla/pcb.jpg)
-
-Figura 13. Diagrama de bloques control cascada.
-
-
-
-__- Etiquetado__
-  
-![Figura de prueba](images/plantilla/etiquetado.jpg)
-
-Figura 14. Máquina de Etiquetado.
-
-## 8. Conclusiones
 Se observa que el control de movimiento ha evolucionado significativamente, pasando de sistemas mecánicos y analógicos, que dependían de mecanismos físicos como engranajes, levas y poleas, a soluciones digitales y electrónicas que permiten un control mas preciso de parámetros críticos como la posición, velocidad, aceleración y torque. Esta transformación ha posibilitado la implementación de estrategias de control más sofisticadas, como el control en cascada, que divide el proceso en bucles internos y externos para corregir rápidamente las perturbaciones y mantener la estabilidad del sistema. La integración de algoritmos de procesamiento en tiempo real ha mejorado la capacidad de respuesta y la adaptabilidad, facilitando la optimización de procesos en aplicaciones industriales complejas. Además, es importante destacar la importancia de la convergencia de diversos componentes tecnológicos en el control de movimiento moderno. La incorporación de interfaces hombre-máquina (HMI), controladores avanzados, drivers de potencia, actuadores precisos, mecanismos de transmisión y sensores ha permitido no solo la supervisión en tiempo real, sino también ajustes continuos y la corrección dinámica de errores. Este enfoque integrado garantiza una operación más eficiente, flexible y segura, satisfaciendo las demandas de industrias tan variadas como el embalaje, ensamblaje, etiquetado y fabricación de semiconductores, y posicionando el control de movimiento como un pilar fundamental en la automatización industrial actual.
 
-## 9. Referencias  
+## 6. Referencias  
 - [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
 - [2] *R. Kelly, V. Santibáñez, and A. Loria, Control of Robot Manipulators in Joint Space, Springer, 2005*
 - [3] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
