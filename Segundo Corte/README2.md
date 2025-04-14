@@ -23,6 +23,10 @@ Al incorporar los perfiles de movimiento en el diseño de transmisión, se logra
 
 En el diseño de sistemas de transmisión, uno de los requerimientos fundamentales es garantizar que el torque proporcionado por el motor, incluso a su máxima velocidad, sea mayor al exigido por la aplicación. Esto no solo asegura un funcionamiento eficiente, sino que previene el sobreesfuerzo del motor ante condiciones variables o inesperadas. Para ello, se recomienda siempre incorporar un margen de seguridad, que actúe como una reserva de capacidad ante incrementos imprevistos de carga o pérdidas por fricción. Asimismo, es crucial mantener una relación adecuada de inercia entre el motor y la carga, ya que una inercia mal equilibrada puede generar respuestas lentas, inestabilidad en el control del sistema y desgaste acelerado de los componentes.
 
+![Figura de prueba](images/plantilla/sistemas.png)
+
+Figura 2. Software para diseño de Transmisiones.
+
 No atender correctamente estos requerimientos puede derivar en diversos problemas de diseño en las transmisiones. Por ejemplo, un motor subdimensionado puede operar constantemente cerca de sus límites, elevando su temperatura y reduciendo su vida útil. De igual forma, una mala gestión de la inercia puede causar oscilaciones o vibraciones indeseadas, afectando la precisión del sistema, especialmente en aplicaciones que requieren alta repetibilidad o ciclos de tiempo muy controlados. Además, ignorar aspectos como el costo, la facilidad de mantenimiento o la compatibilidad entre componentes puede traducirse en soluciones poco sostenibles, tanto en términos técnicos como económicos. Por ello, el diseño de una transmisión debe abordarse de forma integral, considerando no solo los parámetros mecánicos, sino también el contexto operativo completo del sistema.
 
 ### Inercia y Torque reflejado
@@ -48,6 +52,10 @@ Desde el punto de vista del control de movimiento, el manejo adecuado de la iner
 ## 3. Relacion de Engranajes
 
 Una relación de engranajes es una medida que describe cómo se transmite el movimiento entre dos o más engranajes, en función de sus tamaños y número de dientes. Es un concepto fundamental en la ingeniería mecánica, pues determina la velocidad de rotación y la fuerza aplicada a través de los engranajes. La relación de engranajes se define generalmente como la razón entre el número de dientes de los engranajes involucrados, y tiene un impacto directo en la eficiencia de las máquinas. Dependiendo de cómo estén conectados los engranajes, esta relación puede ser de aumento o reducción de velocidad, lo que influye en la funcionalidad y rendimiento de sistemas complejos como motores, transmisiones o mecanismos de reloj.
+
+![Figura de prueba](images/plantilla/sistemas.png)
+
+Figura 3. Relación de Engranajes.
 
 Una de las propiedades clave de las relaciones de engranajes es que permiten alterar la velocidad y el par motor en un sistema mecánico sin necesidad de modificar directamente los motores. En una relación de engranajes reductora, el engranaje conductor (el que está impulsando el sistema) tiene más dientes que el engranaje conducido, lo que resulta en una disminución de la velocidad de salida pero un aumento en el par motor. Por el contrario, una relación multiplicadora aumenta la velocidad de salida, pero a costa de reducir el par motor. Estas relaciones son cruciales para optimizar el funcionamiento de vehículos, maquinaria industrial y dispositivos que requieren control preciso sobre la velocidad y fuerza de movimiento.
 
