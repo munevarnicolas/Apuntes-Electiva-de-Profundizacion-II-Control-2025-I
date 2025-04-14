@@ -312,12 +312,6 @@ Los sistemas de polea y correa son especialmente relevantes en control y perfile
 
 Los sistemas de transmisión por correa y poleas, estan para transferir movimiento y fuerza de manera eficiente. En este contexto, la relación de transmisión es clave para describir cómo se vinculan las velocidades angulares y los radios de las poleas. Dado que la velocidad tangencial de la correa es constante en ambas poleas, se puede deducir que el producto de la velocidad angular y el radio de una polea equivale al mismo producto en la otra. Este principio permite calcular la relación de transmisión, definida por el cociente entre las velocidades angulares o, alternativamente, por el cociente de los radios de las poleas. Este concepto es aplicable en numerosos sistemas mecánicos donde se requiere ajustar la velocidad y el torque transmitido para satisfacer las necesidades de una aplicación específica. La relación de transmisión tiene implicaciones significativas en el diseño de sistemas. Por ejemplo, una relación de transmisión más alta permite aumentar el torque a expensas de reducir la velocidad, lo que es ideal para aplicaciones que demandan fuerza pero no requieren rapidez. Por otro lado, una relación más baja prioriza la velocidad sobre el torque, siendo útil en situaciones que requieren movimientos rápidos y precisos. 
 
-
-![Figura de prueba](images/plantilla/relatrans.png)
-
-Figura 8. Relacion de transmisión en polea - correa.
-
-
 $$
 V_{tangential} = \omega_{ip} \cdot r_{ip} = \omega_{lp} \cdot r_{lp}
 $$
@@ -325,6 +319,16 @@ $$
 $$
 N_{BP} = \frac{\omega_{ip}}{\omega_{lp}} = \frac{r_{lp}}{r_{ip}}
 $$
+
+
+![Figura de prueba](images/plantilla/relatrans.png)
+
+Figura 8. Relacion de transmisión en polea - correa.
+
+### Inercia Reflejada
+
+
+
 ## 5. Conclusiones
 
 Se observa que el control de movimiento ha evolucionado significativamente, pasando de sistemas mecánicos y analógicos, que dependían de mecanismos físicos como engranajes, levas y poleas, a soluciones digitales y electrónicas que permiten un control mas preciso de parámetros críticos como la posición, velocidad, aceleración y torque. Esta transformación ha posibilitado la implementación de estrategias de control más sofisticadas, como el control en cascada, que divide el proceso en bucles internos y externos para corregir rápidamente las perturbaciones y mantener la estabilidad del sistema. La integración de algoritmos de procesamiento en tiempo real ha mejorado la capacidad de respuesta y la adaptabilidad, facilitando la optimización de procesos en aplicaciones industriales complejas. Además, es importante destacar la importancia de la convergencia de diversos componentes tecnológicos en el control de movimiento moderno. La incorporación de interfaces hombre-máquina (HMI), controladores avanzados, drivers de potencia, actuadores precisos, mecanismos de transmisión y sensores ha permitido no solo la supervisión en tiempo real, sino también ajustes continuos y la corrección dinámica de errores. Este enfoque integrado garantiza una operación más eficiente, flexible y segura, satisfaciendo las demandas de industrias tan variadas como el embalaje, ensamblaje, etiquetado y fabricación de semiconductores, y posicionando el control de movimiento como un pilar fundamental en la automatización industrial actual.
