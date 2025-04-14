@@ -313,7 +313,7 @@ Los sistemas de polea y correa son especialmente relevantes en control y perfile
 Los sistemas de transmisión por correa y poleas, estan para transferir movimiento y fuerza de manera eficiente. En este contexto, la relación de transmisión es clave para describir cómo se vinculan las velocidades angulares y los radios de las poleas. Dado que la velocidad tangencial de la correa es constante en ambas poleas, se puede deducir que el producto de la velocidad angular y el radio de una polea equivale al mismo producto en la otra. Este principio permite calcular la relación de transmisión, definida por el cociente entre las velocidades angulares o, alternativamente, por el cociente de los radios de las poleas. Este concepto es aplicable en numerosos sistemas mecánicos donde se requiere ajustar la velocidad y el torque transmitido para satisfacer las necesidades de una aplicación específica. La relación de transmisión tiene implicaciones significativas en el diseño de sistemas. Por ejemplo, una relación de transmisión más alta permite aumentar el torque a expensas de reducir la velocidad, lo que es ideal para aplicaciones que demandan fuerza pero no requieren rapidez. Por otro lado, una relación más baja prioriza la velocidad sobre el torque, siendo útil en situaciones que requieren movimientos rápidos y precisos. 
 
 
-![Figura de prueba](images/plantilla/poleacorrea.png)
+![Figura de prueba](images/plantilla/relatrans.png)
 
 Figura 8. Relacion de transmisión en polea - correa.
 
