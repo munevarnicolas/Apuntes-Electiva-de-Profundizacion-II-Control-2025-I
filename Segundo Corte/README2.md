@@ -180,6 +180,24 @@ $$
 J_{\text{ref}} = \frac{J_{\text{load}}}{\eta N_{\text{GB}}^2}
 $$
 
+### Inercia Total
+
+La inercia total es la medida global de la resistencia que presenta un sistema a los cambios en su estado de movimiento, considerando todos los componentes involucrados. Esta propiedad es la suma de las inercias individuales de cada componente, ponderadas por su distribución en el sistema, es decir, su masa y la distancia de cada masa respecto al eje de rotación o al centro de masa. En sistemas rotacionales, la inercia total se calcula considerando no solo la masa de los componentes, sino también su forma y la ubicación de las masas respecto al eje de rotación. A mayor distancia de la masa respecto al eje, mayor será su contribución a la inercia total.
+
+En aplicaciones prácticas, como en maquinaria o vehículos, la inercia total determina cuánta energía es necesaria para acelerar o desacelerar el sistema. Si un sistema tiene una inercia total alta, se requiere más esfuerzo (torque) para cambiar su velocidad de rotación, lo que implica mayor consumo de energía y tiempo. Por el contrario, una inercia total baja facilita los cambios rápidos en el movimiento, pero puede resultar en un sistema menos estable o más susceptible a fluctuaciones de velocidad. Por lo tanto, comprender y controlar la inercia total es fundamental para diseñar sistemas eficientes y bien equilibrados, optimizando tanto su rendimiento como su consumo energético.
+
+- Lo recomendable es reflejar toda la inercia hacia el eje del motor, de tal manera que:
+
+$$
+J_{\text{total}} = J_m + J_{\text{on motor shaft}} + J_{\text{ref}}
+$$
+
+- Donde:
+  - $$J_m$$: Inercia del eje del motor (según datasheet)
+  - $$J_{\text{on motor shaft}}$$: Inercia del acople y transmisión
+  - $$J_{\text{ref}}$$: Inercia reflejada desde la carga
+
+
 
 💡**Ejemplo 1:**
 
