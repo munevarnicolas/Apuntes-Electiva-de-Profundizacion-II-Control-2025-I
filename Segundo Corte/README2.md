@@ -249,6 +249,7 @@ $$
 
 Donde M: Comercialmente el fabricante da la inercia reflejada al eje del motor.
 
+
 💡**Ejemplo 2:**
 
 ![Figura de prueba](images/plantilla/ejem2.png)
@@ -284,6 +285,8 @@ $$
 J_R  = 3.75
 $$
 
+Los sistemas mecánicos que emplean motores y cajas de engranajes requieren un análisis cuidadoso de la relación de inercia para optimizar su desempeño. En este contexto, la relación de inercia $$\( J_R \)$$ juega un papel crucial, ya que mide la relación entre la inercia reflejada al eje del motor y la propia inercia del rotor. Un valor adecuado de $$\( J_R \)$$ asegura que el motor pueda manejar las demandas dinámicas del sistema sin comprometer su estabilidad o eficiencia. Si la relación de inercia es demasiado baja (por ejemplo, entre 1 y 2), el sistema será muy sensible a los cambios, lo cual es ideal para movimientos rápidos y repetidos, pero podría resultar en un sobredimensionamiento del motor, incrementando costos y consumo de energía. Por el contrario, si $$\( J_R \)$$ es demasiado alta (superior a 10), el sistema se vuelve menos eficiente y puede carecer del torque necesario, siendo adecuado únicamente para aplicaciones donde las dinámicas rápidas no sean prioritarias.
+Desde una perspectiva técnica, alcanzar un equilibrio en \( J_R \) permite diseñar sistemas que no solo cumplen con los requisitos de la aplicación, sino que también optimizan el uso de los recursos. Por ejemplo, en sistemas industriales de alta precisión o repetición, como robots o equipos de manufactura, se requiere mantener $$\( J_R \)$$ por debajo de 5 para evitar problemas relacionados con la respuesta dinámica. Además, el uso de factores como la eficiencia $$\( \eta \)$$ y la relación de transmisión $$\( N_{GB} \)$$ en el cálculo del momento reflejado ayuda a ajustar el diseño para mantener valores de $$\( J_R \)$$ dentro de un rango ideal. Este tipo de análisis garantiza que tanto la inercia de la carga como los efectos dinámicos sean manejados adecuadamente, asegurando un equilibrio entre rendimiento, estabilidad y costo del sistema.
 
 
 
