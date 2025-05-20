@@ -99,7 +99,7 @@ En cuanto a dinámica y aplicaciones, el yugo escocés ofrece una conversión de
 
 Figura 8. Diagrama de bloques Yugo Escoces.
 
-La figura 8 representa el digaram de bloques para un mecanismo de yugo escoces.
+La figura 8 representa el diagrama de bloques para un mecanismo de yugo escoces.
 
 Este diagrama de bloques representa un modelo del mecanismo Yugo Escocés implementado en Simulink utilizando la librería de Simscape Multibody. El sistema comienza con un actuador rotacional (bloque "Discrete") que genera un movimiento angular continuo sobre un eje. Este eje está conectado a un bloque de articulación rotacional que transmite el par a un componente giratorio (disco o manivela), el cual está unido a la biela a través de un pivote. Esta biela convierte el movimiento circular en un movimiento lineal alternativo del yugo, mediante el acoplamiento en una ranura que restringe su desplazamiento a una sola dirección.
 
