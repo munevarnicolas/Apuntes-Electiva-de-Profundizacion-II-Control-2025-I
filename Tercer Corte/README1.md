@@ -49,6 +49,15 @@ $$
 $$
 
 
+💡**Ejemplo 1:**
+
+Simulacion Tornillo Guía Simulink:
+
+![Figura de prueba](images/plantilla/ejem1.png)
+
+Figura 4. Ejemplo 1.
+
+
 
 ### Inercia Reflejada
 
@@ -186,37 +195,7 @@ Donde:
 
 
 
-💡**Ejemplo 1:**
 
-Para el Sistema de la figura encuentre la inercia total vista en el eje del motor
-
-![Figura de prueba](images/plantilla/ejem1.png)
-
-Figura 4. Ejemplo 1.
-
-$$
-J_{\text{total}} = J_m + J_{\text{on motor shaft}} + J_{\text{ref}}
-$$
-
-$$
-J_{\text{on motor shaft}} = J_{\text{coupling}} + J_{mg}
-$$
-
-$$
-J_{\text{ref}} = \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
-$$
-
-$$
-J_{\text{total}} = J_m + J_{\text{coupling}} + J_{mg} + \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
-$$
-
-![Figura de prueba](images/plantilla/ejem1.1.png)
-
-Figura 5. Ejemplo 1.
-
-$$
-J_{\text{total}} = J_m + J_{\text{coupling}} + J_{mg} + \frac{1}{\eta N_{\text{GB}}^2} \left[ J_{lg} + J_{\text{load}} \right]
-$$
 
 ### Relación de Inercia
 
