@@ -248,13 +248,25 @@ J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot 0.00182^4}{32} = 5.42
 $$
 
 
-Simulación Simscape Multibody
+Simulación Simscape Multibody:
 
-![Figura de prueba](images/plantilla/sim1.png)
+![Figura de prueba](images/plantilla/sim2.png)
 
 Figura 6. Simulación Ejemplo 2.
 
 
+Resultados Posición:
+
+![Figura de prueba](images/plantilla/sim3.png)
+
+Figura 7. Simulación Posición Ejemplo 2.
+
+
+Resultados Velocidad:
+
+![Figura de prueba](images/plantilla/sim4.png)
+
+Figura 8. Simulación Velocidad Ejemplo 2.
 
 
 ## 4. Conceptos de Transmisión Polea - Correa
