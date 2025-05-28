@@ -53,10 +53,21 @@ $$
 
 Simulacion Tornillo Guía Simulink:
 
-![Figura de prueba](images/plantilla/ejem1.png)
+![Figura de prueba](images/plantilla/ejemplo1.png)
 
 Figura 4. Ejemplo 1.
 
+Resultados:
+
+![Figura de prueba](images/plantilla/ejemplo1.png)
+
+Figura 5. Resultados Ejemplo 1.
+
+La conversión de desplazamiento angular a lineal se puede expresar como:
+
+$$
+117.8 \, \text{rad} \cdot \frac{1 \, \text{rev}}{2\pi \, \text{rad}} \cdot 0.015 = 0.28 \, \text{m}
+$$
 
 
 ### Inercia Reflejada
