@@ -17,11 +17,16 @@ El sistema de transmisión por tornillo sin fin ofrece varias ventajas clave las
 
 Los mecanismos de tornillo sin fin son altamente relevantes en la industria porque ofrecen una solución compacta, precisa y segura para la transmisión de movimiento y control de posición en equipos donde se requiere reducir velocidad y aumentar torque, como en elevadores, grúas, transportadores, actuadores y maquinaria pesada. Su capacidad de mantener la carga en posición sin retroceso los hace ideales para sistemas donde la seguridad y la estabilidad son críticas. Además, su diseño simple y duradero reduce el mantenimiento y permite integrarlos fácilmente en espacios reducidos o diseños mecánicos complejos.
 
+![Figura de prueba](images/plantilla/torguia.png)
+
+Figura 2. Tornillo Guía
+
+
 Los tornillos ACME y los tornillos de esferas  son mecanismos utilizados para convertir el movimiento rotativo en lineal, y ambos son capaces de transmitir grandes potencias con distintos niveles de precisión y eficiencia. Los tornillos ACME utilizan un perfil trapezoidal en su rosca y una tuerca que desliza directamente sobre el tornillo. Esto genera una mayor fricción, lo que disminuye la eficiencia del sistema (entre un 35% y 85%, dependiendo del material, lubricación y velocidad), pero también proporciona un efecto autobloqueante, útil en aplicaciones donde se quiere evitar el retroceso sin necesidad de frenos. Son económicos, robustos y adecuados para aplicaciones donde la precisión extrema no es crítica.
 
 ![Figura de prueba](images/plantilla/acme.jpg)
 
-Figura 2. Tornillo ACME
+Figura 3. Tornillo ACME
 
 Por otro lado, los tornillos de esferas incorporan un sistema de recirculación de bolas entre el tornillo y la tuerca, lo que reduce significativamente la fricción al funcionar como un rodamiento lineal. Esta reducción de contacto directo minimiza el desgaste, mejora la suavidad del movimiento y disminuye el backlash (juego mecánico), lo cual es crucial en sistemas de control numérico o automatización de alta precisión. Gracias a esto, su eficiencia se eleva entre el 85% y el 95%, permitiendo un mejor aprovechamiento del torque del motor para generar fuerza lineal sobre la carga. Aunque son más costosos que los ACME, su alta precisión y durabilidad justifican su uso en maquinaria CNC, equipos médicos, y sistemas robóticos.
 
