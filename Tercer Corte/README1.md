@@ -197,7 +197,7 @@ Donde:
 - $$\(N_S\)$$: relación de paso del tornillo  
 - $$\(\eta\)$$: eficiencia mecánica del sistema
 
-💡**Ejemplo 1:**
+💡**Ejemplo 2:**
 
 Una carga de 50 kg debe ser posicionada usando un tornillo esferado de acero. El tornillo tiene una densidad de 0.14 kg/cm³, un diámetro de 0.182 cm y una longitud de 36 cm. El paso del tornillo es de 0.75 cm por revolución y el sistema tiene una eficiencia del 90%. Además, el carro que sostiene la carga pesa 0.23 kg. Con esta información, se solicita calcular la inercia reflejada por la transmisión hacia su eje de entrada.
 
@@ -248,48 +248,12 @@ J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot 0.00182^4}{32} = 5.42
 $$
 
 
-💡**Ejemplo 2:**
+Simulación Simscape Multibody
 
-![Figura de prueba](images/plantilla/ejem2.png)
+![Figura de prueba](images/plantilla/sim1.png)
 
-Figura 6. Ejemplo 2.
+Figura 6. Simulación Ejemplo 2.
 
-El sistema en la figura usa un engranaje PN023 de Apex Dynamics. Este tiene 5:1 de relación, 0,1 Kg·cm² reflejado a la entrada y 97% de eficiencia. El motor es un Quantum QB02301 NEMA tamaño 23 de Allied Motion Technologies. Este tiene 1,5 × 10⁻⁵ Kg·m² de inercia en el rotor. Si la inercia de la carga es 10 × 10⁻⁴ Kg·m², encuentre la relación de inercia.
-
-
-$$
-J_{load \to M} = \frac{J_{load}}{\eta N_{GB}^2}
-$$
-
-$$
-J_{load \to M} = \frac{10 \times 10^{-4}}{0.97 \cdot 5^2}
-$$
-
-$$
-J_{load \to M} = 4.124 \times 10^{-5} \, \text{kg·m}^2
-$$
-
----
-
-$$
-J_R = \frac{J_{on \, \text{motor shaft}} + J_{load \to M} + J_{GB \to M}}{J_m}
-$$
-
-$$
-J_R = \frac{4.124 \times 10^{-5} + 0.15 \times 10^{-4}}{1.5 \times 10^{-5}}
-$$
-
-
-Los sistemas mecánicos que emplean motores y cajas de engranajes requieren un análisis cuidadoso de la relación de inercia para optimizar su desempeño. En este contexto, la relación de inercia $$\( J_R \)$$ juega un papel crucial, ya que mide la relación entre la inercia reflejada al eje del motor y la propia inercia del rotor. Un valor adecuado de $$\( J_R \)$$ asegura que el motor pueda manejar las demandas dinámicas del sistema sin comprometer su estabilidad o eficiencia. Si la relación de inercia es demasiado baja (por ejemplo, entre 1 y 2), el sistema será muy sensible a los cambios, lo cual es ideal para movimientos rápidos y repetidos, pero podría resultar en un sobredimensionamiento del motor, incrementando costos y consumo de energía. Por el contrario, si $$\( J_R \)$$ es demasiado alta (superior a 10), el sistema se vuelve menos eficiente y puede carecer del torque necesario, siendo adecuado únicamente para aplicaciones donde las dinámicas rápidas no sean prioritarias.
-
-$$ J_R \leq 5 $$
-
-Desde una perspectiva técnica, alcanzar un equilibrio en \( J_R \) permite diseñar sistemas que no solo cumplen con los requisitos de la aplicación, sino que también optimizan el uso de los recursos. Por ejemplo, en sistemas industriales de alta precisión o repetición, como robots o equipos de manufactura, se requiere mantener $$\( J_R \)$$ por debajo de 5 para evitar problemas relacionados con la respuesta dinámica. Además, el uso de factores como la eficiencia $$\( \eta \)$$ y la relación de transmisión $$\( N_{GB} \)$$ en el cálculo del momento reflejado ayuda a ajustar el diseño para mantener valores de $$\( J_R \)$$ dentro de un rango ideal. Este tipo de análisis garantiza que tanto la inercia de la carga como los efectos dinámicos sean manejados adecuadamente, asegurando un equilibrio entre rendimiento, estabilidad y costo del sistema.
-
-| Relación de inercia | Rango       | Casos                                         | Posibles problemas                   |
-|---------------------|-------------|-----------------------------------------------|---------------------------------------|
-| Baja                | 1 o 2       | Movimientos rápidos, frecuentes paradas y arranques | Motor sobredimensionado               |
-| Alta                | Mayor a 10  | No es importante dinámicas rápidas            | Baja eficiencia o torque insuficiente |
 
 
 
