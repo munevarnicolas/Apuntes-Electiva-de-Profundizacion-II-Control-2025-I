@@ -218,25 +218,34 @@ $$ N_S = 2 \pi p $$
 
 $$ = 2 \pi \left( \frac{1}{0.75} \right) = 8.38 $$
 
-
-
-### Relación de Inercia
-
-La relación de inercia se refiere a la comparación entre las inercias de dos o más componentes dentro de un sistema mecánico. En términos generales, esta relación se utiliza para entender cómo se distribuye la resistencia al cambio de movimiento entre diferentes partes de un sistema, como los engranajes, ejes o masas. En sistemas rotacionales, la relación de inercia se calcula comparando las inercias de los componentes involucrados, que dependen de la masa de los cuerpos y la distribución de esa masa en relación con el eje de rotación. Esta relación es esencial para prever cómo los cambios en un componente afectarán a otros elementos del sistema, particularmente en lo que respecta a la aceleración, desaceleración y la eficiencia del movimiento.
-
-- Esta definida como:
+- Se calcula suponiendo que el tornillo es un cilindro alargado.
 
 $$
-J_R = \frac{J_{\text{on motor shaft}} + J_{\text{ref}}}{J_m}
+J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
-- De esta relación se concluye que es la relación entre toda la inercia de la carga y la inercia del motor:
+- Por lo tanto:
 
 $$
-J_R = \frac{J_{\text{on motor shaft}} + J_{\text{load} \rightarrow M} + J_{\text{GB} \rightarrow M}}{J_m}
+J_{\text{ref}}^{\text{trans}} = 5.42 \times 10^{-8} + \frac{1}{0.9 \cdot 8.38^2} \left( \frac{50 + 0.23}{9.89} \right) = 8.1 \\text{Kgm}
 $$
 
-Donde M: Comercialmente el fabricante da la inercia reflejada al eje del motor.
+
+$$
+J_{\text{screw}} = \frac{\pi L \rho D^4}{32g}
+$$
+
+- Cuando se trabaja en Sistema Inglés
+
+
+
+$$
+J_{\text{screw}} = \frac{\pi L \rho D^4}{32}
+$$
+
+$$
+J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot 0.00182^4}{32} = 5.42 \times 10^{-8} \ \text{Kgm}
+$$
 
 
 💡**Ejemplo 2:**
