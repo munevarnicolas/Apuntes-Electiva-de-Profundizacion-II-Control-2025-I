@@ -51,7 +51,7 @@ $$
 
 💡**Ejemplo 1:**
 
-Simulacion Tornillo Guía Simulink:
+Simulación Tornillo Guía Simulink:
 
 ![Figura de prueba](images/plantilla/ejemplo1.png)
 
@@ -281,29 +281,38 @@ El piñón-cremallera permite implementar trayectorias lineales suaves y predeci
 
 
 
-
-
-
-Estos sistemas ofrecen ventajas importantes como simplicidad mecánica, bajo costo y capacidad de absorber vibraciones y pequeñas desalineaciones, lo que los hace ideales para muchas aplicaciones industriales. Sin embargo, su comportamiento dinámico puede ser más complejo que otros sistemas como los de engranajes, debido a la elasticidad de la correa y el posible deslizamiento. Esto introduce variables como la inercia reflejada y el retardo en la respuesta del sistema, aspectos críticos cuando se requiere precisión en la sincronización del movimiento o en perfiles de aceleración y desaceleración.
-
-Los sistemas de polea y correa son especialmente relevantes en control y perfiles de movimiento porque permiten modular la relación de velocidad y torque entre el motor y la carga de manera eficiente. En aplicaciones donde el movimiento debe seguir un perfil específico tales como rampas suaves de aceleración, cambios de dirección o ciclos repetitivos; es fundamental considerar la respuesta mecánica del sistema de transmisión. La elasticidad de la correa, la masa rotacional y la tensión afectan la precisión con la que se puede seguir un perfil de movimiento. 
-
 ### Relacion de Transmisión
 
-Los sistemas de transmisión por correa y poleas, estan para transferir movimiento y fuerza de manera eficiente. En este contexto, la relación de transmisión es clave para describir cómo se vinculan las velocidades angulares y los radios de las poleas. Dado que la velocidad tangencial de la correa es constante en ambas poleas, se puede deducir que el producto de la velocidad angular y el radio de una polea equivale al mismo producto en la otra. Este principio permite calcular la relación de transmisión, definida por el cociente entre las velocidades angulares o, alternativamente, por el cociente de los radios de las poleas. Este concepto es aplicable en numerosos sistemas mecánicos donde se requiere ajustar la velocidad y el torque transmitido para satisfacer las necesidades de una aplicación específica. La relación de transmisión tiene implicaciones significativas en el diseño de sistemas. Por ejemplo, una relación de transmisión más alta permite aumentar el torque a expensas de reducir la velocidad, lo que es ideal para aplicaciones que demandan fuerza pero no requieren rapidez. Por otro lado, una relación más baja prioriza la velocidad sobre el torque, siendo útil en situaciones que requieren movimientos rápidos y precisos. 
+La relación de transmisión en un mecanismo piñón-cremallera describe cómo se convierte el movimiento rotacional del piñón en movimiento lineal de la cremallera. Específicamente, esta relación se determina por el radio del piñón: a mayor radio, mayor desplazamiento lineal por cada vuelta del piñón. Matemáticamente, se expresa como: $$N_{RP} = \frac{1}{r_{\text{pinion}}}$$ cuando se trabaja con velocidades angulares en radianes por segundo. Esta relación es fundamental en sistemas mecatrónicos, ya que permite diseñar perfiles de movimiento lineal precisos a partir del control de velocidad rotacional del actuador (motor).
+
 
 $$
-V_{tangential} = \omega_{ip} \cdot r_{ip} = \omega_{lp} \cdot r_{lp}
+N = \frac{\text{Velocidad motor}}{\text{Velocidad carga}}
 $$
 
 $$
-N_{BP} = \frac{\omega_{ip}}{\omega_{lp}} = \frac{r_{lp}}{r_{ip}}
+V_{\text{rack}} = r_{\text{pinion}} \, \omega_{\text{pinion}}
 $$
 
+$$
+N_{RP} = \frac{1}{r_{\text{pinion}}}
+$$
 
-![Figura de prueba](images/plantilla/relatrans.png)
+💡**Ejemplo 3:**
 
-Figura 8. Relacion de transmisión en polea - correa.
+Simulacion Simscape Multibody:
+
+![Figura de prueba](images/plantilla/sim5.png)
+
+Figura 10. Mecanismo Piñon-Cremallera Simscape.
+
+
+Resultados:
+
+![Figura de prueba](images/plantilla/sim6.png)
+
+Figura 10. Resultados mecanismo Piñon-Cremallera Simscape.
+
 
 ### Inercia Reflejada
 
