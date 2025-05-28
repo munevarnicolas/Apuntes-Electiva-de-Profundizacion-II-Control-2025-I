@@ -30,151 +30,159 @@ Figura 3. Tornillo ACME
 
 Por otro lado, los tornillos de esferas incorporan un sistema de recirculación de bolas entre el tornillo y la tuerca, lo que reduce significativamente la fricción al funcionar como un rodamiento lineal. Esta reducción de contacto directo minimiza el desgaste, mejora la suavidad del movimiento y disminuye el backlash (juego mecánico), lo cual es crucial en sistemas de control numérico o automatización de alta precisión. Gracias a esto, su eficiencia se eleva entre el 85% y el 95%, permitiendo un mejor aprovechamiento del torque del motor para generar fuerza lineal sobre la carga. Aunque son más costosos que los ACME, su alta precisión y durabilidad justifican su uso en maquinaria CNC, equipos médicos, y sistemas robóticos.
 
-### Relación de Engranajes
+### Relación de Transmisión
 
-Una relación de engranajes es una medida que describe cómo se transmite el movimiento entre dos o más engranajes, en función de sus tamaños y número de dientes. Es un concepto fundamental en la ingeniería mecánica, pues determina la velocidad de rotación y la fuerza aplicada a través de los engranajes. La relación de engranajes se define generalmente como la razón entre el número de dientes de los engranajes involucrados, y tiene un impacto directo en la eficiencia de las máquinas. Dependiendo de cómo estén conectados los engranajes, esta relación puede ser de aumento o reducción de velocidad, lo que influye en la funcionalidad y rendimiento de sistemas complejos como motores, transmisiones o mecanismos de reloj.
+En un tornillo guía, la relación de transmisión entre el movimiento rotatorio del tornillo y el desplazamiento lineal de la cápsula (o tuerca) está determinada por el paso (lead) y el cabeceo (pitch). El paso representa la distancia lineal que se avanza en una vuelta completa del tornillo, y se expresa generalmente en milímetros o pulgadas. Por ejemplo, si un tornillo tiene un paso de 5 mm, significa que la cápsula se desplazará 5 mm por cada vuelta del tornillo. Este valor es fundamental para calcular cuántas revoluciones por minuto (RPM) se requieren para alcanzar una velocidad lineal específica, y tiene un impacto directo en la precisión, velocidad y fuerza del sistema.
 
-![Figura de prueba](images/plantilla/relacionengra.png)
+Por otro lado, el cabeceo es el número de vueltas del tornillo necesarias para mover la cápsula una unidad de distancia, por ejemplo, un metro. Es simplemente el inverso del paso: si el paso es 5 mm/vuelta, entonces el cabeceo es 200 vueltas/m. Esta relación permite establecer la tasa de conversión entre la velocidad angular del motor y la velocidad lineal de la carga, y se utiliza para dimensionar motores, calcular relaciones de control y programar movimientos en sistemas automatizados. En conjunto, paso y cabeceo definen cómo se traduce el torque aplicado en el eje del tornillo en una fuerza lineal útil sobre la carga, determinando la eficiencia y funcionalidad del sistema de transmisión.
 
-Figura 3. Relación de Engranajes.
+$$
+\Delta \theta = 2 \pi p \Delta x
+$$
 
-Una de las propiedades clave de las relaciones de engranajes es que permiten alterar la velocidad y el par motor en un sistema mecánico sin necesidad de modificar directamente los motores. En una relación de engranajes reductora, el engranaje conductor (el que está impulsando el sistema) tiene más dientes que el engranaje conducido, lo que resulta en una disminución de la velocidad de salida pero un aumento en el par motor. Por el contrario, una relación multiplicadora aumenta la velocidad de salida, pero a costa de reducir el par motor. Estas relaciones son cruciales para optimizar el funcionamiento de vehículos, maquinaria industrial y dispositivos que requieren control preciso sobre la velocidad y fuerza de movimiento.
+$$
+\frac{\Delta \theta}{\Delta x} = 2 \pi p
+$$
 
-Desde una perspectiva más técnica, el diseño de una relación de engranajes involucra factores como la geometría de los engranajes (módulo, diámetro de paso, y ángulos de presión), la precisión en el corte de dientes, y la sincronización de los engranajes para evitar deslizamientos y desgastes prematuros. En aplicaciones donde se busca alta eficiencia y durabilidad, se deben considerar materiales resistentes al desgaste y al calor, además de una lubricación adecuada para minimizar la fricción. Los avances tecnológicos han permitido crear engranajes más compactos y eficientes, mejorando así la capacidad de las máquinas modernas para operar a mayores velocidades y con mayor fuerza sin comprometer su fiabilidad.
+$$
+\frac{\frac{\Delta \theta}{\Delta t}}{\frac{\Delta x}{\Delta t}} = \frac{\text{Velocidad motor}}{\text{Velocidad carga}} = \frac{\dot{\theta}}{\dot{x}} = 2 \pi p
+$$
+
 
 
 ### Inercia Reflejada
 
 La inercia reflejada es un concepto que describe cómo la inercia de un componente en un sistema se traslada o se refleja en otro componente al momento de conectar diferentes partes de un mecanismo, como engranajes o ejes. Este fenómeno se refiere al efecto de la inercia de un cuerpo, como un volante de inercia, cuando se transmite a través de un sistema de transmisión o a otro componente mecánico, afectando la dinámica de todo el sistema.
 
-- Acople directo
+La inercia reflejada en un tornillo guía es una forma de expresar cómo la masa lineal de una carga se traduce en una resistencia al cambio de velocidad angular del motor que mueve el tornillo. En otras palabras, aunque la carga se desplaza de forma lineal, esa masa genera un efecto inercial que se "refleja" en el eje del motor como si fuera una masa rotacional. Esto es importante porque el motor no solo necesita superar la fricción o el peso, sino también la inercia que representa esa masa al convertir el movimiento de rotación en movimiento lineal.
+
+- Sabiendo que la carga tiene un movimiento lineal, su energía cinética sería:
 
 $$
-T_m = J_{\text{load}} \, \ddot{\theta}_m
+KE = \frac{1}{2} m \dot{x}^2
 $$
 
-
-
-- Desplazamiento tangencial
+- A partir de la relación de transmisión: $$\frac{\dot{\theta}}{\dot{x}} = 2 \pi p$$  se puede reemplazar en la expresión de energía cinética:
 
 $$
-r_l \theta_l = r_m \theta_m
+KE = \frac{1}{2} m \frac{1}{(2\pi p)^2} \dot{\theta}^2
 $$
 
-
-- Acople con engranajes
-
-$$
-T_l = J_{\text{load}} \, \ddot{\theta}_l
-$$
+- Ahora se tiene la energía cinética en términos de la velocidad angular, por lo tanto, el término que multiplica la velocidad es la inercia reflejada:
 
 $$
-\frac{\omega_m}{\omega_l} = \frac{r_l}{r_m}
+J_{ref} = \frac{m}{(2\pi p)^2} = \frac{m}{N_s^2}
 $$
 
-$$
-\frac{r_l}{r_m} T_m = J_{\text{load}} \, \ddot{\theta}_l
-$$
-
-$$
-r_l \ddot{\theta}_l = r_m \ddot{\theta}_m
-$$
-
-$$
-\frac{r_l}{r_m} T_m = J_{\text{load}} \frac{r_m}{r_l} \ddot{\theta}_m
-$$
+### Inercia Reflejada Total
 
 
-
-- Por leyes de Newton
-
 $$
-T_m = J_{\text{load}} \left( \frac{r_m}{r_l} \right)^2 \ddot{\theta}_m
+m = \frac{W_L + W_C}{g}
 $$
 
-$$
-T_m = J_{\text{load}} \frac{1}{N_{\text{GB}}^2} \ddot{\theta}_m
-$$
+Donde:
+- m = Masa Total
+- $$W_C$$ = Cama
 
 $$
-J_{\text{ref}} = \frac{J_{\text{load}}}{N_{\text{GB}}^2}
+J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
+La inercia reflejada total es la equivalente inercial que ve el motor cuando tiene que mover no solo su propio eje, sino también todos los componentes mecánicos conectados mediante mecanismos de transmisión (como tornillos guía, engranajes, poleas, etc.).
+
+En otras palabras, es la suma de:
+
+- La inercia propia del tornillo u otro componente rotatorio conectado directamente al motor.
+- La inercia equivalente de las masas lineales (como la carga útil y la cama móvil), convertida a una forma rotacional, considerando la eficiencia del sistema y la relación de transmisión.
+
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
+$$
+
+Donde:
+
+- $$\(J_{\text{ref}}^{\text{trans}}\)$$ : Inercia reflejada total al motor  
+- $$\(J_{\text{screw}}\)$$ : Inercia del tornillo  
+- $$\(W_L, W_C\)$$ : Pesos de la carga y la cama (carro móvil)  
+- $$\(g\)$$ : Aceleración de la gravedad  
+- $$\(\eta\)$$ : Eficiencia del sistema de transmisión  
+- $$\(N_S\)$$ : Relación de paso del tornillo
+
+Esta inercia es fundamental en el diseño y control de sistemas mecatrónicos, ya que influye directamente en la aceleración, el torque requerido y la estabilidad del sistema.
 
 
-En un sistema de engranajes o de transmisión de potencia, la inercia de un componente puede influir en la velocidad y el comportamiento del sistema. Por ejemplo, si un motor está conectado a una carga a través de engranajes, la inercia reflejada del sistema de carga puede hacer que el motor necesite trabajar más para acelerar o desacelerar el sistema completo. En otras palabras, la inercia de la carga, aunque no forme parte directamente del motor, se "refleja" sobre él, haciendo que el esfuerzo necesario para cambiar su velocidad de rotación aumente.
+
+
+
+
 
 
 ### Torque Reflejado
 
-De la relación definida anteriormente en inercia reflejada:
+## Cálculo de la Fuerza Externa y el Torque Reflejado
+
+La fuerza externa total que debe vencer el sistema incluye la fricción, la componente gravitacional y cualquier fuerza aplicada externamente:
 
 $$
-\frac{\omega_m}{\omega_l} = \frac{T_l}{T_m}
+F_{\text{ext}} = F_f + F_g + F_p
 $$
 
-$$
-T_m = \frac{\omega_l}{\omega_m} T_l
-$$
+Donde:
+
+- $$\(F_f = \mu (W_L + W_C) \cos \beta\)$$: fuerza de fricción  
+- $$\(F_g = (W_L + W_C) \sin \beta\)$$: componente de fuerza gravitacional  
+- $$\(F_p\)$$: fuerza externa adicional
+
+Por lo tanto, la fuerza total queda:
 
 $$
-T_m = \frac{T_l}{N_{\text{GB}}}
+F_{\text{ext}} = F_p + (W_L + W_C)(\sin \beta + \mu \cos \beta)
 $$
 
-La relación de engranajes también está en el denominador, pero no se eleva al cuadrado.
+Si el sistema se encuentra en posición horizontal, entonces $$\(F_g = 0\)$$.
 
 
-El torque reflejado es el concepto que describe cómo el par motor (torque) aplicado en un componente de un sistema se "transmite" o "refleja" en otro componente conectado, como un engranaje, eje o carga. Este fenómeno ocurre debido a la relación de transmisión de los componentes del sistema, y refleja cómo las fuerzas se distribuyen en función de las características geométricas de los elementos involucrados, como el número de dientes de los engranajes. Dependiendo de esta relación, el torque experimenta una variación al pasar de un componente a otro, lo que puede aumentar o disminuir en magnitud, afectando el comportamiento dinámico de todo el sistema.
+Ahora, para calcular el torque reflejado al motor debido a la carga, se puede utilizar el trabajo realizado:
 
-
-### Eficiencia
-
->🔑 *Eficiencia:* La eficiencia en control de movimiento se refiere a la capacidad de un sistema para maximizar la conversión de energía en trabajo útil, minimizando las pérdidas de energía durante el proceso de funcionamiento.
->
-
-*Recordando que:*
+Desde la rotación:
 
 $$
-P = T \cdot \omega
+\text{Work} = F_{\text{ext}} \cdot \frac{1}{2\pi p} \cdot \Delta \theta
 $$
 
+Desde el desplazamiento lineal:
 
 $$
-\eta = \frac{P_{\text{output}}}{P_{\text{input}}}
+\text{Work} = F_{\text{ext}} \cdot \Delta x
 $$
 
-$$
-T_l \omega_l = \eta T_m \omega_m
-$$
+Igualando ambos trabajos:
 
 $$
-T_m = \frac{T_l}{\eta N_{\text{GB}}}
+\text{Work} = T_{\text{load} \rightarrow \text{in}} \cdot \Delta \theta
 $$
 
-
-
-*Siguiendo la inercia reflejada:*
+Por lo tanto, el torque reflejado al motor es:
 
 $$
-J_{\text{ref}} = \frac{J_{\text{load}}}{\eta N_{\text{GB}}^2}
+T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{N_S}
 $$
 
-### Inercia Total
-
-La inercia total es la medida global de la resistencia que presenta un sistema a los cambios en su estado de movimiento, considerando todos los componentes involucrados. Esta propiedad es la suma de las inercias individuales de cada componente, ponderadas por su distribución en el sistema, es decir, su masa y la distancia de cada masa respecto al eje de rotación o al centro de masa. En sistemas rotacionales, la inercia total se calcula considerando no solo la masa de los componentes, sino también su forma y la ubicación de las masas respecto al eje de rotación. A mayor distancia de la masa respecto al eje, mayor será su contribución a la inercia total.
-
-En aplicaciones prácticas, como en maquinaria o vehículos, la inercia total determina cuánta energía es necesaria para acelerar o desacelerar el sistema. Si un sistema tiene una inercia total alta, se requiere más esfuerzo (torque) para cambiar su velocidad de rotación, lo que implica mayor consumo de energía y tiempo. Por el contrario, una inercia total baja facilita los cambios rápidos en el movimiento, pero puede resultar en un sistema menos estable o más susceptible a fluctuaciones de velocidad. Por lo tanto, comprender y controlar la inercia total es fundamental para diseñar sistemas eficientes y bien equilibrados, optimizando tanto su rendimiento como su consumo energético.
-
-- Lo recomendable es reflejar toda la inercia hacia el eje del motor, de tal manera que:
+Si se considera la eficiencia del sistema:
 
 $$
-J_{\text{total}} = J_m + J_{\text{on motor shaft}} + J_{\text{ref}}
+T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_S}
 $$
 
-- Donde:
-  - $$J_m$$: Inercia del eje del motor (según datasheet)
-  - $$J_{\text{on motor shaft}}$$: Inercia del acople y transmisión
-  - $$J_{\text{ref}}$$: Inercia reflejada desde la carga
+Donde:
+- $$\(\mu\)$$: coeficiente de fricción  
+- $$\(W_L, W_C\)$$: pesos de la carga y la cama  
+- $$\(\beta\)$$: ángulo de inclinación  
+- $$\(N_S\)$$: relación de paso del tornillo  
+- $$\(\eta\)$$: eficiencia mecánica del sistema
+
+
 
 
 
