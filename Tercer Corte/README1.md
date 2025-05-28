@@ -60,7 +60,7 @@ Figura 4. Ejemplo 1.
 
 Resultados:
 
-![Figura de prueba](images/plantilla/result1.png)
+![Figura de prueba](images/plantilla/resultado1.png)
 
 Figura 5. Resultados Ejemplo 1.
 
