@@ -133,12 +133,6 @@ Donde:
 Esta inercia es fundamental en el diseño y control de sistemas mecatrónicos, ya que influye directamente en la aceleración, el torque requerido y la estabilidad del sistema.
 
 
-
-
-
-
-
-
 ### Torque Reflejado
 
 ## Cálculo de la Fuerza Externa y el Torque Reflejado
@@ -203,9 +197,26 @@ Donde:
 - $$\(N_S\)$$: relación de paso del tornillo  
 - $$\(\eta\)$$: eficiencia mecánica del sistema
 
+💡**Ejemplo 1:**
 
+Una carga de 50 kg debe ser posicionada usando un tornillo esferado de acero. El tornillo tiene una densidad de 0.14 kg/cm³, un diámetro de 0.182 cm y una longitud de 36 cm. El paso del tornillo es de 0.75 cm por revolución y el sistema tiene una eficiencia del 90%. Además, el carro que sostiene la carga pesa 0.23 kg. Con esta información, se solicita calcular la inercia reflejada por la transmisión hacia su eje de entrada.
 
+Solución:
 
+- La inercia reflejada sería:
+
+$$ J_{ref}^{trans} = J_{screw} + J_{load \rightarrow in} + J_{carriage \rightarrow in} $$
+
+$$ = J_{screw} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right) $$
+
+Resultado: 386 in/s²
+
+- Relación de transmisión
+La relación de transmisión es:
+
+$$ N_S = 2 \pi p $$
+
+$$ = 2 \pi \left( \frac{1}{0.75} \right) = 8.38 $$
 
 
 
