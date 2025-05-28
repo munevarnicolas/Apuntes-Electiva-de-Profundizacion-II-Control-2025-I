@@ -269,13 +269,19 @@ Figura 7. Simulación Posición Ejemplo 2.
 Figura 8. Simulación Velocidad Ejemplo 2.
 
 
-## 4. Conceptos de Transmisión Polea - Correa
+## 2. Conceptos de Transmisión Piñon - Cremallera
 
-Los sistemas de transmisión por polea y correa son mecanismos utilizados para transferir movimiento y potencia entre ejes separados, mediante el contacto entre una o más poleas y una correa flexible. Este tipo de sistema se basa en la fricción generada entre la superficie de la polea y la correa, permitiendo transmitir el giro desde un eje motriz (como el de un motor) hacia uno o más ejes conducidos. Existen diferentes configuraciones, como transmisiones abiertas, cruzadas o múltiples, y también distintos tipos de correas (planas, trapezoidales, dentadas), dependiendo del nivel de precisión, velocidad y torque requerido en la aplicación.
+Un mecanismo piñón-cremallera es un sistema que transforma movimiento rotativo en movimiento lineal, y viceversa, mediante el engrane de un piñón con una cremallera. Este mecanismo es ampliamente utilizado en sistemas mecatrónicos por su simplicidad y precisión al generar desplazamientos lineales a partir de motores rotativos, facilitando así la integración con actuadores eléctricos. Su capacidad de convertir la rotación continua del motor en un movimiento lineal controlado lo hace ideal para aplicaciones como ejes de máquinas CNC, brazos robóticos o sistemas de dirección asistida.
 
-![Figura de prueba](images/plantilla/poleacorrea.png)
+![Figura de prueba](images/plantilla/rackandpinion.png)
 
-Figura 7. Transmisión Polea - Correa.
+Figura 9. Mecanismo Piñon-Cremallera.
+
+El piñón-cremallera permite implementar trayectorias lineales suaves y predecibles, esenciales para lograr movimientos tipo trapezoidal o tipo S, comunes en el diseño de perfiles de velocidad, aceleración y posición. Al vincularse con sistemas de control (como servomotores o controladores PID), se puede garantizar que el movimiento lineal responda con precisión a las órdenes del sistema, cumpliendo requisitos de tiempo, exactitud y dinámica del proceso.
+
+
+
+
 
 
 Estos sistemas ofrecen ventajas importantes como simplicidad mecánica, bajo costo y capacidad de absorber vibraciones y pequeñas desalineaciones, lo que los hace ideales para muchas aplicaciones industriales. Sin embargo, su comportamiento dinámico puede ser más complejo que otros sistemas como los de engranajes, debido a la elasticidad de la correa y el posible deslizamiento. Esto introduce variables como la inercia reflejada y el retardo en la respuesta del sistema, aspectos críticos cuando se requiere precisión en la sincronización del movimiento o en perfiles de aceleración y desaceleración.
