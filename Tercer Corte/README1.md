@@ -1,56 +1,22 @@
 # Elementos de Transmisión Continuacion 
 Esta clase se llevó a cabo el día 24 de abril de 2025, la cual estuvo dirigida a comprender los sistemas de transmisión, abordando temas los conceptos de transmisión tales como el tornillo guía, así como los conceptos de inercia y torque reflejado, fundamentales para el análisis y optimización del movimiento en sistemas mecánicos.
 
-## 1. ¿Que es un sistema de Transmisión?
->🔑 *Sistema de Transmision:* Un sistema de transmisión es un conjunto de elementos mecánicos que transfieren potencia desde una fuente de energía, como un motor, hacia un componente receptor, controlando velocidad, torque y dirección del movimiento.
->
+## 1. Conceptos de transmisión Tornillo Guía
 
-Los diseños de transmisión son fundamentales porque permiten adaptar la potencia generada por un motor a las necesidades específicas de una máquina o sistema. A través del diseño adecuado, se puede controlar la velocidad, el torque y la eficiencia del movimiento, optimizando el rendimiento general del mecanismo. Esto es especialmente importante en aplicaciones donde se requiere precisión o donde las condiciones de carga varían constantemente, como en la robótica, la manufactura o los vehículos eléctricos.
+Los sistemas de transmisión por tornillo sin fin están compuestos por un tornillo helicoidal (sin fin) que engrana con una rueda dentada (corona) colocada en un eje perpendicular. Este conjunto permite transmitir movimiento rotatorio entre ejes que forman un ángulo de 90°, y es especialmente útil cuando se necesita reducir la velocidad de manera significativa mientras se incrementa el par (torque). El tornillo actúa como un engranaje con un número muy bajo de “dientes” (generalmente uno o dos hilos), lo que da lugar a relaciones de transmisión muy altas, como 40:1 o más.
 
-Además, un buen diseño de transmisión contribuye a la durabilidad y seguridad del sistema. Al seleccionar correctamente componentes como engranajes, correas o cadenas, se minimizan las pérdidas de energía y se reducen los esfuerzos mecánicos innecesarios, lo que alarga la vida útil de los equipos. También permite prever y compensar factores como la inercia o las vibraciones, haciendo que el funcionamiento sea más estable y confiable incluso en condiciones exigentes.
-Los perfiles son esenciales porque definen de forma precisa la trayectoria, la velocidad y la aceleración que debe seguir un sistema para moverse de un punto a otro. Esto permite programar transiciones suaves y evitar movimientos bruscos, lo que reduce el desgaste mecánico y mejora la precisión. Ajustar estos parámetros es clave para adaptar el comportamiento del sistema a diferentes condiciones o tareas, facilitando la corrección en tiempo real de desviaciones y asegurando un rendimiento óptimo y seguro en aplicaciones tan diversas como la robótica, la manufactura, etc.
 
-![Figura de prueba](images/plantilla/sistemas.png)
+![Figura de prueba](images/plantilla/poleacorrea.png)
 
-Figura 1. Sistemas de transmision por poleas.
+Figura 1. Transmisión mediante Tornillo Guía
 
-La importancia de los diseños de transmisión también está estrechamente relacionada con los perfiles de movimiento, ya que estos determinan cómo varía la velocidad y aceleración a lo largo del tiempo en un sistema mecánico. Un diseño de transmisión bien ajustado permite seguir de manera precisa el perfil de movimiento deseado, lo cual es esencial en aplicaciones donde se requiere un control exacto, como en sistemas automatizados o maquinaria de alta precisión.
+El funcionamiento se basa en el principio de rosca sin fin, donde al girar el tornillo, sus filetes empujan los dientes de la rueda, haciéndola rotar. Debido al alto ángulo de fricción, estos sistemas suelen ser irreversibles, lo que significa que la rueda no puede hacer girar al tornillo, proporcionando así una especie de autobloqueo. Esta característica es muy valorada en aplicaciones donde se desea mantener una posición fija sin necesidad de frenos adicionales, como en elevadores, compuertas o mecanismos de ajuste fino.
 
-Al incorporar los perfiles de movimiento en el diseño de transmisión, se logra una correspondencia precisa entre las exigencias dinámicas del sistema y la respuesta mecánica de sus componentes. Esta integración permite controlar de forma más efectiva la aceleración, el desaceleramiento y la estabilidad del movimiento, lo que resulta en una operación más eficiente y fluida. Además, una transición cuidadosamente diseñada entre distintas fases del movimiento minimiza picos de carga y esfuerzos transitorios, reduciendo significativamente la fatiga y el desgaste prematuro de los elementos mecánicos. Esto no solo prolonga la vida útil del sistema, sino que también garantiza un desempeño más confiable en condiciones variables o exigentes, donde pequeñas desviaciones en el perfil de movimiento pueden traducirse en fallas críticas o pérdidas de precisión operativa.
+El sistema de transmisión por tornillo sin fin ofrece varias ventajas clave las cuales permite altas reducciones de velocidad en un solo paso, lo que lo hace ideal para aplicaciones donde se requiere gran torque a baja velocidad. Además, su configuración compacta facilita la transmisión entre ejes no coaxiales y perpendiculares, ahorrando espacio. Una de sus características más valiosas es el efecto autobloqueante, que impide el retroceso del sistema, aumentando la seguridad en mecanismos de elevación o posicionamiento. También proporciona un funcionamiento suave y silencioso, con bajo nivel de vibraciones.
 
-## 2. Diseño de Transmisión
+Los mecanismos de tornillo sin fin son altamente relevantes en la industria porque ofrecen una solución compacta, precisa y segura para la transmisión de movimiento y control de posición en equipos donde se requiere reducir velocidad y aumentar torque, como en elevadores, grúas, transportadores, actuadores y maquinaria pesada. Su capacidad de mantener la carga en posición sin retroceso los hace ideales para sistemas donde la seguridad y la estabilidad son críticas. Además, su diseño simple y duradero reduce el mantenimiento y permite integrarlos fácilmente en espacios reducidos o diseños mecánicos complejos.
 
-En el diseño de sistemas de transmisión, uno de los requerimientos fundamentales es garantizar que el torque proporcionado por el motor, incluso a su máxima velocidad, sea mayor al exigido por la aplicación. Esto no solo asegura un funcionamiento eficiente, sino que previene el sobreesfuerzo del motor ante condiciones variables o inesperadas. Para ello, se recomienda siempre incorporar un margen de seguridad, que actúe como una reserva de capacidad ante incrementos imprevistos de carga o pérdidas por fricción. Asimismo, es crucial mantener una relación adecuada de inercia entre el motor y la carga, ya que una inercia mal equilibrada puede generar respuestas lentas, inestabilidad en el control del sistema y desgaste acelerado de los componentes.
-
-![Figura de prueba](images/plantilla/diseñotrans.png)
-
-Figura 2. Software para diseño de Transmisiones.
-
-No atender correctamente estos requerimientos puede derivar en diversos problemas de diseño en las transmisiones. Por ejemplo, un motor subdimensionado puede operar constantemente cerca de sus límites, elevando su temperatura y reduciendo su vida útil. De igual forma, una mala gestión de la inercia puede causar oscilaciones o vibraciones indeseadas, afectando la precisión del sistema, especialmente en aplicaciones que requieren alta repetibilidad o ciclos de tiempo muy controlados. Además, ignorar aspectos como el costo, la facilidad de mantenimiento o la compatibilidad entre componentes puede traducirse en soluciones poco sostenibles, tanto en términos técnicos como económicos. Por ello, el diseño de una transmisión debe abordarse de forma integral, considerando no solo los parámetros mecánicos, sino también el contexto operativo completo del sistema.
-
-### Inercia y Torque reflejado
-
->🔑 *Inercia:* s una medida de la fuerza que causa un giro o rotación alrededor de un eje. Depende de la magnitud de la fuerza y la distancia desde el punto de aplicación al eje de rotación.
->
-
->🔑 *Torque:* es la fuerza aplicada a una distancia del eje de rotación, que genera un movimiento giratorio. Se expresa en Newton-metro (Nm) y determina la capacidad para hacer girar un objeto alrededor de un eje.
->
-
-En el contexto del diseño de sistemas de transmisión y control de movimiento, la inercia juega un papel esencial al representar la resistencia de un cuerpo a los cambios en su velocidad angular. De acuerdo con las leyes de Newton, esta propiedad es la contraparte rotacional de la masa en los sistemas lineales. En aplicaciones de control, tanto rotacionales como lineales, se hace referencia a la inercia para describir la dificultad que tiene el sistema para acelerar o desacelerar. Esta característica influye directamente en la capacidad del motor para seguir un perfil de movimiento con precisión, ya que una inercia mal dimensionada puede provocar retrasos en la respuesta, oscilaciones o incluso pérdida de control.
-
-El concepto de torque reflejado está estrechamente ligado a la inercia y al diseño de transmisión. A través de un sistema de engranajes o cualquier medio de acoplamiento mecánico, la carga externa impone una resistencia que es "reflejada" hacia el motor, y esta resistencia incluye tanto el torque como la inercia equivalente. Si esta carga reflejada es demasiado alta respecto a la capacidad del motor, el sistema no podrá seguir adecuadamente el perfil de movimiento programado, comprometiendo el rendimiento del control y la eficiencia energética. Por ello, es fundamental ajustar las relaciones de transmisión para adecuar el valor de inercia reflejada, logrando un equilibrio entre rapidez de respuesta y estabilidad del sistema.
-
-Por leyes de Newton el comportamiento es:
-
-$$
-∑T = Jα
-$$
-
-Desde el punto de vista del control de movimiento, el manejo adecuado de la inercia y el torque reflejado permite un seguimiento más preciso de los perfiles de velocidad, aceleración y posición, aspectos críticos en sistemas automatizados de alta exigencia como robots industriales, CNC o impresoras 3D. Un diseño optimizado facilita que el controlador aplique los comandos de forma más efectiva, minimizando errores y mejorando la dinámica general del sistema. En resumen, la comprensión y correcta aplicación de estos conceptos no solo aseguran el funcionamiento mecánico, sino también la fidelidad en la ejecución del perfil de movimiento deseado.
-
-## 3. Conceptos de transmisión Engranajes
-
-### Relacion de Engranajes
+### Relación de Engranajes
 
 Una relación de engranajes es una medida que describe cómo se transmite el movimiento entre dos o más engranajes, en función de sus tamaños y número de dientes. Es un concepto fundamental en la ingeniería mecánica, pues determina la velocidad de rotación y la fuerza aplicada a través de los engranajes. La relación de engranajes se define generalmente como la razón entre el número de dientes de los engranajes involucrados, y tiene un impacto directo en la eficiencia de las máquinas. Dependiendo de cómo estén conectados los engranajes, esta relación puede ser de aumento o reducción de velocidad, lo que influye en la funcionalidad y rendimiento de sistemas complejos como motores, transmisiones o mecanismos de reloj.
 
