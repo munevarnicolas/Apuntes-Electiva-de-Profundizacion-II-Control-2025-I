@@ -224,7 +224,7 @@ Este modelo de inercia reflejada total ayuda a los ingenieros a tener una visió
 
 El cálculo del **torque de carga reflejado** en el motor de un sistema con tornillo guía es fundamental para dimensionar correctamente el actuador, asegurar su desempeño dinámico y evitar sobreesfuerzos. Este torque depende directamente de las **fuerzas externas** que actúan sobre la carga y de cómo estas se transmiten hacia el eje rotacional del motor.
 
-## 1. Fuerzas que Conforman el Esfuerzo Total
+### Fuerzas que Conforman el Esfuerzo Total
 
 La fuerza externa total $$\( F_{ext} \)$$ que debe superar el sistema se obtiene a partir de la suma de tres componentes principales:
 
