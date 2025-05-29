@@ -173,6 +173,42 @@ $$
 
 Aquí, $$\( N_s = 2\pi p \)$$ es el “número de relación de tornillo” que sirve como parámetro de transmisión. Esta inercia reflejada es la cantidad que "ve" el motor como carga rotacional equivalente, y es clave para diseñar el sistema de control, ya que afecta directamente la dinámica del actuador.
 
+## Inercia Reflejada Total
+
+Cuando se analiza un sistema con un **tornillo guía** (por ejemplo, una transmisión de tornillo de bolas), es importante considerar no solo la masa que se mueve linealmente (la carga), sino también los elementos mecánicos que intervienen en la transmisión, como el tornillo y la plataforma (carriage). En este caso, se calcula la **inercia reflejada total** al eje del motor, que es clave para el análisis dinámico del sistema y para el diseño del controlador.
+
+### Masa Total del Sistema Lineal
+
+La masa total $$\( m \)$$ que se debe mover se compone del peso de la carga $$\( W_L \)$$ y del peso del carro o cama $$\( W_C \)$$. Esta masa se obtiene dividiendo la suma de los pesos entre la aceleración gravitacional $$\( g \)$$:
+
+$$\[m = \frac{W_L + W_C}{g}\]$$
+
+### Inercia Reflejada Total
+
+La inercia reflejada total al eje del motor (denotada como $$\( J_{ref}^{trans} \))$$ incluye tres componentes:
+
+1. $$\( J_{screw} \)$$: inercia del tornillo mismo (rotacional).
+2. $$\( J_{load \rightarrow in} \)$$: inercia reflejada de la carga lineal al eje de entrada.
+3. $$\( J_{carriage \rightarrow in} \)$$: inercia reflejada del carro lineal al eje de entrada.
+
+Estas se suman de la siguiente manera:
+
+$$\[J_{ref}^{trans} = J_{screw} + J_{load \rightarrow in} + J_{carriage \rightarrow in}\]$$
+
+Reemplazando los términos de inercia reflejada de la carga y del carro (que se mueven linealmente pero se reflejan al eje rotacional), se tiene:
+
+$$\[J_{ref}^{trans} = J_{screw} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)\]$$
+
+donde:
+
+- $$\( \eta \)$$: eficiencia del tornillo.
+- $$\( N_S = 2\pi p \)$$: relación de transmisión del tornillo (con \( p \) siendo el paso).
+- $$\( W_L \)$$: peso de la carga.
+- $$\( W_C \)$$: peso del carro (cama).
+- $$\( g \)$$: aceleración gravitacional.
+
+Este modelo de inercia reflejada total ayuda a los ingenieros a tener una visión completa del esfuerzo que el motor debe hacer. No solo se considera la inercia del tornillo (que gira), sino también la masa de la carga y del carro (que se mueven en línea recta), pero vistas desde el motor como si fueran rotacionales. Esto es muy importante para entender cómo se comportará el sistema cuando acelera o desacelera, cuánta fuerza (par) necesita el motor y cómo reaccionará todo el sistema ante los comandos de control. Al tener en cuenta tanto la carga como el carro, se obtiene un cálculo más preciso y realista de lo que el motor enfrentará durante el funcionamiento.
+
 
 
 
