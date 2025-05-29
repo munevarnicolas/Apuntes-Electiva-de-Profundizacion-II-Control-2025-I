@@ -270,11 +270,11 @@ e = z_1 - y
 \]$$
 
 Donde:
-- $$\( z_1 \)$$: estimación de la salida \( y \),
-- $$\( z_2 \)$$: estimación de \( \dot{y} \),
-- $$\( z_3 \)$$: estimación de la perturbación total \( f \),
-- $$\( \gamma_i(e) \)$$: funciones del error, posiblemente no lineales,
-- $$\( \beta_i \)$$: ganancias del observador,
+- $$\( z_1 \)$$: estimación de la salida $$\( y \)$$.
+- $$\( z_2 \)$$: estimación de $$\( \dot{y} \)$$.
+- $$\( z_3 \)$$: estimación de la perturbación total $$\( f \)$$.
+- $$\( \gamma_i(e) \)$$: funciones del error, posiblemente no lineales.
+- $$\( \beta_i \)$$: ganancias del observador.
 - $$\( e \)$$: error de estimación entre la salida real y su estimación.
 
 
