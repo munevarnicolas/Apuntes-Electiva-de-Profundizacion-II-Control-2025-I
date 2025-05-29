@@ -372,6 +372,32 @@ $$
 $$J_ref ≈ 8.1 Kgm$$
 
 
+## Piñon - Cremallera
+
+### ¿Qué es un Piñon - Cremallera?
+
+>🔑 *Piñon - Cremallera:* convierte movimiento rotacional en lineal mediante un engrane cilíndrico (piñón) que engrana con una barra dentada lineal (cremallera).
+
+
+![paco3](https://github.com/user-attachments/assets/d4b2418c-a577-4428-8f94-1948b460a051)
+
+
+El sistema **piñón-cremallera** es un mecanismo de transmisión que convierte el movimiento **rotacional** de un engranaje (piñón) en **movimiento lineal** de una barra dentada (cremallera), o viceversa. Es ampliamente usado en sistemas de dirección, actuadores lineales y maquinaria industrial.
+
+
+Este mecanismo es fundamental cuando se requiere un movimiento lineal preciso a partir de un motor rotacional. Su simplicidad y capacidad de transmitir fuerzas significativas lo hacen ideal para aplicaciones en robótica, CNC, automoción, y más.
+
+### Ventajas
+
+- 🔄 **Conversión directa** de movimiento rotacional a lineal.
+- ⚙️ **Diseño simple** y fácil de mantener.
+- 🎯 **Alta precisión** en el posicionamiento lineal.
+- 💪 **Capacidad para transmitir grandes fuerzas**.
+- 🧭 **Respuesta rápida** y lineal al movimiento rotacional.
+
+El sistema piñón-cremallera es una solución efectiva y robusta para necesidades de movimiento lineal controlado.
+
+
 
 
 
