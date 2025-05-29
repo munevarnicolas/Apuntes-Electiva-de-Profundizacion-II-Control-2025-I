@@ -191,6 +191,10 @@ La inercia reflejada total al eje del motor (denotada como $$\( J_{ref}^{trans} 
 2. $$\( J_{load \rightarrow in} \)$$: inercia reflejada de la carga lineal al eje de entrada.
 3. $$\( J_{carriage \rightarrow in} \)$$: inercia reflejada del carro lineal al eje de entrada.
 
+
+![Captura de pantalla 2025-05-29 121356](https://github.com/user-attachments/assets/3a5602e9-4117-4a95-8c7d-7cffedc5687a)
+
+
 Estas se suman de la siguiente manera:
 
 $$\[J_{ref}^{trans} = J_{screw} + J_{load \rightarrow in} + J_{carriage \rightarrow in}\]$$
@@ -208,6 +212,89 @@ donde:
 - $$\( g \)$$: aceleración gravitacional.
 
 Este modelo de inercia reflejada total ayuda a los ingenieros a tener una visión completa del esfuerzo que el motor debe hacer. No solo se considera la inercia del tornillo (que gira), sino también la masa de la carga y del carro (que se mueven en línea recta), pero vistas desde el motor como si fueran rotacionales. Esto es muy importante para entender cómo se comportará el sistema cuando acelera o desacelera, cuánta fuerza (par) necesita el motor y cómo reaccionará todo el sistema ante los comandos de control. Al tener en cuenta tanto la carga como el carro, se obtiene un cálculo más preciso y realista de lo que el motor enfrentará durante el funcionamiento.
+
+
+
+
+## Torque de Carga
+
+
+![Captura de pantalla 2025-05-29 121335](https://github.com/user-attachments/assets/fda32996-c262-49a2-88fa-d0cf809130ee)
+
+
+El cálculo del **torque de carga reflejado** en el motor de un sistema con tornillo guía es fundamental para dimensionar correctamente el actuador, asegurar su desempeño dinámico y evitar sobreesfuerzos. Este torque depende directamente de las **fuerzas externas** que actúan sobre la carga y de cómo estas se transmiten hacia el eje rotacional del motor.
+
+## 1. Fuerzas que Conforman el Esfuerzo Total
+
+La fuerza externa total $$\( F_{ext} \)$$ que debe superar el sistema se obtiene a partir de la suma de tres componentes principales:
+
+$$\[F_{ext} = F_f + F_g + F_p\]$$
+
+Donde:
+
+- $$\( F_f \)$$: fuerza de fricción entre el carro y la superficie.
+- $$\( F_g \)$$: componente del peso en la dirección de movimiento.
+- $$\( F_p \)$$: fuerza de empuje requerida por la aplicación (por ejemplo, resistencia de la carga).
+
+Cada una de estas se calcula como:
+
+- **Fricción**:  
+
+  $$\[F_f = \mu (W_L + W_C) \cos \beta\]$$
+
+  Donde $$\( \mu \)$$ es el coeficiente de fricción, $$\( W_L \)$$ el peso de la carga, $$\( W_C \)$$ el peso del carro, y $$\( \beta \)$$ el ángulo de inclinación del tornillo.
+
+- **Peso**:  
+
+  $$\[F_g = (W_L + W_C) \sin \beta\]$$
+
+- **Combinación total**:  
+
+  $$\[F_{ext} = F_p + (W_L + W_C)(\sin \beta + \mu \cos \beta)\]$$
+
+Cuando el tornillo está en posición horizontal $$(\( \beta = 0 \))$$, la componente de la gravedad desaparece y la fricción es la principal resistencia pasiva.
+
+
+
+### Conversión de Fuerza Lineal a Torque
+
+Para convertir esta fuerza externa en un torque reflejado en el eje del motor, se utiliza el **principio de conservación del trabajo**:
+
+$$\[\text{Trabajo} = F_{ext} \cdot \Delta x = T_{load \rightarrow in} \cdot \Delta \theta\]$$
+
+Donde $$\( \Delta x \)$$ es el desplazamiento lineal del carro y \( \Delta \theta \) el desplazamiento angular del tornillo. Sabiendo que:
+
+$$\[\Delta x = \frac{1}{2\pi p} \Delta \theta\]$$
+
+Entonces:
+
+$$\[\text{Trabajo} = F_{ext} \cdot \frac{1}{2\pi p} \Delta \theta\]$$
+
+$$\[T_{load \rightarrow in} = \frac{F_{ext}}{2\pi p}\]$$
+
+
+
+### Consideración de la Eficiencia del Sistema
+
+En la práctica, los sistemas de tornillo guía no son perfectamente eficientes. Se introducen pérdidas por fricción interna, juego mecánico, deformaciones, etc. Para contemplar estas pérdidas, se introduce un **factor de eficiencia mecánica** $$\( \eta \):$$
+
+$$\[T_{load \rightarrow in} = \frac{F_{ext}}{\eta N_S}\]$$
+
+Donde:
+
+- $$\( N_S = 2\pi p \)$$: relación tornillo (distancia lineal por vuelta).
+- $$\( \eta \)$$: eficiencia del sistema $$(0 < \( \eta \) ≤ 1)$$.
+
+
+Este modelo permite determinar con precisión el **torque mínimo requerido** por el motor para mover la carga bajo condiciones reales de operación. Es una herramienta clave para:
+
+- Selección de motores eléctricos.
+- Diseño del control de par y velocidad.
+- Estimación del consumo energético.
+- Prevención de fallas por sobrecarga.
+
+Una estimación incorrecta del torque reflejado puede conducir a sistemas sobredimensionados (costosos) o subdimensionados (inseguros y propensos a fallos). Por eso, este análisis debe ser considerado desde las primeras etapas del diseño mecánico y de automatización.
+
 
 
 💡**Ejemplo 1:**
