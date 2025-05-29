@@ -51,6 +51,44 @@ Este enfoque reduce significativamente la carga de modelado y facilita el contro
 En el ADRC, el error de seguimiento es parte de la perturbación estimada, lo que significa que no se requiere acción integral explícita para eliminar el error permanente. El controlador se encarga automáticamente de este comportamiento gracias al diseño del observador.
 
 
+### Importancia de ADRC
+
+El ADRC responde a uno de los desafíos más persistentes del control automático: la incertidumbre del modelo. En muchos sistemas reales tales como robótica, procesos industriales,etc en donde modelar con precisión es costoso o inviable. El ADRC:
+
+- Permite prescindir de modelos detallados, reduciendo costos de ingeniería.
+- Compensa activamente cambios en la dinámica del sistema.
+- Funciona bien bajo condiciones cambiantes o desconocidas.
+- Tiene un diseño simple, con ganancias proporcionales y ubicación de polos.
+- Se implementa fácilmente, lo cual lo hace ideal tanto en investigación como en la industria.
+
+
+## Diferencias con otros métodos de control
+
+
+| Aspecto                           | PID Tradicional                      | Control Basado en Modelo (LQR, MPC) | ADRC                                      |
+|-----------------------------------|--------------------------------------|--------------------------------------|-------------------------------------------|
+| **Dependencia del modelo**        | Alta                                 | Muy alta                             | Muy baja (solo orden y ganancia estimada) |
+| **Gestión de perturbaciones**     | Reactiva (acción integral)           | Requiere modelarlas explícitamente  | Activa y en tiempo real                   |
+| **Capacidad frente a no linealidades** | Limitada a un rango lineal         | Requiere linealización o modelos complejos | Naturalmente absorbidas por el observador |
+| **Rechazo de incertidumbre**      | No explícito                         | Requiere robustez o adaptabilidad   | Sí, a través del ESO                       |
+| **Diseño e implementación**       | Empírico, por prueba y error         | Matemáticamente complejo             | Sistemático y proporcional                |
+| **Comportamiento integrador**     | Requiere término I                   | Según diseño                         | Surge naturalmente del modelo             |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 💡**Ejemplo 1:**
 
