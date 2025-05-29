@@ -614,9 +614,179 @@ Su importancia esta en que:
 - Es clave para asegurar que el sistema no se detenga bajo carga.
 - Permite anticipar comportamientos como **sobrecargas**, pérdida de pasos (en motores paso a paso), o fallos térmicos.
 
+### Relación de transmisión e inercia reflejada
+
+En algunos sistemas de transporte, se incorporan uno o varios **rodillos locos** (también llamados rodillos de retorno o de soporte) a lo largo de la estructura. Estos rodillos no están conectados al motor; simplemente giran al contacto con la banda y su función principal es **guiar, sostener y mantener la tensión adecuada** de la banda transportadora durante su funcionamiento.
+
+>🔑 *Rodillos locos:* elementos pasivos que giran libremente y sirven de soporte y guía para la banda transportadora sin estar conectados al sistema de accionamiento.
+
+
+![paco7](https://github.com/user-attachments/assets/c0e0eff2-1646-44b5-b161-0b8fdf6c57dd)
+
+El uso de rodillos locos permite diseñar **trayectorias más largas y flexibles**, facilitando el transporte de materiales en zonas con curvas, inclinaciones o desniveles. Sin embargo, este diseño implica ciertas condiciones:
+
+- Se requiere una **banda más larga**, ya que debe cubrir toda la distancia entre rodillos motrices y rodillos locos.
+- Generalmente, se transportan **cargas ligeras o de peso moderado**, ya que una mayor longitud de banda y múltiples puntos de soporte pueden generar flexión o pérdida de tensión si la carga es demasiado pesada.
+
+#### ✅ Ventajas de usar rodillos locos:
+
+- Reducción del desgaste en la banda.
+- Menor consumo energético al minimizar la fricción localizada.
+- Mayor cobertura de áreas de transporte sin necesidad de múltiples motores.
+
+
+$$
+N_{CV} = \frac{1}{r_{DR}}
+$$
+
+
+$$
+J_{ID \rightarrow in} = \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2}
+$$
+
+
+$$
+J_{ref}^{trans} = J_{DR} + J_{load \rightarrow in} + J_{belt \rightarrow in} + J_{ID \rightarrow in} + J_{BR \rightarrow in}
+$$
+
+
+$$
+J_{ref}^{trans} = J_{DR} + \frac{1}{\eta N_{CV}^2} \left( \frac{W_L + W_{belt}}{g} \right) + \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2} + \frac{J_{BR}}{\eta \left( \frac{r_{BR}}{r_{DR}} \right)^2}
+$$
+
+
+### Torque de Carga
+
+$$
+F_{ext} = F_p + (W_L + W_{belt})(\sin \beta + \mu \cos \beta)
+$$
+
+
+
+$$
+T_{load \rightarrow in} = \frac{F_{ext}}{\eta N_{CV}}
+$$
+
+Aplicando caso general donde la banda tiene un ángulo.
+
+
+![paco8](https://github.com/user-attachments/assets/34a11117-12e8-44f6-a2f0-938b444d1f9b)
+
+## Ejercicios
+
+### 📚Ejercicio 1:
+
+**Sistema:** Banda transportadora horizontal accionada por una polea impulsora (sin caja reductora).
+
+### 📋 Datos:
+
+- **Radio de la polea impulsora:** $$\( r_{\text{ip}} = 0.05 \, \text{m} \)$$
+- **Peso total transportado (carga + carro + banda):** $$\( W_{\text{total}} = 120 \, \text{N} \)$$
+- **Fuerza de fricción equivalente:** $$\( F_{\text{ext}} = 40 \, \text{N} \)$$
+- **Inercia de cada polea:** $$\( J_p = 0.0006 \, \text{kg·m}^2 \)$$
+- **Eficiencia del sistema $$(\( \eta \))$$**: 80% (0.8)
+- **Inercia del motor:** $$\( J_{\text{motor}} = 0.002 \, \text{kg·m}^2 \)$$
+
+
+
+**¿Cuál es la relación de transmisión \( N_{\text{BD}} \)?**
+
+La relación de transmisión para una banda transportadora con polea impulsora es:
+
+$$\[N_{\text{BD}} = \frac{1}{r_{\text{ip}}}\]$$
+
+$$\[N_{\text{BD}} = \frac{1}{0.05} = 20\]$$
+
+
+
+**¿Cuál es el torque que debe entregar el motor?**
+
+$$\[T_{\text{motor}} = \frac{F_{\text{ext}}}{\eta \cdot N_{\text{BD}}}\]$$
+
+$$\[T_{\text{motor}} = \frac{40}{0.8 \cdot 20} = \frac{40}{16} = 2.5 \, \text{Nm}\]$$
+
+
+
+**¿Cuál es la inercia reflejada al motor?**
+
+$$\[J_{\text{ref}}^{\text{trans}} = 2J_p + \frac{1}{\eta \cdot N_{\text{BD}}^2} \cdot \left( \frac{W_{\text{total}}}{g} \right)\]$$
+
+$$\[J_{\text{ref}}^{\text{trans}} = 2(0.0006) + \frac{1}{0.8 \cdot 20^2} \cdot \left( \frac{120}{9.81} \right)\]$$
+
+$$\[J_{\text{ref}}^{\text{trans}} = 0.0012 + \frac{1}{320} \cdot 12.23 \approx 0.0012 + 0.0382 \approx 0.0394 \, \text{kg·m}^2\]$$
+
+
+
+**¿La relación de inercia es adecuada?**
+
+$$\[IR = \frac{J_{\text{ref}}}{J_{\text{motor}}} = \frac{0.0394}{0.002} \approx 19.7\]$$
+
+*Una relación de inercia entre 1 y 5 es ideal. Una relación cercana a 20 indica que el motor podría tener dificultades para controlar aceleraciones rápidas con precisión.*
+
+### 📚Ejercicio 2:
+
+
+**Datos del sistema**
+
+- **Peso de la carga:** $$\( W_L = 400 \, \text{N} \)$$
+- **Peso del carro:** $$\( W_C = 250 \, \text{N} \)$$
+- **Paso del tornillo (lead):** $$\( L = 0.01 \, \text{m/rev} \)$$
+- **Eficiencia del tornillo:** $$\( \eta = 0.6 \)$$
+- **Inercia del tornillo:** $$\( J_{\text{screw}} = 0.03 \, \text{kg·m}^2 \)$$
+- **Fuerza de fricción y carga total externa:** $$\( F_{\text{ext}} = 75 \, \text{N} \)$$
+
+Calcular la masa total
+
+\[m = \frac{W_L + W_C}{g} = \frac{400 + 250}{9.81} \approx \frac{650}{9.81} \approx 66.27 \, \text{kg}\]
+
+
+Calcular la relación de transmisión del tornillo
+
+$$\[N = \frac{2\pi}{L} = \frac{2\pi}{0.01} = 628.32 \, \text{rad/m}\]$$
+
+
+Calcular la inercia reflejada
+
+$$\[J_{\text{ref}} = \frac{1}{\eta} \cdot N^2 \cdot m\]$$
+
+$$\[J_{\text{ref}} = \frac{1}{0.6} \cdot (628.32)^2 \cdot 66.27 \approx \frac{1}{0.6} \cdot 394784 \cdot 66.27\]$$
+
+$$\[J_{\text{ref}} \approx \frac{1}{0.6} \cdot 26151914.7 \approx 43586524.5 \, \text{kg·m}^2\]$$
+
+
+Inercia total:
+
+$$\[J_{\text{total}} = J_{\text{screw}} + J_{\text{ref}} = 0.03 + 0.87 = 0.90 \, \text{kg·m}^2\]$$
+
+
+
+Torque reflejado al motor
+
+El torque requerido por la carga se refleja al motor de esta forma:
+
+$$\[T_{\text{motor}} = \frac{F_{\text{ext}} \cdot L}{2\pi \cdot \eta} = \frac{75 \cdot 0.01}{2\pi \cdot 0.6}\]$$
+
+$$\[T_{\text{motor}} = \frac{0.75}{3.77} \approx 0.199 \, \text{Nm}\]$$
+
+
+
+## Conclusiones
+
+
+
+
 
 
 
 # Referencias
-- https://gm0.org/es/latest/docs/software/concepts/control-loops.html
-- https://www.a-m-c.com/es/experiencia/tecnologias/motion-control/resumen/#:~:text=Perfiles%20de%20movimiento,Curva%20S%20perfiles%20de%20movimiento.
+
+- https://gm0.org/es/latest/docs/software/concepts/control-loops.html  
+- https://www.a-m-c.com/es/experiencia/tecnologias/motion-control/resumen/#:~:text=Perfiles%20de%20movimiento,Curva%20S%20perfiles%20de%20movimiento.  
+- https://www.igus.es/info/plain-bearing-glossary-transmission-ratio  
+- https://www.rexroth.com/en/xc/knowledge/technical-articles/fundamentals-of-mechanical-drives  
+- https://mechteacher.com/reflected-inertia-in-motors/  
+- https://www.engineersedge.com/mechanics_machines/screw_thread_mechanics.htm  
+- https://www.motioncontroltips.com/what-is-a-lead-screw-and-how-does-it-work/  
+- https://nptel.ac.in/courses/112/105/112105268/  
+
+
