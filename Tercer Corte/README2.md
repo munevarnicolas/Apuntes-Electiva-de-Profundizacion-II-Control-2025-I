@@ -241,6 +241,79 @@ Una vez extendido el modelo:
 El observador estima la perturbación en tiempo real, y el controlador la compensa activamente, logrando seguimiento preciso incluso sin conocer la forma de `f` o `h`.
 
 
+### Observador de estados extendido para NADRC
+
+El Observador de Estados Extendido (ESO) es un componente fundamental del NADRC (Nonlinear Active Disturbance Rejection Control). Su propósito es estimar en tiempo real tanto los estados del sistema como las perturbaciones desconocidas (modeladas como un estado adicional), lo que permite que el controlador reaccione adecuadamente incluso en presencia de dinámicas no modeladas, incertidumbre o entradas perturbadoras.
+
+
+###  ¿Para qué sirve el ESO?
+
+- Estima los estados internos del sistema (por ejemplo: posición y velocidad),
+- Estima la perturbación total (agrupación de no linealidades, errores de modelado, y perturbaciones externas),
+- Provee información precisa al controlador NADRC sin requerir un modelo exacto del sistema.
+
+Esto convierte al ESO en el componente que permite que el controlador trabaje independientemente del modelo físico exacto de la planta.
+
+
+### Estructura del ESO (modelo generalizado):
+
+El observador tiene la siguiente forma:
+
+$$
+\[
+\begin{cases}
+\dot{z}_1 = z_2 - \beta_1 \gamma_1(e) \\
+\dot{z}_2 = z_3 + b_0 u - \beta_2 \gamma_2(e) \\
+\dot{z}_3 = -\beta_3 \gamma_3(e) \\
+e = z_1 - y
+\end{cases}
+\]$$
+
+Donde:
+- $$\( z_1 \)$$: estimación de la salida \( y \),
+- $$\( z_2 \)$$: estimación de \( \dot{y} \),
+- $$\( z_3 \)$$: estimación de la perturbación total \( f \),
+- $$\( \gamma_i(e) \)$$: funciones del error, posiblemente no lineales,
+- $$\( \beta_i \)$$: ganancias del observador,
+- $$\( e \)$$: error de estimación entre la salida real y su estimación.
+
+
+
+### Ley de control del NADRC
+
+Una vez estimados los estados y la perturbación, se aplica la siguiente ley de control:
+
+$$\[u = \frac{u_0 - z_3}{b_0}\]$$
+
+Donde:
+- $$\( u_0 \)$$: acción de control deseada (proveniente del controlador externo),
+- $$\( z_3 \)$$: estimación de la perturbación total,
+- $$\( b_0 \)$$: ganancia estimada del sistema.
+
+Este lazo interno cancela dinámicamente la perturbación, transformando el sistema en:
+
+$$
+\[
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = u_0 \\
+y = x_1
+\end{cases}
+\]$$
+
+
+Este es un sistema ideal: libre de perturbaciones y con comportamiento integrador puro, lo cual simplifica enormemente el diseño del controlador externo.
+
+
+### ¿Por qué usar un ESO?
+
+- Permite desacoplar el controlador del modelo exacto.
+- Hace que el sistema sea robusto ante incertidumbre y no linealidades.
+- Reduce el impacto de perturbaciones externas.
+- Es aplicable a sistemas rápidos y dinámicos, como convertidores de potencia o servomecanismos.
+
+
+
 
 💡**Ejemplo 2:**
 
