@@ -1,5 +1,5 @@
 # Elementos de Transmisión Continuación 
-Esta clase se llevó a cabo el día 24 de abril de 2025, la cual estuvo dirigida a comprender los sistemas de transmisión, abordando temas los conceptos de transmisión tales como el tornillo guía, así como los conceptos de inercia y torque reflejado, fundamentales para el análisis y optimización del movimiento en sistemas mecánicos.
+Para esta clase se abordó el estudio de los sistemas de transmisión, profundizando en conceptos clave como el tornillo guía, la inercia y el torque reflejado. A través de estos temas, se analizaron su impacto en el movimiento de sistemas mecánicos y su relevancia para la optimización de procesos. Durante la sesión, se presentaron ejemplos y ejercicios que permitieron explorar la aplicación de estos principios en distintos escenarios, facilitando la comprensión de su importancia en el diseño y funcionamiento de mecanismos.
 
 ## 1. Tornillo Guía
 
