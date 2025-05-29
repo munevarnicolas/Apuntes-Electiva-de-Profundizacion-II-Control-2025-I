@@ -3,33 +3,29 @@ Esta clase se llevó a cabo el día 13 de Mayo de 2025,
 
 ## 1. ADRC
 
+>🔑 *ADRC:* es una técnica de control desarrollada para enfrentar una de las mayores limitaciones en el diseño de controladores, la cual es la necesidad de conocer de forma precisa el modelo matemático de la planta
 
-Los sistemas de transmisión por tornillo sin fin están compuestos por un tornillo helicoidal (sin fin) que engrana con una rueda dentada (corona) colocada en un eje perpendicular. Este conjunto permite transmitir movimiento rotatorio entre ejes que forman un ángulo de 90°, y es especialmente útil cuando se necesita reducir la velocidad de manera significativa mientras se incrementa el par (torque). El tornillo actúa como un engranaje con un número muy bajo de “dientes” (generalmente uno o dos hilos), lo que da lugar a relaciones de transmisión muy altas, como 40:1 o más.
+ADRC se basa en el marco de espacio de estados, lo que le permite representar dinámicamente el comportamiento del sistema utilizando un conjunto de variables de estado, pero introduce un elemento innovador: el observador de estados extendido (ESO).
 
-El funcionamiento se basa en el principio de rosca sin fin, donde al girar el tornillo, sus filetes empujan los dientes de la rueda, haciéndola rotar. Debido al alto ángulo de fricción, estos sistemas suelen ser irreversibles, lo que significa que la rueda no puede hacer girar al tornillo, proporcionando así una especie de autobloqueo. Esta característica es muy valorada en aplicaciones donde se desea mantener una posición fija sin necesidad de frenos adicionales, como en elevadores, compuertas o mecanismos de ajuste fino.
+A diferencia de los observadores convencionales como el de Luenberger que solo estiman los estados internos del sistema, el ESO incorpora como estado adicional una representación de la "perturbación total". Esta perturbación total no es simplemente ruido externo, sino una combinación de múltiples factores: perturbaciones externas reales, errores de modelado, incertidumbre paramétrica, y sobre todo, dinámica no modelada (por ejemplo, no linealidades que no fueron incluidas en el modelo). El observador entonces estima esta perturbación total en tiempo real y la entrega al controlador para que pueda cancelarla activamente en su acción de control.
+
+Desde el punto de vista conceptual, esto convierte al ADRC en un controlador adaptativo generalizado, ya que no necesita conocimiento exacto de las ecuaciones diferenciales del sistema. El diseño del controlador se reduce a conocer:
+
+El orden del sistema, es decir, el número de derivadas necesarias para describir la dinámica de salida.
+
+La ganancia estática (o ganancia crítica), que puede ser constante o incluso una función, pero que no necesita conocerse con precisión.
+
+Por tanto, el ADRC externaliza la complejidad del sistema en el observador, lo que permite controlar sistemas lineales, no lineales, con parámetros variables e incluso con estructuras desconocidas de manera eficaz.
+
+![Figura de prueba](images/plantilla/gao.jpg)
+
+Figura 1. Gao Zhiqiang.
+
+Zhiqiang Gao es un investigador clave en el desarrollo del Active Disturbance Rejection Control (ADRC), un enfoque de control que busca mejorar la estabilidad y precisión de sistemas dinámicos sin depender de modelos matemáticos exactos
 
 
-![Figura de prueba](images/plantilla/tornillosinfin.jpg)
-
-Figura 1. Transmisión mediante Tornillo Guía
 
 
-El sistema de transmisión por tornillo sin fin ofrece varias ventajas clave las cuales permite altas reducciones de velocidad en un solo paso, lo que lo hace ideal para aplicaciones donde se requiere gran torque a baja velocidad. Además, su configuración compacta facilita la transmisión entre ejes no coaxiales y perpendiculares, ahorrando espacio. Una de sus características más valiosas es el efecto autobloqueante, que impide el retroceso del sistema, aumentando la seguridad en mecanismos de elevación o posicionamiento. También proporciona un funcionamiento suave y silencioso, con bajo nivel de vibraciones.
-
-Los mecanismos de tornillo sin fin son altamente relevantes en la industria porque ofrecen una solución compacta, precisa y segura para la transmisión de movimiento y control de posición en equipos donde se requiere reducir velocidad y aumentar torque, como en elevadores, grúas, transportadores, actuadores y maquinaria pesada. Su capacidad de mantener la carga en posición sin retroceso los hace ideales para sistemas donde la seguridad y la estabilidad son críticas. Además, su diseño simple y duradero reduce el mantenimiento y permite integrarlos fácilmente en espacios reducidos o diseños mecánicos complejos.
-
-![Figura de prueba](images/plantilla/torguia.png)
-
-Figura 2. Tornillo Guía
-
-
-Los tornillos ACME y los tornillos de esferas  son mecanismos utilizados para convertir el movimiento rotativo en lineal, y ambos son capaces de transmitir grandes potencias con distintos niveles de precisión y eficiencia. Los tornillos ACME utilizan un perfil trapezoidal en su rosca y una tuerca que desliza directamente sobre el tornillo. Esto genera una mayor fricción, lo que disminuye la eficiencia del sistema (entre un 35% y 85%, dependiendo del material, lubricación y velocidad), pero también proporciona un efecto autobloqueante, útil en aplicaciones donde se quiere evitar el retroceso sin necesidad de frenos. Son económicos, robustos y adecuados para aplicaciones donde la precisión extrema no es crítica.
-
-![Figura de prueba](images/plantilla/acme.jpg)
-
-Figura 3. Tornillo ACME
-
-Por otro lado, los tornillos de esferas incorporan un sistema de recirculación de bolas entre el tornillo y la tuerca, lo que reduce significativamente la fricción al funcionar como un rodamiento lineal. Esta reducción de contacto directo minimiza el desgaste, mejora la suavidad del movimiento y disminuye el backlash (juego mecánico), lo cual es crucial en sistemas de control numérico o automatización de alta precisión. Gracias a esto, su eficiencia se eleva entre el 85% y el 95%, permitiendo un mejor aprovechamiento del torque del motor para generar fuerza lineal sobre la carga. Aunque son más costosos que los ACME, su alta precisión y durabilidad justifican su uso en maquinaria CNC, equipos médicos, y sistemas robóticos.
 
 ### Relación de Transmisión
 
