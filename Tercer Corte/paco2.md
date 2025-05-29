@@ -506,6 +506,42 @@ T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{RP}}
 $$
 
 
+## Banda Transportadora
+
+### ¿Qué es una Banda Transportadora?
+
+>🔑 *Banda Transportadora:* Es un sistema que convierte movimiento rotacional de un motor en movimiento lineal continuo para transportar materiales de un punto a otro.
+
+
+![paco6](https://github.com/user-attachments/assets/536ef023-6ceb-4f52-9670-5e62ec538369)
+
+
+
+Una **banda transportadora** es un equipo que consiste en una cinta o banda flexible, generalmente de goma, tela o metal, que se mueve sobre rodillos o poleas para trasladar productos o materiales de forma continua. Esta cinta se acciona por un motor que hace girar las poleas, permitiendo el movimiento constante y controlado de cargas, desde objetos pequeños hasta materiales pesados.
+
+### Usos e importancia de la Banda Transportadora
+
+Las bandas transportadoras se emplean en muchas industrias como la minería, la agricultura, la fabricación y la logística para facilitar el transporte de materiales de manera rápida y segura. Son fundamentales para:
+
+- 🚚 **Mover grandes cantidades de material** sin esfuerzo manual.
+- ⏱️ **Aumentar la productividad** en líneas de producción o procesos de empaquetado.
+- 🛡️ **Mejorar la seguridad laboral** al reducir la manipulación directa de objetos pesados o peligrosos.
+- 💰 **Reducir costos operativos** mediante la automatización del transporte interno.
+
+Este sistema es clave para optimizar procesos industriales y mantener un flujo constante en la cadena productiva.
+
+
+### Ventajas de la Banda Transportadora
+
+- ✅ **Automatización del transporte:** permite mover materiales sin intervención manual constante, lo que ahorra tiempo y esfuerzo.
+- ✅ **Aumento de la productividad:** facilita un flujo continuo de materiales en procesos industriales, evitando interrupciones.
+- ✅ **Reducción de costos:** disminuye la necesidad de mano de obra y minimiza daños a los productos por manipulación.
+- ✅ **Versatilidad:** puede transportar una gran variedad de materiales, desde piezas pequeñas hasta cargas voluminosas y pesadas.
+- ✅ **Mejora de la seguridad:** reduce riesgos laborales al evitar que los trabajadores manipulen objetos pesados o peligrosos directamente.
+- ✅ **Fácil integración:** se adapta a diferentes diseños y procesos industriales, integrándose con otros sistemas automatizados.
+
+
+
 # Referencias
 - https://gm0.org/es/latest/docs/software/concepts/control-loops.html
 - https://www.a-m-c.com/es/experiencia/tecnologias/motion-control/resumen/#:~:text=Perfiles%20de%20movimiento,Curva%20S%20perfiles%20de%20movimiento.
