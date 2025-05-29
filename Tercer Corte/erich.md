@@ -258,7 +258,7 @@ $$
 
 **Sustitución final**
 
-Sustituyendo en la fórmula de \( J_{\text{ref}}^{\text{trans}} \):
+Sustituyendo en la fórmula de $$\( J_{\text{ref}}^{\text{trans}} \)$$:
 
 $$
 J_{\text{ref}}^{\text{trans}} = 5.42 \times 10^{-8} + \frac{1}{0.9 \cdot 8.38^2} \left( \frac{50 + 0.23}{9.89} \right)
@@ -266,30 +266,8 @@ $$
 
 **Resultado final:**
 
-```text
-J_ref ≈ 8.1 Kgm
+$$J_ref ≈ 8.1 Kgm$$
 
-
-
-**Simulación Simscape Multibody:**
-
-![Figura de prueba](images/plantilla/sim2.png)
-
-Figura 6. Simulación Ejemplo 2.
-
-
-**Resultados Posición:**
-
-![Figura de prueba](images/plantilla/sim3.png)
-
-Figura 7. Simulación Posición Ejemplo 2.
-
-
-**Resultados Velocidad:**
-
-![Figura de prueba](images/plantilla/sim4.png)
-
-Figura 8. Simulación Velocidad Ejemplo 2.
 
 
 ## 2. Conceptos de Transmisión Piñon - Cremallera
