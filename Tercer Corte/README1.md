@@ -492,67 +492,19 @@ $$
 Aplicando caso general donde la banda tiene un ángulo.
 
 
-## 5. Ejercicios
+## 4. Ejercicios
 
 ### 📚Ejercicio 1:
 
-La figura 12 muestra un sistema mecánico compuesto por dos círculos conectados por líneas que representan una correa o cadena. El círculo más grande, de color rojo, podría simbolizar una polea motriz o engranaje principal, mientras que el círculo más pequeño, de color verde, sería la polea conducida o secundaria. Los cuadrados amarillos en el centro de cada círculo probablemente indican los ejes de rotación.
-
-![Figura de prueba](images/plantilla/ejercicio1ult.png)
-
-Figura 12. Sistema mecanico Polea - correa.
-
-El diagrama de bloques  representa un sistema mecánico basado en la interacción de componentes de una transmisión por correa y polea. Este tipo de sistema es esencial en aplicaciones que requieren transferencias de movimiento y fuerza de manera eficiente, ajustando velocidades y torques para adaptarse a diferentes requisitos funcionales. El diagrama destaca los componentes clave involucrados: la polea, la correa y los puntos de conexión, junto con elementos que parecen representar parámetros físicos, condiciones iniciales y posiblemente simulaciones computacionales.
-
-![Figura de prueba](images/plantilla/ejercicio2ult.png)
-
-Figura 13. Diagrama de bloques Sistema mecanico Polea - correa.
-
-El diagrama mostrado en la figura 13, muestra cómo cada componente contribuye al flujo de movimiento. Los bloques como "pulley-base", "edge_pulley1" y "pulley_edge2" indican partes individuales de la polea que interactúan con la correa, mientras que el bloque etiquetado como "B" representa el modelo dinámico de la correa, que incluye su rigidez y capacidad de transmitir fuerza. La eficiencia y la relación de transmisión están representadas implícitamente, ya que son fundamentales para reflejar los torques y las inercias hacia el eje motriz. Además, los bloques "W" y "P" podrían indicar parámetros de peso o resistencia aplicados a la correa, cuya influencia en el sistema debe ser calculada y controlada para garantizar un rendimiento óptimo.
-
-![Figura de prueba](images/plantilla/ejercicio3ult.png)
-
-Figura 14. Pulley Base.
-
-En la figura 14 el componente "pulley-base", es el bloque central del sistema. Este sólido combina propiedades como la geometría, la inercia y las características gráficas, funcionando como base para modelar el comportamiento dinámico de una polea. Según las propiedades configurables que se presentan, el radio de la polea es de 0.2 m y su longitud es de 0.05 m, mientras que su inercia se calcula a partir de la geometría y la densidad, con un valor de 7800 kg/m³. Por otro lado, hay conexiones rígidas entre diferentes marcos (puertos de referencia) que permiten modelar las interacciones dinámicas entre las poleas y otros componentes mecánicos. Esto es crucial para reflejar con precisión tanto las fuerzas transmitidas como los movimientos en el sistema.
-
-La figura 15 muestra la configuración de un sistema de transmisión por correa y polea, y es una extensión de los cálculos y análisis que hemos discutido previamente. Se observa que se están configurando parámetros importantes relacionados con la geometría y los ángulos iniciales de la envoltura de la correa en la polea. El parámetro denominado Pitch Radius, definido como 20 cm, establece el radio efectivo de la polea que interactúa con la correa. Este valor influye directamente en la relación de transmisión y en el cálculo del torque reflejado hacia el motor.
-
-![Figura de prueba](images/plantilla/ejercicio4ult.png)
-
-Figura 15. Pulley base Propiedades.
-
-Otro aspecto destacado es el ajuste del ángulo inicial de envoltura, denominado Initial Wrap Angle, cuyo límite inferior se fija en 0 grados. Este parámetro es esencial para determinar cómo la correa interactúa con la superficie de la polea, afectando tanto la transmisión de fuerza como la eficiencia del sistema. Además, la sección de "Sensing" permite habilitar la medición de diferentes variables importantes, como el ángulo de envoltura, los ángulos de las poleas (denominados Pulley Angle A y Pulley Angle B), y los ángulos de flota (Fleet Angle A y Fleet Angle B). 
-
-![Figura de prueba](images/plantilla/ejercicio5ult.png)
-
-Figura 16. Solido Pulley base.
-
-El diagrama de bloques mostrado representa la configuración de pulley-base, que es parte del sistema de transmisión por correa y polea. Este marco de referencia desempeña un papel crucial al establecer cómo se determinan y calculan las propiedades físicas y geométricas del sistema, asegurando la precisión en los análisis y simulaciones. El origen del marco puede definirse en distintas posiciones clave, como el centro de masa, el punto de referencia inicial o incluso basado en características geométricas específicas, como el centro de su superficie lateral. Esta flexibilidad es esencial para adaptar el modelo a las necesidades específicas del ejercicio, permitiendo optimizar cálculos como los de torque o inercia reflejada. Asimismo, los ejes del marco se orientan de acuerdo con el eje principal de inercia (+Z) o una característica geométrica relevante, junto con un eje secundario (+X).
-
-![Figura de prueba](images/plantilla/ejercicio6ult.png)
-
-Figura 17. Propiedades del diagrama.
 
 
-![Figura de prueba](images/plantilla/ejercicio7ult.png)
-
-Figura 18. Resultados del mecanismo.
-
-## 6. Conclusiones
-
-El análisis de los sistemas de transmisión evidencia que un diseño cuidadoso de engranajes, poleas y correas es esencial para lograr un control de movimiento preciso y eficiente en aplicaciones mecatrónicas. La elección adecuada de las relaciones de transmisión y el dimensionamiento de los componentes asegura que el motor entregue el torque y la velocidad necesarios, al mismo tiempo que se preserva un margen de seguridad que evita el desgaste prematuro y mejora la durabilidad del sistema. La incorporación de perfiles de movimiento suaves permite transiciones estables, minimiza las tensiones mecánicas y garantiza una respuesta más uniforme ante variaciones de carga.
-
-El manejo de la inercia y la forma en que la carga interactúa con el motor resulta clave para la fidelidad del seguimiento de trayectorias. Ajustar la proporción entre las inercias del motor y de la carga, junto con la eficiencia de la transmisión, favorece un equilibrio entre rapidez de respuesta y estabilidad, reduciendo vibraciones y mejorando la calidad del control. En sistemas de polea y correa, además, es fundamental considerar la elasticidad y la masa de la correa para anticipar retardos dinámicos y optimizar la precisión.
-
-Los ejemplos prácticos demuestran que, más allá de los cálculos teóricos, es imprescindible aplicar una metodología sistemática que contemple la selección de materiales, la compatibilidad entre componentes y las condiciones operativas reales. De este modo, es posible diseñar sistemas de movimiento que no solo cumplan con los requisitos de desempeño, sino que también ofrezcan una operación confiable, un mantenimiento sencillo y un uso energético optimizado.
+## 5. Conclusiones
 
 
-## 7. Referencias  
-- [1] *H. Goldstein, C. Poole, and J. Safko, Classical Mechanics, 3rd ed. San Francisco, CA, USA: Addison-Wesley, 2002.*
-- [2] *R. Kelly, V. Santibáñez, and A. Loria, Control of Robot Manipulators in Joint Space, Springer, 2005*
-- [3] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
-- [4] *Apuntes Clase - Jueves 3 de Abril. [2025]*
-- [5] *M. Gopal, Digital Control and State Variable Methods, 4th ed. New Delhi, India: McGraw-Hill Education, 2012.*
-- [6] *M. Alonso and E. J. Finn, Fundamental University Physics: Volume 1 - Mechanics, 2nd ed. Reading, MA, USA: Addison-Wesley, 1973*
-- [7] *K. Ogata, Discrete-Time Control Systems, 2nd ed. Upper Saddle River, NJ, USA: Prentice Hall, 1995.*
+
+
+## 6. Referencias  
+
+- [1] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
+- [2] *Apuntes Clase - Jueves 24 de Abril. [2025]*
+
