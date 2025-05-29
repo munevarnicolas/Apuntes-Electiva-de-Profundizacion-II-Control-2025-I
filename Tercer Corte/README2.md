@@ -24,26 +24,32 @@ Figura 1. Gao Zhiqiang.
 Zhiqiang Gao es un investigador clave en el desarrollo del Active Disturbance Rejection Control (ADRC), un enfoque de control que busca mejorar la estabilidad y precisión de sistemas dinámicos sin depender de modelos matemáticos exactos
 
 
+### Principales características del ADRC
 
 
+#### 1. Independencia del modelo riguroso
 
-### Relación de Transmisión
+El ADRC no requiere un modelo detallado de la planta. Solo necesita:
 
-En un tornillo guía, la relación de transmisión entre el movimiento rotatorio del tornillo y el desplazamiento lineal de la cápsula (o tuerca) está determinada por el paso (lead) y el cabeceo (pitch). El paso representa la distancia lineal que se avanza en una vuelta completa del tornillo, y se expresa generalmente en milímetros o pulgadas. Por ejemplo, si un tornillo tiene un paso de 5 mm, significa que la cápsula se desplazará 5 mm por cada vuelta del tornillo. Este valor es fundamental para calcular cuántas revoluciones por minuto (RPM) se requieren para alcanzar una velocidad lineal específica, y tiene un impacto directo en la precisión, velocidad y fuerza del sistema.
+- El orden del sistema (número de derivadas de salida).
+- La ganancia crítica o estática (relación entre entrada y salida).
 
-Por otro lado, el cabeceo es el número de vueltas del tornillo necesarias para mover la cápsula una unidad de distancia, por ejemplo, un metro. Es simplemente el inverso del paso: si el paso es 5 mm/vuelta, entonces el cabeceo es 200 vueltas/m. Esta relación permite establecer la tasa de conversión entre la velocidad angular del motor y la velocidad lineal de la carga, y se utiliza para dimensionar motores, calcular relaciones de control y programar movimientos en sistemas automatizados. En conjunto, paso y cabeceo definen cómo se traduce el torque aplicado en el eje del tornillo en una fuerza lineal útil sobre la carga, determinando la eficiencia y funcionalidad del sistema de transmisión.
+Incluso si la ganancia es variable (como en sistemas no lineales), esta se integra como parte de la perturbación total.
 
-$$
-\Delta \theta = 2 \pi p \Delta x
-$$
+#### 2. Agrupación de perturbaciones y no linealidades
 
-$$
-\frac{\Delta \theta}{\Delta x} = 2 \pi p
-$$
+Todo lo desconocido del sistema se agrupa en una o dos variables de estado adicionales estimadas por el ESO. Esto incluye:
 
-$$
-\frac{\frac{\Delta \theta}{\Delta t}}{\frac{\Delta x}{\Delta t}} = \frac{\text{Velocidad motor}}{\text{Velocidad carga}} = \frac{\dot{\theta}}{\dot{x}} = 2 \pi p
-$$
+- Perturbaciones externas
+- Modelado incompleto
+- No linealidades
+
+Este enfoque reduce significativamente la carga de modelado y facilita el control.
+
+#### 3. Comportamiento integrador natural del sistema
+
+En el ADRC, el error de seguimiento es parte de la perturbación estimada, lo que significa que no se requiere acción integral explícita para eliminar el error permanente. El controlador se encarga automáticamente de este comportamiento gracias al diseño del observador.
+
 
 
 💡**Ejemplo 1:**
