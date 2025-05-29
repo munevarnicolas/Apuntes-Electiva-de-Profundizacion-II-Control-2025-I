@@ -281,7 +281,7 @@ El piñón-cremallera permite implementar trayectorias lineales suaves y predeci
 
 
 
-### Relacion de Transmisión
+### Relación de Transmisión
 
 La relación de transmisión en un mecanismo piñón-cremallera describe cómo se convierte el movimiento rotacional del piñón en movimiento lineal de la cremallera. Específicamente, esta relación se determina por el radio del piñón: a mayor radio, mayor desplazamiento lineal por cada vuelta del piñón. Matemáticamente, se expresa como: $$N_{RP} = \frac{1}{r_{\text{pinion}}}$$ cuando se trabaja con velocidades angulares en radianes por segundo. Esta relación es fundamental en sistemas mecatrónicos, ya que permite diseñar perfiles de movimiento lineal precisos a partir del control de velocidad rotacional del actuador (motor).
 
@@ -300,14 +300,14 @@ $$
 
 💡**Ejemplo 3:**
 
-Simulacion Simscape Multibody:
+**Simulación Simulink:**
 
 ![Figura de prueba](images/plantilla/sim5.png)
 
 Figura 10. Mecanismo Piñon-Cremallera Simulink.
 
 
-Resultados:
+**Resultados:**
 
 ![Figura de prueba](images/plantilla/sim6.png)
 
@@ -354,6 +354,26 @@ Donde:
 
 
 💡**Ejemplo 4:**
+
+**Simulación Simscape Multibody:**
+
+![Figura de prueba](images/plantilla/sim7.png)
+
+Figura 11. Mecanismo Piñon-Cremallera Simscape.
+
+
+**Resultados de Posición:**
+
+![Figura de prueba](images/plantilla/sim8.png)
+
+Figura 12. Resultados Posición mecanismo Piñon-Cremallera Simscape.
+
+
+**Resultados de Velocidad:**
+
+![Figura de prueba](images/plantilla/sim9.png)
+
+Figura 13. Resultados Velocidad mecanismo Piñon-Cremallera Simscape.
 
 
 
