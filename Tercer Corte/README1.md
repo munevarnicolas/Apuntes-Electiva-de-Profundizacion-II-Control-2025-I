@@ -514,11 +514,22 @@ Figura 18. Perfil de Velocidad
 
 ## 5. Conclusiones
 
+El análisis de los sistemas de transmisión, particularmente aquellos basados en tornillo guía y mecanismos piñón-cremallera, constituye un eje fundamental en la formación del ingeniero mecatrónico, al representar la intersección crítica entre el diseño mecánico, la dinámica de sistemas y el control automatizado. Desde una perspectiva analítica, estos mecanismos no solo permiten la conversión eficiente de movimiento rotacional a lineal, sino que, más profundamente, condicionan la respuesta dinámica del sistema completo, afectando aspectos clave como la aceleración, el consumo energético, la precisión de posicionamiento y la estabilidad del movimiento. En el caso del tornillo guía, el alto grado de reducción y la posibilidad de autobloqueo lo hacen idóneo para aplicaciones de posicionamiento estático y carga sostenida. Sin embargo, estas ventajas están asociadas a una alta inercia reflejada, que debe ser cuidadosamente modelada e integrada en el sistema de control. La correcta estimación de esta inercia —junto con el torque reflejado— permite transformar una necesidad física (mover una masa) en una demanda de torque que el motor pueda gestionar con eficiencia, evitando así errores de seguimiento, sobrecalentamiento o comportamientos oscilatorios.
 
+Del mismo modo, el mecanismo piñón-cremallera, aunque más simple estructuralmente, presenta desafíos distintos: requiere un control más fino del perfil de aceleración para compensar la ausencia de autobloqueo, y su capacidad para generar trayectorias lineales predecibles lo convierte en un componente clave para el diseño de perfiles de movimiento optimizados. Estos perfiles especialmente los de tipo trapezoidal y tipo S no son meras funciones matemáticas; representan un compromiso entre exigencias mecánicas, límites de actuadores y criterios dinamicos. Una planificación de trayectoria que no considere estos factores puede traducirse en esfuerzos mecánicos excesivos, desgaste prematuro o resonancias que afectan el desempeño global.
+
+En conjunto, se concluye que la ingeniería mecatrónica no puede abordar el control de movimiento como un problema puramente computacional o únicamente mecánico. El entendimiento profundo de la interacción entre elementos de transmisión, parámetros dinámicos (como la inercia reflejada) y el diseño de perfiles de movimiento constituye la base de sistemas de control robustos, eficientes y adaptativos. Este enfoque sistémico permite no solo el funcionamiento correcto de máquinas automatizadas, sino su optimización frente a condiciones variables, aumentando su vida útil y mejorando la calidad del producto o proceso que controlan. Así, el estudio de estas transmisiones se consolida como una competencia técnica de alto valor en la formación de profesionales capaces de integrar inteligentemente la mecánica, la electrónica y el control.
 
 
 ## 6. Referencias  
 
 - [1] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
 - [2] *Apuntes Clase - Jueves 24 de Abril. [2025]*
-
+- [3] *Groover, M. P. Automation, Production Systems, and Computer-Integrated Manufacturing. 4th ed., Pearson, 2016*
+- [4] *Jazar, Reza N. Theory of Applied Robotics: Kinematics, Dynamics, and Control. 2nd ed., Springer, 2010.*
+- [5] *Craig, John J. Introduction to Robotics: Mechanics and Control. 4th ed., Pearson, 2017.*
+- [6] *Manual de Diseño Mecánico. Bosch Rexroth AG. Ed. Técnica, 2018.*
+- [7] *Mechatronics: Electronic Control Systems in Mechanical and Electrical Engineering. Bolton, W., 7th ed., Pearson, 2021.*
+- [8] *Diseño de Elementos de Máquinas. Shigley, J., 10ª ed., McGraw-Hill, 2015.*
+- [9] *Fundamentals of Machine Component Design. Juvinall, R., Marshek, K., 6th ed., Wiley, 2020.*
+- [10] *Modeling and Control of Engineering Systems. Ogata, K., Prentice Hall, 2000*
