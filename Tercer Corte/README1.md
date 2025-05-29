@@ -304,14 +304,14 @@ Simulacion Simscape Multibody:
 
 ![Figura de prueba](images/plantilla/sim5.png)
 
-Figura 10. Mecanismo Piñon-Cremallera Simscape.
+Figura 10. Mecanismo Piñon-Cremallera Simulink.
 
 
 Resultados:
 
 ![Figura de prueba](images/plantilla/sim6.png)
 
-Figura 10. Resultados mecanismo Piñon-Cremallera Simscape.
+Figura 10. Resultados mecanismo Piñon-Cremallera Simulink.
 
 
 ### Inercia Reflejada
@@ -341,10 +341,6 @@ $$
 F_{\text{ext}} = F_f + F_g + F_p
 $$
 
-Donde:
-- \( F_f \): fuerza de fricción  
-- \( F_g \): fuerza gravitacional  
-- \( F_p \): fuerza del proceso (por ejemplo, corte, empuje, etc.)
 
 El torque reflejado al motor debido a esta fuerza externa es:
 
@@ -355,6 +351,10 @@ $$
 Donde:
 - $$\( \eta \)$$: eficiencia del sistema  
 - $$\( N_{\text{RP}} \)$$: relación de transmisión del sistema piñón-cremallera
+
+
+💡**Ejemplo 4:**
+
 
 
 ## 5. Ejercicios
