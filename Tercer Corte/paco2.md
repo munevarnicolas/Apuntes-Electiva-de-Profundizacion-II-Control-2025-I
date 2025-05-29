@@ -35,7 +35,7 @@ En sistemas mecatrónicos, los elementos de transmisión no solo cumplen una fun
 
 ## Tornillo Guia
 
-## ¿Qué es un Tornillo Guia?
+### ¿Qué es un Tornillo Guia?
 
 >🔑 *Tornillo Guía:* convierte el giro de un motor en movimiento lineal, como un tornillo que empuja una tuerca, permitiendo mover objetos con precisión y fuerza..
 
@@ -45,12 +45,13 @@ La operación básica se basa en el principio de la rosca: al girar el tornillo,
 
 - **Rosca ACME (trapezoidal):** más fricción, ideal para autobloqueo.
 
- ![paco1](https://github.com/user-attachments/assets/786a6db2-a8dc-47df-83c9-8c90550e75f1)
+![paco1](https://github.com/user-attachments/assets/786a6db2-a8dc-47df-83c9-8c90550e75f1)
 
 - **Tornillo de bolas (ball screw):** menor fricción, mayor eficiencia y precisión.
- ![paco2](https://github.com/user-attachments/assets/ec1fd926-be98-406e-a43b-3380289285f0)
+  
+![paco2](https://github.com/user-attachments/assets/ec1fd926-be98-406e-a43b-3380289285f0)
 
-## Características principales
+### Características principales
 
 - Convierte rotación en desplazamiento lineal.
 - Permite **movimientos precisos y controlados**.
@@ -58,7 +59,7 @@ La operación básica se basa en el principio de la rosca: al girar el tornillo,
 - Tiene **capacidad de autobloqueo** en algunos tipos (como el tornillo ACME).
 - Se puede integrar fácilmente con motores y sistemas de control.
 
-## ¿Para qué se usa un tornillo guía?
+### ¿Para qué se usa un tornillo guía?
 
 Los tornillos guía se utilizan ampliamente en aplicaciones donde se requiere **control preciso del movimiento lineal**. Algunos ejemplos incluyen:
 
@@ -68,114 +69,110 @@ Los tornillos guía se utilizan ampliamente en aplicaciones donde se requiere **
 - 🧪 **Equipos médicos:** como dispositivos de escaneo o posicionamiento quirúrgico.
 - 📦 **Automatización industrial:** en líneas de ensamblaje y sistemas de posicionamiento.
 
-## Ventajas del tornillo guía
+### Ventajas del tornillo guía
 
 - ✅ Alta precisión en el posicionamiento.
 - ✅ Capacidad de sostener carga sin retroceso (efecto autobloqueo).
 - ✅ Diseño compacto y fácil de integrar.
 - ✅ Movimiento suave y silencioso (especialmente en tornillos de bolas).
 
-## Consideraciones en el diseño
+### Consideraciones en el diseño
 
 - **Paso del tornillo:** determina cuánto se mueve la tuerca por cada vuelta (afecta velocidad y fuerza).
 - **Inercia reflejada:** influye en el torque necesario del motor.
 - **Eficiencia mecánica:** varía según el tipo de rosca y fricción.
 
----
 
-El tornillo guía es un componente clave en ingeniería mecatrónica, ya que permite lograr movimientos precisos, seguros y controlados, fundamentales para el rendimiento de sistemas automatizados.
+### Relacion de Transmision
 
+# Relación de Transmisión en un Tornillo Guía
 
-
-
-
+Un **tornillo guía** es un mecanismo que convierte el movimiento rotacional del tornillo en un desplazamiento lineal de una cápsula o carga.
 
 
+### Definiciones clave
+
+- **Cabeceo (pitch):**  
+  Número de revoluciones que debe dar el tornillo para que la cápsula se desplace 1 metro (o 1 pulgada en sistema inglés).  
+  Ejemplo: Si el cabeceo es 100, el tornillo debe girar 100 vueltas para que la cápsula avance 1 m.
+
+- **Paso (lead):**  
+  Distancia que avanza la cápsula con una sola revolución del tornillo (en metros o pulgadas).  
+  Es la inversa del cabeceo:  
+  $$\[\text{Paso} = \frac{1 \text{ m}}{\text{Cabeceo (vueltas/m)}}\]$$
 
 
+### Relación entre ángulo girado y desplazamiento lineal
 
+$$\[\Delta \theta = 2 \pi p \Delta x\]$$
 
+Donde:
 
+- $$\(\Delta \theta\)$$: ángulo girado por el tornillo (radianes).
+- $$\(\Delta x\)$$: desplazamiento lineal de la cápsula (metros o pulgadas).
+- $$\(p\)$$: cabeceo, número de vueltas del tornillo por unidad de desplazamiento (vueltas/m).
 
-
-
-
-
-
-
-
-
-
-# Perfiles de movimiento
-- Los perfiles de movimiento son diseñados para cumplir con unas condiciones ya sea el trayecto de una carga en un tiempo estipulado.
-
-![](https://www.researchgate.net/publication/329874723/figure/fig37/AS:706765452767235@1545517423178/Figura-4-12-Perfiles-de-movimiento-para-un-desplazamiento-de-30-unidades.ppm)
-
-Los perfiles de movimiento mas sensillo son los que solo tienen movimientos en un eje, aunque en este caso los perfiles de movimiento multi eje son los mas completos pues permiten el movimiento no solo en un plano sin no en un campo especifico y para esto se le asignara una posicion velocidad y aceleracion, de esta manera se garantiza el movimiento de la carga para una trayectoria.
-
-Teniendo en cuenta los conceptos de cinematica donde la posicion en funcion del tiempo podemos derivarla para obtener la velocidad en el instante, y asi mismo la velocidad deribada nos dara la aceleracion que sera el cambio de velocidad con respecto al tiempo.
-$$P=\frac{s}{dt}$$
-$$V=\frac{ds}{dt}$$
-$$A=\frac{ds_{2}}{dt_{2}}$$
-
-de esta manera y teniendo en cuenta la integracion podemos llegar a la posicion y velocidad teniendo la aceleracion.
-
-$$ s=\int v(t)dt$$
-
-$$ v=\int a(t)dt$$
-
-El perfil de movimiento seran 3 graficas con curvas donde nos indicaran el cambio con respecto al tiempo
-
-![](https://www.libreservo.com/sites/libreservo.com/files/imagenes/Trapezoidal.png)
-
-Hay diferentes formas de aplicar los perfiles de movimiento, uno de los mas usados es definiendo la trayectoria entre los puntos, conocer el camino que se va a realizar en el desplzamiento de A a B, la mas utilizada es la definicion del perfil de movimiento en la velocidad ya que la deficnicion de velociodad en la relacion entre la posicion y velocidad que son las 2 variables que mas queremos conocer pues la posicion donde debe quedar la carga y la velocidad con la que este realizara el trayecto y de esta manera derivando la velocidad tendremos la aceleracion e integrando encontraremos la posicion.
+**Interpretación:**  
+Por cada $$\(\Delta x\)$$ metros que avanza la cápsula, el tornillo gira \(2 \pi p \Delta x\) radianes (o \(p \Delta x\) vueltas).
 
 
 
-En el perfil de movimiento en multiples ejes es necesario realizar el perfeil de movimiento de cada eje en donde todos colaboren para lograr llegar a la posicion final y velocidad final en el campo
+### Relación entre velocidades
 
-La obtencion de los datos de los perfiles de movimiento a partir de una grafica de velocidad se puede realizar a partir de las reglas geometricas.
-![](https://www.neurochispas.com/wp-content/uploads/2023/06/Ejemplo-de-grafica-de-velocidad-vs-tiempo.png)
+Derivando respecto al tiempo:
 
-- De la grafica podemos obtener la velocidad donde$$V=v_{0}+a(t-t_{0})$$
-- Y nuestra posicion se puede determinar por $$S=s_{
-0}+ \frac{1}{2}(t-t_{0})(v_{0}+a(t-t_{0}))$$
+$$\[\frac{\dot{\theta}}{\dot{x}} = 2 \pi p\]$$
 
-# Ejemplo 1
-- Encuentre la posicion y la aceleracion en t=5s
+- $$\(\dot{\theta}\)$$: velocidad angular del tornillo (rad/s).
+- $$\(\dot{x}\)$$: velocidad lineal de la cápsula (m/s).
 
-![1](c1/1.png)
- para hallar nuestra posicion u aceleracion tenemos:
- $$V=v_{0}+a(t-t_{0})$$
- $$10=a(5)$$
- $$a=\frac{10}{5}=2$$
- $$S=s_{
-0}+ \frac{1}{2}(t-t_{0})(v_{0}+a(t-t_{0}))$$
-$$S=0+ \frac{1}{2}(5-0)(0+2(5-0))$$
-$$S=\frac{1}{2}(5)(10+2(5))$$
-$$S=50$$
+Esto indica que la velocidad angular del tornillo es proporcional a la velocidad lineal de la carga multiplicada por \(2 \pi p\).
 
-# Ejemplo 2
 
-  - halle la aceleracion y la posicion del eje al detenerse considerando una posocion inicial de 25m
+### Relación entre paso y cabeceo
 
-hallando la pendiente de la recta para encontrar la aceleracion:
-$$a = \frac{(y_{2}-y_{1})}{(x_{2}-x_{1})}$$
-- $$a = \frac{(-10)}{(10)}$$
-- $$a = -1$$
-para encontrar la posicion podemos sacar el area de nuestra curva y conociendo los datos  de la base y la altura nos queda de la siguiente manera:
-- $$s=\frac{1}{ 2}*B*H$$
-- $$s=\frac{1}{ 2}*(10*10)$$
-- $$s=\frac{100}{ 2}$$
-- $$s=50$$
-es decir que durante los 10 segundos de frenado se desplazo 50 cm
+Dado que el cabeceo es la inversa del paso:
 
-## Perfiles de movimiento comunes 
+$$\[p = \frac{1}{\text{Paso}}\]$$
 
-Los perfiles de movimiento mas comunes son el trapezoidal y la cuerva en S, donde el mivimiento trapezoidal seran movimientos lineales de velocidad, los de curva en S seran movimientos mas suaves pero mas demorados en realizar lo que afecta el tiempo de proceso
+se puede escribir también:
 
-- Perfil trapezoidal
-![](https://gm0.org/es/latest/_images/trapezoidal-motion-profiling-graph.png) 
+$$\[\frac{\dot{\theta}}{\dot{x}} = \frac{2 \pi}{\text{Paso}}\]$$
+
+Esto significa que la velocidad angular del tornillo es igual a $$\(2 \pi\)$$ radianes divididos entre la distancia que avanza la cápsula por vuelta.
+
+
+| Término       | Significado                                     | Relación                    |
+|---------------|------------------------------------------------|----------------------------|
+| Cabeceo (p)   | Número de vueltas por unidad de desplazamiento | $$\(p = \frac{1}{\text{Paso}}\)$$  |
+| Paso          | Distancia que avanza la cápsula por vuelta     | $$\(\text{Paso} = \frac{1}{p}\)$$  |
+| Ángulo vs avance | $$\(\Delta \theta = 2 \pi p \Delta x\)$$         | Movimiento angular-lineal   |
+| Velocidad angular vs lineal | $$\(\frac{\dot{\theta}}{\dot{x}} = 2 \pi p = \frac{2 \pi}{\text{Paso}}\)$$ | Relación de transmisión |
+
+
+## Inercia Reflejada 
+
+El punto de partida es la energía cinética de una masa $$\( m \)$$ que se mueve linealmente a una velocidad $$\( \dot{x} \)$$. Esta energía se expresa como:
+
+$$\[KE = \frac{1}{2} m \dot{x}^2\]$$
+
+Sin embargo, dado que en el sistema con tornillo guía la carga no se mueve directamente por un actuador lineal sino a través de una conversión desde un movimiento rotacional, se utiliza una relación de transmisión que relaciona la velocidad angular del motor $$\( \dot{\theta} \)$$ con la velocidad lineal $$\( \dot{x} \)$$. En este caso, la relación es:
+
+$$\[\frac{\dot{\theta}}{\dot{x}} = 2\pi p\]$$
+
+donde $$\( p \)$$ representa el paso del tornillo guía (distancia lineal que avanza la tuerca por cada vuelta del tornillo). Reescribiendo la velocidad lineal en términos de la angular y sustituyendo en la ecuación de la energía cinética, obtenemos:
+
+$$\[KE = \frac{1}{2} m \left(\frac{1}{2\pi p}\right)^2 \dot{\theta}^2\]$$
+
+Esto permite expresar la energía cinética en términos de la velocidad angular del motor, lo que es útil porque es en el eje del motor donde se mide y controla el movimiento. Al identificar el coeficiente que multiplica a $$\( \dot{\theta}^2 \)$$, se define la inercia reflejada $$\( J_{ref} \)$$ como:
+
+$$\[J_{ref} = m \left(\frac{1}{2\pi p}\right)^2 = \frac{m}{N_s^2}\]$$
+
+Aquí, $$\( N_s = 2\pi p \)$$ es el “número de relación de tornillo” que sirve como parámetro de transmisión. Esta inercia reflejada es la cantidad que "ve" el motor como carga rotacional equivalente, y es clave para diseñar el sistema de control, ya que afecta directamente la dinámica del actuador.
+
+
+
+
 
 
 
