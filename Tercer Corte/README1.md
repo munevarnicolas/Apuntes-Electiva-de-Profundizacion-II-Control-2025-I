@@ -375,7 +375,15 @@ Figura 12. Resultados Posición mecanismo Piñon-Cremallera Simscape.
 
 Figura 13. Resultados Velocidad mecanismo Piñon-Cremallera Simscape.
 
+## 3. Conceptos de Transmisión Banda Transportadora
 
+La transmisión por banda en sistemas de transportadoras es un mecanismo muy utilizado para convertir el movimiento rotacional de un motor en movimiento lineal continuo, permitiendo el desplazamiento eficiente de objetos a lo largo de un trayecto. Este tipo de transmisión emplea una banda (de caucho, poliuretano u otros materiales) que se mueve sobre poleas, impulsada por un motor, logrando trasladar cargas con suavidad, precisión y bajo mantenimiento.
+
+![Figura de prueba](images/plantilla/banda.jpg)
+
+Figura 14. Mecanismo Banda transportadora.
+
+Su importancia en la mecatrónica y la automatización industrial radica en su capacidad para integrar el transporte de materiales en procesos secuenciales, como ensamblado, empaque o clasificación. Al ser compatible con sensores, actuadores y controladores, la transmisión por banda facilita la sincronización de operaciones, mejora la eficiencia del sistema y reduce tiempos muertos en líneas de producción automatizadas.
 
 ## 5. Ejercicios
 
