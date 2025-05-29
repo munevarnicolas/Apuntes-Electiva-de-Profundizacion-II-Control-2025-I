@@ -496,7 +496,21 @@ Aplicando caso general donde la banda tiene un ángulo.
 
 ### 📚Ejercicio 1:
 
+![Figura de prueba](images/plantilla/ejercicio1.gif)
 
+Figura 16. Mecanismo Piñon Cremallera
+
+En este mecanismo se busco emular el funcionamiento de un sistema de sellado de un proceso industrial por medio de piñon cremallera, se uso el software solidworks y Matlab para la simulacion de este mecanismo.
+
+
+![Figura de prueba](images/plantilla/posicion.png)
+
+Figura 17. Perfil de Posición
+
+
+![Figura de prueba](images/plantilla/velocidads.png)
+
+Figura 18. Perfil de Velocidad
 
 ## 5. Conclusiones
 
