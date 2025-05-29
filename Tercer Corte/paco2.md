@@ -85,7 +85,6 @@ Los tornillos guía se utilizan ampliamente en aplicaciones donde se requiere **
 
 ### Relacion de Transmision
 
-# Relación de Transmisión en un Tornillo Guía
 
 Un **tornillo guía** es un mecanismo que convierte el movimiento rotacional del tornillo en un desplazamiento lineal de una cápsula o carga.
 
@@ -150,7 +149,7 @@ Esto significa que la velocidad angular del tornillo es igual a $$\(2 \pi\)$$ ra
 | Velocidad angular vs lineal | $$\(\frac{\dot{\theta}}{\dot{x}} = 2 \pi p = \frac{2 \pi}{\text{Paso}}\)$$ | Relación de transmisión |
 
 
-## Inercia Reflejada 
+### Inercia Reflejada 
 
 El punto de partida es la energía cinética de una masa $$\( m \)$$ que se mueve linealmente a una velocidad $$\( \dot{x} \)$$. Esta energía se expresa como:
 
@@ -173,7 +172,7 @@ $$
 
 Aquí, $$\( N_s = 2\pi p \)$$ es el “número de relación de tornillo” que sirve como parámetro de transmisión. Esta inercia reflejada es la cantidad que "ve" el motor como carga rotacional equivalente, y es clave para diseñar el sistema de control, ya que afecta directamente la dinámica del actuador.
 
-## Inercia Reflejada Total
+### Inercia Reflejada Total
 
 Cuando se analiza un sistema con un **tornillo guía** (por ejemplo, una transmisión de tornillo de bolas), es importante considerar no solo la masa que se mueve linealmente (la carga), sino también los elementos mecánicos que intervienen en la transmisión, como el tornillo y la plataforma (carriage). En este caso, se calcula la **inercia reflejada total** al eje del motor, que es clave para el análisis dinámico del sistema y para el diseño del controlador.
 
@@ -217,7 +216,7 @@ Este modelo de inercia reflejada total ayuda a los ingenieros a tener una visió
 
 
 
-## Torque de Carga
+### Torque de Carga
 
 
 ![Captura de pantalla 2025-05-29 121335](https://github.com/user-attachments/assets/fda32996-c262-49a2-88fa-d0cf809130ee)
@@ -444,6 +443,67 @@ La relación $$\(N_{RP}\)$$ permite:
 
 - Traducir un perfil de velocidad angular en un perfil de velocidad lineal.
 - Diseñar controladores para actuadores que requieren desplazamiento preciso.
+
+### Inercia Reflejada
+
+La **inercia reflejada** es una técnica de modelado que permite expresar las cargas lineales como si fueran equivalentes rotacionales vistas desde el eje del motor. Esto es especialmente útil cuando hay una conversión entre movimiento rotacional y lineal, como ocurre con el mecanismo piñón-cremallera. En esencia, el motor experimenta una carga adicional debido a la masa de los elementos que se mueven linealmente. Esta carga depende tanto de la masa como de la relación de transmisión del sistema, ya que dicha relación determina cuánta fuerza debe aplicar el motor para generar cierto movimiento lineal.
+
+![paco5](https://github.com/user-attachments/assets/e44690ef-0006-4071-bb94-5e5725bfb62c)
+
+### Ecuación General de Inercia Reflejada
+
+La inercia reflejada total se puede expresar como:
+
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{pinion}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}}
+$$
+
+Donde:
+
+- $$\( J_{\text{pinion}} \)$$: inercia del piñón girando.
+- $$\( J_{\text{load} \rightarrow \text{in}} \)$$: inercia reflejada de la carga lineal.
+- $$\( J_{\text{carriage} \rightarrow \text{in}} \)$$: inercia reflejada del carro o estructura móvil.
+
+
+### Conversión de Masa Lineal a Inercia Rotacional
+
+Las masas que se mueven linealmente pueden reflejarse al motor usando la relación de transmisión piñón-cremallera \( N_{RP} \). La fórmula para reflejar masas lineales al eje del motor es:
+
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{pinion}} + \frac{1}{\eta N_{\text{RP}}^2} \left( \frac{W_L + W_C}{g} \right)
+$$
+
+Donde:
+
+- $$\( \eta \)$$: eficiencia del sistema de transmisión.
+- $$\( N_{RP} \)$$: relación de transmisión piñón-cremallera, en [rad/m].
+- $$\( W_L \)$$: peso de la carga [N].
+- $$\( W_C \)$$: peso del carro o estructura móvil [N].
+- $$\( g \)$$: aceleración gravitacional $$(\( \approx 9.81 \, \text{m/s}^2 \))$$.
+
+
+
+El cálculo de la inercia reflejada permite:
+
+- Seleccionar un motor adecuado que pueda generar el torque necesario.
+- Ajustar perfiles de aceleración en controladores PID o sistemas de control de trayectoria.
+- Evitar sobreesfuerzo del motor o pérdidas de precisión por subdimensionamiento.
+
+Esto para comprender cómo las masas lineales afectan dinámicamente al sistema rotacional del motor es clave para diseñar mecanismos piñón-cremallera robustos, eficientes y precisos.
+
+### Torque de carga
+
+El comportamiento es igual al tornillo guía:
+
+$$
+F_{\text{ext}} = F_f + F_g + F_p
+$$
+
+
+
+$$
+T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{RP}}}
+$$
 
 
 # Referencias
