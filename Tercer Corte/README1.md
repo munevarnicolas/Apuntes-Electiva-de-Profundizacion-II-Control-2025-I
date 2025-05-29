@@ -439,11 +439,11 @@ Donde:
 - $$\( W_L, W_C, W_{\text{belt}} \)$$: peso de la carga, el carro y la banda  
 - $$\( g \)$$: aceleración gravitacional  
 
-### Relación de transmisión e inercia reflejada banda transportadora de varios rodillos
+### Relación de transmisión e inercia reflejada banda transportadora inclinada
 
 En los sistemas de transporte por banda, es común encontrar configuraciones que incluyen uno o varios rodillos locos, es decir, rodillos que no están conectados directamente al motor y que giran libremente. Estos rodillos permiten guiar, tensar o soportar mejor la banda a lo largo de su trayectoria. La presencia de rodillos locos implica que la longitud total de la banda aumenta, lo cual puede impactar en la dinámica del sistema, pero también permite distribuir mejor la carga y mantener la tensión adecuada. Como resultado, este tipo de configuración suele emplearse con cargas más ligeras, ya que una banda más larga con muchos puntos de soporte no está diseñada para transportar pesos elevados sin deformarse o comprometer la eficiencia del movimiento.
 
-### Relación entre rodillos en bandas transportadoras
+### Relación entre rodillos en bandas transportadoras inclinada
 
 - La relación de transmisión entre el motor y el rodillo conductor (DR) se define como:
 
@@ -469,7 +469,27 @@ $$
 J_{ref}^{trans} = J_{DR} + \frac{1}{\eta N_{CV}^2} \left( \frac{W_L + W_{belt}}{g} \right) + \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2} + \frac{J_{BR}}{\eta \left( \frac{r_{BR}}{r_{DR}} \right)^2}
 $$
 
-### Torque de Carga:
+### Torque de Carga de bandas transportadoras inclinadas:
+
+
+![Figura de prueba](images/plantilla/torquecarga.png)
+
+Figura 15. Mecanismo Banda transportadora inclinada.
+
+
+- Cuando se aplica el caso general en el que la banda transportadora se encuentra inclinada, la fuerza externa se determina como:
+
+$$
+F_{ext} = F_p + (W_L + W_{belt})(\sin \beta + \mu \cos \beta)
+$$
+
+- Luego, el torque reflejado en el eje del motor se calcula mediante:
+
+$$
+T_{load \rightarrow in} = \frac{F_{ext}}{\eta N_{CV}}
+$$
+
+Aplicando caso general donde la banda tiene un ángulo.
 
 
 ## 5. Ejercicios
