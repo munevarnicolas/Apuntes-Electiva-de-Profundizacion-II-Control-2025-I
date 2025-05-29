@@ -316,59 +316,45 @@ Figura 10. Resultados mecanismo Piñon-Cremallera Simscape.
 
 ### Inercia Reflejada
 
-$$
-J_{trans_{ref}} = J_{IP} + J_{belt \rightarrow in} + J_{LP \rightarrow in} + J_{load \rightarrow in} + J_{C2 \rightarrow in}
-$$
+La inercia reflejada en un sistema piñón-cremallera es la inercia equivalente que el motor siente debido a las masas que está moviendo, una vez que se toma en cuenta la conversión del movimiento rotacional a lineal. Es decir, no solo se considera la inercia del piñón que gira, sino también cómo las masas lineales (como la carga o el carro) afectan el esfuerzo que debe hacer el motor, ajustadas por la relación de transmisión del sistema.
+
+La inercia reflejada al motor se calcula como:
 
 $$
-J_{trans_{ref}} = J_{IP} + \left( \frac{W_{belt}}{g \cdot \eta} \right) \cdot r_{ip}^2 + \frac{1}{\eta N_{BP}^2} (J_{LP} + J_{load} + J_{C2})
+J_{\text{ref}}^{\text{trans}} = J_{\text{pinion}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}}
 $$
 
-Donde BP: es igual a los engranajes
-
-![Figura de prueba](images/plantilla/inerrefle1.png)
-
-Figura 9. Inercia reflejada.
-
-La correa se modela como una masa rotatoria, cuya inercia se define como:
+Reemplazando los términos, se tiene:
 
 $$
-J = m \cdot r^2
+J_{\text{ref}}^{\text{trans}} = J_{\text{pinion}} + \frac{1}{\eta N_{\text{RP}}^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
-Sustituyendo:
+Su importancia radica en que esta inercia reflejada impacta directamente en el rendimiento del sistema de control del motor. Si no se considera correctamente, el sistema puede volverse lento, inestable o impreciso. Al calcularla adecuadamente, se pueden seleccionar motores y controladores más eficientes, diseñar perfiles de movimiento óptimos y evitar problemas como vibraciones, sobrecargas o errores de posicionamiento. En mecatrónica, especialmente en aplicaciones de automatización y robótica, conocer la inercia reflejada es esencial para lograr movimientos suaves, rápidos y precisos.
+
+### Torque de Carga
+
+
+- La fuerza externa total aplicada sobre el sistema es la suma de:
 
 $$
-W_{belt} = m \cdot g \quad \text{y} \quad r = r_{ip}
-$$
-
-$$
-J_{belt \rightarrow in} = \frac{W_{belt}}{g \cdot \eta} \cdot r_{ip}^2
-$$
-
-![Figura de prueba](images/plantilla/inerrefle2.png)
-
-Figura 10. Inercia reflejada.
-
-### Torque Reflejado
-
-Como la relación de transmisión funciona de manera similar a la de los engranajes, el torque de la carga se refleja hacia el motor siguiendo el mismo principio.
-
-$$
-T_{\text{load} \rightarrow \text{in}} = \frac{T_{\text{ext}}}{\eta N_{\text{BP}}}
+F_{\text{ext}} = F_f + F_g + F_p
 $$
 
 Donde:
-- $$( T_{\text{load} \rightarrow \text{in}} $$ Torque reflejado hacia el motor.
-- $$( T_{\text{ext}} )$$: Torque externo aplicado a la carga.
-- $$( \eta )$$: Eficiencia del sistema de transmisión.
-- $$( N_{\text{BP}} )$$: Relación de transmisión de la correa y polea.
+- \( F_f \): fuerza de fricción  
+- \( F_g \): fuerza gravitacional  
+- \( F_p \): fuerza del proceso (por ejemplo, corte, empuje, etc.)
 
+El torque reflejado al motor debido a esta fuerza externa es:
 
+$$
+T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{RP}}}
+$$
 
-![Figura de prueba](images/plantilla/inerrefle2.png)
-
-Figura 11. Torque reflejado.
+Donde:
+- $$\( \eta \)$$: eficiencia del sistema  
+- $$\( N_{\text{RP}} \)$$: relación de transmisión del sistema piñón-cremallera
 
 
 ## 5. Ejercicios
