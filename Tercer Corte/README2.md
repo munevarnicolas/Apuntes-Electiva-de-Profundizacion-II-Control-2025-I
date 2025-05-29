@@ -27,7 +27,7 @@ Zhiqiang Gao es un investigador clave en el desarrollo del Active Disturbance Re
 ### Principales características del ADRC
 
 
-#### 1. Independencia del modelo riguroso
+#### I. Independencia del modelo riguroso
 
 El ADRC no requiere un modelo detallado de la planta. Solo necesita:
 
@@ -36,7 +36,7 @@ El ADRC no requiere un modelo detallado de la planta. Solo necesita:
 
 Incluso si la ganancia es variable (como en sistemas no lineales), esta se integra como parte de la perturbación total.
 
-#### 2. Agrupación de perturbaciones y no linealidades
+#### II. Agrupación de perturbaciones y no linealidades
 
 Todo lo desconocido del sistema se agrupa en una o dos variables de estado adicionales estimadas por el ESO. Esto incluye:
 
@@ -46,7 +46,7 @@ Todo lo desconocido del sistema se agrupa en una o dos variables de estado adici
 
 Este enfoque reduce significativamente la carga de modelado y facilita el control.
 
-#### 3. Comportamiento integrador natural del sistema
+#### III. Comportamiento integrador natural del sistema
 
 En el ADRC, el error de seguimiento es parte de la perturbación estimada, lo que significa que no se requiere acción integral explícita para eliminar el error permanente. El controlador se encarga automáticamente de este comportamiento gracias al diseño del observador.
 
@@ -75,10 +75,42 @@ El ADRC responde a uno de los desafíos más persistentes del control automátic
 | **Comportamiento integrador**     | Requiere término I                   | Según diseño                         | Surge naturalmente del modelo             |
 
 
+## 2. Componentes ADRC
 
 
+![Figura de prueba](images/plantilla/componentes.png)
+
+Figura 2. Componentes ADRC.
 
 
+El diseño del controlador ADRC se fundamenta en tres componentes principales que trabajan de manera integrada para lograr un control robusto y adaptable. A pesar de la sofisticación conceptual de esta técnica, su estructura es modular y clara, lo que facilita su implementación práctica en diversos entornos. Estos tres bloques funcionales son:
+
+### Generador de trayectorias
+
+El generador de trayectorias es el encargado de definir los perfiles de movimiento deseados para el sistema. Se trata de una unidad que calcula referencias o *setpoints* en función del tiempo, considerando parámetros como posición, velocidad, aceleración y, en casos avanzados, derivadas superiores.
+
+En esencia, este generador traduce los requerimientos de desempeño dinámico en señales de referencia que el controlador debe seguir. Aunque en aplicaciones simples este módulo puede reducirse a una señal de entrada directa (como una posición deseada), en sistemas más complejos como robótica o control de movimiento rápido puede incluir cálculos cinemáticos avanzados. En la referencia, se simplifica el sistema controlando directamente la posición como variable objetivo, omitiendo derivadas más altas para facilitar el análisis.
+
+### Observador de Estados Extendido (ESO)
+
+El observador es el núcleo del enfoque ADRC. El ESO (Extended State Observer) no solo estima las variables de estado convencionales de la planta, sino que también reconstruye una variable adicional que representa la perturbación total del sistema. Esta perturbación incluye:
+- Perturbaciones externas no medidas,
+- No linealidades dinámicas,
+- Incertidumbres paramétricas,
+- Y errores de modelado o seguimiento.
+
+Esta variable extra, comúnmente denominada `z₊₁`, se introduce dentro del espacio de estados como si fuera una parte del sistema, permitiendo así su control y rechazo activo. El observador entrega todas estas estimaciones al controlador, lo cual minimiza la dependencia de un modelo matemático exacto y mejora la robustez frente a cambios dinámicos.
+
+### Controlador proporcional por retroalimentación de estados
+
+El controlador toma como insumo:
+- Los valores de referencia generados por el generador de trayectorias,
+- Los estados estimados (`Z`) proporcionados por el observador,
+- Y la perturbación total estimada (`z₊₁`).
+
+Con esta información, el controlador aplica una ley de control proporcional sobre los estados, buscando reducir el error de seguimiento. La acción de control se ajusta restando el efecto estimado de la perturbación antes de aplicar la señal al actuador.
+
+Un punto clave del diseño es el uso de la ganancia estática del sistema (B₀), también llamada ganancia crítica. Esta se utiliza para normalizar la acción de control y cerrar adecuadamente el lazo de realimentación. La estructura general del controlador tiene una forma de lazo en cascada, donde el lazo externo sigue la trayectoria deseada y el lazo interno se encarga de compensar perturbaciones y dinámicas no modeladas.
 
 
 
