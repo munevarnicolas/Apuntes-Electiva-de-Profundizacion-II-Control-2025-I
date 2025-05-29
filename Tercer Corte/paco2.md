@@ -162,11 +162,14 @@ $$\[\frac{\dot{\theta}}{\dot{x}} = 2\pi p\]$$
 
 donde $$\( p \)$$ representa el paso del tornillo guía (distancia lineal que avanza la tuerca por cada vuelta del tornillo). Reescribiendo la velocidad lineal en términos de la angular y sustituyendo en la ecuación de la energía cinética, obtenemos:
 
-$$\[KE = \frac{1}{2} m \left(\frac{1}{2\pi p}\right)^2 \dot{\theta}^2\]$$
+$$KE = \frac{1}{2} m \frac{1}{(2\pi p)^2} \dot{\theta}^2$$
 
 Esto permite expresar la energía cinética en términos de la velocidad angular del motor, lo que es útil porque es en el eje del motor donde se mide y controla el movimiento. Al identificar el coeficiente que multiplica a $$\( \dot{\theta}^2 \)$$, se define la inercia reflejada $$\( J_{ref} \)$$ como:
 
-$$\[J_{ref} = m \left(\frac{1}{2\pi p}\right)^2 = \frac{m}{N_s^2}\]$$
+$$
+J_{ref} = \frac{m}{(2\pi p)^2} = \frac{m}{N_s^2}
+$$
+
 
 Aquí, $$\( N_s = 2\pi p \)$$ es el “número de relación de tornillo” que sirve como parámetro de transmisión. Esta inercia reflejada es la cantidad que "ve" el motor como carga rotacional equivalente, y es clave para diseñar el sistema de control, ya que afecta directamente la dinámica del actuador.
 
