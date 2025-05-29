@@ -112,19 +112,133 @@ Con esta información, el controlador aplica una ley de control proporcional sob
 
 Un punto clave del diseño es el uso de la ganancia estática del sistema (B₀), también llamada ganancia crítica. Esta se utiliza para normalizar la acción de control y cerrar adecuadamente el lazo de realimentación. La estructura general del controlador tiene una forma de lazo en cascada, donde el lazo externo sigue la trayectoria deseada y el lazo interno se encarga de compensar perturbaciones y dinámicas no modeladas.
 
-
-
-
-
-
-
-
-
-
-
 💡**Ejemplo 1:**
 
+![Figura de prueba](images/plantilla/tanque.png)
 
+Figura 3. Tanque ejemplo.
+
+
+La imagen del tanque ilustra lo siguiente:
+
+- El sistema se descompone en una parte lineal + parte no lineal.
+- El control se aplica sobre la parte lineal.
+- La parte no lineal se estima como una perturbación y se rechaza activamente por medio del ESO.
+- Se sugiere una forma equivalente lineal del sistema:  
+  $$\[\dot{h} = Ku + h\]$$
+
+Esta forma es funcionalmente útil para implementar el controlador, aunque no represente una linealización exacta.
+
+
+### Reducción de un modelo no lineal a un modelo equivalente lineal (ADRC)
+
+Una de las fortalezas más distintivas del ADRC es su capacidad para tratar sistemas no lineales como si fueran lineales, sin necesidad de linealización matemática tradicional. Esto se logra reconfigurando la estructura del modelo, desplazando la complejidad de la dinámica no lineal hacia el observador de estados extendido (ESO), que se encarga de estimar y compensar la parte no modelada.
+
+
+Consideremos un sistema físico con un tanque de forma irregular, cuya entrada es un flujo de líquido `u` y cuya salida depende del nivel del fluido `h`.
+
+La ecuación de balance de masa para este sistema es:
+
+$$\[\frac{d}{dt} \left( \int_0^h A(h) \, dh \right) = u - a\sqrt{2gh}\]$$
+
+Aplicando el teorema fundamental del cálculo:
+
+$$\[A(h) \cdot \dot{h} = u - a\sqrt{2gh}\]$$
+
+Despejando la derivada del nivel `h`:
+
+$$\[\dot{h} = \frac{1}{A(h)} \left( u - a\sqrt{2gh} \right)\]$$
+
+
+## NADRC (No lineal)
+
+El NADRC es una extensión del método ADRC que permite controlar sistemas no lineales y perturbados sin conocer explícitamente su dinámica interna. A continuación se describe el procedimiento completo paso a paso.
+
+
+### 1. Modelo de partida
+
+Se parte de una ecuación diferencial de segundo orden:
+
+$$\[\ddot{y} = -a_1 \dot{y} - a_0 y + b u\]$$
+
+Donde:
+- $$\( y \)$$: salida del sistema  
+- $$\( u \)$$: entrada de control  
+- $$\( a_0, a_1 \)$$: parámetros físicos del sistema  
+- $$\( b \)$$: ganancia del sistema
+
+
+
+### 2. Representación en espacio de estados
+
+Haciendo el cambio de variables:
+
+$$\[x_1 = y, \quad x_2 = \dot{y}\]$$
+
+El sistema queda:
+
+$$
+\[
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = -a_0 x_1 - a_1 x_2 + b u + w \\
+y = x_1
+\end{cases}
+\]$$
+
+Donde $$\( w \)$$ representa perturbaciones externas o dinámicas no modeladas.
+
+
+### 3. Agrupación de lo desconocido en una perturbación total `f`
+
+Definimos:
+
+$$\[f = -a_0 x_1 - a_1 x_2 + (b - b_0)u + w\]$$
+
+Con esto, el modelo se reformula como:
+
+$$
+\[
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = f + b_0 u \\
+y = x_1
+\end{cases}
+\]$$
+
+
+
+### 4. Modelo extendido: inclusión de `f` como nuevo estado
+
+Dado que `f` es desconocida, se introduce como un nuevo estado:
+
+$$\[x_3 = f, \quad \dot{x}_3 = h\]$$
+
+El sistema extendido queda:
+
+$$
+\[
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = x_3 + b_0 u \\
+\dot{x}_3 = h \\
+y = x_1
+\end{cases}
+\]$$
+
+
+Donde `h` representa la dinámica (acotada o lenta) de la perturbación `f`.
+
+
+
+### 5. Objetivo del NADRC
+
+Una vez extendido el modelo:
+
+- Se diseña un observador extendido de estados (ESO) que estima $$\( x_1, x_2, x_3 \)$$.
+- Se diseña una ley de control proporcional que usa estas estimaciones para generar la señal de control $$\( u \)$$.
+
+El observador estima la perturbación en tiempo real, y el controlador la compensa activamente, logrando seguimiento preciso incluso sin conocer la forma de `f` o `h`.
 
 
 
