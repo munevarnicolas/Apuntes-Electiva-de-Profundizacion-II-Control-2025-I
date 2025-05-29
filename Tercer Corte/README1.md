@@ -385,6 +385,93 @@ Figura 14. Mecanismo Banda transportadora.
 
 Su importancia en la mecatrónica y la automatización industrial radica en su capacidad para integrar el transporte de materiales en procesos secuenciales, como ensamblado, empaque o clasificación. Al ser compatible con sensores, actuadores y controladores, la transmisión por banda facilita la sincronización de operaciones, mejora la eficiencia del sistema y reduce tiempos muertos en líneas de producción automatizadas.
 
+### Relación de transmisión banda transportafdora 2 rodillos
+
+La relación de transmisión se define como:
+
+$$
+N = \frac{\text{Velocidad motor}}{\text{Velocidad carga}}
+$$
+
+La velocidad lineal de la banda está dada por:
+
+$$
+V_{\text{belt}} = r_{\text{ip}} \, \omega_{\text{ip}}
+$$
+
+Y la relación de transmisión específica para sistemas con polea impulsora es:
+
+$$
+N_{\text{BD}} = \frac{1}{r_{\text{ip}}}
+$$
+
+Donde:
+- $$\( r_{\text{ip}} \)$$: radio de la polea impulsora  
+- $$\( \omega_{\text{ip}} \)$$: velocidad angular de la polea impulsora  
+
+### Inercia Reflejada:
+
+La inercia reflejada en una banda transportadora es la inercia equivalente que el motor experimenta debido a las masas que está moviendo a través del sistema de transmisión por banda. Aunque la carga se desplaza linealmente, su efecto dinámico se traduce en el eje del motor como una resistencia rotacional, dependiendo del radio de la polea impulsora y la relación de transmisión. Esta inercia reflejada influye directamente en la aceleración, el torque requerido y la respuesta del sistema de control, por lo que es un parámetro clave al dimensionar motores y diseñar perfiles de movimiento en sistemas automatizados.
+
+
+- La inercia reflejada total al eje del motor en un sistema con banda transportadora es:
+
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{IP}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}} + J_{\text{belt} \rightarrow \text{in}} + J_{\text{LP}}
+$$
+
+- Dado que $$\( J_{\text{IP}} = J_{\text{LP}} = J_p \)$$, la expresión se simplifica a:
+
+$$
+J_{\text{ref}}^{\text{trans}} = 2J_p + \frac{1}{\eta N_{\text{BD}}^2} \left( \frac{W_L + W_C + W_{\text{belt}}}{g} \right)
+$$
+
+- La ecuación del torque reflejado al motor por la carga externa es:
+
+$$
+T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{BD}}}
+$$
+
+Donde:
+- $$\( J_p \)$$: inercia de la polea  
+- $$\( N_{\text{BD}} \)$$: relación de transmisión de la banda  
+- $$\( \eta \)$$: eficiencia del sistema  
+- $$\( W_L, W_C, W_{\text{belt}} \)$$: peso de la carga, el carro y la banda  
+- $$\( g \)$$: aceleración gravitacional  
+
+### Relación de transmisión e inercia reflejada banda transportadora de varios rodillos
+
+En los sistemas de transporte por banda, es común encontrar configuraciones que incluyen uno o varios rodillos locos, es decir, rodillos que no están conectados directamente al motor y que giran libremente. Estos rodillos permiten guiar, tensar o soportar mejor la banda a lo largo de su trayectoria. La presencia de rodillos locos implica que la longitud total de la banda aumenta, lo cual puede impactar en la dinámica del sistema, pero también permite distribuir mejor la carga y mantener la tensión adecuada. Como resultado, este tipo de configuración suele emplearse con cargas más ligeras, ya que una banda más larga con muchos puntos de soporte no está diseñada para transportar pesos elevados sin deformarse o comprometer la eficiencia del movimiento.
+
+### Relación entre rodillos en bandas transportadoras
+
+- La relación de transmisión entre el motor y el rodillo conductor (DR) se define como:
+
+$$
+N_{CV} = \frac{1}{r_{DR}}
+$$
+
+- La inercia reflejada de un rodillo intermedio hacia el eje del motor se calcula mediante:
+
+$$
+J_{ID \rightarrow in} = \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2}
+$$
+
+- La inercia total reflejada al eje del motor se expresa como:
+
+$$
+J_{ref}^{trans} = J_{DR} + J_{load \rightarrow in} + J_{belt \rightarrow in} + J_{ID \rightarrow in} + J_{BR \rightarrow in}
+$$
+
+- Reemplazando los términos, se tiene:
+
+$$
+J_{ref}^{trans} = J_{DR} + \frac{1}{\eta N_{CV}^2} \left( \frac{W_L + W_{belt}}{g} \right) + \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2} + \frac{J_{BR}}{\eta \left( \frac{r_{BR}}{r_{DR}} \right)^2}
+$$
+
+### Torque de Carga:
+
+
 ## 5. Ejercicios
 
 ### 📚Ejercicio 1:
