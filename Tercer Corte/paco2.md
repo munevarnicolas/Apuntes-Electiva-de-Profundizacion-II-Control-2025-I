@@ -1,6 +1,6 @@
 # Autores 
-Nicolas Rodriguez Diaz 112572
-Juan Diego Alvarez Beltran 120688
+- Nicolas Rodriguez Diaz (112572)
+- Juan Diego Alvarez Beltran (120688)
 
 # Mecanismos de Transmisión
 
