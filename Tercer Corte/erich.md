@@ -56,7 +56,7 @@ Figura 2. Tipos de Tornillo Guía
 
 La relación de transmisión en un sistema con tornillo sin fin es fundamental para comprender cómo se traduce el movimiento rotacional del tornillo en un desplazamiento lineal de una carga (por ejemplo, una cápsula o carro). En la imagen proporcionada se destacan dos conceptos clave: el cabecero (pitch) y el paso (lead). Aunque en ocasiones se usan como sinónimos, en este contexto tienen diferencias importantes.
 
-El cabecero (pitch) se refiere al número de vueltas que debe realizar el tornillo para que la cápsula se desplace una unidad de distancia (por ejemplo, 1 metro en sistema métrico o 1 pulgada en sistema inglés). En cambio, el paso (lead) indica la distancia lineal que recorre la cápsula por cada revolución del tornillo. Este valor depende de la geometría de la rosca del tornillo, y se mide en metros o pulgadas según el sistema utilizado.
+El cabecero (pitch) se refiere al número de vueltas que debe realizar el tornillo para que la cápsula se desplace una unidad de distancia (por , 1 metro en sistema métrico o 1 pulgada en sistema inglés). En cambio, el paso (lead) indica la distancia lineal que recorre la cápsula por cada revolución del tornillo. Este valor depende de la geometría de la rosca del tornillo, y se mide en metros o pulgadas según el sistema utilizado.
 
 Entonces:
 
@@ -184,7 +184,7 @@ $$
 
 
 
-💡**Ejemplo 2:**
+💡**Ejemplo 1:**
 
 **Cálculo de la inercia reflejada en un sistema con tornillo esferado**
 
@@ -491,8 +491,15 @@ Este torque es esencial para dimensionar adecuadamente el motor y asegurar que e
 
 ## 5. Conclusiones
 
+- El control de movimiento, basado en perfiles como trapezoidal y S-curve, impacta directamente en el desgaste y la eficiencia de mecanismos como tornillo sin fin y piñón-cremallera, pues perfiles más suaves reducen picos de torque y esfuerzos dinámicos que afectan la vida útil.
 
+- Los mecanismos con alta inercia reflejada, como el tornillo sin fin, requieren un diseño cuidadoso de perfiles de aceleración para evitar sobrecargas y lograr una respuesta dinámica óptima, evidenciando la necesidad de un control adaptativo que minimice vibraciones y errores de posicionamiento.
 
+- La elección del perfil de movimiento influye en el torque dinámico requerido, que a su vez condiciona el dimensionamiento del motor y la transmisión, por lo que la integración entre el control de movimiento y el diseño mecánico es clave para sistemas mecatrónicos eficientes y robustos.
+
+- Los sistemas de banda transportadora y piñón-cremallera, debido a su naturaleza de movimiento continuo y lineal respectivamente, se benefician de perfiles de movimiento que optimizan la sincronización y minimizan impactos, asegurando estabilidad y precisión en la operación.
+
+- La modelación de la inercia reflejada en el dominio rotacional o lineal facilita la implementación de controladores predictivos que ajustan en tiempo real las aceleraciones, maximizando el desempeño de los mecanismos y prolongando su vida útil mediante la reducción de esfuerzos mecánicos.
 
 
 ## Referencias
