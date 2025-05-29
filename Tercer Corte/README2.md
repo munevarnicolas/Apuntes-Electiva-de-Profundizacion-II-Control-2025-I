@@ -524,7 +524,7 @@ En conjunto, se concluye que la ingeniería mecatrónica no puede abordar el con
 ## 6. Referencias 
 
 - [1] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
-- [2] *Apuntes Clase - Jueves 24 de Abril. [2025]*
+- [2] *Apuntes Clase - Martes 13 de Mayo. [2025]*
 - [3] *Groover, M. P. Automation, Production Systems, and Computer-Integrated Manufacturing. 4th ed., Pearson, 2016*
 - [4] *Jazar, Reza N. Theory of Applied Robotics: Kinematics, Dynamics, and Control. 2nd ed., Springer, 2010.*
 - [5] *Craig, John J. Introduction to Robotics: Mechanics and Control. 4th ed., Pearson, 2017.*
