@@ -1,6 +1,39 @@
 # Autores 
 Nicolas Rodriguez Diaz 112572
 Juan Diego Alvarez Beltran 120688
+
+# Mecanismos de Transmisión
+
+## ¿Qué son los Elementos de Transmisión?
+
+>🔑 *Mecanismo de Transmision:* Es un sistema que facilita la transferencia de energía, movimiento o información de un lugar a otro.
+
+
+Los elementos de transmisión son componentes mecánicos cuya función principal es transmitir potencia y movimiento desde una fuente de energía (como un motor) hacia uno o más elementos de una máquina o sistema, permitiendo así que se realice un trabajo útil. Estos elementos pueden modificar características como la velocidad, el torque, la dirección del movimiento o el tipo de movimiento (de rotacional a lineal y viceversa).
+
+### Clasificación general de elementos de transmisión:
+
+### 1. Elementos de transmisión rotacional:
+- **Ejes y árboles:** Transmiten potencia giratoria entre componentes.
+- **Acoplamientos:** Unen dos ejes para transferir movimiento sin desalineación excesiva.
+- **Engranajes:** Modifican velocidad y torque entre ejes mediante contacto dentado.
+- **Poleas y correas:** Transmiten movimiento rotativo entre ejes distantes, con posibilidad de deslizamiento.
+- **Cadenas y piñones:** Similares a poleas, pero con menor deslizamiento y mayor capacidad de carga.
+
+### 2. Elementos de transmisión lineal o conversión de movimiento:
+- **Tornillos guía (como tornillos ACME o de bolas):** Convierte rotación en desplazamiento lineal, útiles para actuadores.
+- **Piñón-cremallera:** Convierte rotación en movimiento lineal mediante engranaje recto.
+- **Banda transportadora:** Transmite movimiento rotacional a lineal continuo para mover cargas.
+
+### 3. Elementos auxiliares o modificadores de transmisión:
+- **Reductores de velocidad:** Ajustan la relación entre velocidad y torque.
+- **Embragues y frenos:** Controlan cuándo y cómo se transmite el movimiento.
+- **Rodamientos:** Reducen la fricción en puntos de rotación.
+
+En sistemas mecatrónicos, los elementos de transmisión no solo cumplen una función mecánica, sino que también afectan directamente al control del sistema, ya que sus características determinan parámetros como la inercia reflejada, el torque requerido y la eficiencia energética. Por ello, su selección y análisis es clave para lograr movimientos precisos, seguros y optimizados.
+
+
+
 # Perfiles de movimiento
 - Los perfiles de movimiento son diseñados para cumplir con unas condiciones ya sea el trayecto de una carga en un tiempo estipulado.
 
