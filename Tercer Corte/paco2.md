@@ -541,6 +541,32 @@ Este sistema es clave para optimizar procesos industriales y mantener un flujo c
 - ✅ **Fácil integración:** se adapta a diferentes diseños y procesos industriales, integrándose con otros sistemas automatizados.
 
 
+### Relación de Transmisión
+
+En una banda transportadora, la relación de transmisión describe cómo se relaciona la velocidad del motor con la velocidad a la que se mueve la carga sobre la banda. Esta relación es fundamental para entender el desempeño del sistema y su eficiencia.
+
+La velocidad a la que se desplaza la banda depende directamente del radio y la velocidad angular de la polea que impulsa el sistema. Matemáticamente, la velocidad lineal de la banda se puede expresar como:
+
+$$
+V_{\text{belt}} = r_{\text{ip}} \times \omega_{\text{ip}}
+$$
+
+Aquí, $$\( r_{\text{ip}} \)$$ representa el radio de la polea impulsora, mientras que $$\( \omega_{\text{ip}} \)$$ es su velocidad angular.
+
+La relación general que indica cuántas veces gira el motor con respecto a la velocidad de la carga transportada se define como:
+
+$$
+N = \frac{\text{Velocidad motor}}{\text{Velocidad carga}}
+$$
+
+En particular, para sistemas con una polea impulsora, esta relación puede expresarse de manera específica como:
+
+$$
+N_{\text{BD}} = \frac{1}{r_{\text{ip}}}
+$$
+
+Esta fórmula refleja que el tamaño de la polea impulsora tiene un impacto directo en la velocidad final de la banda y, por ende, en el ritmo al que se mueve el material transportado.
+
 
 # Referencias
 - https://gm0.org/es/latest/docs/software/concepts/control-loops.html
