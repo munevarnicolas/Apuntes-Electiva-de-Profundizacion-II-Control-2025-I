@@ -409,7 +409,7 @@ Donde:
 - $$\( r_{\text{ip}} \)$$: radio de la polea impulsora  
 - $$\( \omega_{\text{ip}} \)$$: velocidad angular de la polea impulsora  
 
-### Inercia Reflejada:
+### Inercia Reflejada y Torque de carga:
 
 La inercia reflejada en una banda transportadora es la inercia equivalente que el motor experimenta debido a las masas que está moviendo a través del sistema de transmisión por banda. Aunque la carga se desplaza linealmente, su efecto dinámico se traduce en el eje del motor como una resistencia rotacional, dependiendo del radio de la polea impulsora y la relación de transmisión. Esta inercia reflejada influye directamente en la aceleración, el torque requerido y la respuesta del sistema de control, por lo que es un parámetro clave al dimensionar motores y diseñar perfiles de movimiento en sistemas automatizados.
 
