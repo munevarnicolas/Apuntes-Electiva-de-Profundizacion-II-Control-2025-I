@@ -521,7 +521,7 @@ Del mismo modo, el mecanismo piñón-cremallera, aunque más simple estructuralm
 En conjunto, se concluye que la ingeniería mecatrónica no puede abordar el control de movimiento como un problema puramente computacional o únicamente mecánico. El entendimiento profundo de la interacción entre elementos de transmisión, parámetros dinámicos (como la inercia reflejada) y el diseño de perfiles de movimiento constituye la base de sistemas de control robustos, eficientes y adaptativos. Este enfoque sistémico permite no solo el funcionamiento correcto de máquinas automatizadas, sino su optimización frente a condiciones variables, aumentando su vida útil y mejorando la calidad del producto o proceso que controlan. Así, el estudio de estas transmisiones se consolida como una competencia técnica de alto valor en la formación de profesionales capaces de integrar inteligentemente la mecánica, la electrónica y el control.
 
 
-## 6. Referencias  
+## 6. Referencias 
 
 - [1] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
 - [2] *Apuntes Clase - Jueves 24 de Abril. [2025]*
