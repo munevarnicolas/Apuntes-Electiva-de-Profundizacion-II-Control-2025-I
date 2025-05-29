@@ -33,6 +33,78 @@ Los elementos de transmisión son componentes mecánicos cuya función principal
 En sistemas mecatrónicos, los elementos de transmisión no solo cumplen una función mecánica, sino que también afectan directamente al control del sistema, ya que sus características determinan parámetros como la inercia reflejada, el torque requerido y la eficiencia energética. Por ello, su selección y análisis es clave para lograr movimientos precisos, seguros y optimizados.
 
 
+## Tornillo Guia
+
+## ¿Qué es un Tornillo Guia?
+
+>🔑 *Tornillo Guía:* convierte el giro de un motor en movimiento lineal, como un tornillo que empuja una tuerca, permitiendo mover objetos con precisión y fuerza..
+
+Un **tornillo guía** es un mecanismo mecánico utilizado para **convertir el movimiento rotacional en movimiento lineal**. Está compuesto principalmente por un eje roscado (el tornillo) y una tuerca móvil que se desplaza a lo largo del eje a medida que este gira. 
+
+La operación básica se basa en el principio de la rosca: al girar el tornillo, los filetes de la rosca empujan o tiran de la tuerca, provocando su desplazamiento lineal. Dependiendo del diseño, puede incluir diferentes tipos de rosca, como:
+
+- **Rosca ACME (trapezoidal):** más fricción, ideal para autobloqueo.
+
+ ![paco1](https://github.com/user-attachments/assets/786a6db2-a8dc-47df-83c9-8c90550e75f1)
+
+- **Tornillo de bolas (ball screw):** menor fricción, mayor eficiencia y precisión.
+ ![paco2](https://github.com/user-attachments/assets/ec1fd926-be98-406e-a43b-3380289285f0)
+
+## Características principales
+
+- Convierte rotación en desplazamiento lineal.
+- Permite **movimientos precisos y controlados**.
+- Puede transmitir **altas fuerzas lineales**.
+- Tiene **capacidad de autobloqueo** en algunos tipos (como el tornillo ACME).
+- Se puede integrar fácilmente con motores y sistemas de control.
+
+## ¿Para qué se usa un tornillo guía?
+
+Los tornillos guía se utilizan ampliamente en aplicaciones donde se requiere **control preciso del movimiento lineal**. Algunos ejemplos incluyen:
+
+- 🛠️ **Máquinas CNC:** para mover herramientas o mesas de trabajo con alta precisión.
+- 🤖 **Robótica:** en actuadores lineales para brazos robóticos o plataformas móviles.
+- 🏗️ **Mecanismos de elevación:** como gatos mecánicos, elevadores o mesas ajustables.
+- 🧪 **Equipos médicos:** como dispositivos de escaneo o posicionamiento quirúrgico.
+- 📦 **Automatización industrial:** en líneas de ensamblaje y sistemas de posicionamiento.
+
+## Ventajas del tornillo guía
+
+- ✅ Alta precisión en el posicionamiento.
+- ✅ Capacidad de sostener carga sin retroceso (efecto autobloqueo).
+- ✅ Diseño compacto y fácil de integrar.
+- ✅ Movimiento suave y silencioso (especialmente en tornillos de bolas).
+
+## Consideraciones en el diseño
+
+- **Paso del tornillo:** determina cuánto se mueve la tuerca por cada vuelta (afecta velocidad y fuerza).
+- **Inercia reflejada:** influye en el torque necesario del motor.
+- **Eficiencia mecánica:** varía según el tipo de rosca y fricción.
+
+---
+
+El tornillo guía es un componente clave en ingeniería mecatrónica, ya que permite lograr movimientos precisos, seguros y controlados, fundamentales para el rendimiento de sistemas automatizados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Perfiles de movimiento
 - Los perfiles de movimiento son diseñados para cumplir con unas condiciones ya sea el trayecto de una carga en un tiempo estipulado.
