@@ -1,102 +1,115 @@
 # Elementos de Transmisión Continuación 
 Esta clase se llevó a cabo el día 24 de abril de 2025, la cual estuvo dirigida a comprender los sistemas de transmisión, abordando temas los conceptos de transmisión tales como el tornillo guía, así como los conceptos de inercia y torque reflejado, fundamentales para el análisis y optimización del movimiento en sistemas mecánicos.
 
-## 1. Conceptos de transmisión Tornillo Guía
+## 1. Tornillo Guía
 
-Los sistemas de transmisión por tornillo sin fin están compuestos por un tornillo helicoidal (sin fin) que engrana con una rueda dentada (corona) colocada en un eje perpendicular. Este conjunto permite transmitir movimiento rotatorio entre ejes que forman un ángulo de 90°, y es especialmente útil cuando se necesita reducir la velocidad de manera significativa mientras se incrementa el par (torque). El tornillo actúa como un engranaje con un número muy bajo de “dientes” (generalmente uno o dos hilos), lo que da lugar a relaciones de transmisión muy altas, como 40:1 o más.
+El mecanismo de tornillo sin fin es un sistema de transmisión de movimiento muy utilizado en aplicaciones donde se requiere precisión, control y reducción significativa de la velocidad. Está compuesto por dos elementos principales: el tornillo sin fin (una especie de tornillo helicoidal) y la rueda dentada o corona (un engranaje con dientes especialmente diseñados para acoplarse al tornillo). Cuando el tornillo gira, hace girar la corona, transmitiendo así el movimiento, pero con una relación de reducción muy alta. Esto significa que por muchas vueltas que dé el tornillo, la rueda gira solo una pequeña fracción.
 
-El funcionamiento se basa en el principio de rosca sin fin, donde al girar el tornillo, sus filetes empujan los dientes de la rueda, haciéndola rotar. Debido al alto ángulo de fricción, estos sistemas suelen ser irreversibles, lo que significa que la rueda no puede hacer girar al tornillo, proporcionando así una especie de autobloqueo. Esta característica es muy valorada en aplicaciones donde se desea mantener una posición fija sin necesidad de frenos adicionales, como en elevadores, compuertas o mecanismos de ajuste fino.
+Uno de los aspectos más importantes del tornillo sin fin es su capacidad de auto bloqueo. En muchos casos, la corona no puede mover al tornillo en sentido inverso, lo que lo hace ideal para aplicaciones donde se necesita mantener una posición fija sin consumo de energía adicional, como en actuadores o sistemas de elevación. Esta característica lo convierte en un elemento fundamental en perfiles de movimiento que requieren estabilidad y seguridad, como brazos robóticos, sistemas de posicionamiento de cámaras o mesas CNC.
 
+En cuanto al control de movimiento, el tornillo sin fin permite lograr un desplazamiento suave y continuo, ideal para movimientos de precisión. Debido a su diseño, ofrece una gran reducción de velocidad y un incremento del par motor (torque), lo que se traduce en movimientos lentos pero muy controlados. Esta propiedad es especialmente útil en sistemas automatizados donde se necesita controlar la posición y la velocidad con exactitud, como en actuadores lineales, mesas de coordenadas o mecanismos de regulación fina.
 
-![Figura de prueba](images/plantilla/tornillosinfin.jpg)
-
-Figura 1. Transmisión mediante Tornillo Guía
-
-
-El sistema de transmisión por tornillo sin fin ofrece varias ventajas clave las cuales permite altas reducciones de velocidad en un solo paso, lo que lo hace ideal para aplicaciones donde se requiere gran torque a baja velocidad. Además, su configuración compacta facilita la transmisión entre ejes no coaxiales y perpendiculares, ahorrando espacio. Una de sus características más valiosas es el efecto autobloqueante, que impide el retroceso del sistema, aumentando la seguridad en mecanismos de elevación o posicionamiento. También proporciona un funcionamiento suave y silencioso, con bajo nivel de vibraciones.
-
-Los mecanismos de tornillo sin fin son altamente relevantes en la industria porque ofrecen una solución compacta, precisa y segura para la transmisión de movimiento y control de posición en equipos donde se requiere reducir velocidad y aumentar torque, como en elevadores, grúas, transportadores, actuadores y maquinaria pesada. Su capacidad de mantener la carga en posición sin retroceso los hace ideales para sistemas donde la seguridad y la estabilidad son críticas. Además, su diseño simple y duradero reduce el mantenimiento y permite integrarlos fácilmente en espacios reducidos o diseños mecánicos complejos.
-
-![Figura de prueba](images/plantilla/torguia.png)
-
-Figura 2. Tornillo Guía
+Además, el perfil de movimiento generado por un tornillo sin fin es altamente repetible, lo cual es clave en tareas que requieren una alta fidelidad en el posicionamiento. Su uso combinado con motores paso a paso o servomotores mejora aún más el control del sistema, permitiendo integrar sensores y retroalimentación para crear sistemas de control en lazo cerrado. En resumen, el tornillo sin fin es una solución mecánica eficiente y confiable para perfiles de movimiento donde se priorizan precisión, control y seguridad.
 
 
-Los tornillos ACME y los tornillos de esferas  son mecanismos utilizados para convertir el movimiento rotativo en lineal, y ambos son capaces de transmitir grandes potencias con distintos niveles de precisión y eficiencia. Los tornillos ACME utilizan un perfil trapezoidal en su rosca y una tuerca que desliza directamente sobre el tornillo. Esto genera una mayor fricción, lo que disminuye la eficiencia del sistema (entre un 35% y 85%, dependiendo del material, lubricación y velocidad), pero también proporciona un efecto autobloqueante, útil en aplicaciones donde se quiere evitar el retroceso sin necesidad de frenos. Son económicos, robustos y adecuados para aplicaciones donde la precisión extrema no es crítica.
+![Figura de prueba](images/plantilla/erich1.gif)
 
-![Figura de prueba](images/plantilla/acme.jpg)
+Figura 1. Tornillo Guía
 
-Figura 3. Tornillo ACME
 
-Por otro lado, los tornillos de esferas incorporan un sistema de recirculación de bolas entre el tornillo y la tuerca, lo que reduce significativamente la fricción al funcionar como un rodamiento lineal. Esta reducción de contacto directo minimiza el desgaste, mejora la suavidad del movimiento y disminuye el backlash (juego mecánico), lo cual es crucial en sistemas de control numérico o automatización de alta precisión. Gracias a esto, su eficiencia se eleva entre el 85% y el 95%, permitiendo un mejor aprovechamiento del torque del motor para generar fuerza lineal sobre la carga. Aunque son más costosos que los ACME, su alta precisión y durabilidad justifican su uso en maquinaria CNC, equipos médicos, y sistemas robóticos.
+Existen varios tipos de tornillos sin fin, y su clasificación depende principalmente de la forma del tornillo y el número de entradas o principios que este posee. Cada tipo tiene propiedades distintas que lo hacen más adecuado para ciertas aplicaciones dentro del campo del movimiento y control de movimiento.
 
-### Relación de Transmisión
+### Tipos según la forma del tornillo
 
-En un tornillo guía, la relación de transmisión entre el movimiento rotatorio del tornillo y el desplazamiento lineal de la cápsula (o tuerca) está determinada por el paso (lead) y el cabeceo (pitch). El paso representa la distancia lineal que se avanza en una vuelta completa del tornillo, y se expresa generalmente en milímetros o pulgadas. Por ejemplo, si un tornillo tiene un paso de 5 mm, significa que la cápsula se desplazará 5 mm por cada vuelta del tornillo. Este valor es fundamental para calcular cuántas revoluciones por minuto (RPM) se requieren para alcanzar una velocidad lineal específica, y tiene un impacto directo en la precisión, velocidad y fuerza del sistema.
+#### Tornillo sin fin cilíndrico
+Este es el tipo más común. Tiene una forma similar a un tornillo tradicional con filetes helicoidales que se acoplan con una rueda dentada (corona). Se utiliza principalmente para transmisiones donde se requiere una gran reducción de velocidad y donde el auto bloqueo es una ventaja.
 
-Por otro lado, el cabeceo es el número de vueltas del tornillo necesarias para mover la cápsula una unidad de distancia, por ejemplo, un metro. Es simplemente el inverso del paso: si el paso es 5 mm/vuelta, entonces el cabeceo es 200 vueltas/m. Esta relación permite establecer la tasa de conversión entre la velocidad angular del motor y la velocidad lineal de la carga, y se utiliza para dimensionar motores, calcular relaciones de control y programar movimientos en sistemas automatizados. En conjunto, paso y cabeceo definen cómo se traduce el torque aplicado en el eje del tornillo en una fuerza lineal útil sobre la carga, determinando la eficiencia y funcionalidad del sistema de transmisión.
+#### Tornillo sin fin globoidal
+En este tipo, el tornillo tiene una forma curva o globoidal que envuelve parcialmente la corona. Este diseño proporciona un mayor contacto entre las superficies, lo que mejora la eficiencia, permite mayores cargas y reduce el desgaste. Es muy utilizado en maquinaria de precisión o cuando se requiere mayor durabilidad.
+
+### Tipos según el número de entradas
+
+#### Tornillo sin fin de una entrada
+Tiene solo un hilo. Cada vuelta del tornillo mueve la rueda un solo diente, lo que proporciona una gran reducción y un excelente auto bloqueo, pero con baja eficiencia. Ideal para mecanismos de ajuste fino o donde se requiere mantener una posición sin retroceso.
+
+#### Tornillo sin fin de múltiples entradas 
+Tiene dos o más hilos. Permite que la rueda avance más por cada vuelta del tornillo, aumentando la velocidad y la eficiencia del sistema, pero perdiendo el auto bloqueo. Es útil cuando se necesita mayor rapidez sin perder completamente el control.
+
+
+
+| Tipo                          | Forma del tornillo | Nº de entradas | Ventajas principales                                  | Aplicaciones comunes                                 |
+|-------------------------------|---------------------|----------------|--------------------------------------------------------|------------------------------------------------------|
+| Cilíndrico, entrada simple    | Cilíndrica          | 1              | Alto par, auto bloqueo, gran reducción                | Sistemas de elevación, actuadores manuales           |
+| Cilíndrico, entrada múltiple  | Cilíndrica          | 2 o más        | Mayor eficiencia y velocidad, menor auto bloqueo      | Transportadores, robots con control rápido           |
+| Globoidal, entrada simple     | Globoidal           | 1              | Mayor área de contacto, buena resistencia al desgaste | Maquinaria pesada, automatización de precisión       |
+| Globoidal, entrada múltiple   | Globoidal           | 2 o más        | Alta eficiencia y resistencia, menor retroceso        | Sistemas servoasistidos, control de movimiento CNC   |
+
+Estos diferentes tipos permiten seleccionar el mecanismo más adecuado según las necesidades de velocidad, precisión, carga y seguridad en sistemas de movimiento y control.
+
+
+![Figura de prueba](images/plantilla/erich2.jpg)
+
+Figura 2. Tipos de Tornillo Guía
+
+
+### Relación de Transmisión en Tornillo Sin Fin
+
+La relación de transmisión en un sistema con tornillo sin fin es fundamental para comprender cómo se traduce el movimiento rotacional del tornillo en un desplazamiento lineal de una carga (por ejemplo, una cápsula o carro). En la imagen proporcionada se destacan dos conceptos clave: el cabecero (pitch) y el paso (lead). Aunque en ocasiones se usan como sinónimos, en este contexto tienen diferencias importantes.
+
+El cabecero (pitch) se refiere al número de vueltas que debe realizar el tornillo para que la cápsula se desplace una unidad de distancia (por ejemplo, 1 metro en sistema métrico o 1 pulgada en sistema inglés). En cambio, el paso (lead) indica la distancia lineal que recorre la cápsula por cada revolución del tornillo. Este valor depende de la geometría de la rosca del tornillo, y se mide en metros o pulgadas según el sistema utilizado.
+
+Entonces:
+
 
 $$
 \Delta \theta = 2 \pi p \Delta x
 $$
 
 $$
-\frac{\Delta \theta}{\Delta x} = 2 \pi p
+\frac{\Delta \theta}{\Delta x} = 2\pi
 $$
 
 $$
-\frac{\frac{\Delta \theta}{\Delta t}}{\frac{\Delta x}{\Delta t}} = \frac{\text{Velocidad motor}}{\text{Velocidad carga}} = \frac{\dot{\theta}}{\dot{x}} = 2 \pi p
-$$
-
-
-💡**Ejemplo 1:**
-
-Simulación Tornillo Guía Simulink:
-
-![Figura de prueba](images/plantilla/ejemplo1.png)
-
-Figura 4. Ejemplo 1.
-
-
-Resultados:
-
-![Figura de prueba](images/plantilla/resultado1.png)
-
-Figura 5. Resultados Ejemplo 1.
-
-La conversión de desplazamiento angular a lineal se puede expresar como:
-
-$$
-117.8 \, \text{rad} \cdot \frac{1 \, \text{rev}}{2\pi \, \text{rad}} \cdot 0.015 = 0.28 \, \text{m}
+\frac{\frac{\Delta \theta}{\Delta t}}{\frac{\Delta x}{\Delta t}} = \frac{\textit{Velocidad motor}}{\textit{Velocidad carga}} = \frac{\dot{\theta}}{\dot{x}} = 2\pi
 $$
 
 
 ### Inercia Reflejada
 
-La inercia reflejada es un concepto que describe cómo la inercia de un componente en un sistema se traslada o se refleja en otro componente al momento de conectar diferentes partes de un mecanismo, como engranajes o ejes. Este fenómeno se refiere al efecto de la inercia de un cuerpo, como un volante de inercia, cuando se transmite a través de un sistema de transmisión o a otro componente mecánico, afectando la dinámica de todo el sistema.
+La inercia reflejada es un concepto fundamental en la dinámica de sistemas mecánicos con transmisión, como reductores, engranajes o tornillos sin fin. Se refiere a la inercia aparente que un actuador (como un motor) "ve" desde su eje, considerando la masa o inercia real de la carga movida, pero transformada por la relación de transmisión. En otras palabras, aunque la carga tenga una cierta masa o inercia en su propio sistema de coordenadas (por ejemplo, lineal), al ser movida por un mecanismo rotativo, su efecto dinámico se refleja como una inercia rotacional equivalente en el eje del motor. Esta equivalencia se calcula tomando en cuenta factores como la relación de engranajes o el paso del tornillo sin fin.
 
-La inercia reflejada en un tornillo guía es una forma de expresar cómo la masa lineal de una carga se traduce en una resistencia al cambio de velocidad angular del motor que mueve el tornillo. En otras palabras, aunque la carga se desplaza de forma lineal, esa masa genera un efecto inercial que se "refleja" en el eje del motor como si fuera una masa rotacional. Esto es importante porque el motor no solo necesita superar la fricción o el peso, sino también la inercia que representa esa masa al convertir el movimiento de rotación en movimiento lineal.
+La importancia de la inercia reflejada radica en su impacto directo sobre el desempeño y el diseño de los sistemas de control de movimiento. Un sistema con alta inercia reflejada requerirá más torque y tendrá una respuesta más lenta, lo que puede dificultar el cumplimiento de perfiles de velocidad y aceleración exigentes. Además, una incorrecta estimación de esta inercia puede llevar a diseños de control ineficientes o inestables, especialmente en aplicaciones de alta precisión como robots, CNC o servomecanismos. Por tanto, para garantizar un control preciso, eficiente y seguro, es esencial considerar adecuadamente la inercia reflejada durante la etapa de modelado y diseño del sistema de control.
 
-- Sabiendo que la carga tiene un movimiento lineal, su energía cinética sería:
+
+
 
 $$
 KE = \frac{1}{2} m \dot{x}^2
 $$
 
-- A partir de la relación de transmisión: $$\frac{\dot{\theta}}{\dot{x}} = 2 \pi p$$  se puede reemplazar en la expresión de energía cinética:
 
 $$
-KE = \frac{1}{2} m \frac{1}{(2\pi p)^2} \dot{\theta}^2
+\frac{\dot{\theta}}{\dot{x}} = 2 \pi p
 $$
 
-- Ahora se tiene la energía cinética en términos de la velocidad angular, por lo tanto, el término que multiplica la velocidad es la inercia reflejada:
 
 $$
-J_{ref} = \frac{m}{(2\pi p)^2} = \frac{m}{N_s^2}
+KE = \frac{1}{2} m \left( \frac{1}{(2\pi p)^2} \right) \dot{\theta}^2
 $$
+
+
+$$
+J_{ref} = m \left( \frac{1}{(2\pi p)^2} \right) = J_{ref} = \frac{m}{\left(\frac{N}{S}\right)^2}
+$$
+
 
 ### Inercia Reflejada Total
 
+La inercia reflejada total en un sistema con tornillo sin fin es la suma de todas las inercias externas al motor (como la masa lineal de la carga y cualquier otra parte móvil del sistema), pero expresadas en el eje del motor. Esto se logra a través de una conversión basada en la relación de transmisión del tornillo sin fin. Dado que el tornillo convierte el movimiento rotacional del motor en movimiento lineal, la masa de la carga genera una resistencia al cambio de velocidad rotacional que se refleja como una inercia equivalente, denominada inercia reflejada. Esta inercia reflejada total es clave para modelar correctamente la dinámica del sistema.
+
+![Figura de prueba](images/plantilla/erich3.png)
+
+Figura 3. Inercia reflejada total tornillo sin fin
 
 $$
 m = \frac{W_L + W_C}{g}
@@ -110,46 +123,27 @@ $$
 J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
-La inercia reflejada total es la equivalente inercial que ve el motor cuando tiene que mover no solo su propio eje, sino también todos los componentes mecánicos conectados mediante mecanismos de transmisión (como tornillos guía, engranajes, poleas, etc.).
-
-En otras palabras, es la suma de:
-
-- La inercia propia del tornillo u otro componente rotatorio conectado directamente al motor.
-- La inercia equivalente de las masas lineales (como la carga útil y la cama móvil), convertida a una forma rotacional, considerando la eficiencia del sistema y la relación de transmisión.
 
 $$
 J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
-Donde:
 
-- $$\(J_{\text{ref}}^{\text{trans}}\)$$ : Inercia reflejada total al motor  
-- $$\(J_{\text{screw}}\)$$ : Inercia del tornillo  
-- $$\(W_L, W_C\)$$ : Pesos de la carga y la cama (carro móvil)  
-- $$\(g\)$$ : Aceleración de la gravedad  
-- $$\(\eta\)$$ : Eficiencia del sistema de transmisión  
-- $$\(N_S\)$$ : Relación de paso del tornillo
-
-Esta inercia es fundamental en el diseño y control de sistemas mecatrónicos, ya que influye directamente en la aceleración, el torque requerido y la estabilidad del sistema.
+En el diseño de sistemas de control de movimiento, conocer la inercia reflejada total es crucial. Este parámetro influye directamente en el comportamiento dinámico del sistema, afectando la aceleración, la respuesta del motor y la precisión del control. Una inercia reflejada alta implica que el motor necesita aplicar más torque para cambiar la velocidad, lo cual puede reducir la eficiencia o generar problemas como vibraciones o sobrecargas. Por eso, una estimación precisa de esta inercia permite diseñar controladores más robustos, mejorar la estabilidad del sistema y garantizar un funcionamiento suave y eficiente, especialmente en aplicaciones que requieren alta precisión como robótica, CNC o automatización industrial
 
 
-### Torque Reflejado
+### Torque de carga
 
-## Cálculo de la Fuerza Externa y el Torque Reflejado
+![Figura de prueba](images/plantilla/erich4.png)
 
-La fuerza externa total que debe vencer el sistema incluye la fricción, la componente gravitacional y cualquier fuerza aplicada externamente:
+Figura 4. Torque de carga tornillo sin fin
+
 
 $$
 F_{\text{ext}} = F_f + F_g + F_p
 $$
 
-Donde:
 
-- $$\(F_f = \mu (W_L + W_C) \cos \beta\)$$: fuerza de fricción  
-- $$\(F_g = (W_L + W_C) \sin \beta\)$$: componente de fuerza gravitacional  
-- $$\(F_p\)$$: fuerza externa adicional
-
-Por lo tanto, la fuerza total queda:
 
 $$
 F_{\text{ext}} = F_p + (W_L + W_C)(\sin \beta + \mu \cos \beta)
@@ -158,7 +152,6 @@ $$
 Si el sistema se encuentra en posición horizontal, entonces $$\(F_g = 0\)$$.
 
 
-Ahora, para calcular el torque reflejado al motor debido a la carga, se puede utilizar el trabajo realizado:
 
 Desde la rotación:
 
@@ -172,7 +165,6 @@ $$
 \text{Work} = F_{\text{ext}} \cdot \Delta x
 $$
 
-Igualando ambos trabajos:
 
 $$
 \text{Work} = T_{\text{load} \rightarrow \text{in}} \cdot \Delta \theta
@@ -190,62 +182,93 @@ $$
 T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_S}
 $$
 
-Donde:
-- $$\(\mu\)$$: coeficiente de fricción  
-- $$\(W_L, W_C\)$$: pesos de la carga y la cama  
-- $$\(\beta\)$$: ángulo de inclinación  
-- $$\(N_S\)$$: relación de paso del tornillo  
-- $$\(\eta\)$$: eficiencia mecánica del sistema
+
 
 💡**Ejemplo 2:**
 
-Una carga de 50 kg debe ser posicionada usando un tornillo esferado de acero. El tornillo tiene una densidad de 0.14 kg/cm³, un diámetro de 0.182 cm y una longitud de 36 cm. El paso del tornillo es de 0.75 cm por revolución y el sistema tiene una eficiencia del 90%. Además, el carro que sostiene la carga pesa 0.23 kg. Con esta información, se solicita calcular la inercia reflejada por la transmisión hacia su eje de entrada.
+**Cálculo de la inercia reflejada en un sistema con tornillo esferado**
 
-Solución:
+Una carga de **50 kg** debe ser posicionada mediante un tornillo esferado de acero. Las características del sistema son las siguientes:
 
-- La inercia reflejada sería:
+- **Densidad del tornillo**: 0.14 kg/cm³  
+- **Diámetro del tornillo**: 0.182 cm  
+- **Longitud del tornillo**: 36 cm  
+- **Paso del tornillo**: 0.75 cm/rev  
+- **Eficiencia del sistema**: 90%  
+- **Peso del carro (carriage)**: 0.23 kg  
 
-$$ J_{ref}^{trans} = J_{screw} + J_{load \rightarrow in} + J_{carriage \rightarrow in} $$
+Con esta información, se busca calcular la **inercia reflejada** hacia el eje de entrada del sistema.
 
-$$ = J_{screw} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right) $$
 
-Resultado: 386 in/s²
 
-- Relación de transmisión
-La relación de transmisión es:
+**Fórmula general para la inercia reflejada**
 
-$$ N_S = 2 \pi p $$
+La inercia total reflejada hacia el eje del actuador es la suma de:
 
-$$ = 2 \pi \left( \frac{1}{0.75} \right) = 8.38 $$
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}}
+$$
 
-- Se calcula suponiendo que el tornillo es un cilindro alargado.
+Donde:
 
 $$
 J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
-- Por lo tanto:
+
+**Relación de transmisión**
+
+La relación de transmisión se calcula como:
 
 $$
-J_{\text{ref}}^{\text{trans}} = 5.42 \times 10^{-8} + \frac{1}{0.9 \cdot 8.38^2} \left( \frac{50 + 0.23}{9.89} \right) = 8.1 \\text{Kgm}
+N_S = 2 \pi p
 $$
 
+Sustituyendo el valor del paso \( p = \frac{1}{0.75} \):
+
+$$
+N_S = 2\pi \left( \frac{1}{0.75} \right) = 8.38
+$$
+
+
+
+**Cálculo del momento de inercia del tornillo**
+
+Asumiendo que el tornillo es un cilindro alargado, el momento de inercia es:
+
+**En sistema métrico:**
 
 $$
 J_{\text{screw}} = \frac{\pi L \rho D^4}{32g}
 $$
 
-- Cuando se trabaja en Sistema Inglés
-
-
+**En sistema inglés (sin gravedad):**
 
 $$
 J_{\text{screw}} = \frac{\pi L \rho D^4}{32}
 $$
 
+Sustituyendo los valores:
+
 $$
-J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot 0.00182^4}{32} = 5.42 \times 10^{-8} \ \text{Kgm}
+J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot (0.00182)^4}{32} = 5.42 \times 10^{-8} \ \text{Kgm}
 $$
+
+
+
+**Sustitución final**
+
+Sustituyendo en la fórmula de \( J_{\text{ref}}^{\text{trans}} \):
+
+$$
+J_{\text{ref}}^{\text{trans}} = 5.42 \times 10^{-8} + \frac{1}{0.9 \cdot 8.38^2} \left( \frac{50 + 0.23}{9.89} \right)
+$$
+
+**Resultado final:**
+
+```text
+J_ref ≈ 8.1 Kgm
+
 
 
 **Simulación Simscape Multibody:**
