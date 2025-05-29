@@ -270,54 +270,86 @@ $$J_ref ≈ 8.1 Kgm$$
 
 
 
-## 2. Conceptos de Transmisión Piñon - Cremallera
+## 2. Piñon - Cremallera
 
-Un mecanismo piñón-cremallera es un sistema que transforma movimiento rotativo en movimiento lineal, y viceversa, mediante el engrane de un piñón con una cremallera. Este mecanismo es ampliamente utilizado en sistemas mecatrónicos por su simplicidad y precisión al generar desplazamientos lineales a partir de motores rotativos, facilitando así la integración con actuadores eléctricos. Su capacidad de convertir la rotación continua del motor en un movimiento lineal controlado lo hace ideal para aplicaciones como ejes de máquinas CNC, brazos robóticos o sistemas de dirección asistida.
 
-![Figura de prueba](images/plantilla/rackandpinion.png)
+El mecanismo piñón-cremallera es un sistema mecánico que convierte el movimiento rotatorio de un engranaje (piñón) en movimiento lineal mediante una barra dentada (cremallera). Ambos elementos engranan perfectamente, permitiendo que al girar el piñón, la cremallera se desplace en línea recta. Este sistema es muy usado en aplicaciones como la dirección de automóviles, maquinaria industrial, puertas automáticas y sistemas CNC.
 
-Figura 9. Mecanismo Piñon-Cremallera.
+Su funcionamiento se basa en una transmisión directa, sin deslizamientos, lo que lo hace muy preciso. La velocidad lineal de la cremallera depende del tamaño del piñón y su velocidad de giro. Para un buen rendimiento, es importante mantener una buena lubricación, usar materiales resistentes al desgaste y controlar el juego entre dientes (backlash).
 
-El piñón-cremallera permite implementar trayectorias lineales suaves y predecibles, esenciales para lograr movimientos tipo trapezoidal o tipo S, comunes en el diseño de perfiles de velocidad, aceleración y posición. Al vincularse con sistemas de control (como servomotores o controladores PID), se puede garantizar que el movimiento lineal responda con precisión a las órdenes del sistema, cumpliendo requisitos de tiempo, exactitud y dinámica del proceso.
+
+
+![Figura de prueba](images/plantilla/erich5.png)
+
+Figura 5. Piñon cremallera
+
+
+
+### Ventajas y Desventajas
+
+| Ventajas                                                                 | Desventajas                                                                   |
+|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| Transforma movimiento rotativo en lineal con precisión.                 | Longitud de carrera limitada al tamaño de la cremallera.                      |
+| Soporta cargas más altas que sistemas con correa o husillo.             | Necesita lubricación frecuente para evitar desgaste.                          |
+| Transmisión directa, sin deslizamiento.                                 | Puede tener juego mecánico si no está bien ajustado.                          |
+| Fácil de construir y mantener.                                          | Puede generar ruido o vibraciones si está mal alineado.                       |
+| Funciona bien con motores paso a paso o servomotores.                   | Menor precisión en recorridos muy largos sin guías adicionales.               |
+
 
 
 
 ### Relación de Transmisión
 
-La relación de transmisión en un mecanismo piñón-cremallera describe cómo se convierte el movimiento rotacional del piñón en movimiento lineal de la cremallera. Específicamente, esta relación se determina por el radio del piñón: a mayor radio, mayor desplazamiento lineal por cada vuelta del piñón. Matemáticamente, se expresa como: $$N_{RP} = \frac{1}{r_{\text{pinion}}}$$ cuando se trabaja con velocidades angulares en radianes por segundo. Esta relación es fundamental en sistemas mecatrónicos, ya que permite diseñar perfiles de movimiento lineal precisos a partir del control de velocidad rotacional del actuador (motor).
+En el mecanismo piñón-cremallera, el piñón (engranaje circular) transmite su movimiento rotacional a la cremallera (barra dentada), produciendo un desplazamiento lineal. A diferencia de un sistema de engranajes rotativos, donde ambos elementos giran, aquí el piñón gira y la cremallera se traslada linealmente.
+
+**Fórmulas relevantes**
+
+1. **Relación de transmisión (general):**
+   
+   $$N = \frac{\text{Velocidad motor}}{\text{Velocidad carga}}$$
 
 
-$$
-N = \frac{\text{Velocidad motor}}{\text{Velocidad carga}}
-$$
+2. **Velocidad lineal de la cremallera (rack):**
+   
+   $$V_{\text{rack}} = r_{\text{pinion}} \cdot \omega_{\text{pinion}}$$
 
-$$
-V_{\text{rack}} = r_{\text{pinion}} \, \omega_{\text{pinion}}
-$$
+   
+   Donde:
+   - $$\( V_{\text{rack}} \)$$: velocidad lineal de la cremallera (m/s)
+   - $$\( r_{\text{pinion}} \)$$: radio del piñón (m)
+   - $$\( \omega_{\text{pinion}} \)$$: velocidad angular del piñón (rad/s)
 
-$$
-N_{RP} = \frac{1}{r_{\text{pinion}}}
-$$
+3. **Relación piñón-cremallera (inversa del radio):**
 
-💡**Ejemplo 3:**
-
-**Simulación Simulink:**
-
-![Figura de prueba](images/plantilla/sim5.png)
-
-Figura 10. Mecanismo Piñon-Cremallera Simulink.
+   
+   $$N_{RP} = \frac{1}{r_{\text{pinion}}}$$
 
 
-**Resultados:**
+Esta fórmula es válida para velocidades en rad/s y muestra que a menor radio del piñón, mayor será la relación de transmisión y, por tanto, mayor precisión pero menor desplazamiento lineal por cada vuelta.
 
-![Figura de prueba](images/plantilla/sim6.png)
+**Interpretación**
 
-Figura 10. Resultados mecanismo Piñon-Cremallera Simulink.
+- Si un motor gira a una velocidad angular $$\( \omega_{\text{pinion}} \)$$, la cremallera se desplazará a una velocidad proporcional al radio del piñón.
+- La relación de transmisión $$\( N \)$$ indica cuántas veces gira el motor para lograr un cierto desplazamiento de la carga (en este caso, la cremallera).
+- En lugar de una velocidad angular de salida (como en engranajes clásicos), aquí la "velocidad de carga" es lineal.
+- A menor tamaño del piñón (menor $$\( r_{\text{pinion}} \)$$), mayor será la relación $$\( N_{RP} \)$$, permitiendo más control y fuerza, pero menor avance lineal por revolución.
+
+**Aplicación**
+
+Este análisis es clave al diseñar mecanismos donde se requiere precisión en el desplazamiento lineal, como en máquinas CNC o actuadores lineales, ya que permite seleccionar el piñón adecuado según la velocidad deseada y el recorrido de la cremallera.
+
 
 
 ### Inercia Reflejada
 
-La inercia reflejada en un sistema piñón-cremallera es la inercia equivalente que el motor siente debido a las masas que está moviendo, una vez que se toma en cuenta la conversión del movimiento rotacional a lineal. Es decir, no solo se considera la inercia del piñón que gira, sino también cómo las masas lineales (como la carga o el carro) afectan el esfuerzo que debe hacer el motor, ajustadas por la relación de transmisión del sistema.
+
+En los sistemas mecánicos impulsados por motores, como el mecanismo piñón-cremallera, es fundamental considerar la **inercia reflejada** o **inercia equivalente**, ya que afecta directamente la dinámica del sistema y el dimensionamiento del motor. La **inercia reflejada al eje del motor** es la manera de expresar cómo la masa lineal (en este caso, la de la cremallera y la carga asociada) se "traduce" a una **inercia rotacional equivalente** que el motor debe vencer para acelerar. Esto es clave al diseñar sistemas de control o seleccionar motores, ya que influye en la aceleración, torque requerido y estabilidad.
+
+
+![Figura de prueba](images/plantilla/erich6.png)
+
+Figura 6. Inercia reflejada Piñon cremallera
+
 
 La inercia reflejada al motor se calcula como:
 
@@ -325,177 +357,135 @@ $$
 J_{\text{ref}}^{\text{trans}} = J_{\text{pinion}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}}
 $$
 
-Reemplazando los términos, se tiene:
 
 $$
 J_{\text{ref}}^{\text{trans}} = J_{\text{pinion}} + \frac{1}{\eta N_{\text{RP}}^2} \left( \frac{W_L + W_C}{g} \right)
 $$
 
-Su importancia radica en que esta inercia reflejada impacta directamente en el rendimiento del sistema de control del motor. Si no se considera correctamente, el sistema puede volverse lento, inestable o impreciso. Al calcularla adecuadamente, se pueden seleccionar motores y controladores más eficientes, diseñar perfiles de movimiento óptimos y evitar problemas como vibraciones, sobrecargas o errores de posicionamiento. En mecatrónica, especialmente en aplicaciones de automatización y robótica, conocer la inercia reflejada es esencial para lograr movimientos suaves, rápidos y precisos.
+**Interpretación**
+
+- Cuanto **mayor sea la masa lineal**, mayor será la inercia reflejada.
+- Cuanto **mayor sea el radio del piñón**, mayor será el efecto de esa masa sobre el motor (ya que \( r^2 \) amplifica el valor).
+- Una **alta inercia reflejada** implica que el motor necesitará más torque para lograr una determinada aceleración angular.
+- En aplicaciones de alta dinámica (por ejemplo, CNC o robótica), minimizar la inercia reflejada mejora el control y la eficiencia del sistema.
+
+
+Al seleccionar el tamaño del piñón y el motor, se debe buscar un equilibrio entre:
+- Precisión del movimiento lineal
+- Fuerza transmitida
+- Inercia reflejada (para evitar sobredimensionar el motor)
+
+Este análisis es esencial para un diseño mecánico eficiente y un sistema de control estable.
 
 ### Torque de Carga
 
+En un sistema piñón-cremallera, el **torque de carga reflejado al eje del motor** se origina a partir de las fuerzas externas que actúan sobre la cremallera. Estas fuerzas incluyen:
 
-- La fuerza externa total aplicada sobre el sistema es la suma de:
+- **Fuerza de fricción** $$\( F_f \)$$
+- **Fuerza gravitacional** $$\( F_g \)$$
+- **Fuerza productiva o útil** $$\( F_p \)$$
+
+La **fuerza total externa** se define como:
 
 $$
 F_{\text{ext}} = F_f + F_g + F_p
 $$
 
+Esta fuerza representa toda la resistencia que debe vencer el sistema para mover la carga linealmente. Para convertir esta fuerza lineal en un torque equivalente en el eje del motor, se usa la relación de transmisión piñón-cremallera:
 
-El torque reflejado al motor debido a esta fuerza externa es:
+$$
+N_{\text{RP}} = \frac{1}{r_{\text{pinion}}}
+$$
+
+Además, se incluye la **eficiencia mecánica del sistema** $$\( \eta \)$$, que considera pérdidas por fricción y deformaciones. El **torque reflejado** al motor debido a la carga es:
 
 $$
 T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{RP}}}
 $$
 
-Donde:
-- $$\( \eta \)$$: eficiencia del sistema  
-- $$\( N_{\text{RP}} \)$$: relación de transmisión del sistema piñón-cremallera
+
+Este torque es fundamental para seleccionar correctamente el motor y su controlador, ya que determina el esfuerzo que el sistema debe ejercer para mover la carga de forma segura y eficiente. Si el cálculo de $$\( T_{\text{load} \rightarrow \text{in}} \)$$ se subestima, pueden ocurrir problemas como pérdida de precisión, sobrecalentamiento del motor o fallos por sobrecarga. Por eso, siempre debe considerarse tanto la condición estática como la dinámica (si hay aceleraciones) en el análisis del torque de carga reflejado.
 
 
-💡**Ejemplo 4:**
 
-**Simulación Simscape Multibody:**
+## 3. Banda Transportadora
 
-![Figura de prueba](images/plantilla/sim7.png)
+Las bandas transportadoras son sistemas mecánicos diseñados para mover materiales de manera eficiente en diversas industrias. Funcionan mediante una cinta continua que se desplaza sobre rodillos o una superficie plana, impulsada por motores eléctricos. Su principal función es trasladar productos de un punto a otro, optimizando tiempos de producción y reduciendo esfuerzos manuales. Además, pueden adaptarse a diferentes necesidades mediante el ajuste de velocidad y la integración con sensores de control, lo que permite una operación automatizada y precisa.
 
-Figura 11. Mecanismo Piñon-Cremallera Simscape.
-
-
-**Resultados de Posición:**
-
-![Figura de prueba](images/plantilla/sim8.png)
-
-Figura 12. Resultados Posición mecanismo Piñon-Cremallera Simscape.
+En el ámbito del control de movimiento, las bandas transportadoras desempeñan un papel fundamental, ya que su velocidad y dirección pueden ser reguladas para sincronizar con otros procesos productivos. Mediante perfiles de movimiento programados, es posible establecer aceleraciones y desaceleraciones que eviten impactos o daños en los materiales transportados. Esta capacidad de ajuste es esencial en líneas de ensamblaje, donde el flujo de trabajo debe mantenerse constante y coordinado con otras máquinas y operarios. La combinación de bandas transportadoras con tecnología avanzada mejora la eficiencia y seguridad en la manipulación de productos. Este tipo de mecanismo es ampliamente utilizado en procesos industriales, logísticos y de manufactura, permitiendo un transporte continuo, controlado y eficiente.
 
 
-**Resultados de Velocidad:**
+![Figura de prueba](images/plantilla/erich7.png)
 
-![Figura de prueba](images/plantilla/sim9.png)
+Figura 7. Inercia reflejada Piñon cremallera
 
-Figura 13. Resultados Velocidad mecanismo Piñon-Cremallera Simscape.
 
-## 3. Conceptos de Transmisión Banda Transportadora
+**Aplicaciones Comunes:**
 
-La transmisión por banda en sistemas de transportadoras es un mecanismo muy utilizado para convertir el movimiento rotacional de un motor en movimiento lineal continuo, permitiendo el desplazamiento eficiente de objetos a lo largo de un trayecto. Este tipo de transmisión emplea una banda (de caucho, poliuretano u otros materiales) que se mueve sobre poleas, impulsada por un motor, logrando trasladar cargas con suavidad, precisión y bajo mantenimiento.
+- Sistemas de empaque y ensamblaje industrial  
+- Clasificación y distribución de productos  
+- Líneas de producción en fábricas  
+- Transporte de alimentos o materiales pesados
 
-![Figura de prueba](images/plantilla/banda.jpg)
+### Relación de Transmisión y Movimiento
 
-Figura 14. Mecanismo Banda transportadora.
-
-Su importancia en la mecatrónica y la automatización industrial radica en su capacidad para integrar el transporte de materiales en procesos secuenciales, como ensamblado, empaque o clasificación. Al ser compatible con sensores, actuadores y controladores, la transmisión por banda facilita la sincronización de operaciones, mejora la eficiencia del sistema y reduce tiempos muertos en líneas de producción automatizadas.
-
-### Relación de transmisión banda transportafdora 2 rodillos
-
-La relación de transmisión se define como:
+El movimiento de la banda está relacionado directamente con el giro de un rodillo motriz, y la velocidad lineal de la banda se puede determinar a partir del radio del rodillo y la velocidad angular del motor:
 
 $$
 N = \frac{\text{Velocidad motor}}{\text{Velocidad carga}}
 $$
 
-La velocidad lineal de la banda está dada por:
+- **Velocidad de la banda (\(V_{\text{belt}}\)):**
 
 $$
-V_{\text{belt}} = r_{\text{ip}} \, \omega_{\text{ip}}
+V_{\text{belt}} = r_{\text{ip}} \cdot \omega_{\text{ip}}
 $$
 
-Y la relación de transmisión específica para sistemas con polea impulsora es:
+Donde:  
+- $$\(r_{\text{ip}}\)$$: Radio del tambor motriz [m]  
+- $$\(\omega_{\text{ip}}\)$$: Velocidad angular del tambor [rad/s]
+
+- **Relación de transmisión específica para banda $$(\(N_{\text{BD}}\))$$:**
 
 $$
 N_{\text{BD}} = \frac{1}{r_{\text{ip}}}
 $$
 
-Donde:
-- $$\( r_{\text{ip}} \)$$: radio de la polea impulsora  
-- $$\( \omega_{\text{ip}} \)$$: velocidad angular de la polea impulsora  
+### Torque de Carga Reflejado
 
-### Inercia Reflejada:
-
-La inercia reflejada en una banda transportadora es la inercia equivalente que el motor experimenta debido a las masas que está moviendo a través del sistema de transmisión por banda. Aunque la carga se desplaza linealmente, su efecto dinámico se traduce en el eje del motor como una resistencia rotacional, dependiendo del radio de la polea impulsora y la relación de transmisión. Esta inercia reflejada influye directamente en la aceleración, el torque requerido y la respuesta del sistema de control, por lo que es un parámetro clave al dimensionar motores y diseñar perfiles de movimiento en sistemas automatizados.
-
-
-- La inercia reflejada total al eje del motor en un sistema con banda transportadora es:
+En una banda transportadora, el torque que el motor necesita entregar está determinado por la suma de fuerzas que se oponen al movimiento. Estas incluyen la fricción de la banda, la fuerza gravitacional si hay pendiente, y la fuerza necesaria para transportar la carga. La fuerza total se define como:
 
 $$
-J_{\text{ref}}^{\text{trans}} = J_{\text{IP}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}} + J_{\text{belt} \rightarrow \text{in}} + J_{\text{LP}}
+F_{\text{ext}} = F_f + F_g + F_p
 $$
 
-- Dado que $$\( J_{\text{IP}} = J_{\text{LP}} = J_p \)$$, la expresión se simplifica a:
+Donde:  
+- $$\(F_f\)$$: Fuerza de fricción  
+- $$\(F_g\)$$: Fuerza gravitacional (por inclinación o elevación)  
+- $$\(F_p\)$$: Fuerza productiva útil (para desplazar la carga)
 
-$$
-J_{\text{ref}}^{\text{trans}} = 2J_p + \frac{1}{\eta N_{\text{BD}}^2} \left( \frac{W_L + W_C + W_{\text{belt}}}{g} \right)
-$$
-
-- La ecuación del torque reflejado al motor por la carga externa es:
+El **torque reflejado al motor** se calcula como:
 
 $$
 T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{BD}}}
 $$
 
-Donde:
-- $$\( J_p \)$$: inercia de la polea  
-- $$\( N_{\text{BD}} \)$$: relación de transmisión de la banda  
-- $$\( \eta \)$$: eficiencia del sistema  
-- $$\( W_L, W_C, W_{\text{belt}} \)$$: peso de la carga, el carro y la banda  
-- $$\( g \)$$: aceleración gravitacional  
+Donde:  
+- $$\(\eta\)$$: Eficiencia mecánica total del sistema (típicamente entre 0.85 y 0.95)
 
-### Relación de transmisión e inercia reflejada banda transportadora inclinada
-
-En los sistemas de transporte por banda, es común encontrar configuraciones que incluyen uno o varios rodillos locos, es decir, rodillos que no están conectados directamente al motor y que giran libremente. Estos rodillos permiten guiar, tensar o soportar mejor la banda a lo largo de su trayectoria. La presencia de rodillos locos implica que la longitud total de la banda aumenta, lo cual puede impactar en la dinámica del sistema, pero también permite distribuir mejor la carga y mantener la tensión adecuada. Como resultado, este tipo de configuración suele emplearse con cargas más ligeras, ya que una banda más larga con muchos puntos de soporte no está diseñada para transportar pesos elevados sin deformarse o comprometer la eficiencia del movimiento.
-
-### Relación entre rodillos en bandas transportadoras inclinada
-
-- La relación de transmisión entre el motor y el rodillo conductor (DR) se define como:
-
-$$
-N_{CV} = \frac{1}{r_{DR}}
-$$
-
-- La inercia reflejada de un rodillo intermedio hacia el eje del motor se calcula mediante:
-
-$$
-J_{ID \rightarrow in} = \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2}
-$$
-
-- La inercia total reflejada al eje del motor se expresa como:
-
-$$
-J_{ref}^{trans} = J_{DR} + J_{load \rightarrow in} + J_{belt \rightarrow in} + J_{ID \rightarrow in} + J_{BR \rightarrow in}
-$$
-
-- Reemplazando los términos, se tiene:
-
-$$
-J_{ref}^{trans} = J_{DR} + \frac{1}{\eta N_{CV}^2} \left( \frac{W_L + W_{belt}}{g} \right) + \frac{J_{ID}}{\eta \left( \frac{r_{ID}}{r_{DR}} \right)^2} + \frac{J_{BR}}{\eta \left( \frac{r_{BR}}{r_{DR}} \right)^2}
-$$
-
-### Torque de Carga de bandas transportadoras inclinadas:
+Este torque es esencial para dimensionar adecuadamente el motor y asegurar que el sistema funcione con fiabilidad, evitando sobrecalentamientos, fallas o pérdida de velocidad bajo carga.
 
 
-![Figura de prueba](images/plantilla/torquecarga.png)
+**Ventajas y Desventajas**
 
-Figura 15. Mecanismo Banda transportadora inclinada.
+| Ventajas                                           | Desventajas                                              |
+|----------------------------------------------------|-----------------------------------------------------------|
+| Permite transporte continuo y automatizado         | Puede requerir mantenimiento frecuente (limpieza, ajuste) |
+| Bajo consumo energético en trayectos horizontales  | Menor eficiencia en inclinaciones pronunciadas            |
+| Adaptable a diferentes formas y longitudes         | Ocupa espacio físico considerable                         |
+| Reducción de tiempos de transporte en línea        | Posibilidad de desalineación o desgaste de la banda       |
+| Facilita procesos logísticos y de producción        | La carga máxima es limitada por el motor y fricción       |
 
-
-- Cuando se aplica el caso general en el que la banda transportadora se encuentra inclinada, la fuerza externa se determina como:
-
-$$
-F_{ext} = F_p + (W_L + W_{belt})(\sin \beta + \mu \cos \beta)
-$$
-
-- Luego, el torque reflejado en el eje del motor se calcula mediante:
-
-$$
-T_{load \rightarrow in} = \frac{F_{ext}}{\eta N_{CV}}
-$$
-
-Aplicando caso general donde la banda tiene un ángulo.
-
-
-## 4. Ejercicios
-
-### 📚Ejercicio 1:
 
 
 
@@ -504,8 +494,23 @@ Aplicando caso general donde la banda tiene un ángulo.
 
 
 
-## 6. Referencias  
 
-- [1] *E.P.2.Control digital y de Mov. Aulas Ecci. [2025]*
-- [2] *Apuntes Clase - Jueves 24 de Abril. [2025]*
+## Referencias
+
+1. Shigley, J. E., & Mischke, C. R. (2001). *Mechanical Engineering Design* (7th ed.). McGraw-Hill.  
+   - Referencia clásica para análisis de mecanismos, torque, inercia y transmisión.
+
+2. Norton, R. L. (2011). *Design of Machinery* (5th ed.). McGraw-Hill.  
+   - Excelente texto para el estudio de mecanismos como piñón-cremallera y bandas transportadoras.
+
+3. Hamrock, B. J., Schmid, S. R., & Jacobson, B. O. (2004). *Fundamentals of Machine Elements* (2nd ed.). McGraw-Hill.  
+   - Explicaciones detalladas sobre transmisión de potencia y cálculo de torque.
+
+4. Spotts, M. F., & Shoup, T. E. (1998). *Mechanical Design of Machines*. Pearson Prentice Hall.  
+   - Guía práctica para cálculo de cargas, inercia reflejada y selección de motores.
+
+5. Ambekar, A. G. (2014). *Mechanics of Materials and Machine Design*. Wiley.  
+   - Incluye análisis avanzado de sistemas de transmisión y mecanismos lineales como la banda transportadora.
+
+
 
