@@ -772,9 +772,10 @@ $$\[T_{\text{motor}} = \frac{0.75}{3.77} \approx 0.199 \, \text{Nm}\]$$
 
 ## Conclusiones
 
-
-
-
+- Los mecanismos de transmisión no solo facilitan la transferencia de energía y movimiento, sino que también influyen directamente en el control de sistemas mecánicos. Factores como la inercia reflejada, la relación de transmisión y el torque requerido son esenciales para garantizar una operación eficiente y precisa.
+- La relación de transmisión determina cómo se vincula el movimiento rotacional con el desplazamiento lineal. Un paso o radio mayor en los componentes reduce la relación de transmisión, afectando la velocidad y el torque necesario para mover cargas, lo que impacta el diseño y dimensionamiento del motor y los sistemas de control.
+- La inercia reflejada es un concepto clave en el análisis de transmisión, ya que permite convertir cargas lineales en equivalentes rotacionales vistas desde el eje del motor. Una inercia alta demanda mayor esfuerzo del actuador, afectando la estabilidad del sistema, la precisión en los movimientos y el consumo energético.
+- La eficiencia del sistema de transmisión influye directamente en el desempeño de los actuadores y el consumo energético. Un diseño que minimice la fricción, seleccione correctamente los componentes y considere la eficiencia mecánica permite mejorar la precisión del control de movimiento, reducir pérdidas energéticas y aumentar la vida útil del sistema.
 
 
 
