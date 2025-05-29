@@ -398,7 +398,52 @@ Este mecanismo es fundamental cuando se requiere un movimiento lineal preciso a 
 El sistema piñón-cremallera es una solución efectiva y robusta para necesidades de movimiento lineal controlado.
 
 
+ ### Relacion de Transmision
 
+![paco4](https://github.com/user-attachments/assets/d5cd299e-e96a-43db-ba63-7c0c640df16c)
+
+
+- **Piñón**: gira con una velocidad angular $$\( \omega_{\text{pinion}} \)$$ [rad/s].
+- **Cremallera**: se desplaza linealmente con velocidad $$\( V_{\text{rack}} \)$$ [m/s].
+- **Radio del piñón**: $$\( r_{\text{pinion}} \)$$ [m].
+
+La relación de transmisión describe cómo se vinculan estas velocidades. Se define la relación de transmisión piñón-cremallera como:
+
+$$N_{RP} = \frac{\omega_{pinion}}{V_{rack}} = \frac{1}{r_{pinion}}$$
+
+
+Donde:
+
+- $$\(N_{RP}\)$$ se expresa en [rad/m] si se usan unidades del Sistema Internacional.
+
+### Ecuaciones Fundamentales
+
+### Conversión de Velocidad Rotacional a Lineal
+
+La velocidad lineal de la cremallera se relaciona con la velocidad angular del piñón mediante:
+
+$$
+V_{\text{rack}} = r_{\text{pinion}} \cdot \omega_{\text{pinion}}
+$$
+
+
+### Relación General de Transmisión
+
+La relación de transmisión en sistemas mecánicos también puede representarse como:
+
+$$N = \frac{\text{Velocidad del motor}}{\text{Velocidad de la carga}}$$
+
+Esto se puede analizar de la siguiente manera: 
+
+- Un radio de piñón mayor produce más desplazamiento lineal por vuelta, lo que significa una menor relación de transmisión.
+- Un radio de piñón menor produce menos desplazamiento por vuelta, lo que equivale a una mayor relación de transmisión.
+
+### Aplicación en Control de Movimiento
+
+La relación $$\(N_{RP}\)$$ permite:
+
+- Traducir un perfil de velocidad angular en un perfil de velocidad lineal.
+- Diseñar controladores para actuadores que requieren desplazamiento preciso.
 
 
 # Referencias
