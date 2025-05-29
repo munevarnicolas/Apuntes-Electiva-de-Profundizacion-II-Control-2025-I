@@ -192,7 +192,8 @@ La inercia reflejada total al eje del motor (denotada como $$\( J_{ref}^{trans} 
 3. $$\( J_{carriage \rightarrow in} \)$$: inercia reflejada del carro lineal al eje de entrada.
 
 
-![Captura de pantalla 2025-05-29 121356](https://github.com/user-attachments/assets/3a5602e9-4117-4a95-8c7d-7cffedc5687a)
+![Captura de pantalla 2025-05-29 121356](https://github.com/user-attachments/assets/293d8098-1fdd-4672-ae62-2d560a6b7cb5)
+
 
 
 Estas se suman de la siguiente manera:
