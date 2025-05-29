@@ -210,6 +210,78 @@ donde:
 Este modelo de inercia reflejada total ayuda a los ingenieros a tener una visión completa del esfuerzo que el motor debe hacer. No solo se considera la inercia del tornillo (que gira), sino también la masa de la carga y del carro (que se mueven en línea recta), pero vistas desde el motor como si fueran rotacionales. Esto es muy importante para entender cómo se comportará el sistema cuando acelera o desacelera, cuánta fuerza (par) necesita el motor y cómo reaccionará todo el sistema ante los comandos de control. Al tener en cuenta tanto la carga como el carro, se obtiene un cálculo más preciso y realista de lo que el motor enfrentará durante el funcionamiento.
 
 
+💡**Ejemplo 1:**
+
+Una carga de 50 kg debe ser posicionada usando un tornillo esferado de acero. El tornillo tiene una densidad de 0.14 kg/cm³, un diámetro de 0.182 cm y una longitud de 36 cm. El paso del tornillo es de 0.75 cm por revolución y el sistema tiene una eficiencia del 90%. Además, el carro que sostiene la carga pesa 0.23 kg. Con esta información, se solicita calcular la inercia reflejada por la transmisión hacia su eje de entrada.
+
+
+
+**Fórmula general para la inercia reflejada**
+
+La inercia total reflejada hacia el eje del actuador es la suma de:
+
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + J_{\text{load} \rightarrow \text{in}} + J_{\text{carriage} \rightarrow \text{in}}
+$$
+
+Donde:
+
+$$
+J_{\text{ref}}^{\text{trans}} = J_{\text{screw}} + \frac{1}{\eta N_S^2} \left( \frac{W_L + W_C}{g} \right)
+$$
+
+
+**Relación de transmisión**
+
+La relación de transmisión se calcula como:
+
+$$
+N_S = 2 \pi p
+$$
+
+Sustituyendo el valor del paso \( p = \frac{1}{0.75} \):
+
+$$
+N_S = 2\pi \left( \frac{1}{0.75} \right) = 8.38
+$$
+
+
+
+**Cálculo del momento de inercia del tornillo**
+
+Asumiendo que el tornillo es un cilindro alargado, el momento de inercia es:
+
+**En sistema métrico:**
+
+$$
+J_{\text{screw}} = \frac{\pi L \rho D^4}{32g}
+$$
+
+**En sistema inglés (sin gravedad):**
+
+$$
+J_{\text{screw}} = \frac{\pi L \rho D^4}{32}
+$$
+
+Sustituyendo los valores:
+
+$$
+J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot (0.00182)^4}{32} = 5.42 \times 10^{-8} \ \text{Kgm}
+$$
+
+
+
+**Sustitución final**
+
+Sustituyendo en la fórmula de $$\( J_{\text{ref}}^{\text{trans}} \)$$:
+
+$$
+J_{\text{ref}}^{\text{trans}} = 5.42 \times 10^{-8} + \frac{1}{0.9 \cdot 8.38^2} \left( \frac{50 + 0.23}{9.89} \right)
+$$
+
+**Resultado final:**
+
+$$J_ref ≈ 8.1 Kgm$$
 
 
 
