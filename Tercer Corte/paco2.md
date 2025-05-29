@@ -568,6 +568,55 @@ $$
 Esta fórmula refleja que el tamaño de la polea impulsora tiene un impacto directo en la velocidad final de la banda y, por ende, en el ritmo al que se mueve el material transportado.
 
 
+### Inercia Reflejada y Torque de Carga
+
+En los sistemas como la banda transportadora, el motor no solo debe mover una carga: debe **vencer las resistencias dinámicas** asociadas al sistema. Dos de los parámetros más críticos para entender este esfuerzo son:
+
+- **Inercia reflejada $$(\( J_{\text{ref}} \))$$**: representa cómo "siente" el motor la masa que está moviendo a través de la banda.
+- **Torque de carga $$(\( T_{\text{load}} \))$$**: es el torque necesario para mantener la carga en movimiento, incluyendo fricción, inclinaciones o aceleraciones.
+
+Ambos valores afectan directamente el **dimensionamiento del motor**, el diseño de perfiles de aceleración/desaceleración y la estabilidad del sistema de control.
+
+
+AL inercia reflejada quiere decir que aunque la carga se mueve en línea recta, la banda está impulsada por una **polea rotatoria**, por lo tanto, toda la masa lineal (carro, carga y banda) se "convierte" en una inercia rotacional que actúa sobre el eje del motor.
+
+
+$$
+J_{\text{ref}}^{\text{trans}} = 2J_p + \frac{1}{\eta N_{\text{BD}}^2} \left( \frac{W_L + W_C + W_{\text{belt}}}{g} \right)
+$$
+
+**Donde:**
+- $$ J_p \)$$: inercia de cada polea.
+- $$\( \eta \)$$: eficiencia mecánica del sistema (0 < η ≤ 1).
+- $$\( N_{\text{BD}} = \frac{1}{r_{\text{ip}}} \)$$: relación de transmisión basada en el radio de la polea impulsora.
+- $$\( W_L, W_C, W_{\text{belt}} \)$$: pesos de la carga, el carro y la banda.
+- $$\( g \)$$: gravedad (9.81 m/s²).
+
+La importancia de la inercia reflejada radica en que:
+- Una **inercia alta** significa que el motor requerirá **más torque para acelerar** o desacelerar el sistema.
+- Impacta en el tiempo de respuesta, el **sobredimensionamiento del motor** y el consumo energético.
+- Es crucial en aplicaciones donde se requieren **movimientos rápidos o precisos** (como robótica o sistemas pick & place).
+
+Po otro lado el torque de carga genera una fuerza de resistencia que el motor debe vencer en forma de torque. Este torque, reflejado al eje del motor, es:
+
+$$
+T_{\text{load} \rightarrow \text{in}} = \frac{F_{\text{ext}}}{\eta N_{\text{BD}}}
+$$
+
+**Donde:**
+- $$\( F_{\text{ext}} \)$$: fuerza externa neta que actúa sobre la carga (fricción, peso en rampa, etc.).
+- $$\( \eta \)$$: eficiencia mecánica.
+- $$\( N_{\text{BD}} \)$$: relación de transmisión inversamente proporcional al radio de la polea.
+
+Su importancia esta en que:
+
+- Un **torque alto** puede indicar que se necesita un motor más robusto.
+- Es clave para asegurar que el sistema no se detenga bajo carga.
+- Permite anticipar comportamientos como **sobrecargas**, pérdida de pasos (en motores paso a paso), o fallos térmicos.
+
+
+
+
 # Referencias
 - https://gm0.org/es/latest/docs/software/concepts/control-loops.html
 - https://www.a-m-c.com/es/experiencia/tecnologias/motion-control/resumen/#:~:text=Perfiles%20de%20movimiento,Curva%20S%20perfiles%20de%20movimiento.
