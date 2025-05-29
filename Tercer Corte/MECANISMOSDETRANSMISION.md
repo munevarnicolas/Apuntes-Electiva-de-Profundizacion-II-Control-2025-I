@@ -586,7 +586,7 @@ J_{\text{ref}}^{\text{trans}} = 2J_p + \frac{1}{\eta N_{\text{BD}}^2} \left( \fr
 $$
 
 **Donde:**
-- $$ J_p \)$$: inercia de cada polea.
+- $$\(J_p \)$$: inercia de cada polea.
 - $$\( \eta \)$$: eficiencia mecánica del sistema (0 < η ≤ 1).
 - $$\( N_{\text{BD}} = \frac{1}{r_{\text{ip}}} \)$$: relación de transmisión basada en el radio de la polea impulsora.
 - $$\( W_L, W_C, W_{\text{belt}} \)$$: pesos de la carga, el carro y la banda.
@@ -737,7 +737,7 @@ $$\[IR = \frac{J_{\text{ref}}}{J_{\text{motor}}} = \frac{0.0394}{0.002} \approx 
 
 Calcular la masa total
 
-\[m = \frac{W_L + W_C}{g} = \frac{400 + 250}{9.81} \approx \frac{650}{9.81} \approx 66.27 \, \text{kg}\]
+$$\[m = \frac{W_L + W_C}{g} = \frac{400 + 250}{9.81} \approx \frac{650}{9.81} \approx 66.27 \, \text{kg}\]$$
 
 
 Calcular la relación de transmisión del tornillo
