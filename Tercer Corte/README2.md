@@ -313,6 +313,156 @@ Este es un sistema ideal: libre de perturbaciones y con comportamiento integrado
 - Es aplicable a sistemas rápidos y dinámicos, como convertidores de potencia o servomecanismos.
 
 
+##  Funciones para la acción de control en NADRC no lineal
+
+En el caso del NADRC (Nonlinear Active Disturbance Rejection Control), cuando se enfrenta un sistema fuertemente no lineal o con comportamientos extremos, la acción de control \( u_0 \) no se diseña con funciones proporcionales lineales tradicionales. En su lugar, se utilizan funciones no lineales especiales conocidas como `fal` (Function with Adjustable Linearity), diseñadas para proporcionar transiciones suaves y robustas dependiendo del error y su magnitud.
+
+---
+
+### Estructura de la acción de control no lineal
+
+La señal de control deseada $4\( u_0 \)$$ se construye como:
+
+
+$$\[u_0 = k_1 \cdot fal(r_1 - z_1, \alpha_1, \delta) + k_2 \cdot fal(r_1 - z_2, \alpha_2, \delta)\]$$
+
+Donde:
+
+- $$\( r_1 \)$$: trayectoria deseada (posición).
+- $$\( z_1 \), \( z_2 \)$$: estimaciones de los estados del sistema (posición y velocidad).
+- $$\( k_1, k_2 \)$$: ganancias del controlador.
+- $$\( \alpha_1, \alpha_2 \)$$: exponentes que determinan la forma no lineal de la función.
+- $$\( \delta \)$$: umbral de transición entre linealidad y no linealidad.
+- `fal`: función no lineal definida por partes.
+
+
+
+###  Definición de la función `fal`
+
+$$
+\[
+fal(\tilde{e}, \alpha, \delta) =
+\begin{cases}
+\frac{\tilde{e}}{\delta^{1 - \alpha}}, & |\tilde{e}| \leq \delta \\
+|\tilde{e}|^\alpha \cdot \text{sign}(\tilde{e}), & |\tilde{e}| > \delta
+\end{cases}
+\]$$
+
+Donde:
+- $$\( \tilde{e} \)$$: error entre el setpoint y el estado estimado,
+- $$\( \alpha \in (0, 1) \)$$: determina el grado de suavizado no lineal,
+- $$\( \delta \)$$: valor umbral que separa el comportamiento cuasi-lineal (para errores pequeños) del comportamiento no lineal fuerte (para errores grandes).
+
+---
+
+###  Propósito de la función `fal`
+
+La función `fal` permite:
+- Suavizar la respuesta del controlador cerca del equilibrio (cuando $$\( |\tilde{e}| \)$$ es pequeño),
+- Introducir una corrección fuerte y rápida cuando el error es grande,
+- Garantizar robustez frente a ruido, evitando oscilaciones por errores pequeños,
+- Adaptarse a sistemas no lineales donde las respuestas tradicionales no son suficientes.
+
+
+### Consideraciones y complejidad
+
+Como se menciona en la clase, el uso de esta versión no lineal del NADRC con funciones `fal` es complejo, porque:
+- Requiere calcular valores específicos para $$\( \alpha_i \), \( \delta \), y las ganancias \( k_i \)$$.
+- Necesita mayor conocimiento del modelo del sistema para definir correctamente estas funciones.
+- Se aplica solo en casos extremos, cuando el modelo linealizado del sistema no es suficiente para lograr control aceptable.
+
+En la práctica, la versión lineal del ADRC suele ser suficiente para la mayoría de las aplicaciones reales, por lo que esta formulación no lineal es más común en investigaciones avanzadas o entornos altamente exigentes.
+
+
+# 🧠 LADRC (Lineal) - Análisis y Explicación
+
+## 🔍 Observador de Estados Extendido Lineal
+
+En el enfoque LADRC lineal, se parte de un **observador extendido de estados (ESO)** que estima tanto las variables internas del sistema como las perturbaciones externas no modeladas. Este observador sigue la siguiente forma:
+
+```math
+\begin{cases}
+\dot{z}_1 = z_2 + L_1 e \\
+\dot{z}_2 = z_3 + b_0 u + L_2 e \\
+\dot{z}_3 = L_3 e \\
+e = y - z_1
+\end{cases}
+```
+
+Aquí:
+
+- \( z_1 \): estimación de la salida.  
+- \( z_2 \): estimación de su derivada.  
+- \( z_3 \): estimación de la perturbación generalizada.  
+- \( e \): error entre la salida real y la estimación.
+
+> 🎯 En el caso lineal, las ganancias del observador son constantes: \( L_1, L_2, L_3 \), a diferencia del caso no lineal donde podrían depender del estado.
+
+---
+
+## ⚙️ Modelo Extendido del Sistema
+
+El modelo extendido que representa el sistema y sus perturbaciones está dado por:
+
+```math
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = x_3 + b_0 u \\
+\dot{x}_3 = h \\
+y = x_1
+\end{cases}
+```
+
+Este modelo incorpora una tercera variable \( x_3 \) que representa la **perturbación generalizada \( h \)**, que incluye no linealidades, incertidumbres del modelo y perturbaciones externas.
+
+---
+
+## 🎮 Ley de Control Lineal
+
+La ley de control propuesta es una retroalimentación lineal de estados observados:
+
+```math
+u_0 = k_1 (r - z_1) - k_2 z_2
+```
+
+Donde:
+
+- \( r \): señal de referencia  
+- \( z_1 \): estimación de la salida  
+- \( z_2 \): estimación de la derivada de la salida  
+- \( k_1, k_2 \): ganancias del controlador
+
+> 📌 Este control busca compensar las perturbaciones actuando sobre el error estimado y la derivada, de forma similar a una realimentación de estados clásica.
+
+---
+
+## 📐 Planteamiento General del LADRC
+
+Finalmente, el planteamiento general del sistema controlado bajo LADRC se modela como:
+
+```math
+y^{(n)} = \kappa(x) u(t) + \xi(t)
+```
+
+Donde:
+
+- \( y^{(n)} \): derivada de orden \( n \) de la salida  
+- \( \kappa(x) \): ganancia (constante en este caso, al tratarse de un modelo lineal)  
+- \( \xi(t) \): perturbación generalizada, que incluye todo lo desconocido del sistema
+
+> 🧩 Este enfoque unifica modelado, estimación y control, encapsulando las incertidumbres del sistema en un único término \( \xi(t) \), que es estimado en línea por el observador extendido.
+
+---
+
+## 📌 Conclusión
+
+El enfoque **LADRC lineal** ofrece una poderosa técnica de control al estimar dinámicamente las perturbaciones y actuar sobre ellas sin necesidad de un modelo preciso del sistema. La simplicidad de las leyes de control lineal, junto con la estimación robusta del ESO, permite un diseño eficiente y adaptable frente a incertidumbres y perturbaciones externas.
+
+
+
+
+
+
 
 
 💡**Ejemplo 2:**
