@@ -522,6 +522,9 @@ El valor estimado de la perturbación $$\( \hat{d}_k \)$$ puede ser luego utiliz
 El Control Activo de Rechazo de Perturbaciones (ADRC) es una técnica de control robusto que permite estimar y compensar perturbaciones sin necesidad de conocerlas explícitamente. Uno de sus pilares fundamentales es el **observador de estado extendido (ESO)**, que se utiliza para estimar tanto los estados del sistema como las perturbaciones que lo afectan.
 
 
+![Captura de pantalla 2025-05-30 095720](https://github.com/user-attachments/assets/b9ea76ad-be40-49d6-b9e9-7fb32a9a9d3f)
+
+
 
 ***Modelo Original del Sistema Discreto con Perturbación**
 
