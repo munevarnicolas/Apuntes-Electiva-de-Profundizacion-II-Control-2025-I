@@ -2,7 +2,7 @@
 - Nicolas Rodriguez Diaz (112572)
 - Juan Diego Alvarez Beltran (120688)
 
-# Mecanismos de Transmisión
+# ADRC
 
 ## ¿Qué son los Elementos de Transmisión?
 
