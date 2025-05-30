@@ -807,6 +807,27 @@ $$
 Los coeficientes \( \lambda_i \) se escogen de tal forma que el polinomio característico relacionado con la dinámica del error de seguimiento tenga sus polos en el semiplano izquierdo del plano complejo (es decir, sea un **polinomio de Hurwitz**).
 
 
+# Estimación de Perturbaciones en ADRC
+
+El control por rechazo activo de perturbaciones (ADRC, por sus siglas en inglés) es una técnica robusta que busca compensar las perturbaciones internas y externas de un sistema sin requerir un modelo exacto del mismo. Una de las claves de esta metodología es la estimación de la **perturbación generalizada**, representada por la variable $$\( \mathcal{E} \)$$. Esta estimación se realiza a través de un **observador de estados**, el cual reconstruye las variables no medidas del sistema, incluyendo perturbaciones y sus derivadas.
+
+## Modelado de la Perturbación Generalizada
+
+Para estimar \( \mathcal{E} \), se asume que esta puede representarse como una función polinómica del tiempo, es decir:
+
+$$\[\xi(t) = k_0 + k_1 t + k_2 t^2 + \cdots + k_m t^m + r(t)\]$$
+
+donde \( k_i \) son coeficientes constantes, \( t \) es el tiempo, y \( r(t) \) representa un **residuo** o error de modelado. Esta aproximación permite capturar tanto las componentes suaves como ciertas dinámicas de las perturbaciones que afectan al sistema.
+
+
+## Implicaciones del Modelo Polinómico
+
+El término $$\( r(t) \)$$, conocido como el residuo, se espera que sea pequeño si el polinomio representa bien la perturbación. En este contexto, si se asume que:
+
+$$\[\hat{\mathcal{E}}^{(m)}(t) = 0\]$$
+
+es decir, la m-ésima derivada de la estimación de la perturbación es nula, entonces es factible diseñar un observador que no solo estime la salida del sistema, sino también la perturbación y sus derivadas sucesivas. Esto tiene una gran relevancia en aplicaciones prácticas, ya que permite que el controlador ADRC compense en tiempo real efectos no modelados o incertidumbres.
+
 
 
 ## Conclusiones
