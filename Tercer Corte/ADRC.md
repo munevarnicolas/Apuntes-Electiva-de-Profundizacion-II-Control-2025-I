@@ -60,7 +60,7 @@ El **NADRC** (Nonlinear Active Disturbance Rejection Control) es una evolución 
 
 A diferencia del ADRC lineal, que utiliza funciones proporcionales lineales para estimar errores y calcular la señal de control, el NADRC emplea funciones no lineales suavizadas como las funciones *fal*, *sat* o variantes del signo. Estas funciones permiten una estimación más precisa en regiones cercanas al punto de equilibrio y, al mismo tiempo, suavizan la respuesta cuando el sistema sufre perturbaciones grandes o repentinas, evitando oscilaciones excesivas o comportamientos bruscos.
 
-## 3.1 Características principales del NADRC
+## Características principales del NADRC
 
 | Característica                | Descripción                                                                                  |
 |------------------------------|----------------------------------------------------------------------------------------------|
@@ -223,10 +223,142 @@ Este diseño adaptativo proporciona varias ventajas importantes. Primero, el con
 
 Para que esta implementación funcione correctamente, es fundamental coordinar la sintonización de las ganancias del observador $$(\(\beta_i\))$$ y del controlador $$(\(k_i\))$$. Un ajuste adecuado asegura un equilibrio entre la rapidez de respuesta y la estabilidad, evitando tanto respuestas lentas como sensibilidad excesiva al ruido.
 
-En resumen, el uso de la función fal() en la ley de control del NADRC representa una mejora significativa con respecto a los controladores lineales tradicionales. Esta función permite modular la respuesta del controlador de forma inteligente, adaptándose a las condiciones del sistema y mejorando el desempeño ante perturbaciones y no linealidades. Sin embargo, esta flexibilidad también requiere una cuidadosa selección de parámetros para garantizar que el sistema mantenga un comportamiento estable y eficiente en cualquier situación.
+El uso de la función fal() en la ley de control del NADRC representa una mejora significativa con respecto a los controladores lineales tradicionales. Esta función permite modular la respuesta del controlador de forma inteligente, adaptándose a las condiciones del sistema y mejorando el desempeño ante perturbaciones y no linealidades. Sin embargo, esta flexibilidad también requiere una cuidadosa selección de parámetros para garantizar que el sistema mantenga un comportamiento estable y eficiente en cualquier situación.
 
 
+## LADRC (Lineal)
 
+El **LADRC** (Linear Active Disturbance Rejection Control) es una estrategia de control desarrollada para gestionar sistemas dinámicos sin requerir un modelo matemático exacto. Su diseño se centra en la **estimación activa de perturbaciones**, lo que le permite adaptarse en tiempo real a variaciones del entorno, no linealidades internas o incertidumbres estructurales del sistema.
+
+
+### Componentes del LADRC Lineal
+
+La arquitectura del LADRC está compuesta esencialmente por dos bloques funcionales:
+
+### 1. Observador de Estados Extendidos (ESO)
+
+Este observador se encarga de reconstruir en tiempo real el comportamiento interno del sistema (incluidas las perturbaciones) a partir de la salida medida. Para ello, extiende el vector de estados del sistema real incorporando un nuevo estado que modela el efecto total de las perturbaciones.
+
+Las ecuaciones del LESO que aparecen en la imagen son:
+
+$$
+\[
+\begin{cases}
+\dot{z}_1 = z_2 + L_1(y - z_1) \\
+\dot{z}_2 = z_3 + b_0 u + L_2(y - z_1) \\
+\dot{z}_3 = L_3(y - z_1)
+\end{cases}
+\]$$
+
+Donde:
+- $$\( z_1 \)$$ estima la salida del sistema (por ejemplo, posición).
+- $$\( z_2 \)$$ estima su derivada (velocidad).
+- $$\( z_3 \)$$ estima la perturbación total actuando sobre el sistema.
+- $$\( e = y - z_1 \)$$ es el error de observación, entre la salida medida y la salida estimada.
+
+La estructura de este observador es muy similar a la de un **filtro de alta ganancia**, diseñado para que los errores converjan rápidamente a cero.
+
+### 2. Modelo Dinámico Interno (Modelo Extendido)
+
+El modelo extendido que acompaña al LADRC transforma el sistema en una cadena de integradores artificial, permitiendo tratar todas las dinámicas no modeladas y perturbaciones como un solo término agrupado:
+
+$$
+\[
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = x_3 + b_0 u \\
+\dot{x}_3 = h \\
+y = x_1
+\end{cases}
+\]$$
+
+Donde:
+- $$\( x_1 \)$$: representa el estado principal medido (salida).
+- $$\( x_2 \)$$: su derivada (normalmente no medida).
+- $$\( x_3 \)$$: perturbación generalizada (cualquier dinámica no modelada o disturbio).
+- $$\( h \)$$: deriva del cambio en las perturbaciones (considerado acotado pero desconocido).
+
+Este modelo proporciona una base para diseñar el observador LESO, cuyo propósito es estimar \( x_1, x_2 \) y \( x_3 \) con las variables \( z_1, z_2, z_3 \), respectivamente.
+
+**La acción de control sería**
+
+Una vez que el LESO proporciona estimaciones de los estados relevantes y de la perturbación total, el controlador puede aplicar una ley simple pero eficaz basada en estas estimaciones:
+
+$$
+\[
+u_0 = k_1(r - z_1) - k_2 z_2
+\]$$
+
+Aquí:
+- $$\( r \)$$: señal de referencia (valor deseado de salida),
+- $$\( z_1 \)$$: estimación del estado actual (posición),
+- $$\( z_2 \)$$: estimación de la velocidad,
+- $$\( k_1, k_2 \)$$: ganancias de control que ajustan la rapidez y estabilidad de la respuesta.
+
+Este controlador puede interpretarse como un **PD compensado**, pero lo realmente potente es que gracias a $$\( z_3 \)$$, se puede cancelar el efecto de la perturbación total. Aunque $$\( z_3 \)$$ no aparece explícitamente en la ley de control, **su efecto ya fue eliminado del sistema al compensar desde el observador**.
+
+
+El valor de LADRC radica en su capacidad de aislar y eliminar las perturbaciones de forma implícita. Su funcionamiento se centra en:
+
+1. **Estimación de perturbaciones**: el término $$\( z_3 \)$$ representa todo lo que afecta negativamente al sistema y que no fue modelado (rozamiento, saturaciones, fuerzas externas, etc.). El ESO estima esta "caja negra".
+
+2. **Compensación dinámica**: al añadir $$\( z_3 \)$$ en la derivada de $$\( z_2 \)$$, y luego aplicar un control que ignora directamente $$\( z_3 \)$$, el efecto se cancela, como si el sistema nunca hubiese sido perturbado.
+
+3. **Robustez estructural**: el observador no necesita conocer la estructura exacta de la perturbación, basta con que su derivada esté acotada para que el estimador funcione correctamente.
+
+4. **Desacoplamiento del modelo real**: LADRC puede usarse en sistemas con incertidumbres grandes o no lineales, ya que se basa en la estimación activa de lo que no se conoce.
+
+
+### Ventajas:
+
+- No requiere un modelo exacto del sistema.
+- Es robusto frente a perturbaciones no modeladas.
+- Fácil de ajustar y de implementar en sistemas embebidos.
+- Alta adaptabilidad a cambios en la dinámica del sistema.
+
+_________________________________
+
+
+## Planteamiento LADRC
+
+La ecuación fundamental del planteamiento LADRC es la siguiente:
+
+\[
+y^{(n)} = \kappa(\mathbf{x}) u(t) + \xi(t)
+\]
+
+Esta expresión representa un modelo generalizado del sistema, que permite aplicar el control activo de perturbaciones sin conocer en detalle su dinámica interna. A continuación se detalla el significado de cada término.
+
+**1. Derivada de orden *n* de la salida: $$\( y^{(n)} \)$$**
+
+- Representa la **n-ésima derivada temporal** de la salida del sistema $$\( y(t) \)$$.
+- Por ejemplo, si $$\( n = 2 \)$$, entonces $$\( y^{(2)} = \ddot{y}(t) \)$$, es decir, la aceleración.
+- Esta formulación permite que el método se aplique a sistemas de cualquier orden.
+
+**2. $$\( \kappa(\mathbf{x}) u(t) \)$$: Dinámica modelada**
+
+- $$\( \kappa(\mathbf{x}) \)$$ es una función (posiblemente no lineal) de las variables de estado $$\( \mathbf{x} \)$$.
+- Representa cómo la entrada $$\( u(t) \)$$ afecta a la salida del sistema.
+- En sistemas lineales, esto se reduce a un coeficiente constante $$\( b_0 \)$$.
+- En LADRC, puede usarse un valor nominal $$\( b_0 \)$$ aunque $$\( \kappa(\mathbf{x}) \)$$ no se conozca exactamente.
+
+**3. $$\( \xi(t) \)$$: Perturbación generalizada**
+
+- Es una perturbación **aditiva** que captura:
+  - Efectos no modelados o inciertos.
+  - Perturbaciones externas (viento, fricción, etc.).
+  - No linealidades, retardos, variaciones de parámetros.
+- Se estima como parte del diseño LADRC mediante un observador extendido.
+
+Esta forma permite que el sistema se represente como una suma de:
+
+- Una parte controlada $$\( \kappa(\mathbf{x}) u(t) \)$$.
+- Una parte perturbadora $$\( \xi(t) \)$$ que se estima y cancela activamente.
+
+Esto simplifica el diseño del controlador, que ya no necesita un modelo preciso, sino una **estimación activa de perturbaciones**.
+
+
+La ecuación $$\( y^{(n)} = \kappa(\mathbf{x}) u(t) + \xi(t) \)$$ captura la esencia del LADRC: un sistema controlado más una perturbación estimable. Esta filosofía permite diseñar controladores robustos sin requerir un modelo exacto, confiando en la capacidad del observador para compensar las perturbaciones en tiempo real.
 
 
 ## Conclusiones
