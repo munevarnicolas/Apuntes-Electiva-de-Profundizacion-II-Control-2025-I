@@ -452,7 +452,9 @@ Donde:
 
 Este enfoque unifica modelado, estimación y control, encapsulando las incertidumbres del sistema en un único término $$\( \xi(t) \)$$, que es estimado en línea por el observador extendido.
 
+![Figura de prueba](images/plantilla/adrc1.png)
 
+Figura 4. Diagrama de bloques ADRC.
 
 
 El enfoque LADRC lineal ofrece una poderosa técnica de control al estimar dinámicamente las perturbaciones y actuar sobre ellas sin necesidad de un modelo preciso del sistema. La simplicidad de las leyes de control lineal, junto con la estimación robusta del ESO, permite un diseño eficiente y adaptable frente a incertidumbres y perturbaciones externas.
