@@ -669,3 +669,4 @@ Desde una perspectiva de diseño, el enfoque basado en la ubicación de polos y 
 - [8] *Diseño de Elementos de Máquinas. Shigley, J., 10ª ed., McGraw-Hill, 2015.*
 - [9] *Fundamentals of Machine Component Design. Juvinall, R., Marshek, K., 6th ed., Wiley, 2020.*
 - [10] *Modeling and Control of Engineering Systems. Ogata, K., Prentice Hall, 2000*
+- [11] *Control por rechazo activo de perturbaciones: un algoritmo versátil para sistemas con incertidumbre. Garrido, J. A., Visiers, A., Revista Iberoamericana de Automática e Informática industrial RIAI, Elsevier, 2021.*
