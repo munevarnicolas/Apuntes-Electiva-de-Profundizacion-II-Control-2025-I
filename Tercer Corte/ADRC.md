@@ -794,6 +794,20 @@ C_\xi = [1 \quad 0 \quad 0 \quad \cdots \quad 0]
 Este observador es capaz de rastrear dinámicamente el comportamiento del sistema incluyendo las perturbaciones desconocidas.
 
 
+Al restar las ecuaciones anteriores se define la matriz asociada a la dinámica del error de estimación, donde se obtiene la ecuación que describe la dinámica del error de estimación y su polinomio característico:
+
+$$e_{y}^{(n+m)} + \lambda_{n+m-1} e_{y}^{(n+m-1)} + \ldots + \lambda_0 e_y = \xi^{(m)}(t)$$
+
+El polinomio característico asociado es:
+
+$$
+p(s) = s^{n+m} + \lambda_{n+m-1}s^{n+m-1} + \lambda_{n+m-2}s^{n+m-2} + \cdots + \lambda_2 s^2 + \lambda_1 s + \lambda_0
+$$
+
+Los coeficientes \( \lambda_i \) se escogen de tal forma que el polinomio característico relacionado con la dinámica del error de seguimiento tenga sus polos en el semiplano izquierdo del plano complejo (es decir, sea un **polinomio de Hurwitz**).
+
+
+
 
 ## Conclusiones
 
