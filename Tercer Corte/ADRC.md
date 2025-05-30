@@ -693,6 +693,10 @@ donde:
 El observador de Luenberger es una herramienta fundamental en el diseño del **Control Activo de Rechazo de Perturbaciones (ADRC)**. En esta sección se describe cómo se construye un observador extendido que permite estimar no solo los estados del sistema, sino también las perturbaciones.
 
 
+![Captura de pantalla 2025-05-30 104032](https://github.com/user-attachments/assets/0d114885-23a6-4129-8627-34164d8e9155)
+
+
+
 **Definición del Error de Estimación**
 
 El objetivo del observador es minimizar el error entre la salida real \( y \) y la salida estimada \( \hat{y} \):
@@ -701,7 +705,7 @@ El objetivo del observador es minimizar el error entre la salida real \( y \) y 
 \tilde{e}_y = y - \hat{y}
 ```
 
----
+
 
 **Modelo del Observador**
 
