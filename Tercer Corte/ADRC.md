@@ -316,8 +316,6 @@ El valor de LADRC radica en su capacidad de aislar y eliminar las perturbaciones
 - Fácil de ajustar y de implementar en sistemas embebidos.
 - Alta adaptabilidad a cambios en la dinámica del sistema.
 
-_________________________________
-
 
 ## Planteamiento LADRC
 
@@ -360,6 +358,88 @@ Esto simplifica el diseño del controlador, que ya no necesita un modelo preciso
 
 
 La ecuación $$\( y^{(n)} = \kappa(\mathbf{x}) u(t) + \xi(t) \)$$ captura la esencia del LADRC: un sistema controlado más una perturbación estimable. Esta filosofía permite diseñar controladores robustos sin requerir un modelo exacto, confiando en la capacidad del observador para compensar las perturbaciones en tiempo real.
+
+
+__________________________
+
+
+## Observador de Estados en ADRC
+
+En sistemas dinámicos, muchas veces no se puede medir directamente el estado completo del sistema, ya sea por limitaciones físicas, técnicas o económicas. Para abordar esta situación, se recurre a un **observador de estados**, que es un mecanismo diseñado para reconstruir (estimar) las variables internas del sistema a partir de sus entradas y salidas observables.
+
+**Dinámica del sistema y estimación:**
+
+La evolución del sistema real en el tiempo discreto se describe mediante la ecuación:
+
+$$
+\[
+x_{k+1} = A x_k + B u_k
+\]$$
+
+Aquí, $$\(x_k\)$$ representa el estado actual, $$\(u_k\)$$ es la entrada de control, y las matrices $$\(A\)$$ y $$\(B\)$$ definen cómo evolucionan los estados.
+
+Sin embargo, dado que no siempre podemos observar directamente \(x_k\), se introduce una versión estimada:
+
+$$
+\[
+\hat{x}_{k+1} = A \hat{x}_k + B u_k + L (y_k - \hat{y}_k)
+\]$$
+
+Esta ecuación combina dos mecanismos:
+- **Predicción**: el término $$\(A \hat{x}_k + B u_k\)$$ proyecta el estado hacia el siguiente instante usando el modelo conocido del sistema.
+- **Corrección**: el término $$\(L (y_k - \hat{y}_k)\)$$ ajusta la estimación comparando la salida real medida $$\(y_k\)$$ con la salida estimada $$\(\hat{y}_k = C \hat{x}_k\)$$. Este componente es clave para "corregir el rumbo" de la estimación y minimizar el error acumulado.
+
+¿Qué papel cumple cada componente?
+
+- **\(A\)**: Modela la dinámica interna del sistema.
+- **\(B\)**: Describe cómo las entradas afectan los estados.
+- **\(L\)**: Matriz de ganancias del observador; regula qué tan agresiva es la corrección con base en el error.
+- **\(C\)**: Define cómo se relacionan los estados con la salida observable.
+
+La retroalimentación del error \(y_k - \hat{y}_k\) asegura que el observador pueda ajustarse incluso si hay pequeñas discrepancias entre el modelo y la realidad.
+
+
+Para representar al observador como un sistema por sí mismo, se define un conjunto de matrices que capturan su comportamiento dinámico:
+
+- **Matriz dinámica del observador**:
+  $$
+  \[
+  A_{ob} = A - L C
+  \]
+  $$
+  
+  Indica cómo evolucionan los estados estimados sin entrada ni corrección.
+
+- **Entrada del observador**:
+
+  $$
+  \[
+  B_{ob} = [B \quad L]
+  \]
+  $$
+  
+  Refleja cómo la entrada de control y el error de medición influyen sobre la estimación.
+
+- **Salida del observador**:
+  
+  $$
+  \[
+  C_{ob} = I_{n \times n}
+  \]
+  $$
+  
+  La salida es directamente la estimación de los estados.
+
+- **Efecto directo**:
+  $$
+  \[
+  D_{ob} = \begin{bmatrix} 0_{n \times m} & 0_{n \times p} \end{bmatrix}
+  \]
+  $$
+  
+  Se asume que ni la entrada ni la perturbación tienen un efecto directo e inmediato en la salida estimada.
+
+El observador de estados en ADRC actúa como una réplica virtual del sistema real, corrigiéndose en tiempo real mediante la comparación entre la salida medida y la salida estimada. Esta herramienta es fundamental para que el controlador ADRC pueda operar con información fiable, incluso en presencia de perturbaciones o incertidumbre estructural.
 
 
 ## Conclusiones
