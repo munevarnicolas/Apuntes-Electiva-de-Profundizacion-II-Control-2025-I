@@ -641,6 +641,80 @@ Donde:
 
 
 
+### Representación en Espacio de Estados para ADRC
+
+La imagen muestra una representación típica del modelo en espacio de estados usado en el diseño del observador extendido para un sistema de orden \( n \), particularmente en el contexto del **Control Activo de Rechazo de Perturbaciones (ADRC)**.
+
+El modelo parte de la ecuación diferencial de orden $$\( n \)$$:
+
+```math
+y^{(n)}(t) = u(t) + \xi(t)
+```
+
+Donde:
+
+- $$\( y^{(n)}(t) \)$$: derivada de orden $$\( n \)$$ de la salida del sistema
+- $$\( u(t) \)$$: entrada de control
+- $$\( \xi(t) \)$$: perturbación o incertidumbre total
+
+
+
+**Modelo en Espacio de Estados**
+
+Definimos el vector de estado como:
+
+```math
+x = [x_1, x_2, ..., x_n]^T
+```
+
+donde:
+
+- $$\( x_1 = y(t) \)$$
+- $$\( x_2 = \dot{y}(t) \)$$
+- $$\( x_3 = \ddot{y}(t) \)$$
+- ...
+- $$\( x_n = y^{(n-1)}(t) \)$$
+
+Entonces el sistema en forma de espacio de estados es:
+
+```math
+\dot{x} = A x + B (u(t) + \xi(t))
+```
+
+donde:
+
+```math
+A =
+\begin{bmatrix}
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \ddots & \vdots \\
+0 & 0 & \cdots & 0 & 1 \\
+0 & 0 & \cdots & 0 & 0
+\end{bmatrix}, \quad
+B =
+\begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+0 \\
+1
+\end{bmatrix}
+```
+
+La salida se define como:
+
+```math
+y = C x
+```
+
+con:
+
+```math
+C = [1 \quad 0 \quad 0 \quad \cdots \quad 0]
+```
+
+
 
 
 
