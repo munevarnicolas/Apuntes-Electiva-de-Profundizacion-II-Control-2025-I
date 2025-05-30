@@ -480,7 +480,123 @@ $$
 Figura 5. Ecuacion del Observador.
 
 
+- Estimacion de Perturbaciones
 
+$$
+\begin{cases}
+x_{k+1} = A \cdot x_k + B \cdot u_k + F \cdot d_k \\
+y_k = C \cdot x_k
+\end{cases}
+$$
+
+- Si la perturbación es constante \( d(k+1) = d(k) \), podemos añadirla como variable de estado:
+
+$$
+\begin{cases}
+\begin{bmatrix}
+x(k+1) \\
+d(k+1)
+\end{bmatrix}
+= x_a(k+1) =
+\begin{bmatrix}
+A & F \\
+0 & I
+\end{bmatrix}
+x_a(k) +
+\begin{bmatrix}
+B \\
+0
+\end{bmatrix}
+u(k) \\
+\\
+y(k) = [C \quad 0] \cdot x_a(k)
+\end{cases}
+$$
+
+- Para un sistema discreto con perturbación:
+
+$$
+\begin{cases}
+x_{k+1} = A \cdot x_k + B \cdot u_k + F \cdot d_k \\
+y_k = C \cdot x_k
+\end{cases}
+\quad
+\Rightarrow
+\quad
+\begin{cases}
+\begin{bmatrix}
+x(k+1) \\
+d(k+1)
+\end{bmatrix}
+= x_a(k+1) =
+\begin{bmatrix}
+A & F \\
+0 & I
+\end{bmatrix}
+x_a(k) +
+\begin{bmatrix}
+B \\
+0
+\end{bmatrix}
+u(k) \\
+\\
+y(k) = [C \quad 0] \cdot x_a(k)
+\end{cases}
+$$
+
+- Representación en Espacio de Estados:
+
+La ecuación diferencial:
+
+$$
+y^{(n)}(t) = u(t) + \xi(t)
+$$
+
+se puede representar en espacio de estados como:
+
+$$\[\underbrace{
+\begin{bmatrix}
+\dot{x}_1 \\
+\dot{x}_2 \\
+\dot{x}_3 \\
+\vdots \\
+\dot{x}_{n-1} \\
+\dot{x}_n
+\end{bmatrix}
+}_{\dot{x}} = \underbrace{\begin{bmatrix}
+0 & 1 & 0 & \cdots & 0 & 0 \\
+0 & 0 & 1 & \cdots & 0 & 0 \\
+0 & 0 & 0 & \cdots & 0 & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & \cdots & 0 & 1 \\
+0 & 0 & 0 & \cdots & 0 & 0
+\end{bmatrix}
+}_{A}\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 \\
+\vdots \\
+x_{n-1} \\
+x_n
+\end{bmatrix}+\underbrace{\begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+0 \\
+0 \\
+1\end{bmatrix}}_{B}\left( u(t) + \xi(t) \right)\]$$
+
+La salida es:
+
+$$
+y = 
+\underbrace{
+\begin{bmatrix}
+1 & 0 & 0 & \cdots & 0 & 0
+\end{bmatrix}
+}_{C}
+\cdot x
+$$
 
 
 💡**Ejemplo 2:**
