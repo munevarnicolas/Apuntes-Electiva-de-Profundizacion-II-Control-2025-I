@@ -548,10 +548,8 @@ $$
 - Representación en Espacio de Estados:
 
 <p align="center">
-  <img src= '![Captura de pantalla 2025-05-29 204930](https://github.com/user-attachments/assets/58b256b3-75b0-4dc3-b728-98453b095a2c)' alt="Descripción de la imagen" width="400"/>
+  <img src="images/plantilla/matriz.png" alt="Descripción de la imagen" width="400"/>
 </p>
-
-
 
 
 La ecuación diferencial:
@@ -560,8 +558,13 @@ $$
 y^{(n)}(t) = u(t) + \xi(t)
 $$
 
+Se construye un observador de Luenberger donde ẋ<sub>ξ</sub> es el vector asociado a los coeficientes que determinan el polinomio de Hurwitz, 
+asociado a la dinámica del error de estimación ẽ<sub>y</sub> definido como ẽ<sub>y</sub> = y − ŷ**
 
 
+<p align="center">
+  <img src="images/plantilla/matriz2.png" alt="Descripción de la imagen" width="400"/>
+</p>
 
 
 
