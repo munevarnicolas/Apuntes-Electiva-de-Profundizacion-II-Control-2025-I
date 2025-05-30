@@ -360,12 +360,17 @@ Esto simplifica el diseño del controlador, que ya no necesita un modelo preciso
 La ecuación $$\( y^{(n)} = \kappa(\mathbf{x}) u(t) + \xi(t) \)$$ captura la esencia del LADRC: un sistema controlado más una perturbación estimable. Esta filosofía permite diseñar controladores robustos sin requerir un modelo exacto, confiando en la capacidad del observador para compensar las perturbaciones en tiempo real.
 
 
-__________________________
 
 
 ## Observador de Estados en ADRC
 
 En sistemas dinámicos, muchas veces no se puede medir directamente el estado completo del sistema, ya sea por limitaciones físicas, técnicas o económicas. Para abordar esta situación, se recurre a un **observador de estados**, que es un mecanismo diseñado para reconstruir (estimar) las variables internas del sistema a partir de sus entradas y salidas observables.
+
+
+
+![paco](https://github.com/user-attachments/assets/a883fa72-bf48-4bb2-ac2f-e26c97f99336)
+
+
 
 **Dinámica del sistema y estimación:**
 
@@ -396,50 +401,245 @@ Esta ecuación combina dos mecanismos:
 - **\(L\)**: Matriz de ganancias del observador; regula qué tan agresiva es la corrección con base en el error.
 - **\(C\)**: Define cómo se relacionan los estados con la salida observable.
 
-La retroalimentación del error \(y_k - \hat{y}_k\) asegura que el observador pueda ajustarse incluso si hay pequeñas discrepancias entre el modelo y la realidad.
+La retroalimentación del error $$\(y_k - \hat{y}_k\)$$ asegura que el observador pueda ajustarse incluso si hay pequeñas discrepancias entre el modelo y la realidad.
 
 
 Para representar al observador como un sistema por sí mismo, se define un conjunto de matrices que capturan su comportamiento dinámico:
 
 - **Matriz dinámica del observador**:
-  $$
-  \[
-  A_{ob} = A - L C
-  \]
-  $$
+  
+  $$\[A_{ob} = A - L C\]$$
   
   Indica cómo evolucionan los estados estimados sin entrada ni corrección.
 
 - **Entrada del observador**:
 
-  $$
-  \[
-  B_{ob} = [B \quad L]
-  \]
-  $$
+  $$\[B_{ob} = [B \quad L]\]$$
   
   Refleja cómo la entrada de control y el error de medición influyen sobre la estimación.
 
 - **Salida del observador**:
   
-  $$
-  \[
-  C_{ob} = I_{n \times n}
-  \]
-  $$
+  $$\[C_{ob} = I_{n \times n}\]$$
   
   La salida es directamente la estimación de los estados.
 
 - **Efecto directo**:
-  $$
-  \[
-  D_{ob} = \begin{bmatrix} 0_{n \times m} & 0_{n \times p} \end{bmatrix}
-  \]
-  $$
-  
-  Se asume que ni la entrada ni la perturbación tienen un efecto directo e inmediato en la salida estimada.
 
-El observador de estados en ADRC actúa como una réplica virtual del sistema real, corrigiéndose en tiempo real mediante la comparación entre la salida medida y la salida estimada. Esta herramienta es fundamental para que el controlador ADRC pueda operar con información fiable, incluso en presencia de perturbaciones o incertidumbre estructural.
+```math
+D_{ob} = \begin{bmatrix} 0_{n \times m} & 0_{n \times p} \end{bmatrix}
+```
+
+  
+Se asume que ni la entrada ni la perturbación tienen un efecto directo e inmediato en la salida estimada. El observador de estados en ADRC actúa como una réplica virtual del sistema real, corrigiéndose en tiempo real mediante la comparación entre la salida medida y la salida estimada. Esta herramienta es fundamental para que el controlador ADRC pueda operar con información fiable, incluso en presencia de perturbaciones o incertidumbre estructural.
+
+
+## ADRC Observador Extendido para Estimación de Perturbaciones
+
+En sistemas dinámicos reales, además de los estados propios del sistema, suele haber perturbaciones externas que afectan el comportamiento de manera no deseada. En lugar de ignorarlas o modelarlas por separado, el enfoque del Control por Rechazo Activo de Perturbaciones (ADRC) propone estimarlas junto con el estado del sistema, mediante un **observador extendido**.
+
+**Modelo del sistema con perturbaciones**
+
+Consideramos un sistema lineal en tiempo discreto, afectado por una perturbación aditiva. Su evolución se describe con el siguiente conjunto de ecuaciones:
+
+```math
+\begin{cases}
+x_{k+1} = A x_k + B u_k + F d_k \\
+y_k = C x_k
+\end{cases}
+```
+
+Aquí:
+
+- $$\( x_k \)$$ es el estado del sistema en el instante \( k \),
+- $$\( u_k \)$$ es la entrada de control,
+- $$\( d_k \)$$ representa la perturbación externa desconocida,
+- $$\( y_k \)$$ es la salida medida del sistema.
+
+El término $$\( F d_k \)$$ modela cómo influye la perturbación sobre la dinámica del sistema.
+
+El objetivo no es solo estimar $$\( x_k \)$$, sino también obtener una estimación de $$\( d_k \)$$, denotada como $$\( \hat{d}_k \)$$.
+
+
+**Extensión del modelo: Incorporando la perturbación como estado**
+
+Una forma efectiva de estimar la perturbación es tratarla como un nuevo estado adicional dentro del sistema. Para esto, definimos un vector de estado ampliado que incluye tanto el estado original como la perturbación:
+
+```math
+x_a(k) = \begin{bmatrix} x(k) \\ d(k) \end{bmatrix}
+```
+
+Al hacer esta ampliación, la dinámica del sistema puede reescribirse como:
+
+```math
+x_a(k+1) =
+\begin{bmatrix}
+A & F \\
+0 & I
+\end{bmatrix}
+x_a(k) +
+\begin{bmatrix}
+B \\
+0
+\end{bmatrix}
+u(k)
+```
+
+En esta formulación:
+
+- La parte superior del sistema sigue modelando la evolución del estado original, afectado por la entrada y la perturbación.
+- La parte inferior asume que la perturbación es **constante** o **lentamente variable**, modelándola con una matriz identidad \( I \) que mantiene su valor en el tiempo.
+
+La salida del sistema se expresa en función del nuevo vector de estado como:
+
+```math
+y(k) = \begin{bmatrix} C & 0 \end{bmatrix} x_a(k)
+```
+
+Esto indica que la salida medida depende únicamente del estado original, y no directamente de la perturbación.
+
+
+## Diseño del observador extendido
+
+Con el modelo ampliado, ahora es posible diseñar un observador que estime el nuevo vector de estado completo. La estimación se representa como:
+
+```math
+\hat{x}_a(k) =
+\begin{bmatrix}
+\hat{x}_k \\
+\hat{d}_k
+\end{bmatrix}
+```
+
+Este observador se construye siguiendo los principios del observador de Luenberger, pero adaptado al sistema extendido. Se busca que la estimación de $$\( \hat{x}_a(k) \)$$ converja al valor real $$\( x_a(k) \)$$ aún cuando la perturbación no sea directamente observable.
+
+El valor estimado de la perturbación $$\( \hat{d}_k \)$$ puede ser luego utilizado para compensarla dentro del controlador, permitiendo al sistema mantener un rendimiento deseado incluso ante influencias externas.
+
+
+
+### Estimación de Perturbaciones en Sistemas Discretos
+
+El Control Activo de Rechazo de Perturbaciones (ADRC) es una técnica de control robusto que permite estimar y compensar perturbaciones sin necesidad de conocerlas explícitamente. Uno de sus pilares fundamentales es el **observador de estado extendido (ESO)**, que se utiliza para estimar tanto los estados del sistema como las perturbaciones que lo afectan.
+
+
+
+***Modelo Original del Sistema Discreto con Perturbación**
+
+Consideramos un sistema lineal en tiempo discreto con la siguiente forma general:
+
+```math
+\begin{cases}
+x_{k+1} = A \cdot x_k + B \cdot u_k + F \cdot d_k \\
+y_k = C \cdot x_k
+\end{cases}
+```
+
+Donde:
+
+- $$\( x_k \in \mathbb{R}^n \)$$: vector de estado en el instante \( k \)
+- $$\( u_k \in \mathbb{R} \)$$: entrada de control
+- $$\( d_k \in \mathbb{R} \)$$: perturbación externa o no modelada
+- $$\( y_k \in \mathbb{R} \)$$: salida del sistema
+- $$\( A, B, F, C \)$$: matrices del sistema
+
+
+**Ampliación del Modelo: Estado Extendido**
+
+Para poder estimar la perturbación, ampliamos el sistema agregando $$\( d_k \)$$ como un nuevo estado:
+
+```math
+d_{k+1} = d_k
+```
+
+Definimos el estado extendido:
+
+```math
+x_a(k) =
+\begin{bmatrix}
+x(k) \\
+d(k)
+\end{bmatrix}
+```
+
+El modelo extendido del sistema es:
+
+```math
+\begin{cases}
+x_a(k+1) =
+\begin{bmatrix}
+A & F \\
+0 & I
+\end{bmatrix}
+x_a(k) +
+\begin{bmatrix}
+B \\
+0
+\end{bmatrix}
+u(k) \\
+y(k) = [C \quad 0] \cdot x_a(k)
+\end{cases}
+```
+
+Matrices del sistema extendido:
+
+```math
+A_a =
+\begin{bmatrix}
+A & F \\
+0 & I
+\end{bmatrix}, \quad
+B_a =
+\begin{bmatrix}
+B \\
+0
+\end{bmatrix}, \quad
+C_a = [C \quad 0]
+```
+
+
+
+**Observador de Estado Ampliado (ESO)**
+
+Se estima:
+
+```math
+\hat{x}_a(k) =
+\begin{bmatrix}
+\hat{x}(k) \\
+\hat{d}(k)
+\end{bmatrix}
+```
+
+El observador tiene la forma:
+
+```math
+\hat{x}_a(k+1) = A_a \hat{x}_a(k) + B_a u(k) + L \cdot (y(k) - C_a \hat{x}_a(k))
+```
+
+La perturbación estimada es:
+
+```math
+\hat{d}(k) = \text{último elemento de } \hat{x}_a(k)
+```
+
+
+**Estructura del Controlador ADRC**
+
+El controlador se diseña como:
+
+```math
+u_k = K_F \cdot (r_k - y_k) - \hat{d}_k
+```
+
+Donde:
+
+- $$\( K_F \)$$: ganancia del controlador
+- $$\( \hat{d}_k \)$$: perturbación estimada
+
+
+
+
+
 
 
 ## Conclusiones
