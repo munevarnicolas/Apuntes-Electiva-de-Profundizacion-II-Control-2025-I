@@ -683,37 +683,8 @@ Entonces el sistema en forma de espacio de estados es:
 
 donde:
 
-```math
-A =
-\begin{bmatrix}
-0 & 1 & 0 & \cdots & 0 \\
-0 & 0 & 1 & \cdots & 0 \\
-\vdots & \vdots & \ddots & \ddots & \vdots \\
-0 & 0 & \cdots & 0 & 1 \\
-0 & 0 & \cdots & 0 & 0
-\end{bmatrix}, \quad
-B =
-\begin{bmatrix}
-0 \\
-0 \\
-\vdots \\
-0 \\
-1
-\end{bmatrix}
-```
 
-La salida se define como:
-
-```math
-y = C x
-```
-
-con:
-
-```math
-C = [1 \quad 0 \quad 0 \quad \cdots \quad 0]
-```
-
+![Captura de pantalla 2025-05-30 100658](https://github.com/user-attachments/assets/5fe76c6d-fb57-4cd5-9b9e-2875a4326e9a)
 
 
 
