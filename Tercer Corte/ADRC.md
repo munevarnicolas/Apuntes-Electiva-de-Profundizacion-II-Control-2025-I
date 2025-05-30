@@ -323,9 +323,10 @@ _________________________________
 
 La ecuación fundamental del planteamiento LADRC es la siguiente:
 
+$$
 \[
 y^{(n)} = \kappa(\mathbf{x}) u(t) + \xi(t)
-\]
+\]$$
 
 Esta expresión representa un modelo generalizado del sistema, que permite aplicar el control activo de perturbaciones sin conocer en detalle su dinámica interna. A continuación se detalla el significado de cada término.
 
