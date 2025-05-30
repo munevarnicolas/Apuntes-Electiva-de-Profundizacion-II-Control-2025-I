@@ -544,7 +544,15 @@ y(k) = [C \quad 0] \cdot x_a(k)
 \end{cases}
 $$
 
+
 - Representación en Espacio de Estados:
+
+<p align="center">
+  <img src= '![Captura de pantalla 2025-05-29 204930](https://github.com/user-attachments/assets/58b256b3-75b0-4dc3-b728-98453b095a2c)' alt="Descripción de la imagen" width="400"/>
+</p>
+
+
+
 
 La ecuación diferencial:
 
@@ -552,51 +560,9 @@ $$
 y^{(n)}(t) = u(t) + \xi(t)
 $$
 
-se puede representar en espacio de estados como:
 
-$$\[\underbrace{
-\begin{bmatrix}
-\dot{x}_1 \\
-\dot{x}_2 \\
-\dot{x}_3 \\
-\vdots \\
-\dot{x}_{n-1} \\
-\dot{x}_n
-\end{bmatrix}
-}_{\dot{x}} = \underbrace{\begin{bmatrix}
-0 & 1 & 0 & \cdots & 0 & 0 \\
-0 & 0 & 1 & \cdots & 0 & 0 \\
-0 & 0 & 0 & \cdots & 0 & 0 \\
-\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
-0 & 0 & 0 & \cdots & 0 & 1 \\
-0 & 0 & 0 & \cdots & 0 & 0
-\end{bmatrix}
-}_{A}\begin{bmatrix}
-x_1 \\
-x_2 \\
-x_3 \\
-\vdots \\
-x_{n-1} \\
-x_n
-\end{bmatrix}+\underbrace{\begin{bmatrix}
-0 \\
-0 \\
-\vdots \\
-0 \\
-0 \\
-1\end{bmatrix}}_{B}\left( u(t) + \xi(t) \right)\]$$
 
-La salida es:
 
-$$
-y = 
-\underbrace{
-\begin{bmatrix}
-1 & 0 & 0 & \cdots & 0 & 0
-\end{bmatrix}
-}_{C}
-\cdot x
-$$
 
 
 💡**Ejemplo 2:**
