@@ -129,6 +129,102 @@ Donde $$\(x_3\)$$ absorbe todas las no linealidades e incertidumbres, permitiend
 
 El NADRC es especialmente relevante en áreas donde los sistemas presentan comportamientos no lineales complejos y las perturbaciones son frecuentes o impredecibles. Por ejemplo, en robótica, sistemas mecatrónicos, control de vehículos, y procesos industriales con condiciones variables, el NADRC ofrece un control robusto y confiable sin necesidad de modelos matemáticos detallados. Además, la capacidad del NADRC para estimar y compensar perturbaciones en tiempo real mejora la estabilidad y el rendimiento del sistema, reduciendo errores y evitando problemas como el sobreimpulso o el "chattering" (oscilaciones rápidas). Esto se traduce en una mayor eficiencia operativa y menor desgaste de los componentes físicos.
 
+## Observador de Estados Extendido (ESO)
+
+El Observador de Estados Extendido (ESO) es un componente fundamental dentro del control por rechazo activo de perturbaciones (ADRC), especialmente en su versión no lineal (NADRC). Su función principal es estimar en tiempo real no solo los estados internos del sistema, sino también las perturbaciones y dinámicas no modeladas que afectan al proceso controlado. Esto permite al controlador compensar activamente dichas perturbaciones, mejorando la precisión y robustez del sistema.
+
+
+La dinámica del ESO se describe por el siguiente sistema de ecuaciones:
+
+$$
+\[
+\begin{cases}
+\dot{z}_1 = z_2 - \beta_1 \gamma_1(e) \\
+\dot{z}_2 = z_3 + b_0 u - \beta_2 \gamma_2(e) \\
+\dot{z}_3 = - \beta_3 \gamma_3(e) \\
+e = z_1 - y
+\end{cases}
+\]$$
+
+Donde:
+
+- $$\(z_1, z_2, z_3\)$$ son las variables de estado estimadas por el observador.
+- $$\(e\)$$ es el error de estimación, definido como la diferencia entre la salida estimada $$\(z_1\)$$ y la salida real $$\(y\)$$.
+- $$\(\beta_i\)$$ son las ganancias del observador, que determinan la velocidad y estabilidad de la convergencia.
+- $$\(\gamma_i(e)\)$$ son funciones no lineales (modelo de función de error) que actúan sobre el error $$\(e\)$$, comúnmente funciones sigmoideas o de saturación, que permiten una convergencia rápida sin generar oscilaciones ni sensibilidad excesiva al ruido.
+- $$\(b_0\)$$ es la ganancia estimada del sistema.
+- $$\(u\)$$ es la señal de control aplicada.
+
+El ESO utiliza la información de la entrada $$\(u\)$$ y la salida medida $$\(y\)$$ para construir una estimación precisa de los estados del sistema y de la perturbación total que afecta al proceso. La realimentación del error \(e\) a través de las funciones $$\(\gamma_i(e)\)$$ y las ganancias $$\(\beta_i\)$$ permite corregir continuamente las estimaciones, acelerando la convergencia hacia los valores reales.
+
+El término $$\(z_3\)$$ en el observador representa la estimación de la perturbación total $$\(f\)$$, que incluye no linealidades internas, incertidumbres paramétricas y perturbaciones externas. Cuando $$\(z_3 \approx f\)$$, la perturbación es cancelada efectivamente mediante la ley de control, lo que reduce el sistema original a una doble integración idealizada:
+
+$$
+\[
+\begin{cases}
+\dot{x}_1 = x_2 \\
+\dot{x}_2 = u_0 \\
+y = x_1
+\end{cases}
+\]$$
+
+Aquí, $$\(u_0\)$$ es la acción de control diseñada para el sistema nominal libre de perturbaciones.
+
+## Ley de control en NADRC
+
+La señal de control se define como:
+
+$$
+\[
+u = u_0 - \frac{z_3}{b_0}
+\]
+$$
+
+Donde:
+
+- $$\(u_0\)$$ es la acción de control calculada para el sistema idealizado.
+- $$\(\frac{z_3}{b_0}\)$$ es la compensación activa de la perturbación estimada por el ESO.
+
+Esta estructura permite que el controlador actúe sobre la planta real como si estuviera libre de perturbaciones, mejorando significativamente la estabilidad y el desempeño.
+
+## Ventajas analíticas del ESO
+
+- **Convergencia rápida y sin oscilaciones:** Gracias a las funciones no lineales \(\gamma_i(e)\) (por ejemplo, funciones sigmoideas o de saturación), el ESO puede ajustar la velocidad de convergencia sin generar comportamientos oscilatorios o sensibles al ruido, lo que es común en observadores lineales con altas ganancias.
+  
+- **Estimación en tiempo real de perturbaciones desconocidas:** El ESO no requiere conocer explícitamente la forma o naturaleza de las perturbaciones, ya que las agrupa en un estado extendido \(z_3\) que se estima continuamente.
+
+- **Reducción del sistema a un modelo canónico:** Al cancelar la perturbación estimada, el sistema se comporta como una doble integración, lo que facilita el diseño del controlador y garantiza un comportamiento predecible.
+
+- **Robustez frente a incertidumbres:** La estructura del ESO permite mantener la estabilidad y el rendimiento aun cuando existan cambios en la dinámica del sistema o perturbaciones externas inesperadas.
+
+
+
+## Implementación No Lineal del NADRC en casos no lineales
+
+En la implementación no lineal del NADRC, la ley de control se basa en funciones no lineales adaptativas que permiten una respuesta más flexible y robusta frente a perturbaciones y ruidos. La función principal utilizada es la **fal()**, que combina comportamientos lineales y no lineales para optimizar la actuación del controlador en diferentes regiones de operación.
+
+La señal de control base, denotada como \(u_0\), se construye a partir de dos términos que aplican la función fal() sobre los errores de estado, ponderados por ganancias específicas:
+
+$$
+\[
+u_0 = k_1 \, \text{fal}(r_1 - z_1, \alpha_1, \delta) + k_2 \, \text{fal}(r_2 - z_2, \alpha_2, \delta)
+\]
+$$
+
+Aquí, $$\(r_1\)$$ y $$\(r_2\)$$ representan las referencias deseadas o setpoints para los estados, mientras que $$\(z_1\)$$ y $$\(z_2\)$$ son las estimaciones de esos estados proporcionadas por el observador extendido (ESO). Las ganancias $$\(k_1\)$$ y $$\(k_2\)$$ ajustan la velocidad y amortiguamiento de la respuesta del sistema, permitiendo controlar la rapidez con la que el error se corrige. Los exponentes no lineales $$\(\alpha_1\)$$ y $$\(\alpha_2\)$$ controlan la curvatura de la función fal(), modulando la transición entre comportamiento lineal y no lineal. Finalmente, $$\(\delta\)$$ define un umbral que delimita la zona de linealidad suave.
+
+La función fal() está definida de forma segmentada para adaptarse a la magnitud del error $$\(\epsilon = r_i - z_i\)$$:
+
+- Cuando el valor absoluto del error es pequeño, es decir, $$\(|\epsilon| \leq \delta\)$$, la función se comporta de manera casi lineal, calculando $$\(\text{fal}(\epsilon) = \frac{\epsilon}{\delta^{1-\alpha}}\)$$. Esta característica suaviza la acción del controlador cerca del punto de operación, evitando oscilaciones y respuestas bruscas ante pequeñas desviaciones o ruido.
+
+- Cuando el error es mayor que el umbral $$\(\delta\)$$, la función adopta una forma no lineal más agresiva: $$\(\text{fal}(\epsilon) = |\epsilon|^\alpha \, \text{sign}(\epsilon)\)$$. Esto permite que el controlador responda con mayor rapidez y fuerza durante transitorios o perturbaciones significativas.
+
+Este diseño adaptativo proporciona varias ventajas importantes. Primero, el controlador es capaz de ser suave y estable cuando el sistema está cerca del equilibrio, lo que reduce la sensibilidad a ruidos y pequeñas fluctuaciones. Segundo, puede ser suficientemente enérgico para corregir errores grandes o repentinos, mejorando la rapidez y eficacia en la recuperación del sistema. Además, la zona lineal definida por $$\(\delta\)$$ actúa como un amortiguador natural que previene oscilaciones indeseadas causadas por mediciones ruidosas.
+
+Para que esta implementación funcione correctamente, es fundamental coordinar la sintonización de las ganancias del observador $$(\(\beta_i\))$$ y del controlador $$(\(k_i\))$$. Un ajuste adecuado asegura un equilibrio entre la rapidez de respuesta y la estabilidad, evitando tanto respuestas lentas como sensibilidad excesiva al ruido.
+
+En resumen, el uso de la función fal() en la ley de control del NADRC representa una mejora significativa con respecto a los controladores lineales tradicionales. Esta función permite modular la respuesta del controlador de forma inteligente, adaptándose a las condiciones del sistema y mejorando el desempeño ante perturbaciones y no linealidades. Sin embargo, esta flexibilidad también requiere una cuidadosa selección de parámetros para garantizar que el sistema mantenga un comportamiento estable y eficiente en cualquier situación.
+
 
 
 
