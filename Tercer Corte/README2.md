@@ -608,10 +608,10 @@ Una vez definido el grado del polinomio, se deben ubicar sus polos. Esta es una 
 
 
 <p align="center">
-  <img src="images/plantilla/matrix.png" alt="Descripción de la imagen" width="400"/>
+  <img src="images/plantilla/matrix.png" alt="Descripción de la imagen" width="700"/>
 </p>
 
-## Diseño de Controlador ADRC - Ubicación de Polos
+### Diseño de Controlador ADRC - Ubicación de Polos
 
 En el diseño de un sistema de control por rechazo activo de perturbaciones (ADRC, por sus siglas en inglés), uno de los elementos clave es la ubicación de polos tanto para el observador como para el controlador. Este enfoque se fundamenta en la caracterización dinámica del sistema mediante polinomios cuyas raíces (los polos) determinan el comportamiento temporal del sistema.
 
@@ -627,7 +627,12 @@ Para el controlador, el procedimiento es análogo. Se busca definir una dinámic
 
 A partir de estos polos deseados, se construye un polinomio cuyas raíces coincidan con ellos. Luego, se determinan los coeficientes del polinomio, que corresponden directamente a las ganancias del controlador.
 
-## Procedimiento General
+$$
+\xi(t) = k_0 + k_1 t + k_2 t^2 + \cdots + k_m t^m + r(t)
+$$
+
+  
+### Procedimiento General
 
 1. Modelo del sistema y definición de la dinámica deseada.
 2. Construcción del polinomio característico (para el observador y el controlador).
