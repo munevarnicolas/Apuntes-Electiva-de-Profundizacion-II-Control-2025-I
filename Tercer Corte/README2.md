@@ -568,6 +568,48 @@ asociado a la dinámica del error de estimación ẽ<sub>y</sub> definido como �
 
 
 
+### Modelo del Sistema
+
+En espacio de estados, no existe una diferencia estructural significativa entre los modelos en tiempo continuo y en tiempo discreto. Lo que cambia principalmente es la notación:
+- En continuo, se utilizan derivadas respecto al tiempo.
+- En discreto, se utiliza la notación con pasos de tiempo (k y k+1).
+
+Esto implica que donde antes teníamos derivadas, ahora usamos el valor del estado en el siguiente instante de tiempo. También se reemplaza el tiempo t por el índice discreto k.
+
+### Observador Básico
+
+El observador parte del modelo original del sistema, al cual se le añade un lazo de control. Esta estructura es la misma tanto en tiempo continuo como en discreto. La diferencia principal radica en el tratamiento temporal:
+- En continuo se integran señales.
+- En discreto se aplican atrasos (o pasos hacia adelante en el tiempo).
+
+Desde el punto de vista de implementación, no hay diferencias relevantes entre trabajar con sistemas continuos o discretos, al menos en la estructura básica del observador.
+
+### Extensión para Estimar Perturbaciones
+
+Una mejora importante que se introduce es la estimación de perturbaciones. Para ello, el modelo del sistema se amplía:
+- Se añade un nuevo estado al modelo.
+- Las matrices que describen el sistema deben ajustarse en dimensiones para acomodar este nuevo estado.
+
+El observador modificado incluirá un nuevo término que representa la estimación de la perturbación. Para que esta estimación sea precisa, es necesario diseñar adecuadamente las ganancias del observador.
+
+### Diseño de Ganancias del Observador
+
+El objetivo del diseño es garantizar que el observador sea capaz de seguir la dinámica del sistema, incluyendo las perturbaciones. Para ello:
+- Se modela la dinámica de las perturbaciones como un polinomio.
+- El orden de ese polinomio dependerá de la dinámica que se desee modelar (por ejemplo, segundo orden, tercer orden, etc.).
+
+Una vez definido el grado del polinomio, se deben ubicar sus polos. Esta es una técnica conocida como ubicación de polos.
+
+### Criterios de Diseño
+
+- El observador debe ser más rápido que el controlador.
+- La ubicación de polos define la velocidad y estabilidad del sistema observado.
+- Los coeficientes del polinomio asociado a esa dinámica determinarán las ganancias que se deben aplicar en el observador.
+
+
+
+
+
 💡**Ejemplo 2:**
 
 
