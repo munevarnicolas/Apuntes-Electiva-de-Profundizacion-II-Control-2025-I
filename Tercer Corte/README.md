@@ -1,4 +1,4 @@
-# Elementos de Transmisión Continuación 
+# Tutorial Gemelos Digitales de Quanser
 Esta clase se llevó a cabo el día 24 de abril de 2025, la cual estuvo dirigida a comprender los sistemas de transmisión, abordando temas los conceptos de transmisión tales como el tornillo guía, así como los conceptos de inercia y torque reflejado, fundamentales para el análisis y optimización del movimiento en sistemas mecánicos.
 
 ## 1. Conceptos de transmisión Tornillo Guía
