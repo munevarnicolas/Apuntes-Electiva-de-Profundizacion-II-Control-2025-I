@@ -1,5 +1,6 @@
 # ADRC
-Esta clase se llevó a cabo el día 13 de Mayo de 2025, 
+Esta clase se llevó a cabo el día 13 de mayo de 2025, en donde se vieron temas tales como el Control por Rechazo Activo de Perturbaciones (ADRC), su fundamento teórico, estructura funcional y ventajas frente a métodos clásicos de control. Se abordaron los conceptos clave del Observador de Estados Extendido (ESO), el diseño basado en ubicación de polos y la compensación activa de perturbaciones, destacando su aplicabilidad en sistemas con incertidumbre, no linealidades y dinámica variable, especialmente en el contexto del control de movimiento en ingeniería.
+
 
 ## 1. ADRC
 
