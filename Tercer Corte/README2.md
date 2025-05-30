@@ -607,6 +607,36 @@ Una vez definido el grado del polinomio, se deben ubicar sus polos. Esta es una 
 - Los coeficientes del polinomio asociado a esa dinámica determinarán las ganancias que se deben aplicar en el observador.
 
 
+<p align="center">
+  <img src="images/plantilla/matrix.png" alt="Descripción de la imagen" width="400"/>
+</p>
+
+## Diseño de Controlador ADRC - Ubicación de Polos
+
+En el diseño de un sistema de control por rechazo activo de perturbaciones (ADRC, por sus siglas en inglés), uno de los elementos clave es la ubicación de polos tanto para el observador como para el controlador. Este enfoque se fundamenta en la caracterización dinámica del sistema mediante polinomios cuyas raíces (los polos) determinan el comportamiento temporal del sistema.
+
+### Observador: Dinámica del Error de Estimación
+
+La estimación de la perturbación generalizada se realiza con un observador de estados. Esta perturbación se modela como una función polinómica del tiempo, lo que permite derivar una ecuación que describe la dinámica del error de estimación. A partir de esta ecuación se define un polinomio característico, cuyos coeficientes determinan el comportamiento dinámico del observador.
+
+La elección de estos coeficientes tiene un objetivo claro: ubicar los polos de dicho polinomio en el semiplano izquierdo del plano complejo. Esto garantiza que el observador tenga una dinámica estable y rápida, siguiendo el principio de que el observador debe ser más rápido que el controlador.
+
+### Controlador: Dinámica del Sistema en lazo cerrado
+
+Para el controlador, el procedimiento es análogo. Se busca definir una dinámica deseada para el sistema, lo que implica especificar los polos que debe tener el sistema cerrado. Estos polos se seleccionan en función del desempeño esperado: rapidez, sobreimpulso, tiempo de establecimiento, etc.
+
+A partir de estos polos deseados, se construye un polinomio cuyas raíces coincidan con ellos. Luego, se determinan los coeficientes del polinomio, que corresponden directamente a las ganancias del controlador.
+
+## Procedimiento General
+
+1. Modelo del sistema y definición de la dinámica deseada.
+2. Construcción del polinomio característico (para el observador y el controlador).
+3. Ubicación de polos** según criterios de estabilidad y desempeño.
+4. Cálculo de coeficientes del polinomio.
+5. Asignación de ganancias tanto para el observador como para el controlador a partir de esos coeficientes.
+
+Este enfoque analítico permite diseñar un sistema ADRC robusto y adaptado a las necesidades específicas del problema, garantizando una respuesta eficiente ante perturbaciones y variaciones en la dinámica del sistema.
+
 
 
 
