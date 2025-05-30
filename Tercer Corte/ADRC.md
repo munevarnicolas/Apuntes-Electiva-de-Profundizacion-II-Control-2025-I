@@ -832,7 +832,15 @@ es decir, la m-ésima derivada de la estimación de la perturbación es nula, en
 
 ## Conclusiones
 
+- El ADRC redefine la necesidad de modelado en control moderno debido a que a diferencia de los enfoques tradicionales, el ADRC desplaza el énfasis del conocimiento preciso del modelo hacia la estimación y compensación activa de perturbaciones. Esta filosofía representa un cambio de paradigma, especialmente útil en sistemas complejos o con dinámicas difíciles de modelar.
 
+- La estimación de perturbaciones como estado clave impulsa la robustez del sistema al incorporar las perturbaciones como un estado adicional dentro del sistema y estimarlas mediante observadores extendidos (ESO), el ADRC permite una cancelación activa de sus efectos. Esta estrategia otorga al controlador una capacidad de adaptación superior frente a incertidumbres internas y externas.
+
+- La estructura modular de ADRC favorece su aplicabilidad industrial al separar el sistema en generador de trayectorias, observador y ley de control permite su implementación flexible. Esta arquitectura facilita adaptaciones a diferentes escenarios, desde control de motores hasta sistemas mecatrónicos avanzados, sin rediseñar todo el controlador.
+
+- El uso de funciones no lineales en NADRC optimiza el rendimiento dinámico debido a la integración de funciones como `fal()` y mecanismos suavizados en el NADRC mejora el rechazo al ruido y la respuesta transitoria, proporcionando un balance entre precisión, rapidez y estabilidad, especialmente en sistemas no lineales o con ruidos significativos.
+
+- El éxito del ADRC depende críticamente de la sintonización del ESO, sin embargo auqnue el enfoque minimiza la necesidad de modelado detallado, la selección adecuada de parámetros del observador (ganancias, polos, estructura) es crucial para garantizar estimaciones precisas y evitar oscilaciones o amplificación del ruido. La habilidad del diseñador para ajustar estos parámetros impacta directamente el desempeño del sistema.
 
 
 
