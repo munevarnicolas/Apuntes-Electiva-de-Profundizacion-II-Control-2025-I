@@ -688,6 +688,107 @@ donde:
 
 
 
+### Observador de Luenberger Extendido en ADRC
+
+El observador de Luenberger es una herramienta fundamental en el diseño del **Control Activo de Rechazo de Perturbaciones (ADRC)**. En esta sección se describe cómo se construye un observador extendido que permite estimar no solo los estados del sistema, sino también las perturbaciones.
+
+
+**Definición del Error de Estimación**
+
+El objetivo del observador es minimizar el error entre la salida real \( y \) y la salida estimada \( \hat{y} \):
+
+```math
+\tilde{e}_y = y - \hat{y}
+```
+
+---
+
+**Modelo del Observador**
+
+El vector de estados extendido del observador es:
+
+```math
+\hat{x}_\xi =
+\begin{bmatrix}
+\hat{x}_1 \\
+\hat{x}_2 \\
+\vdots \\
+\hat{x}_n \\
+\hat{\xi} \\
+\hat{\xi}^{(1)} \\
+\vdots \\
+\hat{\xi}^{(m-1)}
+\end{bmatrix}
+```
+
+Este vector contiene los $$\( n \)$$ estados del sistema y $$\( m \)$$ estimaciones derivadas de la perturbación total $$\( \xi \)$$.
+
+
+**Dinámica del Observador**
+
+La dinámica del observador se modela con la ecuación:
+
+```math
+\dot{\hat{x}}_\xi = A_\xi \hat{x}_\xi + B_\xi u + \lambda_\xi \tilde{e}_y(t)
+```
+
+Donde:
+
+- $$\( A_\xi \)$$ es la matriz del sistema extendido:
+
+```math
+A_\xi =
+\begin{bmatrix}
+\mathbf{0}_{n+m \times 1} & I_{n+m-1 \times n+m-1} \\
+0 & \mathbf{0}_{1 \times n+m-1}
+\end{bmatrix}
+```
+
+- $$\( B_\xi \)$$ es el vector de entrada extendido:
+
+```math
+B_\xi =
+\begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+0 \\
+1 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix}
+```
+
+- $$\( \lambda_\xi \)$$ es el vector de ganancias, asociado a los coeficientes del **polinomio de Hurwitz**, que define la dinámica del error de estimación:
+
+```math
+\lambda_\xi =
+\begin{bmatrix}
+\lambda_{n+m-1} \\
+\lambda_{n+m-2} \\
+\vdots \\
+\lambda_0
+\end{bmatrix}
+```
+
+
+**Salida Estimada**
+
+La salida del observador es una combinación lineal de los estados:
+
+```math
+\hat{y} = C_\xi \hat{x}_\xi
+```
+
+Donde:
+
+```math
+C_\xi = [1 \quad 0 \quad 0 \quad \cdots \quad 0]
+```
+
+Este observador es capaz de rastrear dinámicamente el comportamiento del sistema incluyendo las perturbaciones desconocidas.
+
 
 
 ## Conclusiones
