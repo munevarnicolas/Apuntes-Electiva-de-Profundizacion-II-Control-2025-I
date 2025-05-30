@@ -646,8 +646,6 @@ Este enfoque analítico permite diseñar un sistema ADRC robusto y adaptado a la
 
 
 
-💡**Ejemplo 2:**
-
 
 
 ## 5. Conclusiones
