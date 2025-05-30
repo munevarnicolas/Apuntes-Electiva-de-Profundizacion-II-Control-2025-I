@@ -461,6 +461,23 @@ El enfoque LADRC lineal ofrece una poderosa técnica de control al estimar diná
 
 
 
+## 3. Observador de Estados
+
+En el marco del ADRC, el observador de estados cumple la función fundamental de estimar tanto las variables internas del sistema como las perturbaciones externas o no modeladas que afectan su comportamiento. A diferencia de los métodos clásicos que requieren un modelo matemático preciso del sistema, ADRC introduce un observador extendido que considera estas perturbaciones como un estado adicional. Esto permite al controlador actuar de manera anticipada y adaptativa, incluso en presencia de incertidumbres, variaciones dinámicas o ruidos externos, sin necesidad de conocer con exactitud la estructura del sistema. 
+La relevancia del observador radica en que es el componente que permite que ADRC sea robusto y autónomo frente a condiciones cambiantes. Si el observador es capaz de seguir adecuadamente la evolución del sistema y las perturbaciones, el controlador puede compensarlas en tiempo real, manteniendo un desempeño deseado. Por ello, se diseña con una dinámica más rápida que la del sistema a controlar, asegurando que sus estimaciones sean oportunas y precisas. En esencia, el observador de estados convierte a ADRC en una estrategia eficaz y flexible, adecuada para aplicaciones donde el modelado exacto es difícil o inviable.
+
+
+- Ecuacion de Estado:
+
+$$
+x_{k+1} = A \cdot x_k + B \cdot u_k
+$$
+
+- Ecuacion del observador
+
+![Figura de prueba](images/plantilla/obs.png)
+
+Figura 5. Ecuacion del Observador.
 
 
 
