@@ -46,10 +46,11 @@ Una vez instalado QUARC, el siguiente paso es iniciar la plataforma de laborator
 3.  Selección de la Planta (Gemelo Digital):
     Tras ejecutar `QLabs.launch`, aparecerá una ventana emergente. Esta ventana te presentará las diferentes plantas o sistemas virtuales disponibles para tu institución (por ejemplo, la Universidad ECCI).
 
-    ![Gemelos digitales ecci](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/gemelos%20ecci.PNG)
-    *Figura 3: Ventana de selección de Quanser Interactive Labs, mostrando los gemelos digitales disponibles. Para esta guía, nos enfocaremos en el Qube-Servo 2.*
+![Gemelos digitales ecci](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/gemelos%20ecci.PNG)
 
-4.  Apertura del Qube-Servo 2:
+Figura 3: Ventana de selección de Quanser Interactive Labs, mostrando los gemelos digitales disponibles. Para esta guía, nos enfocaremos en el Qube-Servo 2.*
+
+5.  Apertura del Qube-Servo 2:
     Haz clic en la opción que corresponda al "Qube 2" (o Qube-Servo 2). Esto abrirá una nueva ventana que muestra la interfaz específica del gemelo digital del Qube-Servo 2, con una representación visual del dispositivo y controles para la cámara.
 
  ![interfaz qube servo](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/interfaz%20qube%20servo.PNG)
@@ -68,7 +69,8 @@ Ahora, vamos a construir y configurar el modelo en Simulink que interactuará co
 2.  Acceso a la Librería de Bloques de Simulink:
     Una vez en tu modelo de Simulink, abre el Simulink Library Browser. Puedes hacerlo haciendo clic en el icono correspondiente en la barra de herramientas del modelo de Simulink. Esta librería contiene todos los bloques que puedes usar para construir tus sistemas.
 
-    ![QUARC componentes](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/componentes%20quanser.png)
+![QUARC componentes](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/componentes%20quanser.png)
+
 Figura 5. El Simulink Library Browser, destacando la sección de "QUARC Targets" donde encontrarás los bloques específicos para interactuar con el hardware o gemelos digitales de Quanser.
 
 3.  Localización del Bloque `HIL Initialize`:
@@ -90,8 +92,9 @@ Figura 5. El Simulink Library Browser, destacando la sección de "QUARC Targets"
     * Active during normal simulation (Activo durante simulación normal): Asegúrate de que esta casilla esté marcada. Esto permite que el bloque intente conectarse y operar incluso cuando ejecutas la simulación en modo "Normal" en Simulink (en contraposición a modos de ejecución externos o en tiempo real para hardware físico).
     * Finalmente, haz clic en OK para guardar estos cambios.
 
-    
-    *Figura 6: Ventana de configuración del bloque HIL Initialize, donde se especifican el tipo de tarjeta, el identificador y otras opciones de comunicación.*
+![Captura de pantalla 2025-05-31 162501](https://github.com/user-attachments/assets/a565695f-9f4a-4d39-a4be-6afcfc2811bd)
+
+Figura 6: Ventana de configuración del bloque HIL Initialize, donde se especifican el tipo de tarjeta, el identificador y otras opciones de comunicación.*
 
 7.  Verificación del Estado del Gemelo Digital:
     Asegúrate de que la ventana del Quanser Interactive Labs que muestra el Qube-Servo 2 (Figura 4) sigue abierta y activa. El disco del Qube-Servo 2 debe estar visible y listo para responder.
@@ -112,6 +115,7 @@ Figura 7. Botón "Run" ubicado en la pestaña "Simulation" de Simulink, utilizad
     Si todos los pasos anteriores se realizaron correctamente y no hay errores en la configuración, observarás que la tira LED en la representación visual del Qube-Servo 2 dentro de la aplicación Quanser Interactive Labs cambiará a color verde. Este es un indicador visual clave de que la comunicación entre Simulink (a través de QUARC) y el gemelo digital se ha establecido con éxito.
 
 ![qube servo conectado](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/qube%20servo%20verde.PNG)
+
 Figura 8. El Qube-Servo 2 virtual mostrando su tira LED en color verde, lo que significa una conexión activa y exitosa con el modelo de Simulink.
 
 10. Detener la Simulación:
@@ -160,7 +164,8 @@ Ahora, expandiremos nuestro modelo para enviar comandos de voltaje al motor DC d
 > Quanser incorpora una medida de seguridad importante. El sistema monitorea continuamente el voltaje aplicado al motor y su velocidad. Si el motor permanece inmóvil (bloqueado o "stalled") por más de 20 segundos mientras se le aplica un voltaje superior a ±5V, la simulación se detendrá automáticamente. Esto previene un posible sobrecalentamiento virtual del motor o el consumo excesivo de recursos si se tratara de un sistema físico.
 
 
- ![Stall Detection](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/stall%20torque%20detector.png)
+![Stall Detection](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/stall%20torque%20detector.png)
+
 Figura 9. Representación conceptual de un subsistema de detección de bloqueo (Stall), crucial para la seguridad y durabilidad del sistema.
 
 17. Ejecución del Modelo para Probar el Motor:
@@ -220,7 +225,6 @@ El encoder del Qube-Servo 2 nos proporciona información sobre la posición angu
 
 29. Cierre de la Aplicación:
     Cierra la ventana de Quanser Interactive Labs. También puedes cerrar tu modelo de Simulink y MATLAB si has terminado.
-
 
 
 
