@@ -22,8 +22,8 @@ Aprender a configurar, controlar y simular una planta virtual (gemelo digital) d
 3. Busca **Quanser Interactive Labs for MATLAB**.
 4. Instálalo siguiendo los pasos del asistente (elige instalación típica si no sabes qué cambiar).
 
-![Instalación QUARC](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/Quanser%20interactive%20labs.png)
 
+![Paso_2_Quanser](https://github.com/user-attachments/assets/0f79bac1-ac15-47b4-9924-d1a4d2869d30)
 
 
 ##  Paso 3: Lanzar el entorno virtual QLabs
@@ -39,7 +39,8 @@ Aprender a configurar, controlar y simular una planta virtual (gemelo digital) d
 3. Inicia sesión con tu cuenta institucional.
 4. Elige el modelo **Qube-Servo 2**.
 
-![QLabs](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/gemelos%20ecci.PNG)
+
+![Paso_5_Quanser](https://github.com/user-attachments/assets/fb6cbca7-2f3c-4da5-b4a3-94e56b24dae8)
 
 
 
@@ -64,7 +65,8 @@ Aprender a configurar, controlar y simular una planta virtual (gemelo digital) d
    - **Board identifier**: `0@tcpip://localhost:18920`
    - Marca la opción “Active during normal simulation”
 
-![Configuración HIL](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/Quanser_conf.PNG)
+![Paso_12_Quanser](https://github.com/user-attachments/assets/d7d3a003-411d-441a-b6a6-b60dda3ec194)
+
 
 
 
@@ -83,7 +85,9 @@ Aprender a configurar, controlar y simular una planta virtual (gemelo digital) d
 2. Añade un bloque `Constant` (valor inicial: 0.5).
 3. Conecta `Constant → HIL Write Analog`.
 
-![Simulink modelo](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/diagrama%20bloques.PNG)
+
+![diagrama bloques](https://github.com/user-attachments/assets/59103e92-21c3-4871-a356-01b0d80545fd)
+
 
 
 
@@ -92,10 +96,11 @@ Aprender a configurar, controlar y simular una planta virtual (gemelo digital) d
 1. Haz clic en el botón **Run** de Simulink.
 2. Si todo está bien, la **tira LED del Qube** se pondrá **verde**.
 
-![Qube conectado](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/qube%20servo%20verde.PNG)
+![qube servo verde](https://github.com/user-attachments/assets/4aebdf43-b725-46d2-a81f-c2c17c2c2cbb)
 
 3. Cambia el valor del bloque `Constant` a `-0.5` para ver la rotación inversa.
 4. Detén la simulación con el botón **Stop**.
+
 
 
 
@@ -122,11 +127,18 @@ Aprender a configurar, controlar y simular una planta virtual (gemelo digital) d
 1. Usa el subsistema de detección de bloqueo para proteger el motor.
 2. Si el disco no gira durante 20 segundos con voltaje alto, la simulación se detiene automáticamente.
 
-![Stall Detection](https://github.com/jorgecote/DigtalControl/blob/main/images/plantilla/stall%20torque%20detector.png)
 
+![stall torque detector](https://github.com/user-attachments/assets/60425ccd-d77e-44b7-8d2b-a59999a6e23c)
 
 
 ## Paso 12: Cierre y reinicio
 
 1. Detén el modelo y cierra QLabs.
 2. Cambia parámetros y repite la simulación con otras señales o controladores (PID, por ejemplo).
+
+
+# Referencias
+
+- https://quanserinc.app.box.com/s/5x59eq0l1ygebs6uyexnmcshwxxqish6
+- https://wwwlehre.dhbw-stuttgart.de/~flaemig/MATLAB/Quanser_CubeServo/QUBE-Servo%20User%20Manual.pdf
+- https://www.quanser.com/resource-type/virtual-resources/?_products=1590
