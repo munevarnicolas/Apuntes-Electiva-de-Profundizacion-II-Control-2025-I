@@ -1,7 +1,7 @@
 # Tutorial Gemelos Digitales de Quanser
-Esta clase se llevó a cabo el día 24 de abril de 2025, la cual estuvo dirigida a comprender los sistemas de transmisión, abordando temas los conceptos de transmisión tales como el tornillo guía, así como los conceptos de inercia y torque reflejado, fundamentales para el análisis y optimización del movimiento en sistemas mecánicos.
+Esta clase se llevó a cabo el día 22 de abril de 2025, la cual estuvo dirigida a la introducción y manejo de los gemelos digitales de Quanser. Durante la sesión, se exploró la configuración del Qube-Servo 2 virtual mediante Simulink y QUARC, así como el control básico de su motor DC y la interpretación de señales del encoder, herramientas esenciales para la experimentación y el desarrollo de sistemas de control mecatrónicos.
 
-# Guía Interacción con Gemelos Digitales Quanser: Qube-Servo 2 y Simulink con QUARC
+# Guía de Interacción con Gemelos Digitales Quanser: Qube-Servo 2 y Simulink con QUARC
 
 Esta guía te llevará paso a paso a través del proceso de configuración y uso del gemelo digital Qube-Servo 2 de Quanser, interactuando con él mediante modelos de Simulink y la potente extensión QUARC. Aprenderás a controlar un motor de corriente continua (DC) y a interpretar las mediciones de su ángulo de rotación.
 
